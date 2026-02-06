@@ -88,10 +88,11 @@
           <div class="oasis-submenu__col">
             <h3 class="oasis-submenu__title">Évènements</h3>
             <ul class="oasis-submenu__list">
-              <li><a>Salon des ensembliers</a></li>
-              <li><a>Pad Paris 2024</a></li>
-              <li><a>Lune Rousse</a></li>
-              <li><a>Arjumand's world</a></li>
+              <li><a href="/evenements-post/selon-des-ensembliers">Salon des ensembliers</a></li>
+              <li><a href="/evenements-post/pad-paris-2024">Pad Paris 2024</a></li>
+              <li><a href="/evenements-post/lune-rousse">Lune Rousse</a></li>
+              <li><a href="/evenements-post/arjumand">Arjumand's world</a></li>
+              <li><a href="/evenements-post/modern-metier">Modern Metier</a></li>
             </ul>
           </div>
 
