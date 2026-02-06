@@ -45,3 +45,4 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Jmmpoy/Lea-Zeroil@main/Contact/contact.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Jmmpoy/Lea-Zeroil@main/About/about.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Jmmpoy/Lea-Zeroil@main/Collaboration/collaboration.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Jmmpoy/Lea-Zeroil@main/Collection/collection.css">
