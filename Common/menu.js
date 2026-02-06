@@ -250,7 +250,6 @@
 
   // init now
   if (init()) return;
-
   // retry (Squarespace injecte parfois le header après)
   if (retries > 0) return setTimeout(() => bootOasisSubmenu(retries - 1), 250);
 })();
