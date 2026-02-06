@@ -1,0 +1,565 @@
+
+/* =========================
+   CONTACT — SECTION SCOPE
+   ========================= */
+
+/* Base : tous les inputs du formulaire contact — texte et curseur (caret) bordeaux */
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form input,
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form textarea,
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form select {
+  font-family: "Presicav", serif;
+  color: var(--oasis-bordeaux) !important;
+  caret-color: var(--oasis-bordeaux);
+}
+
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form input::placeholder,
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form textarea::placeholder {
+  color: var(--oasis-brown-70);
+}
+
+/* =========================
+   NOM — Prénom
+   ========================= */
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .field.first-name,
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .field.last-name {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 1 — Texte tapé en haut */
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .field.first-name input,
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .field.last-name input {
+  order: 1;
+  border: 0 !important;
+  border-bottom: 1px solid var(--oasis-bordeaux) !important;
+  background: transparent;
+  padding: 0;
+  margin: 0 0 10px 0;
+  outline: none;
+  font-size: 12px !important;
+  color: var(--oasis-bordeaux);
+}
+
+/* 2 — Ligne graphique */
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .field.first-name .form-input-effects,
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .field.last-name .form-input-effects {
+  order: 2;
+  height: 1px;
+  margin: 0 0 14px 0;
+}
+
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .field.first-name .form-input-effects-border,
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .field.last-name .form-input-effects-border {
+  height: 1px;
+  background: var(--oasis-bordeaux);
+  border: 0;
+}
+
+/* 3 — Label en bas */
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .field.first-name label,
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .field.last-name label {
+  order: 3;
+  margin: 0;
+}
+
+/* Typo du label */
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .field.first-name .caption-text,
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .field.last-name .caption-text {
+  font-style: italic;
+  font-size: 18px !important;
+  color: var(--oasis-bordeaux);
+}
+
+/* Remplacer (obligatoire) par * */
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .field.first-name .description.required,
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .field.last-name .description.required {
+  display: none;
+}
+
+/* Masquer « (obligatoire) » sur le champ email */
+section[data-section-id="6955321ea3ec302437387bc9"] .form-item.email .description.required {
+  display: none !important;
+}
+
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .field.first-name .caption-text::after,
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .field.last-name .caption-text::after {
+  content: " *";
+}
+
+
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .field.first-name .form-input-effects,
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .field.last-name .form-input-effects {
+  display: none;
+}
+
+
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form input {
+  font-family: "Presicav", serif;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+/* === CONTACT — GRID stable (Name full width / Tel left / Email right) === */
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .field-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: min-content;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+/* Fieldset "name" — fond bleu + occupe la 1ère rangée sur 2 colonnes */
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .field-list>fieldset.form-item.fields.name {
+  grid-column: span 2 !important;
+}
+
+/* Fieldset "phone" — 2ème rangée, 1ère colonne, fond vert */
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .field-list>fieldset.form-item.fields.phone {
+  grid-column: 1 !important;
+}
+
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .field-list>fieldset.form-item.fields.phone>legend {
+  display: none !important;
+}
+
+
+
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .field-list>div.form-item.email {
+  grid-column: 2 !important;
+}
+
+
+/* Taille de typo des inputs Téléphone + Email */
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form fieldset.form-item.phone input,
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .form-item.email input {
+  font-size: 12px !important;
+  line-height: 1.2 !important;
+}
+
+/* Bordure bas bordeaux pour Téléphone et Email */
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form fieldset.form-item.phone input,
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .form-item.email input {
+  border: 0 !important;
+  border-bottom: 1px solid var(--oasis-bordeaux) !important;
+}
+
+/* Pas d'espacement entre les chiffres du téléphone (annule letter-spacing global) */
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form fieldset.form-item.phone input,
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form fieldset.form-item.fields.phone input {
+  letter-spacing: 0;
+}
+
+/* === SUPPRIMER TOUS LES STYLES DE FOCUS / VALIDATION === */
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form input:focus,
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form input:focus-visible,
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form input:active {
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+/* Textarea : fond toujours transparent (base + tous les états) */
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form textarea,
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .form-item.field.textarea textarea,
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .qj2U4ppWTRohr5rP {
+  background-color: transparent !important;
+  background: transparent !important;
+}
+
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form textarea:hover,
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form textarea:focus,
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form textarea:focus-visible,
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form textarea:active,
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .qj2U4ppWTRohr5rP:hover,
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .qj2U4ppWTRohr5rP:focus,
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .qj2U4ppWTRohr5rP:focus-visible,
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .qj2U4ppWTRohr5rP:active {
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+  background: transparent !important;
+}
+
+/* Supprimer les effets Squarespace (bordure animée) */
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .form-input-effects {
+  display: none !important;
+}
+
+/* Empêcher les couleurs de validation (vert/rouge) */
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form input[aria-invalid="true"],
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form input[aria-invalid="false"] {
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .form-item.select {
+  grid-column: span 2;
+}
+
+/* === SELECT : masquer le label === */
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .form-item.select>label {
+  display: none !important;
+}
+
+/* === SELECT : typo + uppercase + couleur === */
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .form-item.select select {
+  font-family: "Presicav" !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em;
+  /* optionnel, souvent mieux en uppercase */
+  color: var(--oasis-bordeaux) !important;
+  background: transparent !important;
+}
+
+/* flèche bordeaux (le SVG Squarespace utilise currentColor) */
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .form-item.select .QeVRMFrE3dDozGvZ>svg>path {
+  fill: var(--oasis-brown) !important;
+  /* même bordeaux */
+}
+
+/* retire les effets/bordures Squarespace (comme tu l'as fait ailleurs) */
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .form-item.select .form-input-effects {
+  display: none !important;
+}
+
+/* focus : pas de bordure/outline */
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .form-item.select select:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* === CONTACT — SELECT custom (safe) === */
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .form-item.select {
+  position: relative;
+}
+
+/* ⚠️ on cache le select NATIF seulement quand le JS a injecté le custom */
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .form-item.select.gm-enhanced select {
+  position: absolute !important;
+  left: -9999px !important;
+  width: 1px !important;
+  height: 1px !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+
+/* supprimer les effets Squarespace (uniquement si enhanced) */
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .form-item.select.gm-enhanced .form-input-effects {
+  display: none !important;
+}
+
+/* wrapper custom */
+section[data-section-id="6955321ea3ec302437387bc9"] .gm-select {
+  position: relative;
+  width: 100%;
+  font-family: "Presicav" !important;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--oasis-bordeaux);
+}
+
+
+
+section[data-section-id="6955321ea3ec302437387bc9"] .gm-select__opt,
+section[data-section-id="6955321ea3ec302437387bc9"] .gm-select__btn {
+  font-size: 12px !important;
+  letter-spacing: 0.15em !important;
+}
+
+/* bouton visible */
+section[data-section-id="6955321ea3ec302437387bc9"] .gm-select__btn {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  padding: 18px 52px 18px 0;
+  text-align: left;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  line-height: 1.1;
+  border-bottom: 1px solid var(--oasis-bordeaux);
+  outline: none;
+}
+
+section[data-section-id="6955321ea3ec302437387bc9"] .gm-select__btn:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* flèche à droite (bordeaux) */
+/* Chevron */
+section[data-section-id="6955321ea3ec302437387bc9"] .gm-select__chev {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* SVG lui-même */
+section[data-section-id="6955321ea3ec302437387bc9"] .gm-chevron {
+  display: block;
+  transition: transform 0.25s ease;
+  transform-origin: 50% 50%;
+}
+
+/* ÉTAT FERMÉ → chevron vers le bas */
+section[data-section-id="6955321ea3ec302437387bc9"] .gm-select:not(.is-open) .gm-chevron {
+  transform: rotate(180deg);
+}
+
+/* ÉTAT OUVERT → chevron vers le haut */
+section[data-section-id="6955321ea3ec302437387bc9"] .gm-select.is-open .gm-chevron {
+  transform: rotate(0deg);
+}
+
+/* liste dropdown */
+section[data-section-id="6955321ea3ec302437387bc9"] .gm-select__list {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: none;
+  z-index: 50;
+}
+
+section[data-section-id="6955321ea3ec302437387bc9"] .gm-select.is-open .gm-select__list {
+  display: block;
+}
+
+/* items séparés */
+section[data-section-id="6955321ea3ec302437387bc9"] .gm-select__opt {
+  font-size: 12px !important;
+  letter-spacing: 0.15em !important;
+  display: block;
+  width: 100%;
+  background: transparent;
+  border: 0;
+  border-top: 1px solid var(--oasis-bordeaux);
+  padding: 18px 0;
+  text-align: left;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  line-height: 1.1;
+}
+
+/*fleche select natif squarespace*/
+.AqFl_fiEKw4guqD2 {
+  display: none;
+}
+
+/* Masquer le chevron natif Squarespace */
+section[data-section-id="6955321ea3ec302437387bc9"] .form-item.field.select .QeVRMFrE3dDozGvZ {
+  display: none !important;
+}
+
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .field-list>.form-item.field.text,
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .field-list>.form-item.field.textarea {
+  grid-column: span 2 !important;
+}
+
+
+/* Champ */
+section[data-section-id="6955321ea3ec302437387bc9"] .form-item.field.text>input,
+section[data-section-id="6955321ea3ec302437387bc9"] .form-item.field.textarea>textarea {
+  border: 1px solid var(--oasis-brown) !important;
+  box-shadow: none !important;
+  outline: none !important;
+  height: 100px;
+  padding-top: 10px;
+}
+
+/* Textarea (classe Squarespace) : padding + hauteur */
+section[data-section-id="6955321ea3ec302437387bc9"] .qj2U4ppWTRohr5rP {
+  padding: 12px 14px !important;
+  height: 130px !important;
+  font-family: "Henry", serif !important;
+}
+
+section[data-section-id="6955321ea3ec302437387bc9"] .gm-select__list {
+  background-color: #CEC2B6;
+}
+
+/* CONTACT — Phone + Email : label en bas */
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .field-list .form-item.fields.phone .field,
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .field-list>.form-item.email {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Input en haut */
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .field-list .form-item.fields.phone input,
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .field-list>.form-item.email input {
+  order: 1;
+}
+
+/* Label en bas */
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .field-list .form-item.fields.phone label,
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .field-list>.form-item.email label {
+  order: 3;
+  margin: 0;
+  font-style: italic !important;
+  font-family: Henry !important;
+  font-size: 18px !important;
+  color: var(--oasis-bordeaux);
+}
+
+/* Style du texte du label */
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .field-list .form-item.fields.phone .caption,
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .field-list>.form-item.email .caption-text {
+  color: var(--oasis-bordeaux);
+  font-family: Henry !important;
+  font-style: italic !important;
+  font-size: 18px !important;
+}
+
+/* Si tu avais masqué le label email, il faut l’annuler */
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .field-list>.form-item.email>label.title {
+  display: block !important;
+}
+
+/* Phone : injecte le texte */
+section[data-section-id="6955321ea3ec302437387bc9"] .form-item.fields.phone .caption::before {
+  content: "Téléphone*";
+}
+
+/* Email : injecte le texte */
+section[data-section-id="6955321ea3ec302437387bc9"] .form-item.email label.title .SP08ZLkhAnk2Rqaf::before {
+  content: "Adresse mail *";
+  text-transform: capitalize !important;
+  letter-spacing: 0 !important;
+  font-size: 18px !important;
+}
+
+
+/* Sous la section d’options (select) */
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .form-item.field.select::after {
+  content: "Objet de la demande *";
+  display: block;
+  margin-top: 10px;
+  font-family: "Henry", serif !important;
+  font-style: italic;
+  font-size: 18px;
+  color: var(--oasis-bordeaux);
+  width: 200px;
+}
+
+/* Sous la section d’options (select) */
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .form-item.field.select select {
+  font-size: 12px !important;
+}
+
+/* Titre du select */
+section[data-section-id="6955321ea3ec302437387bc9"] .gm-select__value {
+  text-transform: uppercase;
+}
+
+/* Options */
+section[data-section-id="6955321ea3ec302437387bc9"] .gm-select__list>li>button {
+  text-transform: uppercase;
+}
+
+section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form input {
+  font-size: 12px !important;
+  line-height: 1.2 !important;
+}
+
+
+
+section[data-section-id="6955321ea3ec302437387bc9"] .form-item.field.text {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px !important;
+}
+
+/* Texte sous le champ */
+section[data-section-id="6955321ea3ec302437387bc9"] .form-item.field.textarea::after {
+  content: "Ajouter un message";
+  display: block;
+  margin-top: 8px;
+  font-family: "Henry", serif !important;
+  font-style: italic;
+  font-size: 18px;
+  color: var(--oasis-bordeaux);
+  width: 200px;
+}
+
+/* Base button styles: transparent background, colored text and border */
+section[data-section-id="6955321ea3ec302437387bc9"] .form-button-wrapper {
+  text-align: center !important;
+}
+
+/* Base button styles: transparent background, colored text and border */
+section[data-section-id="6955321ea3ec302437387bc9"] .form-button-wrapper .form-submit-button {
+  background-color: transparent !important;
+  /* transparent background */
+  color: var(--oasis-bordeaux) !important;
+  /* text color */
+  border: 1px solid var(--oasis-bordeaux) !important;
+  /* border color */
+  padding: 10px 16px;
+  font-size: 15px;
+  font-family: "Presicav" !important;
+  line-height: 1.2;
+  /* match your site’s typography */
+  transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+section[data-section-id="6955321ea3ec302437387bc9"] .form-button-wrapper .form-submit-button>span {
+  font-family: "Presicav" !important;
+}
+
+/* Remove any internal pseudo-element fills Squarespace may add */
+section[data-section-id="6955321ea3ec302437387bc9"] .form-button-wrapper .form-submit-button .form-submit-button-state span {
+  background: transparent !important;
+  border: none !important;
+}
+
+/* Hover: keep background transparent, slightly darken border/text if desired */
+section[data-section-id="6955321ea3ec302437387bc9"] .form-button-wrapper .form-submit-button:hover {
+  background-color: transparent !important;
+  color: var(--oasis-bordeaux) !important;
+  border-color: var(--oasis-bordeaux) !important;
+}
+
+/* Focus-visible: show an accessible outline without changing background */
+section[data-section-id="6955321ea3ec302437387bc9"] .form-button-wrapper .form-submit-button:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Phrase de soumission du formulaire en bordeaux */
+section[data-section-id="6955321ea3ec302437387bc9"] .form-submission-text,
+section[data-section-id="6955321ea3ec302437387bc9"] .form-submission-text--align-center {
+  color: var(--oasis-bordeaux) !important;
+}
+
+/* Erreurs de champ : fond bordeaux, texte 10px */
+section[data-section-id="6955321ea3ec302437387bc9"] .form-field-error,
+section[data-section-id="6955321ea3ec302437387bc9"] .hawrxS_zLJ4CZHlM {
+  background: var(--oasis-bordeaux) !important;
+  color: var(--oasis-beige) !important;
+  font-size: 11px !important;
+  padding: 6px 10px;
+}
+
+/* Masquer le message d’erreur global dans la div.title (premier bloc « L’envoi a échoué ») */
+section[data-section-id="6955321ea3ec302437387bc9"] .field-list>.title>p.form-field-error,
+section[data-section-id="6955321ea3ec302437387bc9"] .field-list>.title>p.hawrxS_zLJ4CZHlM {
+  display: none !important;
+}
+
+section[data-section-id="6955321ea3ec302437387bc9"] .gm-select__btn,
+section[data-section-id="6955321ea3ec302437387bc9"] .gm-select__opt {
+  font-size: 12px !important;
+  letter-spacing: 0.15em !important;
+  /* ajuste la valeur */
+  line-height: 1.2 !important;
+}
+

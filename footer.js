@@ -3,13 +3,14 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/Jmmpoy/Lea-Zeroil@main/Common/common.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/Jmmpoy/Lea-Zeroil@main/Common/theme-toggle.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/Jmmpoy/Lea-Zeroil@main/Common/menu.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/Jmmpoy/Lea-Zeroil@main/Homepage/homepageSlider.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Jmmpoy/Lea-Zeroil@main/Homepage/homepage.css">
 
 <script src="https://cdn.jsdelivr.net/gh/Jmmpoy/Lea-Zeroil@main/BlogPage/blog-theme.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/Jmmpoy/Lea-Zeroil@main/Oasis/expo-swap.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/Jmmpoy/Lea-Zeroil@main/Common/theme-toggle.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/Jmmpoy/Lea-Zeroil@main/Common/menu.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/Jmmpoy/Lea-Zeroil@main/Homepage/newsletter.js"></script>
 
 <script src="https://cdn.jsdelivr.net/gh/Jmmpoy/Lea-Zeroil@main/BlogPage/blog-item-layout.js"></script>
