@@ -84,11 +84,11 @@
             </ul>
           </div>
 
-          <!-- COL 4 - Évènements (aucune redirection au clic) -->
+          <!-- COL 4 - Évènements -->
           <div class="oasis-submenu__col">
             <h3 class="oasis-submenu__title">Évènements</h3>
             <ul class="oasis-submenu__list">
-              <li><a href="/evenements-post/selon-des-ensembliers">Salon des ensembliers</a></li>
+              <li><a href="/evenements-post/salon-des-ensembliers">Salon des ensembliers</a></li>
               <li><a href="/evenements-post/pad-paris-2024">Pad Paris 2024</a></li>
               <li><a href="/evenements-post/lune-rousse">Lune Rousse</a></li>
               <li><a href="/evenements-post/arjumand">Arjumand's world</a></li>
@@ -250,6 +250,9 @@
 
   // init now
   if (init()) return;
+
+  
+
   // retry (Squarespace injecte parfois le header après)
   if (retries > 0) return setTimeout(() => bootOasisSubmenu(retries - 1), 250);
 })();
