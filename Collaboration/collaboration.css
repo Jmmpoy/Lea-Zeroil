@@ -1,0 +1,272 @@
+
+
+/* COLLABORATION - FILTRES */
+.gm-filterbar {
+  display: flex;
+  align-items: baseline;
+  gap: clamp(10px, 3vw, 40px);
+}
+
+
+.gm-filterbar__label {
+  flex: 0 0 auto;
+  color: var(--oasis-bordeaux);
+  font-family: "Presicav", serif !important;
+  font-size: 8px !important;
+  line-height: 1 !important;
+  letter-spacing: 0.20em !important;
+  text-transform: uppercase !important;
+}
+
+.gm-filterbar__rail {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: baseline;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  gap: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.gm-filterbar__rail::-webkit-scrollbar {
+  display: none;
+}
+
+.gm-filterbar__item {
+  display: inline-block;
+  position: relative;
+  padding: 0 14px 0 0;
+  font-size: 17px !important;
+  line-height: 1.05;
+  text-decoration: none;
+  color: var(--oasis-bordeaux);
+  white-space: nowrap;
+  width: max-content;
+}
+
+/* Twin spans : normal dans le flux (donne la taille au lien), italic en overlay */
+.gm-filterbar__item .text-normal {
+  position: relative;
+  display: inline-block;
+  font-style: normal;
+  opacity: 1;
+  z-index: 2;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+
+.gm-filterbar__item .text-italic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-style: italic;
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+
+/* Au survol : afficher la version italic, masquer la normale */
+.gm-filterbar__item:hover .text-normal {
+  opacity: 0;
+}
+
+.gm-filterbar__item:hover .text-italic {
+  opacity: 1;
+}
+
+/* ✅ virgule générée en CSS */
+.gm-filterbar__item::after {
+  content: ", ";
+  opacity: .9;
+}
+
+.gm-filterbar__item:last-child::after {
+  content: "";
+}
+
+.gm-filterbar__item.is-active {
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+
+@media (max-width: 767px) {
+  .gm-filterbar__label {
+    font-size: 12px !important;
+    letter-spacing: .28em;
+    text-transform: uppercase;
+  }
+
+  .gm-filterbar__item {
+    font-size: 17px !important;
+  }
+  
+  h4{
+  	font-size:12px !important;
+  }
+}
+
+/* Filtrer + items – adaptation au thème de la section (bright / dark) */
+section[data-section-id="697e0cc6d8d22f1b5689a5ee"][data-section-theme="bright"] .gm-filterbar__label,
+section[data-section-id="69579673adbf2074438de459"][data-section-theme="bright"] .gm-filterbar__label,
+section[data-section-id="695798500307240bbe40986e"][data-section-theme="bright"] .gm-filterbar__label,
+section[data-section-id="69579a35a0a49914a074cb20"][data-section-theme="bright"] .gm-filterbar__label,
+section[data-section-id="69579b1b3fa9bc11325e312d"][data-section-theme="bright"] .gm-filterbar__label,
+section[data-section-id="69579c80a244612ab35f9160"][data-section-theme="bright"] .gm-filterbar__label,
+section[data-section-id="697e0cc6d8d22f1b5689a5ee"][data-section-theme="bright"] .gm-filterbar__item,
+section[data-section-id="69579673adbf2074438de459"][data-section-theme="bright"] .gm-filterbar__item,
+section[data-section-id="695798500307240bbe40986e"][data-section-theme="bright"] .gm-filterbar__item,
+section[data-section-id="69579a35a0a49914a074cb20"][data-section-theme="bright"] .gm-filterbar__item,
+section[data-section-id="69579b1b3fa9bc11325e312d"][data-section-theme="bright"] .gm-filterbar__item,
+section[data-section-id="69579c80a244612ab35f9160"][data-section-theme="bright"] .gm-filterbar__item {
+  color: var(--oasis-bordeaux);
+}
+
+/* Dark : toute section en thème dark contenant la barre de filtre + !important pour override */
+section[data-section-id="697e0cc6d8d22f1b5689a5ee"][data-section-theme="dark"] .gm-filterbar__label,
+section[data-section-id="69579673adbf2074438de459"][data-section-theme="dark"] .gm-filterbar__label,
+section[data-section-id="695798500307240bbe40986e"][data-section-theme="dark"] .gm-filterbar__label,
+section[data-section-id="69579a35a0a49914a074cb20"][data-section-theme="dark"] .gm-filterbar__label,
+section[data-section-id="69579b1b3fa9bc11325e312d"][data-section-theme="dark"] .gm-filterbar__label,
+section[data-section-id="69579c80a244612ab35f9160"][data-section-theme="dark"] .gm-filterbar__label,
+section[data-section-theme="dark"] .gm-filterbar__label,
+section[data-section-id="697e0cc6d8d22f1b5689a5ee"][data-section-theme="dark"] .gm-filterbar__item,
+section[data-section-id="69579673adbf2074438de459"][data-section-theme="dark"] .gm-filterbar__item,
+section[data-section-id="695798500307240bbe40986e"][data-section-theme="dark"] .gm-filterbar__item,
+section[data-section-id="69579a35a0a49914a074cb20"][data-section-theme="dark"] .gm-filterbar__item,
+section[data-section-id="69579b1b3fa9bc11325e312d"][data-section-theme="dark"] .gm-filterbar__item,
+section[data-section-id="69579c80a244612ab35f9160"][data-section-theme="dark"] .gm-filterbar__item,
+section[data-section-theme="dark"] .gm-filterbar__item {
+  color: var(--oasis-beige) !important;
+}
+
+/* Fallback : section avec classe .dark (Squarespace ajoute class="dark" sur la section) */
+section.dark .gm-filterbar__label,
+section.dark .gm-filterbar__item {
+  color: var(--oasis-beige) !important;
+}
+
+/* Fallback : filtre sur page en dark-mode (body.dark-mode) */
+body.dark-mode .gm-filterbar__label,
+body.dark-mode .gm-filterbar__item {
+  color: var(--oasis-beige) !important;
+}
+
+h3 {
+  letter-spacing: 0.15em !important;
+}
+
+/* Léger zoom au survol des images (sections collaborations – structure Fluid Engine) */
+section[data-section-id="697e0cc6d8d22f1b5689a5ee"],
+section[data-section-id="69579673adbf2074438de459"],
+section[data-section-id="695798500307240bbe40986e"],
+section[data-section-id="69579a35a0a49914a074cb20"],
+section[data-section-id="69579b1b3fa9bc11325e312d"],
+section[data-section-id="69579c80a244612ab35f9160"] {
+  --gm-zoom-scale: 1.05;
+}
+
+/* Cible uniquement les blocs image (.fluid-image-container a déjà overflow: hidden) */
+section[data-section-id="697e0cc6d8d22f1b5689a5ee"] .fluid-image-container img,
+section[data-section-id="69579673adbf2074438de459"] .fluid-image-container img,
+section[data-section-id="695798500307240bbe40986e"] .fluid-image-container img,
+section[data-section-id="69579a35a0a49914a074cb20"] .fluid-image-container img,
+section[data-section-id="69579b1b3fa9bc11325e312d"] .fluid-image-container img,
+section[data-section-id="69579c80a244612ab35f9160"] .fluid-image-container img {
+  transition: transform 0.4s ease;
+  will-change: transform;
+}
+
+section[data-section-id="697e0cc6d8d22f1b5689a5ee"] .fluid-image-container:hover img,
+section[data-section-id="69579673adbf2074438de459"] .fluid-image-container:hover img,
+section[data-section-id="695798500307240bbe40986e"] .fluid-image-container:hover img,
+section[data-section-id="69579a35a0a49914a074cb20"] .fluid-image-container:hover img,
+section[data-section-id="69579b1b3fa9bc11325e312d"] .fluid-image-container:hover img,
+section[data-section-id="69579c80a244612ab35f9160"] .fluid-image-container:hover img {
+  transform: scale(var(--gm-zoom-scale, 1.05));
+}
+
+/* Bouton « VOIR TOUTE LA COLLABORATION » – thème par data-section-theme (bright / dark) */
+/* site.css utilise --primaryButtonBackgroundColor / --primaryButtonTextColor : on surcharge ces variables
+   au niveau de la section pour que la règle Squarespace prenne nos couleurs. */
+
+/* Variables Squarespace – version bright (section claire) */
+section[data-section-id="697e0cc6d8d22f1b5689a5ee"][data-section-theme="bright"],
+section[data-section-id="69579673adbf2074438de459"][data-section-theme="bright"],
+section[data-section-id="695798500307240bbe40986e"][data-section-theme="bright"],
+section[data-section-id="69579a35a0a49914a074cb20"][data-section-theme="bright"],
+section[data-section-id="69579b1b3fa9bc11325e312d"][data-section-theme="bright"],
+section[data-section-id="69579c80a244612ab35f9160"][data-section-theme="bright"] {
+  --primaryButtonBackgroundColor: var(--oasis-beige) !important;
+  --primaryButtonTextColor: var(--oasis-bordeaux) !important;
+}
+
+/* Variables Squarespace – version dark (section sombre) */
+section[data-section-id="697e0cc6d8d22f1b5689a5ee"][data-section-theme="dark"],
+section[data-section-id="69579673adbf2074438de459"][data-section-theme="dark"],
+section[data-section-id="695798500307240bbe40986e"][data-section-theme="dark"],
+section[data-section-id="69579a35a0a49914a074cb20"][data-section-theme="dark"],
+section[data-section-id="69579b1b3fa9bc11325e312d"][data-section-theme="dark"],
+section[data-section-id="69579c80a244612ab35f9160"][data-section-theme="dark"] {
+  --primaryButtonBackgroundColor: transparent;
+  --primaryButtonTextColor: var(--oasis-beige);
+}
+
+/* Styles directs (bordure, hover) – Cible : a.sqs-block-button-element--medium.sqs-button-element--primary.sqs-block-button-element */
+
+/* Version bright (section claire) : bordure bordeaux, hover inversé */
+section[data-section-id="697e0cc6d8d22f1b5689a5ee"][data-section-theme="bright"] a.sqs-block-button-element--medium.sqs-button-element--primary.sqs-block-button-element,
+section[data-section-id="69579673adbf2074438de459"][data-section-theme="bright"] a.sqs-block-button-element--medium.sqs-button-element--primary.sqs-block-button-element,
+section[data-section-id="695798500307240bbe40986e"][data-section-theme="bright"] a.sqs-block-button-element--medium.sqs-button-element--primary.sqs-block-button-element,
+section[data-section-id="69579a35a0a49914a074cb20"][data-section-theme="bright"] a.sqs-block-button-element--medium.sqs-button-element--primary.sqs-block-button-element,
+section[data-section-id="69579b1b3fa9bc11325e312d"][data-section-theme="bright"] a.sqs-block-button-element--medium.sqs-button-element--primary.sqs-block-button-element,
+section[data-section-id="69579c80a244612ab35f9160"][data-section-theme="bright"] a.sqs-block-button-element--medium.sqs-button-element--primary.sqs-block-button-element {
+  background-color: var(--oasis-beige) !important;
+  border: 1px solid var(--oasis-bordeaux) !important;
+  color: var(--oasis-bordeaux) !important;
+  letter-spacing: 0.02em;
+  transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+section[data-section-id="697e0cc6d8d22f1b5689a5ee"][data-section-theme="bright"] a.sqs-block-button-element--medium.sqs-button-element--primary.sqs-block-button-element:hover,
+section[data-section-id="69579673adbf2074438de459"][data-section-theme="bright"] a.sqs-block-button-element--medium.sqs-button-element--primary.sqs-block-button-element:hover,
+section[data-section-id="695798500307240bbe40986e"][data-section-theme="bright"] a.sqs-block-button-element--medium.sqs-button-element--primary.sqs-block-button-element:hover,
+section[data-section-id="69579a35a0a49914a074cb20"][data-section-theme="bright"] a.sqs-block-button-element--medium.sqs-button-element--primary.sqs-block-button-element:hover,
+section[data-section-id="69579b1b3fa9bc11325e312d"][data-section-theme="bright"] a.sqs-block-button-element--medium.sqs-button-element--primary.sqs-block-button-element:hover,
+section[data-section-id="69579c80a244612ab35f9160"][data-section-theme="bright"] a.sqs-block-button-element--medium.sqs-button-element--primary.sqs-block-button-element:hover {
+  background-color: var(--oasis-bordeaux) !important;
+  border-color: var(--oasis-bordeaux) !important;
+  color: var(--oasis-beige) !important;
+}
+
+/* Version dark (section sombre) : fond transparent, bordure et texte beige */
+section[data-section-id="697e0cc6d8d22f1b5689a5ee"][data-section-theme="dark"] a.sqs-block-button-element--medium.sqs-button-element--primary.sqs-block-button-element,
+section[data-section-id="69579673adbf2074438de459"][data-section-theme="dark"] a.sqs-block-button-element--medium.sqs-button-element--primary.sqs-block-button-element,
+section[data-section-id="695798500307240bbe40986e"][data-section-theme="dark"] a.sqs-block-button-element--medium.sqs-button-element--primary.sqs-block-button-element,
+section[data-section-id="69579a35a0a49914a074cb20"][data-section-theme="dark"] a.sqs-block-button-element--medium.sqs-button-element--primary.sqs-block-button-element,
+section[data-section-id="69579b1b3fa9bc11325e312d"][data-section-theme="dark"] a.sqs-block-button-element--medium.sqs-button-element--primary.sqs-block-button-element,
+section[data-section-id="69579c80a244612ab35f9160"][data-section-theme="dark"] a.sqs-block-button-element--medium.sqs-button-element--primary.sqs-block-button-element {
+  background-color: transparent !important;
+  border: 1px solid var(--oasis-beige) !important;
+  color: var(--oasis-beige) !important;
+  letter-spacing: 0.02em;
+  transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+section[data-section-id="697e0cc6d8d22f1b5689a5ee"][data-section-theme="dark"] a.sqs-block-button-element--medium.sqs-button-element--primary.sqs-block-button-element:hover,
+section[data-section-id="69579673adbf2074438de459"][data-section-theme="dark"] a.sqs-block-button-element--medium.sqs-button-element--primary.sqs-block-button-element:hover,
+section[data-section-id="695798500307240bbe40986e"][data-section-theme="dark"] a.sqs-block-button-element--medium.sqs-button-element--primary.sqs-block-button-element:hover,
+section[data-section-id="69579a35a0a49914a074cb20"][data-section-theme="dark"] a.sqs-block-button-element--medium.sqs-button-element--primary.sqs-block-button-element:hover,
+section[data-section-id="69579b1b3fa9bc11325e312d"][data-section-theme="dark"] a.sqs-block-button-element--medium.sqs-button-element--primary.sqs-block-button-element:hover,
+section[data-section-id="69579c80a244612ab35f9160"][data-section-theme="dark"] a.sqs-block-button-element--medium.sqs-button-element--primary.sqs-block-button-element:hover {
+  background-color: var(--oasis-beige) !important;
+  border-color: var(--oasis-beige) !important;
+  color: var(--oasis-bordeaux) !important;
+}
+
+
+
