@@ -1,0 +1,540 @@
+/*******************************************/
+/*                 HOME- SECTION HERO                   */
+/*******************************************/
+
+section[data-section-id="69484eaeeea18757b4e08277"] {
+  height: 100vh !important;
+}
+
+/* Section avec hauteur 100vh */
+section[data-section-id="69484eaeeea18757b4e08277"] {
+  display: flex;
+  flex-direction: column;
+}
+
+section[data-section-id="69484eaeeea18757b4e08277"] .content-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+section[data-section-id="69484eaeeea18757b4e08277"] .content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+section[data-section-id="69484eaeeea18757b4e08277"] .fluid-engine {
+  flex: 1;
+  height: 100%;
+}
+
+section[data-section-id="69484eaeeea18757b4e08277"] .fe-block {
+  height: 100%;
+}
+
+section[data-section-id="69484eaeeea18757b4e08277"] .sqs-block-content {
+  height: 100%;
+}
+
+
+/*******************************************/
+/*                 HOME- HERO- SECTION ROUGE                   */
+/*******************************************/
+
+section[data-section-id="69484eaeeea18757b4e08277"] .fe-block-yui_3_17_2_1_1768323852542_28123 .sqs-block-content {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: end !important;
+}
+
+
+/* Mobile : centré */
+@media (max-width: 767px) {
+  section[data-section-id="69484eaeeea18757b4e08277"] .fe-block-yui_3_17_2_1_1768323852542_28123 .sqs-block-content {
+    justify-content: center !important;
+  }
+}
+
+/*********************************************************************************************************************************/
+/*        HOME- SECTION PRIMO - ZOOM IMAGE       */
+/*********************************************************************************************************************************/
+
+/* Section PRIMO - Zoom au hover sur l'image */
+section[data-section-id="694fe7153e25926a97c74c20"] img {
+  transition: transform 0.4s ease;
+  transform-origin: center;
+}
+
+section[data-section-id="694fe7153e25926a97c74c20"] img:hover {
+  transform: scale(1.05);
+}
+
+/* Si l'image est dans un conteneur avec overflow */
+section[data-section-id="694fe7153e25926a97c74c20"] .sqs-block-image,
+section[data-section-id="694fe7153e25926a97c74c20"] .fluid-image-container,
+section[data-section-id="694fe7153e25926a97c74c20"] .content-fill {
+  overflow: hidden;
+  aspect-ratio: 4/5;
+}
+
+section[data-section-id="694fe7153e25926a97c74c20"] .sqs-block-image img,
+section[data-section-id="694fe7153e25926a97c74c20"] .content-fill img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  transform-origin: center;
+}
+
+
+
+section[data-section-id="694fe7153e25926a97c74c20"] .content-fill:hover img {
+  transform: scale(1.05);
+}
+
+/* Underline au hover uniquement - Section PRIMO */
+section[data-section-id="694fe7153e25926a97c74c20"] .fe-block-fb2077d07400119a2f08 p a {
+  position: relative;
+  text-decoration: none;
+}
+
+section[data-section-id="694fe7153e25926a97c74c20"] .fe-block-fb2077d07400119a2f08 p a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0.1em;
+  background: var(--oasis-cream);
+  transition: width 0.3s ease;
+}
+
+section[data-section-id="694fe7153e25926a97c74c20"] .fe-block-fb2077d07400119a2f08 p a:hover::after {
+  width: 100%;
+}
+
+/* Bouton tertiary small « En savoir plus » : invisible mais lien actif (redirection conservée) */
+section[data-section-id="694fe7153e25926a97c74c20"] a.sqs-block-button-element--small.sqs-button-element--tertiary.sqs-block-button-element {
+  background: transparent !important;
+  border: 0 !important;
+  color: transparent !important;
+  box-shadow: none !important;
+}
+
+section[data-section-id="694fe7153e25926a97c74c20"] a.sqs-block-button-element--small.sqs-button-element--tertiary.sqs-block-button-element:hover {
+  background: transparent !important;
+  border: 0 !important;
+  color: transparent !important;
+  box-shadow: none !important;
+}
+
+/*********************************************************************************************************************************/
+/*        HOME- SECTION GALERIE  OASIS               */
+/*********************************************************************************************************************************/
+
+
+/* Underline au hover - Section GALERIE OASIS */
+#block-yui_3_17_2_1_1766847087218_7129 p a {
+  position: relative;
+  text-decoration: none;
+}
+
+#block-yui_3_17_2_1_1766847087218_7129 p a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0.1em;
+  background: var(--oasis-cream);
+  transition: width 0.3s ease;
+}
+
+#block-yui_3_17_2_1_1766847087218_7129 p a:hover::after {
+  width: 100%;
+}
+
+
+/*********************************************************************************************************************************/
+/*        HOME- SECTION COLLECTIONS               */
+/*********************************************************************************************************************************/
+
+
+section[data-section-id="696a54d6ef67ef6cf6befe25"] .summary-item-list {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  align-items: start;
+  gap: 18px 10px !important;
+}
+
+/* neutralise styles Squarespace (margins/width inline) */
+section[data-section-id="696a54d6ef67ef6cf6befe25"] .summary-item {
+  margin: 0 !important;
+  margin-right: 0 !important;
+  width: auto !important;
+  min-width: 0 !important;
+}
+
+
+/* crop propre */
+section[data-section-id="696a54d6ef67ef6cf6befe25"] .summary-thumbnail img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.4s ease-in-out;
+  transform-origin: center;
+}
+
+section[data-section-id="696a54d6ef67ef6cf6befe25"] .summary-thumbnail:hover img {
+  transform: scale(1.05);
+}
+
+section[data-section-id="696a54d6ef67ef6cf6befe25"] .summary-container {
+  margin-bottom: 0 !important;
+}
+
+section[data-section-id="696a54d6ef67ef6cf6befe25"] .summary-thumbnail-outer-container a {
+  margin: 0 !important;
+}
+
+/* ===== Mobile: 2 colonnes (sans placement "artistique") ===== */
+@media (max-width: 767px) {
+  section[data-section-id="696a54d6ef67ef6cf6befe25"] .summary-item-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    column-gap: 18px !important;
+    row-gap: 22px !important;
+  }
+
+  /* on annule le placement nth-child */
+  section[data-section-id="696a54d6ef67ef6cf6befe25"] .summary-item {
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
+}
+
+/* ===== SUMMARY TITLES — typo ===== */
+section[data-section-id="696a54d6ef67ef6cf6befe25"] .summary-title {
+  font-size: 15px;
+  line-height: 1.35;
+  text-transform: none;
+  color: var(--brown);
+  font-style: italic;
+  /* on annule toute capitalisation globale */
+}
+
+/* Première lettre toujours en majuscule */
+section[data-section-id="696a54d6ef67ef6cf6befe25"] .summary-title::first-letter {
+  text-transform: uppercase;
+}
+
+/*********************************************************************************************************************************/
+/*           GOODMOODS – SLIDER            */
+/*              (Swiper CSS)               */
+/*********************************************************************************************************************************/
+
+/* Section */
+.gm-section {
+  background: transparent;
+}
+
+/* Wrapper */
+.gm-wrap {
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Slider (Swiper container) */
+.gm-slider {
+  direction: ltr;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  /* Swiper gère le “viewport” */
+}
+
+/* Track = swiper-wrapper */
+.gm-track {
+  display: flex;
+  /* OK, Swiper utilise flex */
+  gap: 0;
+  /* IMPORTANT: Swiper utilise spaceBetween */
+  align-items: stretch;
+  width: 100%;
+
+  /* IMPORTANT: enlever l'ancien mode scroll */
+  overflow: visible;
+  overflow-x: visible;
+  scroll-snap-type: none;
+
+  scrollbar-width: auto;
+  -ms-overflow-style: auto;
+}
+
+.gm-track::-webkit-scrollbar {
+  display: initial;
+}
+
+/* Slide = swiper-slide */
+.gm-slide {
+  height: auto;
+  min-width: 0;
+  /* IMPORTANT: évite des largeurs forcées */
+  flex: 0 0 auto;
+  /* IMPORTANT: Swiper calcule la largeur */
+  scroll-snap-align: none;
+}
+
+/* Card */
+.gm-card {
+  height: 100%;
+  position: relative;
+  padding-top: 22px;
+}
+
+/* Ligne fine */
+.gm-topline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--oasis-brown-55);
+}
+
+/* Meta */
+.gm-meta {
+  display: inline-block;
+  margin-top: 6px;
+  margin-bottom: 14px;
+}
+
+.gm-meta__brand {
+  font-family: "Presicav", serif !important;
+  font-size: 10px;
+  letter-spacing: .12em;
+  color: var(--brown);
+  margin: 0 0 4px;
+}
+
+.gm-meta__date {
+  font-family: "Henry", serif !important;
+  font-size: 12px;
+  font-style: italic;
+  line-height: 1.2;
+  color: var(--oasis-brown-85);
+}
+
+/* Quote */
+.gm-quote {
+  margin: 0;
+  font-family: "Henry", serif !important;
+  font-size: 20px;
+  line-height: 1.35;
+  color: var(--brown);
+}
+
+/* Pagination (losanges) — Swiper */
+.gm-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  margin-top: 26px;
+}
+
+.gm-dots .swiper-pagination-bullet {
+  width: 7px;
+  height: 7px;
+  margin: 0 !important;
+  padding: 0;
+  border: 0;
+  opacity: 1;
+  background: var(--oasis-brown-45);
+  border-radius: 0;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+
+.gm-dots .swiper-pagination-bullet-active {
+  background: var(--oasis-brown);
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .gm-wrap {
+    overflow: hidden;
+  }
+
+  .gm-quote {
+    font-size: 15px;
+    line-height: 1.12;
+  }
+
+  .gm-dots {
+    margin-top: 22px;
+  }
+}
+
+
+
+/* HOME - CTA BAR – Galerie Oasis */
+.oasis-cta {
+  position: relative;
+  width: 100%;
+  background: var(--oasis-bordeaux);
+  /* bordeaux */
+  padding: 14px 52px;
+  /* espace pour la croix à droite */
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Lien pleine largeur (mais texte centré) */
+.oasis-cta__link {
+  color: var(--oasis-cream);
+  text-decoration: none;
+  display: inline-block;
+  max-width: 1100px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Typo */
+.oasis-cta__text {
+  font-family: "Henry", serif !important;
+  font-size: 18px;
+  line-height: 1.2;
+  font-style: normal;
+  color: var(--oasis-cream);
+  display: inline-block;
+}
+
+/* “Réserver ici” en italic */
+.oasis-cta__cta {
+  font-style: italic;
+  text-decoration: underline;
+}
+
+/* Croix */
+.oasis-cta__close {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0;
+  background: transparent;
+  color: var(--oasis-cream);
+  font-family: "Henry", serif !important;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 6px 10px;
+}
+
+/* Hover léger */
+.oasis-cta__link:hover .oasis-cta__text {
+  border-bottom-color: var(--oasis-cream);
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .oasis-cta {
+    padding: 12px 44px;
+    /* garde de la place pour la croix */
+  }
+
+  .oasis-cta__text {
+    font-size: 13px;
+    line-height: 1.25;
+  }
+
+  .oasis-cta__close {
+    right: 10px;
+    font-size: 18px;
+    padding: 6px 8px;
+  }
+}
+
+
+/* SLIDER GOODMOODS */
+
+/* Carte: border-top pour TOUTES les slides */
+.gm-card {
+  position: relative;
+  border-top: 1px solid var(--border);
+  padding-top: 18px;
+  /* pour respirer sous la ligne */
+}
+
+/* Zone clic: overlay plein (même layout que sans lien) */
+.gm-card__link {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: block;
+  text-indent: -9999px;
+  /* évite du texte visible si jamais */
+}
+
+/* Slide sans lien: overlay neutre (même footprint, rien au clic) */
+.gm-card__nolink {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: block;
+  pointer-events: none;
+  /* rien ne se passe */
+}
+
+/* Assure que le contenu reste au-dessus du fond mais sous l’overlay */
+.gm-meta,
+.gm-quote {
+  position: relative;
+  z-index: 2;
+}
+
+/* Plus d'espace entre slides et losanges */
+.gm-dots {
+  margin-top: 28px;
+  /* augmente l’écart */
+}
+
+/* === DÉCOLLER LES DOTS SOUS LES SLIDES === */
+.gm-slider {
+  position: relative;
+  padding-bottom: 70px;
+  /* + grand = dots plus bas (ajuste) */
+  overflow: visible !important;
+  /* au cas où un style swiper recoupe */
+}
+
+/* 1) Le conteneur Swiper doit être la référence */
+.gm-section .gm-slider.swiper {
+  position: relative;
+  padding-bottom: 80px;
+  /* espace dédié aux dots (augmente si besoin) */
+  overflow: visible;
+  /* évite que la pagination soit coupée */
+}
+
+/* 2) Pagination sortie du flux, placée en bas dans l'espace réservé */
+.gm-section .gm-slider .gm-dots.swiper-pagination {
+  position: absolute !important;
+  left: 0;
+  right: 0;
+  bottom: 24px;
+  /* "un cran" en dessous (ajuste) */
+  margin: 0 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
