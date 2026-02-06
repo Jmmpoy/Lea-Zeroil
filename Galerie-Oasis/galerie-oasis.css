@@ -1,0 +1,233 @@
+/* GALERIE OASIS - ZOOM LÉGER AU HOVER SUR L'IMAGE */
+section[data-section-id="695501167c658f284aecb9b9"] img {
+  transition: transform 0.4s ease;
+  transform-origin: center;
+}
+
+section[data-section-id="695501167c658f284aecb9b9"] img:hover {
+  transform: scale(1.05);
+}
+
+/* Conteneur avec overflow pour que le zoom ne déborde pas */
+section[data-section-id="695501167c658f284aecb9b9"] .sqs-block-image,
+section[data-section-id="695501167c658f284aecb9b9"] .fluid-image-container,
+section[data-section-id="695501167c658f284aecb9b9"] .content-fill {
+  overflow: hidden;
+}
+
+
+/* lignes + séparateurs comme sur ta capture */
+.expo-row {
+  border-top: 1px solid var(--oasis-cream-35);
+}
+
+.expo-row:last-child {
+  border-bottom: 1px solid var(--oasis-cream-35);
+}
+
+.expo-link {
+  display: grid;
+  grid-template-columns: 70px 1fr 110px;
+  gap: 24px;
+  align-items: center;
+  padding: 14px 0;
+  text-decoration: none !important;
+  color: var(--oasis-cream) !important;
+}
+
+.expo-year {
+  opacity: .85;
+}
+
+.expo-cta {
+  justify-self: end;
+}
+
+@media (max-width: 900px) {
+
+  /* en mobile, tu peux stack image + liste si tu veux */
+  .expo-swap>.grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+
+.expo-swap .expo-cta.underline-b {
+  border-bottom-color: var(--oasis-cream);
+  /* blanc crème */
+}
+
+/* Expo – italic au hover */
+.expo-swap .expo-link:hover .expo-title {
+  font-style: italic;
+}
+
+
+/* Transition douce sur le titre */
+.expo-swap .expo-title {
+  display: inline-block;
+  /* nécessaire pour le transform */
+  transition: opacity .18s ease, transform .18s ease;
+}
+
+/* Au hover : italic + micro fade/slide */
+.expo-swap .expo-link:hover .expo-title {
+  font-style: italic;
+  opacity: .92;
+}
+
+
+/* ===== GRID ===== */
+.expo-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 14px;
+}
+
+@media (max-width: 1100px) {
+  .expo-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .expo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.expo-tile {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  width: 100%;
+  aspect-ratio: 232 / 318.47;
+  overflow: hidden;
+}
+
+.expo-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ===== FULLSCREEN LIGHTBOX ===== */
+.expo-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  background: var(--oasis-bordeaux-dark);
+  /* proche bordeaux */
+  display: none;
+}
+
+.expo-lightbox.is-open {
+  display: block;
+}
+
+.expo-lightbox__inner {
+  height: 100%;
+  width: 100%;
+  padding: 22px 28px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+/* top */
+.expo-lightbox__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--oasis-cream-35);
+  padding-bottom: 14px;
+}
+
+.expo-lightbox__actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.expo-back,
+.expo-close {
+  border: 0;
+  background: transparent;
+  color: var(--oasis-cream);
+  cursor: pointer;
+  font-family: "Henry", serif !important;
+}
+
+.expo-close {
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* stage */
+.expo-stage {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 60px 1fr 60px;
+  align-items: center;
+  margin: 18px 0;
+}
+
+.expo-figure {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.expo-figure img {
+  max-height: 72vh;
+  max-width: min(520px, 70vw);
+  width: auto;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.expo-nav {
+  border: 0;
+  background: transparent;
+  color: var(--oasis-cream-80);
+  cursor: pointer;
+  font-size: 22px;
+  line-height: 1;
+}
+
+.expo-nav:hover {
+  color: var(--oasis-cream);
+}
+
+/* bottom */
+.expo-lightbox__bottom {
+  display: flex;
+  gap: 14px;
+  align-items: baseline;
+  padding-top: 12px;
+}
+
+
+.expo-lightbox {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  /* fallback */
+  min-height: 100vh;
+  /* sécurité */
+  background: var(--oasis-bordeaux-dark);
+  z-index: 9999999;
+}
+
+@supports (height: 100svh) {
+  .expo-lightbox {
+    height: 100svh;
+    min-height: 100svh;
+  }
+}

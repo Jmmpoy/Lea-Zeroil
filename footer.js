@@ -46,3 +46,4 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Jmmpoy/Lea-Zeroil@main/About/about.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Jmmpoy/Lea-Zeroil@main/Collaboration/collaboration.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Jmmpoy/Lea-Zeroil@main/Collection/collection.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Jmmpoy/Lea-Zeroil@main/Galerie-Oasis/galerie-oasis.css">
