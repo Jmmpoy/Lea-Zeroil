@@ -1,0 +1,323 @@
+/* ==========================================================================
+   BlogItem – GLOBAL
+   Thème (rouge / lune-soleil), footer, lightbox, éléments masqués, pagination, marges Squarespace
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Galerie & Événements : forcer thème lune/soleil (priorité sur tout autre CSS)
+   -------------------------------------------------------------------------- */
+body.oasis-blog-theme-lune,
+body.oasis-blog-theme-lune section[data-test="page-section"],
+body.oasis-blog-theme-lune .page-section,
+body.oasis-blog-theme-lune .header,
+body.oasis-blog-theme-lune #header,
+body.oasis-blog-theme-lune footer,
+body.oasis-blog-theme-lune .oasis-footer-frame,
+body.oasis-blog-theme-lune .content-wrapper,
+body.oasis-blog-theme-lune .item-pagination,
+body.oasis-blog-theme-lune .item-pagination--prev-next,
+body.oasis-blog-theme-lune .section-border,
+body.oasis-blog-theme-lune .section-background,
+body.oasis-blog-theme-lune .section-background:not(.has-background) {
+  background-color: var(--bg-color) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Thème global : fond #712317 (collaborations uniquement)
+   -------------------------------------------------------------------------- */
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune),
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) {
+  background-color: #712317 !important;
+}
+
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) section[data-test="page-section"],
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .page-section,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) section[data-test="page-section"],
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .page-section {
+  background-color: #712317 !important;
+}
+
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .header,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) #header,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .header,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) #header {
+  background-color: #712317 !important;
+}
+
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) footer,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .oasis-footer-frame,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) footer,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .oasis-footer-frame {
+  background-color: #712317 !important;
+}
+
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .content-wrapper,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .item-pagination,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .item-pagination--prev-next {
+  background-color: #712317 !important;
+}
+
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .section-border,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .page-section.background-width--inset .section-border {
+  background-color: #712317 !important;
+}
+
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .section-background,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .section-background:not(.has-background) {
+  background-color: #712317 !important;
+}
+
+/* --------------------------------------------------------------------------
+   Footer page collaboration : texte et logo en crème (sauf galerie/événements)
+   -------------------------------------------------------------------------- */
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .oasis-footer-frame,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .oasis-footer-frame .text-brown,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .oasis-footer-frame .link,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .oasis-footer-frame .book,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .oasis-footer-frame a,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .oasis-footer-frame,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .oasis-footer-frame .text-brown,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .oasis-footer-frame .link,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .oasis-footer-frame .book,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .oasis-footer-frame a {
+  color: var(--oasis-cream, #f5f0e8) !important;
+}
+
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .oasis-footer-frame .footer-frame,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .oasis-footer-frame .footer-frame {
+  color: var(--oasis-cream, #f5f0e8);
+}
+
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .oasis-footer-frame .footer-frame svg,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .oasis-footer-frame .footer-frame svg path,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .oasis-footer-frame .footer-frame svg,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .oasis-footer-frame .footer-frame svg path {
+  fill: var(--oasis-cream, #f5f0e8) !important;
+  stroke: var(--oasis-cream, #f5f0e8) !important;
+}
+
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .oasis-footer-frame .news-input,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .oasis-footer-frame .news-btn,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .oasis-footer-frame .news-input,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .oasis-footer-frame .news-btn {
+  color: var(--oasis-cream, #f5f0e8) !important;
+}
+
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .oasis-footer-frame .news-input::placeholder,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .oasis-footer-frame .news-input::placeholder {
+  color: rgba(245, 240, 232, 0.8) !important;
+}
+
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .oasis-footer-frame .newsline,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .oasis-footer-frame .newsline {
+  border-bottom-color: rgba(245, 240, 232, 0.55);
+}
+
+/* Logo footer : crème sur fond #712317 (collaborations uniquement) */
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .oasis-footer-frame .footer-logo--light path,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .oasis-footer-frame .footer-logo--dark path,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .oasis-footer-frame .footer-logo--light path,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .oasis-footer-frame .footer-logo--dark path {
+  fill: var(--oasis-cream, #f5f0e8) !important;
+  stroke: var(--oasis-cream, #f5f0e8) !important;
+}
+
+/* Lightbox galerie : désactivée au clic */
+.gallery-lightbox-outer-wrapper {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+/* Mobile : footer visible (fallback si :has() non supporté) – collaborations uniquement */
+@media (max-width: 900px) {
+  body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) footer,
+  body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .oasis-footer-frame {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Contenu blog item : base (couleur, paddings)
+   -------------------------------------------------------------------------- */
+.collection-type-blog-basic-grid .blog-item-content {
+  color: var(--oasis-bordeaux, #5c3d2e) !important;
+}
+
+.collection-type-blog-basic-grid .blog-item-wrapper article.entry {
+  padding: 0 !important;
+}
+
+.collection-type-blog-basic-grid .sqs-block {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* --------------------------------------------------------------------------
+   Éléments masqués (sauf en mode édition)
+   -------------------------------------------------------------------------- */
+.blog-item-top-wrapper {
+  display: none !important;
+}
+
+body.sqs-edit-mode .blog-item-top-wrapper {
+  display: block !important;
+  margin-top: 150px !important;
+}
+
+.blog-item-comments {
+  display: none;
+}
+
+.blog-item-author-profile-wrapper {
+  display: none;
+}
+
+/* --------------------------------------------------------------------------
+   Pagination prev/next
+   -------------------------------------------------------------------------- */
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .item-pagination.item-pagination--prev-next,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .item-pagination.item-pagination--prev-next {
+  display: flex;
+  flex-direction: column;
+}
+
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .item-pagination.item-pagination--prev-next .item-pagination-link,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .item-pagination.item-pagination--prev-next .item-pagination-link {
+  margin: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "Presicav", serif;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  background: transparent;
+  border: .5px solid var(--oasis-cream, #f5f0e8);
+  padding: 15px;
+  color: var(--oasis-cream, #f5f0e8);
+  text-decoration: none;
+}
+
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .item-pagination-label-custom,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .item-pagination-label-custom {
+  display: inline-block !important;
+  visibility: visible !important;
+  position: static !important;
+  width: auto !important;
+  min-width: max-content !important;
+  overflow: visible !important;
+  clip: auto !important;
+  clip-path: none !important;
+  text-indent: 0 !important;
+  font-family: "Presicav", serif;
+  font-size: 17px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .item-pagination.item-pagination--prev-next .pagination-title-wrapper,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .item-pagination.item-pagination--prev-next .item-pagination-link .pagination-title-wrapper,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .item-pagination.item-pagination--prev-next .pagination-title-wrapper,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .item-pagination.item-pagination--prev-next .item-pagination-link .pagination-title-wrapper {
+  display: block !important;
+  visibility: visible !important;
+  position: static !important;
+  width: auto !important;
+  overflow: visible !important;
+  clip: auto !important;
+  clip-path: none !important;
+  text-indent: 0 !important;
+}
+
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .item-pagination.item-pagination--prev-next .item-pagination-prev-next,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .item-pagination.item-pagination--prev-next .item-pagination-prev-next {
+  display: block !important;
+  visibility: visible !important;
+  position: static !important;
+  width: auto !important;
+  overflow: visible !important;
+  clip: auto !important;
+  clip-path: none !important;
+  text-indent: 0 !important;
+  font-family: "Presicav", serif;
+  font-size: 17px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .item-pagination.item-pagination--prev-next .item-pagination-title,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .item-pagination.item-pagination--prev-next .item-pagination-title {
+  display: none;
+}
+
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .item-pagination-link:has(.item-pagination-label-custom) .pagination-title-wrapper,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .item-pagination-link:has(.item-pagination-label-custom) .pagination-title-wrapper {
+  display: none !important;
+}
+
+.item-pagination-icon {
+  display: none;
+}
+
+.item-pagination-link>span {
+  font-size: 8px !important;
+}
+
+.item-pagination {
+  gap: 15px;
+}
+
+/* ==========================================================================
+   Pages Galerie Oasis & Événements : thème lune/soleil (couleurs site)
+   ========================================================================== */
+body.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content,
+body.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content .sqs-block-html .sqs-html-content,
+body.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content .sqs-block-html .sqs-block-content,
+body.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content .sqs-block-code .italic.text-cream,
+body.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content .sqs-block-code .italic.text-md,
+body.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content .image-slide-title,
+body.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content .image-slide-title__row,
+body.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content .image-slide-title__text,
+body.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content .sqs-layout .row .col.sqs-col-12 > *:nth-child(3) .image-slide-title,
+body.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content .sqs-layout .row .col.sqs-col-12 > *:nth-child(3) .image-slide-title__row,
+body.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content .sqs-layout .row .col.sqs-col-12 > *:nth-child(3) .image-slide-title__text,
+body.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content .sqs-layout .row .col.sqs-col-12 > *:nth-child(4),
+body.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content .sqs-layout .row .col.sqs-col-12 > *:nth-child(4) .sqs-block-content,
+body.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content .sqs-layout .row .col.sqs-col-12 > *:nth-child(4) .sqs-code-container,
+body.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content .sqs-layout .row .col.sqs-col-12 > *:nth-child(4) .sqs-html-content,
+body.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content .sqs-layout .row .col.sqs-col-12 > *:nth-child(5),
+body.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content .sqs-layout .row .col.sqs-col-12 > *:nth-child(5) .image-slide-title,
+body.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content .sqs-layout .row .col.sqs-col-12 > *:nth-child(5) .image-slide-title__row,
+body.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content .sqs-layout .row .col.sqs-col-12 > *:nth-child(5) .image-slide-title__text {
+  color: var(--text-color) !important;
+}
+
+body.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content .gallery-all-slide__link.content-fill {
+  background-color: var(--oasis-bordeaux, #5c3d2e) !important;
+  color: var(--oasis-cream, #f5f0e8) !important;
+  text-decoration-color: var(--oasis-cream, #f5f0e8) !important;
+}
+
+body.dark-mode.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content .gallery-all-slide__link.content-fill {
+  background-color: var(--oasis-bordeaux-dark, #4b0706) !important;
+  color: var(--oasis-cream, #f5f0e8) !important;
+  text-decoration-color: var(--oasis-cream, #f5f0e8) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Suppression des marges Squarespace
+   -------------------------------------------------------------------------- */
+.collection-type-blog-basic-grid .sqs-layout > .sqs-row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.collection-type-blog-basic-grid .sqs-block.image-block.sqs-block-image {
+  padding: 0 !important;
+}
+
+.collection-type-blog-basic-grid .sqs-block.html-block.sqs-block-html {
+  padding: 0 !important;
+}
