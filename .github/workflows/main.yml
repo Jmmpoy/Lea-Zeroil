@@ -16,10 +16,19 @@ jobs:
 
       - name: Update cache-busting querystring
         run: |
-          sed -i.bak -E \
-            's|(cdn.jsdelivr.net/gh/[^"]+\.(css|js))(\\?v=[^"]*)?|\1?v=${{ github.sha }}|g' \
-            footer.js
-          rm -f footer.js.bak
+          python - <<'PY'
+          import re
+          from pathlib import Path
+
+          p = Path("footer.js")
+          s = p.read_text()
+          s = re.sub(
+              r'(https://cdn\.jsdelivr\.net/gh/[^"]+\.(?:css|js))(?:\?v=[^"]*)?',
+              r'\1?v=${{ github.sha }}',
+              s
+          )
+          p.write_text(s)
+          PY
 
       - name: Commit changes
         run: |
