@@ -131,6 +131,7 @@ footer .newsline {
 footer .sqs-block-newsletter {
   opacity: 0;
   position: absolute;
+  top: 0;;
   width: 1px;
   height: 1px;
   margin: -1px;
@@ -605,6 +606,9 @@ body.dark-mode .oasis-footer-frame {
 
 
 @media (max-width: 1170px) {
+  .footer__block-title{
+    margin-bottom: 0px !important;
+  }
   .grid-footer .dateWrap, 
   .grid-footer .footer-lo {
     grid-column: span 2 !important
@@ -628,11 +632,23 @@ body.dark-mode .oasis-footer-frame {
     padding-bottom: 20px;
   }
 
+  
+
   .grid-footer{
     min-width: 0;
     grid-template-columns: 1fr 1fr !important;
     gap: 12px;
   }
+
+  @media (max-width: 600px) {
+  .grid-footer {
+    gap: 64px !important;
+  }
+
+  .footer__block-title{
+    margin-bottom: 24px !important;
+  }
+}
 
   .oasis-footer-frame .footer__inner {
     padding-top: 24px !important;
@@ -709,3 +725,81 @@ body.dark-mode .oasis-footer-frame {
     max-width: 100%;
   }
 }
+
+
+/**FIX ESPACE FOOTER**/ 
+
+body footer#footer-sections
+    section[data-section-id="6943f46e084deb646d9f0a51"]
+    .content-wrapper .content > div > .fe-6943f46e084deb646d9f0a50
+     {
+--row-height-scaling-factor: unset;
+grid-template-rows: repeat(7, minmax(24px, auto));
+  }
+
+
+
+body footer#footer-sections
+    section[data-section-id="6943f46e084deb646d9f0a51"]
+    .content-wrapper .content > div > .fe-6943f46e084deb646d9f0a50 .fe-block-yui_3_17_2_1_1769794676008_202096 .newsletter-block
+     {
+       height:unset !important;
+  }
+
+
+
+
+body footer#footer-sections
+    section[data-section-id="6943f46e084deb646d9f0a51"]
+    .content-wrapper .content > div > .fe-6943f46e084deb646d9f0a50 .fe-block-yui_3_17_2_1_1769794676008_202096 
+     {
+       top:O !important;
+  }
+
+
+@media (min-width: 768px) {
+  body footer#footer-sections
+  section[data-section-id="6943f46e084deb646d9f0a51"]
+  .content-wrapper .content > div > .fe-6943f46e084deb646d9f0a50
+  .fe-block-yui_3_17_2_1_1770425770951_7007 {
+    /* Option simple : toutes les colonnes de la grille, gutters compris */
+    grid-column: span 12;
+  }
+}
+
+body footer#footer-sections
+    section[data-section-id="6943f46e084deb646d9f0a51"]
+    .content-wrapper .content > div > .fe-6943f46e084deb646d9f0a50 .fe-block-yui_3_17_2_1_1770425770951_7007
+     {
+       grid-column: span 26;
+  }
+
+
+@media (min-width: 768px) {
+  footer .oasis-footer-frame .footer__inner .footer__grid .footer__block--galerie  {
+	margin-top:0;
+  }
+}
+
+@media (max-width: 768px) {
+  footer .oasis-footer-frame .footer__inner .footer__grid .footer__block--galerie .footer__block-title  {
+	margin-bottom:24px;
+  }
+}
+
+
+
+@media (max-width: 600px) {
+  .grid-footer{
+    gap: 60px !important;
+  }
+}
+
+.footer__block--newsletter form {
+  width:205px;
+}
+
+.footer__block-title{
+  margin-bottom:10px;
+}
+
