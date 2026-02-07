@@ -16,6 +16,8 @@
 
 <script src="https://cdn.commoninja.com/sdk/latest/commonninja.js" defer></script>
 <div class="commonninja_component pid-0c54ac61-e503-4390-9055-f39e23383385"></div>
+<link rel="stylesheet" href="https://cdn.squarify.xyz/cart-slideout/styles.css">
+<script defer src="https://cdn.squarify.xyz/cart-slideout/index.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/Jmmpoy/Lea-Zeroil@main/Common/common.js"></script>
