@@ -1,3 +1,19 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Jmmpoy/Lea-Zeroil@main/variables.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Jmmpoy/Lea-Zeroil@main/base.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Jmmpoy/Lea-Zeroil@main/components.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Jmmpoy/Lea-Zeroil@main/header.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Jmmpoy/Lea-Zeroil@main/footer.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Jmmpoy/Lea-Zeroil@main/Collection/collection.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Jmmpoy/Lea-Zeroil@main/Product/product.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Jmmpoy/Lea-Zeroil@main/Homepage/homepage.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Jmmpoy/Lea-Zeroil@main/Contact/contact.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Jmmpoy/Lea-Zeroil@main/About/about.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Jmmpoy/Lea-Zeroil@main/Collaboration/collaboration.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Jmmpoy/Lea-Zeroil@main/Galerie-Oasis/galerie-oasis.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Jmmpoy/Lea-Zeroil@main/BlogPage/blogGlobal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Jmmpoy/Lea-Zeroil@main/BlogPage/blogItem.css">
+
 <script src="https://cdn.commoninja.com/sdk/latest/commonninja.js" defer></script>
 <div class="commonninja_component pid-0c54ac61-e503-4390-9055-f39e23383385"></div>
 
@@ -38,14 +54,3 @@
 <script src="https://cdn.jsdelivr.net/gh/Jmmpoy/Lea-Zeroil@main/Product/product-variant-defaults.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/Jmmpoy/Lea-Zeroil@main/Product/product-variant-icon.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/Jmmpoy/Lea-Zeroil@main/Product/product-variant-dropdown.js"></script>
-
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Jmmpoy/Lea-Zeroil@main/Homepage/homepage.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Jmmpoy/Lea-Zeroil@main/Contact/contact.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Jmmpoy/Lea-Zeroil@main/About/about.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Jmmpoy/Lea-Zeroil@main/Collaboration/collaboration.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Jmmpoy/Lea-Zeroil@main/Collection/collection.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Jmmpoy/Lea-Zeroil@main/Galerie-Oasis/galerie-oasis.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Jmmpoy/Lea-Zeroil@main/BlogPage/blogGlobal.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Jmmpoy/Lea-Zeroil@main/BlogPage/blogItem.css">

@@ -1,0 +1,98 @@
+/* ======================================================================================================================================================
+   DESIGN TOKENS
+   ====================================================================================================================================================== */
+
+:root {
+  --oasis-bordeaux: #461010;
+  --oasis-bordeaux-rgb: 70, 16, 16;
+  --oasis-bordeaux-dark: #4b0706;
+  --oasis-sombre-2: #460F10;
+  --oasis-brown: #5c2703;
+  --oasis-brown-rgb: 92, 39, 3;
+  --oasis-beige: #F0EDE6;
+  --oasis-beige-rgb: 240, 237, 230;
+  --oasis-cream: #FFFAED;
+  --oasis-cream-rgb: 255, 250, 237;
+  --oasis-beige-55: rgba(240, 237, 230, 0.55);
+  --oasis-bordeaux-25: rgba(70, 16, 16, 0.25);
+  --oasis-bordeaux-40: rgba(70, 16, 16, 0.4);
+  --oasis-bordeaux-55: rgba(70, 16, 16, 0.55);
+  --oasis-bordeaux-60: rgba(70, 16, 16, 0.6);
+  --oasis-brown-35: rgba(92, 39, 3, 0.35);
+  --oasis-brown-45: rgba(92, 39, 3, 0.45);
+  --oasis-brown-55: rgba(92, 39, 3, 0.55);
+  --oasis-brown-70: rgba(92, 39, 3, 0.7);
+  --oasis-brown-75: rgba(92, 39, 3, 0.75);
+  --oasis-brown-85: rgba(92, 39, 3, 0.85);
+  --oasis-cream-35: rgba(255, 250, 237, 0.35);
+  --oasis-cream-80: rgba(255, 250, 237, 0.8);
+
+  --bg-color: var(--oasis-beige);
+  --text-color: var(--oasis-bordeaux);
+  --accent-color: var(--oasis-brown);
+  --border-color: var(--oasis-brown-55);
+
+  --cream: var(--oasis-cream);
+  --brown: var(--oasis-brown);
+  --border: var(--border-color);
+
+  /* ===== Nuancier produit (diamond-color) – centralisé, toutes pages ===== */
+  --diamond-color-vert: #008000;
+  --diamond-color-vert-fonce: #006400;
+  --diamond-color-vert-clair: #7cfc00;
+  --diamond-color-vert-prairie: #9acd32;
+  --diamond-color-sauge: var(--diamond-color-vert-prairie);
+  --diamond-color-vert-gazon: #3cb371;
+  --diamond-color-vert-kaki: #556b2f;
+
+  --diamond-color-jaune: #ffd966;
+  --diamond-color-jaune-clair: #ffd966;
+  --diamond-color-jaune-paille: #f1c232;
+  --diamond-color-tournesol: #f4c430;
+  --diamond-color-miel: var(--diamond-color-jaune);
+
+  --diamond-color-rose: #e06666;
+  --diamond-color-rose-pale: #f4cccc;
+  --diamond-color-rose-fonce: #cc0000;
+  --diamond-color-rose-etrusque: #e6b8af;
+  --diamond-color-vieux-rose: #c27ba0;
+  --diamond-color-rose-pale-brun-terre: #e6b8af;
+  --diamond-color-rose-terre: #d5a6bd;
+  --diamond-color-rose-brun-terre: #c27ba0;
+
+  --diamond-color-rouge: #cc0000;
+  --diamond-color-bordeaux: #800020;
+  --diamond-color-bordeaux-fonce: #5a0f2e;
+  --diamond-color-vigne: #722f37;
+
+  --diamond-color-brun: #8b4513;
+  --diamond-color-brun-terre: #a0522d;
+  --diamond-color-brun-bois-brule: #5a2d0c;
+  --diamond-color-chocolat: #654321;
+  --diamond-color-tabac: #8b5a2b;
+  --diamond-color-cognac: #c68642;
+
+  --diamond-color-sable: #d2b48c;
+  --diamond-color-lin: #faf0e6;
+  --diamond-color-beige: #f5f5dc;
+  --diamond-color-grege: #d9d2c3;
+
+  --diamond-color-blanc: #ffffff;
+  --diamond-color-noir: #000000;
+  --diamond-color-transparent: #ffffff;
+
+  --diamond-color-or: #ffd700;
+  --diamond-color-argent: #c0c0c0;
+
+  --diamond-color-bleu: #0000ff;
+  --diamond-color-ciel: #87ceeb;
+  --diamond-color-ble: #a4c2f4;
+
+  --diamond-color-olive: #808000;
+  --diamond-color-sapin: #556b2f;
+  --diamond-color-avocat: #568203;
+
+  --diamond-color-violet: #ee82ee;
+
+  --header-height: 55px;
+}

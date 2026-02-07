@@ -1,0 +1,711 @@
+/* Footer grid :
+   la 3e colonne (logo) est volontairement plus large */
+.grid-footer {
+  grid-template-columns: 1fr 1fr 2fr 1fr 1fr !important;
+  min-width: 0;
+}
+
+.grid-footer > * {
+  min-width: 0;
+}
+
+.footer-logo--dark {
+  display: none;
+}
+
+body.dark-mode .footer-logo--light {
+  display: none;
+}
+
+body.dark-mode .footer-logo--dark {
+  display: block;
+}
+
+/* Taches visibles dans le logo sur fond sombre */
+body.dark-mode .footer-logo--dark path:nth-child(n+2) {
+  fill: var(--oasis-cream) !important;
+}
+
+/* Taches visibles dans le logo sur fond clair (thème light) */
+.footer-logo--light path:nth-child(n+2) {
+  fill: var(--oasis-bordeaux) !important;
+}
+
+body.dark-mode footer .text-brown,
+body.dark-mode footer .link,
+body.dark-mode footer .book {
+  color: var(--oasis-cream) !important;
+}
+
+/* Formulaire footer en mode sombre : crème */
+body.dark-mode footer .newsline {
+  border-bottom-color: var(--oasis-cream-55);
+}
+
+body.dark-mode footer .news-input {
+  color: var(--oasis-cream) !important;
+}
+
+body.dark-mode footer .news-input::placeholder {
+  color: var(--oasis-cream-80) !important;
+}
+
+body.dark-mode footer .news-btn {
+  color: var(--oasis-cream) !important;
+}
+
+body.dark-mode footer .news-success {
+  color: var(--oasis-cream) !important;
+}
+
+
+.oasis-footer {
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+/* Transition fluide du texte/liens du footer au changement de thème */
+footer a,
+footer .text-brown,
+footer .link,
+footer .book,
+footer .news-input,
+footer .news-btn,
+footer .oasis-ft-title,
+footer .oasis-ft-text,
+footer .oasis-footer__bottom {
+  transition: color 0.35s ease;
+}
+
+footer .newsline {
+  transition: border-bottom-color 0.35s ease;
+}
+
+
+/* =========================
+   NEWSLETTER (LINE INPUT)
+   ========================= */
+
+.newsline {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 6px;
+  max-width: 320px;
+  min-width: 0;
+  width: 100%;
+}
+
+.news-input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: none;
+  background: transparent;
+  font-family: "Henry", serif !important;
+  font-size: 15px;
+  font-style: italic;
+  color: var(--brown);
+  padding: 0;
+}
+
+.news-input::placeholder {
+  color: var(--oasis-brown-70);
+}
+
+.news-btn {
+  border: 0;
+  background: transparent;
+  font-family: "Presicav", serif !important;
+  font-size: 10px;
+  color: var(--brown);
+  cursor: pointer;
+  padding: 0;
+}
+
+
+
+/* Formulaire natif masqué (sync avec l’input custom .newsline) */
+footer .sqs-block-newsletter {
+  opacity: 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+footer .sqs-block-newsletter .newsletter-form-body {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 6px;
+  max-width: 320px;
+  margin-left: 15px;
+}
+
+footer .sqs-block-newsletter .newsletter-form-fields-wrapper {
+  flex: 1;
+  margin: 0;
+  margin-left: 4px;
+  min-width: 0;
+  max-width: 222px;
+  width: 100%;
+}
+
+footer .sqs-block-newsletter .newsletter-form-field-wrapper.form-item.field.email.required {
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+  flex: 1 1 0;
+  width: 100%;
+  max-width: 222px;
+  box-sizing: border-box;
+}
+
+footer .sqs-block-newsletter .newsletter-form-field-wrapper {
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+  flex: 1;
+  width: 100%;
+}
+
+footer .sqs-block-newsletter .newsletter-form-field-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+footer .sqs-block-newsletter .newsletter-form-field-element.field-element,
+footer .sqs-block-newsletter .newsletter-form-field-element {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  border: 0;
+  outline: none;
+  background: transparent;
+  font-family: "Henry", serif !important;
+  font-size: 15px !important;
+  font-style: italic;
+  color: var(--brown);
+  padding: 0 !important;
+}
+
+footer .sqs-block-newsletter .newsletter-form-field-element::placeholder {
+  color: var(--oasis-brown-70);
+}
+
+footer .sqs-block-newsletter .newsletter-form-button-wrapper {
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0;
+  width: auto !important;
+}
+
+/* Bouton identique au custom : style « OK → », pas de fond ni bordure */
+footer .sqs-block-newsletter .newsletter-form-button {
+  border: 0 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  font-family: "Presicav", serif !important;
+  font-size: 10px !important;
+  color: var(--brown) !important;
+  cursor: pointer;
+  padding: 0 !important;
+  min-height: 0 !important;
+  height: auto !important;
+  line-height: 1.2 !important;
+}
+
+footer .sqs-block-newsletter .newsletter-form-button .newsletter-form-button-label,
+footer .sqs-block-newsletter .newsletter-form-button .newsletter-form-spinner,
+footer .sqs-block-newsletter .newsletter-form-button .newsletter-form-button-icon {
+  display: none !important;
+}
+
+footer .sqs-block-newsletter .newsletter-form-button::after {
+  content: "OK →";
+}
+
+footer .sqs-block-newsletter .newsletter-form-header,
+footer .sqs-block-newsletter .newsletter-form-footnote,
+footer .sqs-block-newsletter .captcha-container {
+  display: none !important;
+}
+
+/* Dark mode — formulaire newsletter footer */
+body.dark-mode footer .sqs-block-newsletter .newsletter-form-body,
+body.dark-mode footer .sqs-block-newsletter .newsletter-form-fields-wrapper {
+  border-bottom-color: var(--oasis-cream-55);
+}
+
+body.dark-mode footer .sqs-block-newsletter .newsletter-form-field-element {
+  color: var(--oasis-cream) !important;
+}
+
+body.dark-mode footer .sqs-block-newsletter .newsletter-form-field-element::placeholder {
+  color: var(--oasis-cream-80) !important;
+}
+
+body.dark-mode footer .sqs-block-newsletter .newsletter-form-button {
+  color: var(--oasis-cream) !important;
+}
+
+
+.dateWrap {
+  grid-column-start: 3;
+}
+
+.contactWrap,
+.infosWrap {
+  display: flex;
+}
+
+.spacer {
+  flex: 1;
+}
+
+/* prend l’espace dispo */
+.contactInner,
+.infosInner {
+  width: max-content;
+  max-width: 100%;
+}
+
+
+/*******************************************/
+/*                FOOTER                  */
+/*******************************************/
+
+footer a {
+  color: var(--oasis-brown) !important;
+}
+
+section[data-section-id="6943f46e084deb646d9f0a51"] {
+  background-color: transparent !important;
+}
+
+section[data-section-id="6943f46e084deb646d9f0a51"] .book {
+  border-bottom: none;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+section[data-section-id="6943f46e084deb646d9f0a51"] .book::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--oasis-brown);
+}
+
+section[data-section-id="6943f46e084deb646d9f0a51"] .book:hover::after {
+  width: 100%;
+}
+
+
+/*******************************************/
+/*           FOOTER BACKGROUND FIX         */
+/*******************************************/
+
+section[data-section-id="6943f46e084deb646d9f0a51"] {
+  position: relative;
+}
+
+section[data-section-id="6943f46e084deb646d9f0a51"] .section-background,
+section[data-section-id="6943f46e084deb646d9f0a51"] .section-background img {
+  height: 100% !important;
+  min-height: 100% !important;
+}
+
+section[data-section-id="6943f46e084deb646d9f0a51"] .section-background img {
+  width: 100% !important;
+  object-fit: contain !important;
+}
+
+/* Masquer le form-wrapper dans le footer */
+section[data-section-id="6943f46e084deb646d9f0a51"] .form-wrapper {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  height: 0;
+  overflow: hidden;
+}
+
+/* Message « Merci » à la place de l’input après envoi newsletter */
+.newsline .news-success {
+  margin: 0;
+  padding: 0;
+  font-family: "Henry", serif !important;
+  font-size: 15px;
+  font-style: italic;
+  color: var(--brown);
+  line-height: 1.2;
+}
+
+.newsline:has(.news-success) {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+
+
+
+
+/* Importé depuis style.css — Footer structure + frame */
+/*******************************************/
+/*   FOOTER – STRUCTURE (SANS BORDURE)     */
+/*******************************************/
+
+.oasis-footer-frame .font-title {
+  letter-spacing: calc(var(--current-letter-spacing, 0.1em) * 1.15) !important;
+}
+
+/* Footer base */
+.oasis-footer {
+  background: var(--bg-color);
+  color: var(--text-color);
+  padding: 48px 48px 24px;
+}
+
+/* Grille desktop : 5 zones (galerie / newsletter / logo / contact / infos) */
+.oasis-footer__wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr 1fr 1fr;  /* 5 colonnes fixes */
+  gap: 32px;
+  align-items: start;
+}
+
+/* Titres */
+.oasis-ft-title {
+  font-family: "Presicav", serif !important;
+  font-size: 20px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  margin: 0 0 14px;
+  color: var(--text-color);
+}
+
+/* Textes */
+.oasis-ft-text,
+.oasis-ft-text p {
+  font-family: "Henry", serif !important;
+  font-size: 15px;
+  line-height: 1.45;
+  margin: 0;
+  color: var(--text-color);
+}
+
+.oasis-footer__block--galerie .oasis-ft-text p+p {
+  margin-top: 10px;
+}
+
+/* Liens */
+.oasis-link {
+  color: var(--text-color) !important;
+  text-decoration: none !important;
+}
+
+.oasis-link:hover {
+  text-decoration: underline !important;
+  text-underline-offset: 4px;
+}
+
+.oasis-link--italic {
+  font-style: italic;
+}
+
+/* Bouton réserver */
+.oasis-btn {
+  display: inline-block;
+  margin-top: 14px;
+  padding-bottom: 2px;
+  border-bottom: 1px solid var(--border-color);
+  font-family: "Henry", serif !important;
+  font-size: 15px;
+  font-style: italic;
+  color: var(--text-color) !important;
+}
+
+/* Newsletter input */
+.oasis-news {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 6px;
+  max-width: 320px;
+}
+
+.oasis-news__input {
+  flex: 1;
+  border: 0;
+  outline: none;
+  background: transparent;
+  font-family: "Henry", serif !important;
+  font-size: 15px;
+  font-style: italic;
+  color: var(--text-color);
+  padding: 0;
+}
+
+.oasis-news__input::placeholder {
+  color: var(--oasis-brown-70);
+}
+
+.oasis-news__btn {
+  border: 0;
+  background: transparent;
+  font-family: "Henry", serif !important;
+  font-size: 15px;
+  color: var(--text-color);
+  padding: 0;
+  cursor: pointer;
+}
+
+/* Logo */
+.oasis-footer__block--logo {
+  display: flex;
+  justify-content: center;
+  padding-top: 6px;
+}
+
+.oasis-footer__logo {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+}
+
+/* Bas */
+.oasis-footer__bottom {
+  margin: 34px 0 0;
+  text-align: center;
+  font-family: "Presicav", serif !important;
+  font-size: 12px;
+  letter-spacing: .1em;
+  color: var(--text-color);
+  opacity: 0.75;
+}
+
+/* Accessibilité */
+.oasis-sr-only {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .oasis-footer {
+    padding: 34px 20px 20px;
+  }
+
+  .oasis-footer__wrap {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .oasis-footer__block--logo {
+    justify-content: flex-start;
+    order: 3;
+  }
+}
+
+/* =========================
+   FOOTER FRAME (BORDURE BASIQUE)
+   ========================= */
+
+/* Bordure : bordeaux en thème clair, crème en thème sombre */
+.oasis-footer-frame {
+  position: relative;
+  background: var(--bg-color);
+  border: 1px solid var(--oasis-bordeaux);
+  padding: 28px;
+  transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease;
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+body.dark-mode .oasis-footer-frame {
+  border-color: var(--oasis-cream);
+}
+
+.oasis-footer-frame .container-footer {
+  position: relative;
+  background: transparent;
+  padding-left: 0;
+  padding-right: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* Mobile : padding réduit */
+@media (max-width: 900px) {
+  .oasis-footer-frame {
+    padding: 16px;
+  }
+
+  .oasis-footer-frame .container-footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Fix : Forcer l'affichage du bloc Fluid Engine contenant le footer custom
+     Squarespace cache automatiquement ce bloc sur mobile via display:none */
+  section[data-section-id="6943f46e084deb646d9f0a51"] .fe-block,
+  section[data-section-id="6943f46e084deb646d9f0a51"] .sqs-block-code {
+    display: block !important;
+    visibility: visible !important;
+  }
+  
+  /* Force aussi la visibilité du footer et de la section */
+  footer,
+  .oasis-footer-frame,
+  section[data-section-id="6943f46e084deb646d9f0a51"] {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    min-height: 1px;
+  }
+}
+
+/* Barre du bas (pleine largeur) — pointer-events: none pour garder le contenu cliquable */
+.oasis-footer-frame .footer-bottom-bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 5px;
+  background: var(--oasis-bordeaux);
+  z-index: 2;
+  pointer-events: none !important;
+}
+
+
+@media (max-width: 1170px) {
+  .grid-footer .dateWrap, 
+  .grid-footer .footer-lo {
+    grid-column: span 2 !important
+  }
+
+  .grid-footer .contactWrap{
+    flex-direction: row-reverse;
+  }
+
+  .grid-footer{
+    gap:10px;
+  }
+
+  /* Titres de section (GALERIE OASIS, NEWSLETTER, etc.) */
+  .grid-footer .font-title {
+    font-size: 10px;
+  }
+
+  .grid-footer .footer-lo{
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .grid-footer{
+    min-width: 0;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px;
+  }
+
+  .oasis-footer-frame .footer__inner {
+    padding-top: 24px !important;
+    padding-bottom: 20px !important;
+  }
+
+  .grid-footer > * {
+    overflow-wrap: break-word;
+  }
+
+  /* Réduire les marges verticales des blocs footer sur mobile */
+  .footer__block > * {
+    margin-top: 6px;
+    margin-bottom: 6px;
+  }
+
+  .footer__block > *:first-child {
+    margin-top: 0;
+  }
+
+  .footer__block > *:last-child {
+    margin-bottom: 0;
+  }
+
+  .footer__block .mt-10 {
+    margin-top: 6px !important;
+  }
+
+  .footer__block .mt-14 {
+    margin-top: 8px !important;
+  }
+
+  .brand{
+    margin-top: 40px !important;
+    margin-bottom: 40px !important;
+  }
+
+  .galerie,.contact{
+    text-align: center;
+  }
+
+  .footer__links {
+    text-align: center;
+  }
+
+  .newletter, .infos{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Mobile très étroit : 1 colonne pour éviter tout débordement horizontal */
+@media (max-width: 600px) {
+  .grid-footer {
+    grid-template-columns: 1fr !important;
+  }
+
+  .grid-footer .footer-lo {
+    grid-column: auto !important;
+  }
+
+  .oasis-footer-frame {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .oasis-footer-frame .container-footer {
+    padding-inline: 0;
+  }
+
+  .newsline {
+    max-width: 100%;
+  }
+}

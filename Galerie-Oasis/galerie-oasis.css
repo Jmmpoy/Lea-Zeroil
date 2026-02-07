@@ -15,7 +15,6 @@ section[data-section-id="695501167c658f284aecb9b9"] .content-fill {
   overflow: hidden;
 }
 
-
 /* lignes + séparateurs comme sur ta capture */
 .expo-row {
   border-top: 1px solid var(--oasis-cream-35);
@@ -231,3 +230,13 @@ section[data-section-id="695501167c658f284aecb9b9"] .content-fill {
     min-height: 100svh;
   }
 }
+
+
+
+/* Importé depuis style.css — Gallery caption */
+.gallery-caption-content {
+  font-style: italic !important;
+  text-align: center;
+  font-size: 17px !important;
+}
+

@@ -1,0 +1,618 @@
+/*******************************************************************************************************************************************************
+/*          MINI TAILWIND – OASIS           */
+/*   Utilitaires layout / typo / spacing   */
+/******************************************************************************************************************************************************* */
+
+/* ======================================================================================================================================================
+  DISPLAY & POSITION
+  ====================================================================================================================================================== */
+
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.inset-0 {
+  inset: 0;
+}
+
+/* ======================================================================================================================================================
+   FLEX / ALIGN
+   ====================================================================================================================================================== */
+
+.items-start {
+  align-items: flex-start;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* ======================================================================================================================================================
+  GRID TEMPLATES
+  ====================================================================================================================================================== */
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* ======================================================================================================================================================
+   SIZING
+   ====================================================================================================================================================== */
+
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.h-310 {
+  height: 310px;
+}
+
+/* ======================================================================================================================================================
+   CONTAINERS
+   ====================================================================================================================================================== */
+
+.container-footer {
+  background: transparent;
+  padding-top: 48px;
+  padding-bottom: 32px;
+  height: 100%;
+}
+
+/* ======================================================================================================================================================
+   GAPS
+   ====================================================================================================================================================== */
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.gap-6 {
+  gap: 1.5rem;
+}
+
+.gap-10 {
+  gap: 2.5rem;
+}
+
+.gap-20 {
+  gap: 20px;
+}
+
+.gap-24 {
+  gap: 24px;
+}
+
+.gap-32 {
+  gap: 32px;
+}
+
+.gap-48 {
+  gap: 48px;
+}
+
+.gap-64 {
+  gap: 64px;
+}
+
+.gap-92 {
+  gap: 92px;
+}
+
+/* =========================
+   SPACING – PADDING
+   ========================= */
+
+.p-0 {
+  padding: 0;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
+}
+
+.px-20 {
+  padding-inline: 20px;
+}
+
+.px-40 {
+  padding-inline: 40px;
+}
+
+.px-64 {
+  padding-inline: 64px;
+}
+
+.pt-24 {
+  padding-top: 24px;
+}
+
+.pt-32 {
+  padding-top: 32px;
+}
+
+.pt-40 {
+  padding-top: 40px;
+}
+
+.pb-24 {
+  padding-bottom: 24px;
+}
+
+.pb-28 {
+  padding-bottom: 28px;
+}
+
+.pb-40 {
+  padding-bottom: 40px;
+}
+
+.py-10 {
+  padding-block: 2.5rem;
+}
+
+.py-20 {
+  padding-block: 5rem;
+}
+
+/* ======================================================================================================================================================
+   SPACING – MARGIN
+   ====================================================================================================================================================== */
+
+.mt-0 {
+  margin-top: 0;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
+.mt-14 {
+  margin-top: 14px;
+}
+
+.mt-18 {
+  margin-top: 18px;
+}
+
+.mt-24 {
+  margin-top: 24px;
+}
+
+.mt-32 {
+  margin-top: 32px;
+}
+
+.mx-auto {
+  margin: auto;
+}
+
+
+/* =========================
+   TYPOGRAPHY – FONTS
+   ========================= */
+
+.font-title {
+  font-family: "Presicav", serif !important;
+}
+
+.font-body {
+  font-family: "Henry", serif !important;
+}
+
+/* =========================
+   TYPOGRAPHY – SIZES
+   ========================= */
+.text-xxs {
+  font-size: 10px;
+}
+
+.text-xs {
+  font-size: 12px;
+}
+
+.text-sm {
+  font-size: 0.9rem;
+}
+
+.text-md {
+  font-size: 1.1rem;
+}
+
+.text-lg {
+  font-size: 2rem;
+}
+
+.text-xl {
+  font-size: 3rem;
+}
+
+.text-2xl {
+  font-size: 24px;
+}
+
+/* =========================
+   TYPOGRAPHY – STYLE
+   ========================= */
+
+.italic {
+  font-style: italic;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.tracking-wide {
+  letter-spacing: .06em;
+}
+
+.tracking-wider {
+  letter-spacing: .1em;
+}
+
+.leading-tight {
+  line-height: 1.2;
+}
+
+.leading-normal {
+  line-height: 1.45;
+}
+
+.leading-relaxed {
+  line-height: 1.6;
+}
+
+/* =========================
+   COLORS
+   ========================= */
+
+.text-cream {
+  color: var(--oasis-cream);
+}
+
+.text-brown {
+  color: var(--brown);
+}
+
+.text-dark {
+  color: var(--oasis-brown);
+}
+
+.bg-cream {
+  background: var(--oasis-cream);
+}
+
+.bg-brown {
+  background: var(--brown);
+}
+
+.bg-bordeaux {
+  background: var(--oasis-bordeaux-dark);
+}
+
+/*******************************************/
+/*                 FONTS                   */
+/*******************************************/
+
+/* HENRY – REGULAR */
+@font-face {
+  font-family: "Henry";
+  src: url("https://static1.squarespace.com/static/6939b3b7d90b6131b1aeebba/t/69482e6f869a8712ac50342f/1766338160029/205TF-Henry-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* HENRY – ITALIC */
+@font-face {
+  font-family: "Henry";
+  src: url("https://static1.squarespace.com/static/6939b3b7d90b6131b1aeebba/t/69482e804dbaa41391780125/1766338176879/205TF-Henry-Italic.woff2") format("woff2"),
+    url("https://static1.squarespace.com/static/6939b3b7d90b6131b1aeebba/t/69482e6ffde6806dfc9e06cc/1766338160031/205TF-Henry-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* PRESiCAV – REGULAR */
+@font-face {
+  font-family: "Presicav";
+  src:
+    url("https://static1.squarespace.com/static/6939b3b7d90b6131b1aeebba/t/696540d069037e3a625cd999/1768243408856/PresicavRg-Regular.woff2") format("woff2"),
+    url("https://static1.squarespace.com/static/6939b3b7d90b6131b1aeebba/t/696540d0f2d4c763ec5b77f6/1768243408854/PresicavRg-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Importé depuis style.css — Thème (toggle + dark mode) */
+/* ======================================================================================================================================================
+   THEME TOGGLE
+   ====================================================================================================================================================== */
+
+#theme-toggle {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+
+#theme-toggle svg {
+  width: 12px;
+  height: 12px;
+}
+
+/* Boutons sans fond */
+#theme-toggle button {
+  background: transparent !important;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* Icônes toggle */
+#theme-toggle .theme-icon path {
+  stroke: var(--oasis-bordeaux) !important;
+  fill: transparent !important;
+  transition: fill 0.35s ease, stroke 0.35s ease;
+}
+
+/* Hover : léger remplissage */
+#theme-toggle button:hover .theme-icon path {
+  fill: rgba(70, 16, 16, 0.2) !important;
+}
+
+/* Actif = rempli */
+#theme-toggle button.is-active .theme-icon path {
+  fill: var(--oasis-bordeaux) !important;
+}
+
+/* Dark mode */
+body.dark-mode #theme-toggle .theme-icon path {
+  stroke: var(--oasis-beige) !important;
+}
+
+body.dark-mode #theme-toggle button:hover .theme-icon path {
+  fill: rgba(240, 237, 230, 0.2) !important;
+}
+
+body.dark-mode #theme-toggle button.is-active .theme-icon path {
+  fill: var(--oasis-beige) !important;
+}
+
+body.dark-mode {
+  --bg-color: var(--oasis-sombre-2);
+  --text-color: var(--oasis-beige);
+  --accent-color: var(--oasis-cream);
+  --border-color: var(--oasis-beige-55);
+}
+
+/* Transition fluide au changement de thème */
+#sections,
+.page-section,
+section {
+  transition: background-color 0.35s ease;
+}
+
+/* Forcer le fond du contenu principal en mode sombre (Squarespace) */
+body.dark-mode #sections,
+body.dark-mode .page-section,
+body.dark-mode section {
+  background-color: var(--bg-color) !important;
+}
+
+/* Footer en mode sombre : texte et SVG en crème */
+body.dark-mode footer a,
+body.dark-mode .oasis-footer a {
+  color: var(--oasis-cream) !important;
+}
+
+body.dark-mode .oasis-footer,
+body.dark-mode .oasis-ft-title,
+body.dark-mode .oasis-ft-text,
+body.dark-mode .oasis-ft-text p,
+body.dark-mode .oasis-link,
+body.dark-mode .oasis-btn,
+body.dark-mode .oasis-news__input,
+body.dark-mode .oasis-news__btn,
+body.dark-mode .oasis-news__input::placeholder,
+body.dark-mode .oasis-footer__bottom {
+  color: var(--oasis-cream) !important;
+}
+
+
+/* Importé depuis style.css — Base (body, liens, accessibilité) */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+a,
+.link,
+.material-title,
+.oasis-ft-text,
+.oasis-link {
+  color: var(--text-color) !important;
+}
+
+
+
+/* =========================
+   LINKS & UI
+   ========================= */
+
+.link {
+  color: var(--brown) !important;
+  text-decoration: none !important;
+}
+
+.link:hover {
+  text-decoration: underline !important;
+  text-underline-offset: 4px;
+}
+
+.underline-b {
+  border-bottom: 1px solid var(--brown);
+  padding-bottom: 2px;
+}
+
+
+
+
+/* =========================
+   ACCESSIBILITY
+   ========================= */
+
+.sr-only {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+
+/* Importé depuis style.css — Responsive générique (h-310, dateWrap, px-64) */
+/* =========================
+   RESPONSIVE (MOBILE)
+   ========================= */
+
+
+
+@media (max-width: 900px) {
+
+  .h-310 {
+    height: auto;
+  }
+
+
+
+  .dateWrap {
+    grid-column: auto;
+  }
+
+  .px-64 {
+    padding-inline: 20px;
+  }
+}
+
+
+/* Importé depuis style.css — Fonts globales + règles de liens */
+/*******************************************/
+/*         GLOBAL FONT APPLICATIONS        */
+/*******************************************/
+
+body,
+.form-submit-button-label,
+.current-language-name,
+.header-nav-folder-title,
+.header-nav-item a,
+.header-menu-nav-item a {
+  font-family: "Henry", serif !important;
+}
+
+/* Premier item du menu en Henry Italic */
+.header-nav-list>.header-nav-item:first-child button,
+.header-menu-nav-list>.header-menu-nav-item:first-child button {
+  font-style: italic !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+
+/* Importé depuis style.css — Responsive générique (text-xl, grid-cols) */
+/*******************************************/
+/*                 MOBILE                 */
+/*******************************************/
+
+@media (max-width: 767px) {
+  .text-xl {
+    font-size: 2rem;
+  }
+
+  .grid-cols-2,
+  .grid-cols-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Importé depuis style.css — Ajustements globaux */
+.page-section.vertical-alignment--middle:not(.content-collection):not(.gallery-section):not(.user-items-list-section):not(.editmode-changing-rowcount).section-height--small>.content-wrapper {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+#block-6f110f864655c4ee7ba5 {
+  border-bottom: 1px solid white;
+}

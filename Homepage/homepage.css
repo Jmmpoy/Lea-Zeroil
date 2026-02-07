@@ -538,3 +538,93 @@ section[data-section-id="696a54d6ef67ef6cf6befe25"] .summary-title::first-letter
   justify-content: center;
   align-items: center;
 }
+
+
+
+/*******************************************/
+/*           HERO SPLIT                    */
+/*******************************************/
+
+.hero-split {
+  width: 100vw !important;
+  margin-inline: calc(50% - 50vw);
+  display: grid;
+  grid-template-columns: 50vw 50vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-split img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--oasis-cream);
+  pointer-events: none;
+}
+
+/* CTA bar */
+.hero-cta {
+  width: 100vw;
+  margin-inline: calc(50% - 50vw);
+  background: var(--oasis-bordeaux-dark);
+  color: var(--oasis-cream);
+  padding: .9rem 1rem;
+  font-size: .95rem;
+}
+
+
+/* Importé depuis style.css — Hero 100vh */
+/*******************************************/
+/*        SECTION HERO 100vh               */
+/*******************************************/
+
+section[data-section-id="693ad8fc71bac65c231449a1"],
+section[data-section-id="693ad8fc71bac65c231449a1"]>.content-wrapper,
+section[data-section-id="693ad8fc71bac65c231449a1"]>.content-wrapper>.content {
+  height: 100vh !important;
+  min-height: 100vh !important;
+  padding: 0 !important;
+}
+
+/* blocs internes full height */
+section[data-section-id="693ad8fc71bac65c231449a1"] .fe-693ad8fc71bac65c231449a0 .fe-block {
+  height: 100% !important;
+}
+
+/* images */
+section[data-section-id="693ad8fc71bac65c231449a1"] .sqs-block-image img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+/* texte centré vertical */
+section[data-section-id="693ad8fc71bac65c231449a1"] .sqs-block-html .sqs-block-alignment-wrapper {
+  height: 100%;
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* MOBILE */
+@media (max-width: 767px) {
+
+  section[data-section-id="693ad8fc71bac65c231449a1"] .fe-693ad8fc71bac65c231449a0 .fe-block:nth-of-type(1) {
+    display: none !important;
+  }
+
+  section[data-section-id="693ad8fc71bac65c231449a1"] .sqs-block-image img {
+    height: 100vh !important;
+    object-fit: cover !important;
+  }
+
+}

@@ -1,0 +1,34 @@
+
+
+/* Bloc texte hero – style titre */
+.hero-meta {
+  color: var(--oasis-cream);
+  text-align: center;
+}
+
+.hero-meta p {
+  margin: 0;
+  font-family: "Presicav", serif !important;
+  font-size: 14px;
+  /* ajuste si besoin */
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  line-height: 1.4;
+  color: var(--oasis-cream);
+}
+
+/* Espacement entre les lignes */
+.hero-meta p+p {
+  margin-top: 6px;
+}
+
+/* SVG losange aligné et blanc */
+.hero-meta svg {
+  display: inline-block;
+  margin: 0 6px;
+  vertical-align: middle;
+}
+
+.hero-meta svg path {
+  fill: var(--oasis-cream);
+}

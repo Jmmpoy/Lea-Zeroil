@@ -786,3 +786,8 @@ body.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content .
 }
 
 .col.sqs-col-12 .website-component-block { margin-top: 50px; margin-bottom: 15px; }
+
+
+.blog-item-inner-wrapper {
+  width: 100% !important;
+}

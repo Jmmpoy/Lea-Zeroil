@@ -1,0 +1,503 @@
+/*******************************************/
+/*         HEADER / NAVIGATION             */
+/*******************************************/
+
+.burger{
+  display: none !important;
+}
+
+.oasis-burger-btn{
+  position: absolute !important;
+  top: 15px !important;
+  background: transparent !important;
+  border:0 !important;
+}
+
+.header-nav-item a {
+  position: relative;
+  display: inline-block;
+}
+
+.header-nav-item a.is-current-page::after,
+.header-nav-item button.is-current-page::after {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+.header-nav-item a::after,
+.header-nav-item button::after {
+  content: "◆";
+  position: absolute;
+  bottom: -1.2em;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.75em;
+  color: var(--oasis-bordeaux);
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+.header-title-text {
+  font-family: "Henry" !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+
+
+/* Header au-dessus de l’overlay menu (z-index > .oasis-submenu 99999) */
+.header,
+.header.header-improvement,
+.header.theme-col--primary {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  z-index: 100000;
+  height: var(--header-height) !important;
+  min-height: var(--header-height) !important;
+  max-height: var(--header-height) !important;
+  overflow: hidden;
+  padding: 0 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Suppression du fond Squarespace (header-background, border, dropshadow) */
+.header .header-background,
+.header .header-border,
+.header .header-dropshadow {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Override Squarespace site.css : header transparent (data-header-style theme/dynamic) */
+[data-header-style="theme"].header,
+[data-header-style="dynamic"].header {
+  background-color: transparent !important;
+}
+
+/* Réduction des paddings Squarespace sur .header-inner */
+.header .header-inner,
+.header .header-inner.container--fluid {
+  padding: 0 !important;
+  min-height: var(--header-height) !important;
+  height: var(--header-height) !important;
+}
+
+.header .header-announcement-bar-wrapper {
+  padding-top: 0 !important;
+}
+
+.header-announcement-bar-wrapper {
+  position: absolute !important;
+  left: 0 !important;
+  top: 0 !important;
+  width: 100% !important;
+  height: var(--header-height) !important;
+  min-height: var(--header-height) !important;
+  max-height: var(--header-height) !important;
+  overflow: hidden;
+  background: transparent !important;
+  z-index: 100000;
+  padding-inline: 12px !important;
+  box-sizing: border-box;
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* Logo header : taille contrainte (évite header immense si logo injecté en JS / image haute) */
+/* .header-announcement-bar-wrapper .header-title,
+.header-announcement-bar-wrapper .header-title-logo,
+.header-announcement-bar-wrapper .header-branding {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  max-height: 100% !important;
+  height: auto !important;
+}
+
+.header-announcement-bar-wrapper .header-title a,
+.header-announcement-bar-wrapper .header-title-logo a {
+  display: flex !important;
+  align-items: center !important;
+  max-height: calc(var(--header-height) - 10px) !important;
+  height: auto !important;
+}
+
+.header-announcement-bar-wrapper .header-title img,
+.header-announcement-bar-wrapper .header-title svg,
+.header-announcement-bar-wrapper .header-title-logo img,
+.header-announcement-bar-wrapper .header-title-logo svg {
+  max-height: 40px !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain !important;
+  vertical-align: middle !important;
+} */
+
+.header-nav-item a,
+.header-menu-nav-item a {
+  color: white !important;
+  font-style: normal;
+}
+
+/* Premier item en italic */
+.header-nav-list>.header-nav-item:first-child a {
+  font-style: italic !important;
+}
+
+/* Nav inline */
+.header-nav-list {
+  display: flex !important;
+  align-items: center !important;
+  width: 100% !important;
+}
+
+.header-nav-list>.header-nav-item {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px;
+}
+
+/* Header – couleur des textes en mode clair */
+.header-announcement-bar-wrapper .header-nav-item a,
+.header-announcement-bar-wrapper .header-nav-folder-title,
+.header-announcement-bar-wrapper .header-actions a,
+.header-announcement-bar-wrapper .header-actions .cart-text-link,
+.header-announcement-bar-wrapper .header-actions .cart-quantity-container,
+.header-announcement-bar-wrapper .header-title a {
+  color: var(--oasis-bordeaux) !important;
+}
+
+/* Burger lines */
+.header-announcement-bar-wrapper .burger-inner .top-bun,
+.header-announcement-bar-wrapper .burger-inner .patty,
+.header-announcement-bar-wrapper .burger-inner .bottom-bun {
+  background-color: var(--oasis-bordeaux) !important;
+}
+
+/* Transition fluide du header au changement de thème */
+.header-announcement-bar-wrapper .header-nav-item a,
+.header-announcement-bar-wrapper .header-nav-folder-title,
+.header-announcement-bar-wrapper .header-actions a,
+.header-announcement-bar-wrapper .header-actions .cart-text-link,
+.header-announcement-bar-wrapper .header-actions .cart-quantity-container,
+.header-announcement-bar-wrapper .header-title a {
+  transition: color 0.35s ease;
+}
+
+.header-announcement-bar-wrapper .burger-inner .top-bun,
+.header-announcement-bar-wrapper .burger-inner .patty,
+.header-announcement-bar-wrapper .burger-inner .bottom-bun {
+  transition: background-color 0.35s ease;
+}
+
+/* Header – mode sombre */
+body.dark-mode .header-announcement-bar-wrapper .header-nav-item a,
+body.dark-mode .header-announcement-bar-wrapper .header-nav-folder-title,
+body.dark-mode .header-announcement-bar-wrapper .header-actions a,
+body.dark-mode .header-announcement-bar-wrapper .header-actions .cart-text-link,
+body.dark-mode .header-announcement-bar-wrapper .header-actions .cart-quantity-container,
+body.dark-mode .header-announcement-bar-wrapper .header-title a {
+  color: var(--oasis-beige) !important;
+}
+
+body.dark-mode .header-announcement-bar-wrapper .burger-inner .top-bun,
+body.dark-mode .header-announcement-bar-wrapper .burger-inner .patty,
+body.dark-mode .header-announcement-bar-wrapper .burger-inner .bottom-bun {
+  background-color: var(--oasis-beige) !important;
+}
+
+
+/* Importé depuis style.css — Oasis submenu */
+/*******************************************/
+/*            OASIS – SUBMENU              */
+/*     Hover desktop / fullscreen mobile   */
+/*******************************************/
+
+/* Masquer le menu Squarespace (.header-menu) quand notre overlay est ouvert */
+.header-menu.oasis-header-menu-hidden {
+  display: none !important;
+}
+
+/* Overlay — masqué par défaut (visible uniquement avec .is-open) */
+.oasis-submenu {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0 !important;
+  z-index: 99999;
+  background: var(--bg-color);
+  color: var(--text-color);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, .08);
+  min-height: 320px;
+  max-height: 85vh;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  pointer-events: none;
+  transition: opacity .18s ease, transform .18s ease, visibility .18s step-end;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* ouvert */
+.oasis-submenu.is-open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+
+/* container interne — marge haute + padding latéral aligné sur le header (12px) */
+.oasis-submenu__inner {
+  margin: 0 auto;
+  padding: 99px 12px 40px;
+  box-sizing: border-box;
+  width: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* grille desktop = 5 colonnes */
+.oasis-submenu__grid {
+  display: grid;
+  grid-template-columns: repeat(5, max-content);
+  /* visuellement proche screen */
+  gap: 56px;
+  align-items: start;
+}
+
+/* titres */
+.oasis-submenu__title {
+  font-family: "Presicav", serif !important;
+  font-size: 10px;
+  font-weight: 300;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  margin: 0 0 10px;
+  color: currentColor;
+}
+
+/* liens */
+.oasis-submenu__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.oasis-submenu__list a {
+  font-family: "Henry", serif !important;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.3;
+  color: currentColor !important;
+  text-decoration: none !important;
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 0;
+  position: relative;
+  transition: transform .18s ease, opacity .18s ease;
+}
+
+.oasis-submenu__list a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .18s ease;
+}
+
+.oasis-submenu__list a:hover,
+.oasis-submenu__list a:focus-visible {
+  transform: skewX(-10deg);
+}
+
+.oasis-submenu__list a:hover::after,
+.oasis-submenu__list a:focus-visible::after {
+  transform: scaleX(1);
+}
+
+
+/* Colonne "Catalogue de prix" : items sur une ligne */
+.oasis-submenu__col:last-child .oasis-submenu__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  align-items: center;
+}
+
+.oasis-submenu__col:last-child .oasis-submenu__list li {
+  display: inline-flex;
+  align-items: center;
+}
+
+.oasis-submenu__diamond {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  transform: rotate(45deg);
+  background: transparent;
+  border: 1px solid currentColor;
+  margin-right: 10px;
+  position: relative;
+  top: -1px;
+  opacity: .85;
+  transition: background-color 0.25s ease;
+}
+
+.oasis-submenu__list a:hover .oasis-submenu__diamond,
+.oasis-submenu__list a:focus-visible .oasis-submenu__diamond {
+  background-color: currentColor;
+}
+
+/* Catalogue de prix : pas d’italique ni de soulignement (y compris au hover) */
+.oasis-submenu__col:last-child .oasis-submenu__list a {
+  font-style: normal !important;
+}
+
+.oasis-submenu__col:last-child .oasis-submenu__list a::after {
+  display: none !important;
+}
+
+.oasis-submenu__col:last-child .oasis-submenu__list a:hover,
+.oasis-submenu__col:last-child .oasis-submenu__list a:focus-visible {
+  transform: none;
+}
+
+/* bouton fermer (mobile) */
+.oasis-submenu__close {
+  display: none;
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  background: transparent;
+  color: currentColor;
+  font-family: "Henry", serif !important;
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+/* Lock scroll quand fullscreen mobile */
+body.oasis-submenu-lock {
+  overflow: hidden !important;
+}
+
+/* Desktop moyen : 5 colonnes avec espacement réduit */
+@media (max-width: 1199px) {
+  .oasis-submenu__inner {
+    padding: 99px 12px 36px;
+  }
+
+  .oasis-submenu__grid {
+    gap: 40px;
+  }
+
+  .oasis-submenu__list a {
+    font-size: 16px;
+  }
+
+  .oasis-submenu__title {
+    font-size: 9px;
+  }
+}
+
+/* Tablette : 3 colonnes */
+@media (max-width: 991px) {
+  .oasis-submenu {
+    max-height: 90vh;
+  }
+
+  .oasis-submenu__inner {
+    padding: 80px 12px 32px;
+  }
+
+  .oasis-submenu__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px 24px;
+  }
+
+  .oasis-submenu__list a {
+    font-size: 15px;
+  }
+
+  .oasis-submenu__title {
+    font-size: 9px;
+  }
+}
+
+/* Mobile : fullscreen sous le header + 2 colonnes */
+@media (max-width: 767px) {
+  .oasis-submenu {
+    top: var(--header-height);
+    bottom: 0;
+    max-height: none;
+    min-height: 0;
+    border-top: 0;
+    box-shadow: none;
+  }
+
+  .oasis-submenu__inner {
+    padding: 80px 12px 34px;
+    flex: 1;
+    min-height: 0;
+  }
+
+  .oasis-submenu__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 20px;
+  }
+
+  .oasis-submenu__close {
+    display: block;
+  }
+
+  .oasis-submenu__list a {
+    font-size: 16px;
+    line-height: 1.3;
+    min-height: 44px;
+    align-items: center;
+  }
+
+  .oasis-submenu__title {
+    font-size: 8px;
+  }
+}
+
+/* Très petit mobile : 1 colonne pour lisibilité */
+@media (max-width: 480px) {
+  .oasis-submenu__inner {
+    padding: 70px 12px 28px;
+  }
+
+  .oasis-submenu__grid {
+    grid-template-columns: 1fr;
+    gap: 24px 0;
+  }
+
+  .oasis-submenu__list a {
+    font-size: 15px;
+  }
+}
+
+/* Masque le dropdown natif du folder "Menu" */
+.oasis-menu-folder>.header-nav-folder-content,
+.oasis-menu-folder .header-nav-folder-content {
+  display: none !important;
+}

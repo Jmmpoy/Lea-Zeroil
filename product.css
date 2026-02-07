@@ -1,0 +1,334 @@
+
+
+/* Importé depuis style.css — Product specs */
+/* PRODUCT SPECS — Styles (no JS injection) */
+.oasis-spec {
+  border-top: 1px solid var(--oasis-bordeaux-55);
+  border-bottom: 1px solid var(--oasis-bordeaux-55);
+}
+
+.oasis-spec__row {
+  border-top: 1px solid var(--oasis-bordeaux-55);
+}
+
+.oasis-spec__row:first-child {
+  border-top: 0;
+}
+
+/* Head rows */
+.oasis-spec__head {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 160px 1fr 18px;
+  gap: 18px;
+  align-items: center;
+  padding: 14px 0;
+  background: transparent;
+  border: 0;
+  text-align: left;
+  cursor: pointer;
+  color: inherit;
+  font: inherit;
+}
+
+/* Non-collapsible rows */
+.oasis-spec__row:not(.oasis-spec__row--collapsible) {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 18px;
+  align-items: center;
+  padding: 14px 0;
+}
+
+.oasis-spec__label {
+  font-style: italic;
+  font-size: 18px;
+  color: var(--oasis-bordeaux);
+}
+
+.oasis-spec__value {
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-size: 15px;
+  color: var(--oasis-bordeaux);
+}
+
+/* Chevron */
+.oasis-spec__icon {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  position: relative;
+}
+
+.oasis-spec__icon:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-right: 1px solid var(--oasis-bordeaux);
+  border-bottom: 1px solid var(--oasis-bordeaux);
+  transform: rotate(45deg);
+  transform-origin: 60% 60%;
+}
+
+.oasis-spec__row--collapsible[data-expanded="true"] .oasis-spec__icon:before {
+  transform: rotate(-135deg);
+  transform-origin: 60% 60%;
+}
+
+.oasis-spec__panel {
+  padding: 0 0 16px;
+}
+
+.oasis-spec__panel-inner {
+  padding-left: 178px;
+}
+
+/* Inline value */
+.oasis-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Colors list */
+.oasis-colors {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.oasis-color {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-size: 15px;
+  color: var(--oasis-bordeaux);
+}
+
+/* ✅ Losange = couleur du texte */
+.oasis-color__swatch {
+  width: 9px;
+  height: 9px;
+  display: inline-block;
+  transform: rotate(45deg);
+  border: 1px solid var(--oasis-bordeaux-40);
+  flex-shrink: 0;
+}
+
+.oasis-dims {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.oasis-dim__line {
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-size: 15px;
+  color: var(--oasis-bordeaux);
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .oasis-spec__head {
+    grid-template-columns: 120px 1fr 18px;
+  }
+
+  .oasis-spec__row:not(.oasis-spec__row--collapsible) {
+    grid-template-columns: 120px 1fr;
+  }
+
+  .oasis-spec__panel-inner {
+    padding-left: 138px;
+  }
+}
+
+
+/*  PRODUCT SPECS — COULEURS /NEUTRES (variables centralisées --diamond-color-*) */
+.oasis-color__swatch[data-color="blanc"] {
+  background: var(--diamond-color-blanc);
+}
+
+.oasis-color__swatch[data-color="lin"] {
+  background: var(--diamond-color-lin);
+}
+
+.oasis-color__swatch[data-color="sable"] {
+  background: var(--diamond-color-sable);
+}
+
+.oasis-color__swatch[data-color="ble"],
+.oasis-color__swatch[data-color="ble"] {
+  background: var(--diamond-color-ble);
+}
+
+/* CHAUDS */
+.oasis-color__swatch[data-color="rose"] {
+  background: var(--diamond-color-rose);
+}
+
+.oasis-color__swatch[data-color="miel"] {
+  background: var(--diamond-color-jaune);
+}
+
+.oasis-color__swatch[data-color="brun"] {
+  background: var(--diamond-color-brun);
+}
+
+.oasis-color__swatch[data-color="cognac"] {
+  background: var(--diamond-color-cognac);
+}
+
+.oasis-color__swatch[data-color="bordeaux"] {
+  background: var(--diamond-color-bordeaux);
+}
+
+/* VERTS */
+.oasis-color__swatch[data-color="vert-avocat"],
+.oasis-color__swatch[data-color="vertavocat"] {
+  background: var(--diamond-color-avocat);
+}
+
+.oasis-color__swatch[data-color="sauge"] {
+  background: var(--diamond-color-vert-prairie);
+}
+
+
+
+
+/* Optionnel : si tu veux être encore plus strict (listes uniquement) */
+.oasis-spec__panel .oasis-dim__line,
+.oasis-inline,
+.oasis-spec__panel .oasis-color__name {
+  font-size: 10px;
+  font-family: "Presicav", sans-serif !important;
+}
+
+
+/* Importé depuis style.css — Oasis color button */
+.oasis-color {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  background: transparent;
+  border: 0;
+  padding: 10px 0;
+  cursor: pointer;
+  text-align: left;
+}
+
+.oasis-color[data-selected="1"] {
+  font-weight: 600;
+}
+
+
+/* Importé depuis style.css — Guide entretien + lock */
+/* =========================
+   LOCK SCROLL
+   ========================= */
+html.gm-lock,
+body.gm-lock {
+  overflow: hidden !important;
+}
+
+/* =========================
+   GUIDE ROOT
+   ========================= */
+.gm-guide {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+/* =========================
+   OVERLAY (cliquable)
+   ========================= */
+.gm-guide__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  /* invisible mais cliquable */
+  opacity: 0;
+  transition: opacity .25s ease;
+  font-family: "Henry", serif !important;
+}
+
+/* =========================
+   PANEL
+   ========================= */
+.gm-guide__panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: min(420px, 92vw);
+  height: 100vh;
+  background: #c8c1b6;
+  /* couleur panneau */
+  transform: translateX(100%);
+  transition: transform .35s ease;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+}
+
+/* =========================
+   OPEN STATE
+   ========================= */
+.gm-guide.is-open {
+  pointer-events: auto;
+}
+
+.gm-guide.is-open .gm-guide__overlay {
+  opacity: 1;
+}
+
+.gm-guide.is-open .gm-guide__panel {
+  transform: translateX(0);
+}
+
+/* =========================
+   CONTENU
+   ========================= */
+.gm-guide__inner {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.gm-guide__row {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 24px;
+  padding: 24px 0;
+}
+
+.gm-guide__colTitle,
+.gm-guide__colText,
+.gm-guide__title {
+  font-family: "Henry", serif !important;
+  color: var(--oasis-bordeaux);
+}
+
+.gm-guide__title {
+  font-size: 15px;
+  font-style: italic;
+  text-transform: capitalize;
+  flex-grow: 1;
+}
+
+.gm-guide__colTitle {
+  text-transform: capitalize;
+  font-style: italic;
+  font-size: 17px;
+}
+
+.gm-guide__colTitle,
+.gm-guide__colText p {
+  margin: 0;
+  padding: 0;
+}
