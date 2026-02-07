@@ -1,0 +1,43 @@
+name: Version footer.js with commit SHA
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  version-footer:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Update cache-busting querystring
+        run: |
+          python - <<'PY'
+          import re
+          from pathlib import Path
+
+          p = Path("footer.js")
+          s = p.read_text()
+          s = re.sub(
+              r'(https://cdn\.jsdelivr\.net/gh/[^"]+\.(?:css|js))(?:\?v=[^"]*)?',
+              r'\1?v=${{ github.sha }}',
+              s
+          )
+          p.write_text(s)
+          PY
+
+      - name: Commit changes
+        run: |
+          if git diff --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add footer.js
+          git commit -m "chore: bust jsdelivr cache in footer.js"
+          git push
