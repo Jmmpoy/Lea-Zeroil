@@ -38,6 +38,7 @@
 <script src="https://cdn.jsdelivr.net/gh/Jmmpoy/Lea-Zeroil@main/Collection/collections-summary-links.js?v=7f4cc2238d6e8c74a283e45b426355149afc9b9b"></script>
 <script src="https://cdn.jsdelivr.net/gh/Jmmpoy/Lea-Zeroil@main/Collection/collections-filters.js?v=7f4cc2238d6e8c74a283e45b426355149afc9b9b"></script>
 <script src="https://cdn.jsdelivr.net/gh/Jmmpoy/Lea-Zeroil@main/Collection/collections-excerpt-links.js?v=7f4cc2238d6e8c74a283e45b426355149afc9b9b"></script>
+<script src="https://cdn.jsdelivr.net/gh/Jmmpoy/Lea-Zeroil@main/Collection/collections-summary-json-load-more.js?v=7f4cc2238d6e8c74a283e45b426355149afc9b9b"></script>
 <script src="https://cdn.jsdelivr.net/gh/Jmmpoy/Lea-Zeroil@main/Collection/filterbar-smooth-scroll.js?v=7f4cc2238d6e8c74a283e45b426355149afc9b9b"></script>
 
 <script src="https://cdn.jsdelivr.net/gh/Jmmpoy/Lea-Zeroil@main/Contact/form-half-columns.js?v=7f4cc2238d6e8c74a283e45b426355149afc9b9b"></script>

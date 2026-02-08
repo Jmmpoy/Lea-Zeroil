@@ -10,10 +10,8 @@ section[data-section-id="696abd01e1d862206d905143"] {
 }
 
 /* Fluid Engine : lignes en hauteur auto pour que la section se réduise avec le contenu */
-section[data-section-id="696abd01e1d862206d905143"] [class^="fe-696abd012586340b3c16d2d4"],
-section[data-section-id="696abd01e1d862206d905143"] .fluid-engine {
-  grid-template-rows: repeat(88, minmax(0, auto)) !important;
-  min-height: 0 !important;
+section[data-section-id="696abd01e1d862206d905143"] [class^="fe-696abd012586340b3c16d2d4"], section[data-section-id="696abd01e1d862206d905143"] .fluid-engine {
+  grid-template-rows: repeat(8, minmax(0, auto)) !important;
 }
 
 /* Titre */
@@ -143,6 +141,14 @@ section[data-section-id="696abd01e1d862206d905143"] .summary-thumbnail-outer-con
   section[data-section-id="696abd01e1d862206d905143"] .summary-item-list>.summary-item {
     grid-column: auto !important;
     grid-row: auto !important;
+  }
+
+  /* Padding horizontal + hauteur min titre : harmonise les cartes en 2 colonnes */
+  section[data-section-id="696abd01e1d862206d905143"] .summary-title {
+    min-height: 2.8em;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
   }
 }
 
