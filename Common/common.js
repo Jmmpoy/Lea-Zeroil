@@ -17,6 +17,23 @@
     document.addEventListener("sqs-route-did-change", run);
   })();
 
+  /* Page Galerie Oasis (/galerie-oasis) : footer toujours en thème dark */
+  (function setGalerieOasisFooterDark() {
+    function run() {
+      var path = (window.location.pathname || "").replace(/^\/|\/$/g, "");
+      var isGalerieOasisPage = path === "galerie-oasis";
+      if (document.body) {
+        document.body.classList.toggle("oasis-footer-force-dark", isGalerieOasisPage);
+      }
+    }
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", run);
+    } else {
+      run();
+    }
+    document.addEventListener("sqs-route-did-change", run);
+  })();
+
   /* Mobile: click => fullscreen + close button */
   (function bootOasisSubmenu(retries = 30) {
     const mqMobile = window.matchMedia("(max-width: 767px)");

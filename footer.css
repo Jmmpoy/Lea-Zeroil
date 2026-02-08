@@ -13,16 +13,19 @@
   display: none;
 }
 
-body.dark-mode .footer-logo--light {
+body.dark-mode .footer-logo--light,
+body.oasis-footer-force-dark .footer-logo--light {
   display: none;
 }
 
-body.dark-mode .footer-logo--dark {
+body.dark-mode .footer-logo--dark,
+body.oasis-footer-force-dark .footer-logo--dark {
   display: block;
 }
 
 /* Taches visibles dans le logo sur fond sombre */
-body.dark-mode .footer-logo--dark path:nth-child(n+2) {
+body.dark-mode .footer-logo--dark path:nth-child(n+2),
+body.oasis-footer-force-dark .footer-logo--dark path:nth-child(n+2) {
   fill: var(--oasis-cream) !important;
 }
 
@@ -33,28 +36,61 @@ body.dark-mode .footer-logo--dark path:nth-child(n+2) {
 
 body.dark-mode footer .text-brown,
 body.dark-mode footer .link,
-body.dark-mode footer .book {
+body.dark-mode footer .book,
+body.oasis-footer-force-dark footer .text-brown,
+body.oasis-footer-force-dark footer .link,
+body.oasis-footer-force-dark footer .book {
   color: var(--oasis-cream) !important;
 }
 
 /* Formulaire footer en mode sombre : crème */
-body.dark-mode footer .newsline {
+body.dark-mode footer .newsline,
+body.oasis-footer-force-dark footer .newsline {
   border-bottom-color: var(--oasis-cream-55);
 }
 
-body.dark-mode footer .news-input {
+body.dark-mode footer .news-input,
+body.oasis-footer-force-dark footer .news-input {
   color: var(--oasis-cream) !important;
 }
 
-body.dark-mode footer .news-input::placeholder {
+body.dark-mode footer .news-input::placeholder,
+body.oasis-footer-force-dark footer .news-input::placeholder {
   color: var(--oasis-cream-80) !important;
 }
 
-body.dark-mode footer .news-btn {
+body.dark-mode footer .news-btn,
+body.oasis-footer-force-dark footer .news-btn {
   color: var(--oasis-cream) !important;
 }
 
-body.dark-mode footer .news-success {
+body.dark-mode footer .news-success,
+body.oasis-footer-force-dark footer .news-success {
+  color: var(--oasis-cream) !important;
+}
+
+/* Page Galerie Oasis : fond et couleurs du footer comme en dark mode */
+body.oasis-footer-force-dark section[data-section-id="6943f46e084deb646d9f0a51"],
+body.oasis-footer-force-dark .oasis-footer,
+body.oasis-footer-force-dark .oasis-footer-frame {
+  background: var(--oasis-sombre-2);
+  color: var(--oasis-beige);
+}
+
+body.oasis-footer-force-dark .oasis-ft-title,
+body.oasis-footer-force-dark .oasis-ft-text,
+body.oasis-footer-force-dark .oasis-ft-text p,
+body.oasis-footer-force-dark .oasis-link,
+body.oasis-footer-force-dark .oasis-btn,
+body.oasis-footer-force-dark .oasis-news__input,
+body.oasis-footer-force-dark .oasis-news__input::placeholder,
+body.oasis-footer-force-dark .oasis-news__btn,
+body.oasis-footer-force-dark .oasis-footer__bottom {
+  color: var(--oasis-cream) !important;
+}
+
+body.oasis-footer-force-dark footer a,
+body.oasis-footer-force-dark .oasis-footer a {
   color: var(--oasis-cream) !important;
 }
 
@@ -249,19 +285,24 @@ footer .sqs-block-newsletter .captcha-container {
 
 /* Dark mode — formulaire newsletter footer */
 body.dark-mode footer .sqs-block-newsletter .newsletter-form-body,
-body.dark-mode footer .sqs-block-newsletter .newsletter-form-fields-wrapper {
+body.dark-mode footer .sqs-block-newsletter .newsletter-form-fields-wrapper,
+body.oasis-footer-force-dark footer .sqs-block-newsletter .newsletter-form-body,
+body.oasis-footer-force-dark footer .sqs-block-newsletter .newsletter-form-fields-wrapper {
   border-bottom-color: var(--oasis-cream-55);
 }
 
-body.dark-mode footer .sqs-block-newsletter .newsletter-form-field-element {
+body.dark-mode footer .sqs-block-newsletter .newsletter-form-field-element,
+body.oasis-footer-force-dark footer .sqs-block-newsletter .newsletter-form-field-element {
   color: var(--oasis-cream) !important;
 }
 
-body.dark-mode footer .sqs-block-newsletter .newsletter-form-field-element::placeholder {
+body.dark-mode footer .sqs-block-newsletter .newsletter-form-field-element::placeholder,
+body.oasis-footer-force-dark footer .sqs-block-newsletter .newsletter-form-field-element::placeholder {
   color: var(--oasis-cream-80) !important;
 }
 
-body.dark-mode footer .sqs-block-newsletter .newsletter-form-button {
+body.dark-mode footer .sqs-block-newsletter .newsletter-form-button,
+body.oasis-footer-force-dark footer .sqs-block-newsletter .newsletter-form-button {
   color: var(--oasis-cream) !important;
 }
 
@@ -548,7 +589,8 @@ section[data-section-id="6943f46e084deb646d9f0a51"] .form-wrapper {
   box-sizing: border-box;
 }
 
-body.dark-mode .oasis-footer-frame {
+body.dark-mode .oasis-footer-frame,
+body.oasis-footer-force-dark .oasis-footer-frame {
   border-color: var(--oasis-cream);
 }
 
