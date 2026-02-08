@@ -1,18 +1,18 @@
-/* ===== PAGE GALERIE OASIS : FOND JAUNE SUR TOUTE LA PAGE (BODY + FOOTER) ===== */
+/* ===== PAGE GALERIE OASIS : FOND SUR TOUTE LA PAGE (BODY + FOOTER) ===== */
 body.galerie-oasis-page {
-  --galerie-oasis-yellow: #f5e6a3;
-  background-color: var(--galerie-oasis-yellow) !important;
+  --galerie-oasis-dark-red: #461010;
+  background-color: var(--galerie-oasis-dark-red) !important;
 }
 
 body.galerie-oasis-page #sections,
 body.galerie-oasis-page .page-section,
 body.galerie-oasis-page section {
-  background-color: var(--galerie-oasis-yellow) !important;
+  background-color: var(--galerie-oasis-dark-red) !important;
 }
 
 body.galerie-oasis-page footer,
 body.galerie-oasis-page footer#footer-sections {
-  background-color: var(--galerie-oasis-yellow) !important;
+  background-color: var(--galerie-oasis-dark-red) !important;
 }
 
 body.galerie-oasis-page section[data-section-id="6943f46e084deb646d9f0a51"],
@@ -21,8 +21,8 @@ body.galerie-oasis-page section[data-section-id="6943f46e084deb646d9f0a51"] .sec
 body.galerie-oasis-page section[data-section-id="6943f46e084deb646d9f0a51"] .content-wrapper,
 body.galerie-oasis-page .oasis-footer,
 body.galerie-oasis-page .oasis-footer-frame {
-  background: var(--galerie-oasis-yellow) !important;
-  background-color: var(--galerie-oasis-yellow) !important;
+  background: var(--galerie-oasis-dark-red) !important;
+  background-color: var(--galerie-oasis-dark-red) !important;
 }
 
 /* GALERIE OASIS - ZOOM LÉGER AU HOVER SUR L'IMAGE */
