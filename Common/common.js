@@ -42,9 +42,7 @@
       var body = getSiteBody();
       if (body) {
         body.classList.toggle("galerie-oasis-page", isGalerieOasisPage);
-        if (isGalerieOasisPage) {
-          body.classList.remove("oasis-footer-force-dark");
-        }
+        body.classList.toggle("oasis-footer-force-dark", isGalerieOasisPage);
       }
     }
 
