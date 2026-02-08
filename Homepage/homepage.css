@@ -546,9 +546,12 @@ section[data-section-id="6987c22136d357787cec839b"] .summary-title::first-letter
 /*******************************************/
 
 section[data-section-id="6982262caeec332d2ad73062"] {
-  padding-top: 0;
+  padding-top: 0 !important;
 }
 
+main .sections:first-child .page-section:first-child {
+    padding-top: 0 !important;
+}
 
 /*******************************************/
 /*           HERO SPLIT                    */
