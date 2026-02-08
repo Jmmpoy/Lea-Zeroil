@@ -95,7 +95,8 @@
     var path = (window.location.pathname || "").replace(/^\/|\/$/g, "");
     var isGalerieOasisPage = path === "galerie-oasis" || path.indexOf("galerie-oasis") === 0;
     if (isGalerieOasisPage) {
-      enableDark(false);
+      /* Page Galerie Oasis : fond jaune, pas de thème dark */
+      disableDark(false);
     } else {
       var savedTheme = localStorage.getItem("theme");
       savedTheme === "dark" ? enableDark() : disableDark();
