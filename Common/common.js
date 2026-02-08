@@ -18,20 +18,45 @@
   })();
 
   /* Page Galerie Oasis (/galerie-oasis) : footer toujours en thème dark */
+  /* Page Galerie Oasis (/galerie-oasis) : footer toujours en thème dark */
   (function setGalerieOasisFooterDark() {
+    /** Dans l'éditeur Squarespace le site est dans une iframe : cibler son body, sinon le body courant. */
+    function getSiteBody() {
+      var iframe = document.getElementById("sqs-site-frame");
+      if (iframe && iframe.contentDocument && iframe.contentDocument.body) {
+        return iframe.contentDocument.body;
+      }
+      return document.body;
+    }
+
+    function getSitePath() {
+      var iframe = document.getElementById("sqs-site-frame");
+      if (iframe && iframe.contentWindow && iframe.contentWindow.location) {
+        return (iframe.contentWindow.location.pathname || "").replace(/^\/|\/$/g, "");
+      }
+      return (window.location.pathname || "").replace(/^\/|\/$/g, "");
+    }
+
     function run() {
-      var path = (window.location.pathname || "").replace(/^\/|\/$/g, "");
-      var isGalerieOasisPage = path === "galerie-oasis";
-      if (document.body) {
-        document.body.classList.toggle("oasis-footer-force-dark", isGalerieOasisPage);
+      var path = getSitePath();
+      var isGalerieOasisPage = path === "galerie-oasis" || path.indexOf("galerie-oasis") === 0;
+      var body = getSiteBody();
+      if (body) {
+        body.classList.toggle("oasis-footer-force-dark", isGalerieOasisPage);
       }
     }
+
     if (document.readyState === "loading") {
       document.addEventListener("DOMContentLoaded", run);
     } else {
       run();
     }
     document.addEventListener("sqs-route-did-change", run);
+    /* Quand l'iframe de prévisualisation charge (éditeur Squarespace), réappliquer */
+    var iframe = document.getElementById("sqs-site-frame");
+    if (iframe) {
+      iframe.addEventListener("load", run);
+    }
   })();
 
   /* Mobile: click => fullscreen + close button */

@@ -23,10 +23,18 @@ body.oasis-footer-force-dark .footer-logo--dark {
   display: block;
 }
 
-/* Taches visibles dans le logo sur fond sombre */
+/* Logo SVG sur fond sombre (Galerie Oasis / dark) : tout en crème */
+body.dark-mode .footer-logo--dark path,
 body.dark-mode .footer-logo--dark path:nth-child(n+2),
+body.oasis-footer-force-dark .footer-logo--dark path,
 body.oasis-footer-force-dark .footer-logo--dark path:nth-child(n+2) {
   fill: var(--oasis-cream) !important;
+  stroke: var(--oasis-cream) !important;
+}
+
+body.dark-mode .footer-logo--dark,
+body.oasis-footer-force-dark .footer-logo--dark {
+  color: var(--oasis-cream);
 }
 
 /* Taches visibles dans le logo sur fond clair (thème light) */
@@ -94,6 +102,19 @@ body.oasis-footer-force-dark .oasis-footer a {
   color: var(--oasis-cream) !important;
 }
 
+/* Galerie Oasis / dark : tout le texte du footer en crème (structure .footer__block-title, .footer__text, etc.) */
+body.dark-mode footer .footer__block-title,
+body.dark-mode footer .footer__text,
+body.dark-mode footer .footer__address,
+body.dark-mode footer .footer__copyright,
+body.dark-mode footer .footer__links,
+body.oasis-footer-force-dark footer .footer__block-title,
+body.oasis-footer-force-dark footer .footer__text,
+body.oasis-footer-force-dark footer .footer__address,
+body.oasis-footer-force-dark footer .footer__copyright,
+body.oasis-footer-force-dark footer .footer__links {
+  color: var(--oasis-cream) !important;
+}
 
 .oasis-footer {
   background: var(--bg-color);
@@ -340,6 +361,29 @@ section[data-section-id="6943f46e084deb646d9f0a51"] {
   background-color: transparent !important;
 }
 
+/* Galerie Oasis / dark : forcer fond sombre (override transparent ci-dessus) */
+body.dark-mode section[data-section-id="6943f46e084deb646d9f0a51"],
+body.oasis-footer-force-dark section[data-section-id="6943f46e084deb646d9f0a51"] {
+  background-color: var(--oasis-sombre-2) !important;
+}
+
+/* Élément au-dessus (section-border, section-background, content-wrapper) : fond sombre (override inline style) */
+body.dark-mode section[data-section-id="6943f46e084deb646d9f0a51"] .section-border,
+body.dark-mode section[data-section-id="6943f46e084deb646d9f0a51"] .section-background,
+body.dark-mode section[data-section-id="6943f46e084deb646d9f0a51"] .content-wrapper,
+body.oasis-footer-force-dark section[data-section-id="6943f46e084deb646d9f0a51"] .section-border,
+body.oasis-footer-force-dark section[data-section-id="6943f46e084deb646d9f0a51"] .section-background,
+body.oasis-footer-force-dark section[data-section-id="6943f46e084deb646d9f0a51"] .content-wrapper {
+  background: var(--oasis-sombre-2) !important;
+  background-color: var(--oasis-sombre-2) !important;
+}
+
+/* Conteneur footer (au-dessus de la section) */
+body.dark-mode footer#footer-sections,
+body.oasis-footer-force-dark footer#footer-sections {
+  background-color: var(--oasis-sombre-2) !important;
+}
+
 section[data-section-id="6943f46e084deb646d9f0a51"] .book {
   border-bottom: none;
   position: relative;
@@ -354,6 +398,12 @@ section[data-section-id="6943f46e084deb646d9f0a51"] .book::after {
   width: 100%;
   height: 1px;
   background-color: var(--oasis-brown);
+}
+
+/* Galerie Oasis / dark : soulignement du lien .book en crème */
+body.dark-mode section[data-section-id="6943f46e084deb646d9f0a51"] .book::after,
+body.oasis-footer-force-dark section[data-section-id="6943f46e084deb646d9f0a51"] .book::after {
+  background-color: var(--oasis-cream) !important;
 }
 
 section[data-section-id="6943f46e084deb646d9f0a51"] .book:hover::after {

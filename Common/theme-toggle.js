@@ -71,25 +71,35 @@
       lightBtn.classList.toggle("is-active", !isDark);
     }
 
-    function enableDark() {
+    function enableDark(persist) {
       document.body.classList.add("dark-mode");
-      localStorage.setItem("theme", "dark");
+      if (persist !== false) {
+        localStorage.setItem("theme", "dark");
+      }
       setActive(true);
       applySectionTheme(darkTheme);
     }
 
-    function disableDark() {
+    function disableDark(persist) {
       document.body.classList.remove("dark-mode");
-      localStorage.setItem("theme", "light");
+      if (persist !== false) {
+        localStorage.setItem("theme", "light");
+      }
       setActive(false);
       applySectionTheme(lightTheme);
     }
 
-    darkBtn.addEventListener("click", enableDark);
-    lightBtn.addEventListener("click", disableDark);
+    darkBtn.addEventListener("click", function () { enableDark(true); });
+    lightBtn.addEventListener("click", function () { disableDark(true); });
 
-    const savedTheme = localStorage.getItem("theme");
-    savedTheme === "dark" ? enableDark() : disableDark();
+    var path = (window.location.pathname || "").replace(/^\/|\/$/g, "");
+    var isGalerieOasisPage = path === "galerie-oasis" || path.indexOf("galerie-oasis") === 0;
+    if (isGalerieOasisPage) {
+      enableDark(false);
+    } else {
+      var savedTheme = localStorage.getItem("theme");
+      savedTheme === "dark" ? enableDark() : disableDark();
+    }
   }
 
   function run() {
