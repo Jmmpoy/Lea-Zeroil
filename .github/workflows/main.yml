@@ -1,44 +1,24 @@
-name: Version footer.js with commit SHA
+name: Purge jsDelivr cache on push
 
 on:
   push:
     branches: [main]
 
-permissions:
-  contents: write
+# Pas de permissions spéciales : on ne fait que purge (GET) et plus de push
 
 jobs:
-  version-footer:
+  purge-jsdelivr:
     runs-on: ubuntu-latest
     if: github.actor != 'github-actions[bot]'
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Update cache-busting querystring
+      - name: Purge jsDelivr cache for Lea-Zeroil assets
         run: |
-          python - <<'PY'
-          import re
-          from pathlib import Path
-
-          p = Path("footer.js")
-          s = p.read_text()
-          s = re.sub(
-              r'(https://cdn\.jsdelivr\.net/gh/[^"]+\.(?:css|js))(?:\?v=[^"]*)?',
-              r'\1?v=${{ github.sha }}',
-              s
-          )
-          p.write_text(s)
-          PY
-
-      - name: Commit changes
-        run: |
-          if git diff --quiet; then
-            echo "No changes to commit"
-            exit 0
-          fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add footer.js
-          git commit -m "chore: bust jsdelivr cache in footer.js"
-          git push
+          # Extraire les URLs gh/Jmmpoy/Lea-Zeroil depuis footer.js (sans query string)
+          grep -oE 'https://cdn\.jsdelivr\.net/gh/Jmmpoy/Lea-Zeroil@main/[^"?#]+' footer.js | sort -u | while read -r url; do
+            purge_url="${url/https:\/\/cdn./https://purge.}"
+            echo "Purging: $purge_url"
+            curl -s -o /dev/null -w "%{http_code}" "$purge_url" && echo " OK" || echo " (purge requested)"
+          done
