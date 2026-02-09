@@ -54,7 +54,7 @@ body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .header,
 body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) #header,
 body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .header,
 body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) #header {
-  background-color: #712317 !important;
+  background-color: transparent !important;
 }
 
 body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) footer,
@@ -306,6 +306,13 @@ body.oasis-blog-theme-lune:not(.dark-mode) .item-pagination.item-pagination--pre
 
 .item-pagination {
   gap: 15px;
+}
+
+/* Pages unitaires collaboration : pagination sans padding sur mobile */
+@media screen and (max-width: 767px) {
+  .item-pagination--prev-next {
+    padding: 0 !important;
+  }
 }
 
 /* ==========================================================================

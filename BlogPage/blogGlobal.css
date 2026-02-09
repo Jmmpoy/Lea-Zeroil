@@ -41,7 +41,7 @@ body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .header,
 body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) #header,
 body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .header,
 body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) #header {
-  background-color: #712317 !important;
+  background-color: transparent !important;
 }
 
 body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) footer,
