@@ -35,6 +35,14 @@
     return el || null;
   }
 
+  function findBurgerTrigger() {
+    const candidates = Array.from(document.querySelectorAll(
+      ".header-burger-btn, [class*=\"header-burger\"], [class*=\"burger\"]"
+    ));
+
+    return candidates[0] || null;
+  }
+
   function buildOverlay() {
     const overlay = document.createElement("div");
     overlay.className = "oasis-submenu";
@@ -123,10 +131,14 @@
 
   function init() {
 
-    const trigger = findMenuTrigger();
+    const menuTrigger = findMenuTrigger();
+    const burgerTrigger = findBurgerTrigger();
+    const trigger = menuTrigger || burgerTrigger;
+    const isMenuTrigger = !!menuTrigger;
+
     if (!trigger) return false;
 
-    const folderItem = trigger.closest('.header-nav-item, .header-menu-nav-item');
+    const folderItem = menuTrigger?.closest('.header-nav-item, .header-menu-nav-item');
     folderItem?.classList.add('oasis-menu-folder');
 
     // évite double init (nav ajax) + ferme si déjà ouvert
@@ -177,6 +189,7 @@
 
     // --- Desktop: hover
     function bindDesktopHover() {
+      if (!isMenuTrigger) return;
       // trigger hover
       trigger.addEventListener("mouseenter", () => { clearTimeout(closeTimer); openMenu(); });
       trigger.addEventListener("mouseleave", () => scheduleClose(120));
@@ -226,9 +239,8 @@
     bindMobileClick();
 
     // Mobile : clic sur le burger → afficher notre overlay et masquer le menu Squarespace (.header-menu)
-    var burger = document.querySelector("[class*=\"header-burger\"]");
-    if (burger) {
-      burger.addEventListener("click", function (e) {
+    if (burgerTrigger && burgerTrigger !== trigger) {
+      burgerTrigger.addEventListener("click", function (e) {
         if (!mqMobile.matches) return;
         e.preventDefault();
         e.stopPropagation();
@@ -237,7 +249,7 @@
     }
 
     // Empêche le "Menu" de naviguer si c'est un lien vers une page (desktop hover)
-    trigger.addEventListener("click", (e) => {
+    if (isMenuTrigger) trigger.addEventListener("click", (e) => {
       if (!mqMobile.matches) {
         // sur desktop, click ne doit pas naviguer (sinon hover inutile)
         e.preventDefault();
