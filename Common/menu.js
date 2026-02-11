@@ -155,13 +155,38 @@
 
     let open = false;
     let closeTimer = null;
+    let headerMenuObserver = null;
+
+    function hideHeaderMenu() {
+      const headerMenu = document.querySelector(".header-menu");
+      if (!headerMenu) return;
+      headerMenu.classList.add("oasis-header-menu-hidden");
+      headerMenu.style.display = "none";
+      headerMenu.style.visibility = "hidden";
+    }
+
+    function showHeaderMenu() {
+      const headerMenu = document.querySelector(".header-menu");
+      if (!headerMenu) return;
+      headerMenu.classList.remove("oasis-header-menu-hidden");
+      headerMenu.style.removeProperty("display");
+      headerMenu.style.removeProperty("visibility");
+    }
 
     function openMenu() {
       if (open) return;
       open = true;
       overlay.classList.add("is-open");
-      var headerMenu = document.querySelector(".header-menu");
-      if (headerMenu) headerMenu.classList.add("oasis-header-menu-hidden");
+      document.body.classList.add("oasis-submenu-open");
+      hideHeaderMenu();
+
+      if (!headerMenuObserver) {
+        headerMenuObserver = new MutationObserver(() => {
+          if (!open) return;
+          hideHeaderMenu();
+        });
+        headerMenuObserver.observe(document.body, { childList: true, subtree: true });
+      }
 
       if (mqMobile.matches) {
         document.body.classList.add("oasis-submenu-lock");
@@ -176,10 +201,12 @@
       if (!open) return;
       open = false;
       overlay.classList.remove("is-open");
+      document.body.classList.remove("oasis-submenu-open");
       document.body.classList.remove("oasis-submenu-lock");
       overlay.setAttribute("aria-modal", "false");
-      var headerMenu = document.querySelector(".header-menu");
-      if (headerMenu) headerMenu.classList.remove("oasis-header-menu-hidden");
+      showHeaderMenu();
+      headerMenuObserver?.disconnect();
+      headerMenuObserver = null;
     }
 
     function scheduleClose(ms) {
@@ -219,23 +246,30 @@
 
     // --- Mobile: clic burger (capture pour bloquer le natif)
     function bindBurgerClick() {
-      if (!burgerTrigger) return;
+      const burgerSelector = ".header-burger-btn, .header-burger, [class*=\"header-burger\"], [class*=\"burger\"]";
+
+      const isBurgerTarget = (target) => {
+        return !!target.closest(burgerSelector);
+      };
 
       const blockNative = (e) => {
         if (!mqMobile.matches) return;
+        if (!isBurgerTarget(e.target)) return;
         e.preventDefault();
         e.stopPropagation();
         e.stopImmediatePropagation?.();
       };
 
       const handleBurgerClick = (e) => {
+        if (!mqMobile.matches) return;
+        if (!isBurgerTarget(e.target)) return;
         blockNative(e);
         open ? closeMenu() : openMenu();
       };
 
-      burgerTrigger.addEventListener("click", handleBurgerClick, true);
-      burgerTrigger.addEventListener("pointerdown", blockNative, true);
-      burgerTrigger.addEventListener("touchstart", blockNative, true);
+      document.addEventListener("click", handleBurgerClick, true);
+      document.addEventListener("pointerdown", blockNative, true);
+      document.addEventListener("touchstart", blockNative, true);
     }
 
     // Close on click outside (desktop)
