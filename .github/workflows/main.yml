@@ -1,24 +1,42 @@
-name: Purge jsDelivr cache on push
+name: Generate versioned footer.js
 
 on:
   push:
     branches: [main]
 
-# Pas de permissions spéciales : on ne fait que purge (GET) et plus de push
-
 jobs:
-  purge-jsdelivr:
+  generate-footer:
     runs-on: ubuntu-latest
-    if: github.actor != 'github-actions[bot]'
+
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Purge jsDelivr cache for Lea-Zeroil assets
+      - name: Generate versioned footer.js
         run: |
-          # Extraire les URLs gh/Jmmpoy/Lea-Zeroil depuis footer.js (sans query string)
-          grep -oE 'https://cdn\.jsdelivr\.net/gh/Jmmpoy/Lea-Zeroil@main/[^"?#]+' footer.js | sort -u | while read -r url; do
-            purge_url="${url/https:\/\/cdn./https://purge.}"
-            echo "Purging: $purge_url"
-            curl -s -o /dev/null -w "%{http_code}" "$purge_url" && echo " OK" || echo " (purge requested)"
-          done
+          VERSION=$(date +%Y%m%d%H%M%S)
+          mkdir -p public/generated
+
+          echo "<!-- Généré automatiquement : $VERSION -->" > public/generated/footer.js
+
+          # CSS globaux
+          echo "<link rel='stylesheet' href='/base.css?v=$VERSION'>" >> public/generated/footer.js
+          echo "<link rel='stylesheet' href='/components.css?v=$VERSION'>" >> public/generated/footer.js
+          echo "<link rel='stylesheet' href='/footer.css?v=$VERSION'>" >> public/generated/footer.js
+          echo "<link rel='stylesheet' href='/header.css?v=$VERSION'>" >> public/generated/footer.js
+          echo "<link rel='stylesheet' href='/variables.css?v=$VERSION'>" >> public/generated/footer.js
+
+          # JS global
+          echo "<script src='/footer.js?v=$VERSION' defer></script>" >> public/generated/footer.js
+
+          # Exemple de fichiers dans des dossiers (tu peux en ajouter d'autres)
+          echo "<link rel='stylesheet' href='/Homepage/style.css?v=$VERSION'>" >> public/generated/footer.js
+          echo "<script src='/Homepage/script.js?v=$VERSION' defer></script>" >> public/generated/footer.js
+          echo "<script src='/Galerie-Oasis/gallery.js?v=$VERSION' defer></script>" >> public/generated/footer.js
+
+      - name: Commit and push
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: 'public/generated/footer.js'
+          message: 'Génération auto de footer.js avec version'
+          push: true
