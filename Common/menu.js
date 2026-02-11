@@ -201,6 +201,7 @@
 
     // --- Mobile: click fullscreen
     function bindMobileClick() {
+      if (!isMenuTrigger) return;
       trigger.addEventListener("click", (e) => {
         if (!mqMobile.matches) return; // desktop ignore click (hover gère)
         e.preventDefault();
@@ -214,6 +215,27 @@
         const a = e.target.closest("a");
         if (a && mqMobile.matches) closeMenu();
       });
+    }
+
+    // --- Mobile: clic burger (capture pour bloquer le natif)
+    function bindBurgerClick() {
+      if (!burgerTrigger) return;
+
+      const blockNative = (e) => {
+        if (!mqMobile.matches) return;
+        e.preventDefault();
+        e.stopPropagation();
+        e.stopImmediatePropagation?.();
+      };
+
+      const handleBurgerClick = (e) => {
+        blockNative(e);
+        open ? closeMenu() : openMenu();
+      };
+
+      burgerTrigger.addEventListener("click", handleBurgerClick, true);
+      burgerTrigger.addEventListener("pointerdown", blockNative, true);
+      burgerTrigger.addEventListener("touchstart", blockNative, true);
     }
 
     // Close on click outside (desktop)
@@ -237,16 +259,7 @@
 
     bindDesktopHover();
     bindMobileClick();
-
-    // Mobile : clic sur le burger → afficher notre overlay et masquer le menu Squarespace (.header-menu)
-    if (burgerTrigger && burgerTrigger !== trigger) {
-      burgerTrigger.addEventListener("click", function (e) {
-        if (!mqMobile.matches) return;
-        e.preventDefault();
-        e.stopPropagation();
-        openMenu();
-      }, true);
-    }
+    bindBurgerClick();
 
     // Empêche le "Menu" de naviguer si c'est un lien vers une page (desktop hover)
     if (isMenuTrigger) trigger.addEventListener("click", (e) => {
