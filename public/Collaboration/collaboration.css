@@ -162,9 +162,7 @@ body.dark-mode .gm-filterbar__item {
   color: var(--oasis-beige) !important;
 }
 
-h3 {
-  letter-spacing: 0.15em !important;
-}
+
 
 /* Léger zoom au survol des images (sections collaborations – structure Fluid Engine) */
 section[data-section-id="697e0cc6d8d22f1b5689a5ee"],

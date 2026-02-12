@@ -441,7 +441,7 @@ body.oasis-submenu-lock {
   }
 
   .oasis-submenu__close {
-    display: block !important;
+    display: none !important;
   }
 }
 

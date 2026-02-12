@@ -87,8 +87,8 @@
             <h3 class="oasis-submenu__title">Galerie Oasis</h3>
             <ul class="oasis-submenu__list">
               <li><a href="/galerie-oasis-collections/tapistelar">Tapistelar</a></li>
-              <li><a>Siroco</a></li>
-              <li><a>Mirages</a></li>
+              <li><a href="/galerie-oasis-collections/siroco">Siroco</a></li>
+              <li><a href="/galerie-oasis-collections/mirages">Mirages</a></li>
             </ul>
           </div>
 
@@ -109,12 +109,12 @@
             <h3 class="oasis-submenu__title">Catalogue</h3>
             <ul class="oasis-submenu__list">
               <li>
-                <a href="#">
+                <a href="https://goby-sawfish-66kt.squarespace.com/s/LZ_catalogue_FR_compressed.pdf">
                   <span class="oasis-submenu__diamond" aria-hidden="true"></span>Catalogue français
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="https://goby-sawfish-66kt.squarespace.com/s/LZ_catalogue_EN_11zon.pdf">
                   <span class="oasis-submenu__diamond" aria-hidden="true"></span>Catalogue anglais
                 </a>
               </li>
