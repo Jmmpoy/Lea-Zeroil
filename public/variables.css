@@ -6,8 +6,7 @@
   --oasis-bordeaux: #461010;
   --oasis-bordeaux-rgb: 70, 16, 16;
   --oasis-bordeaux-dark: #4b0706;
-  --oasis-sombre-2: #460F10;
-  --oasis-brown: #5c2703;
+  --oasis-brown: #460F10;
   --oasis-brown-rgb: 92, 39, 3;
   --oasis-beige: #F0EDE6;
   --oasis-beige-rgb: 240, 237, 230;
@@ -46,21 +45,21 @@
   --diamond-color-vert-kaki: #556b2f;
 
   --diamond-color-jaune: #ffd966;
-  --diamond-color-jaune-clair: #ffd966;
+  --diamond-color-jaune-clair: var(--diamond-color-jaune);
   --diamond-color-jaune-paille: #f1c232;
   --diamond-color-tournesol: #f4c430;
   --diamond-color-miel: var(--diamond-color-jaune);
 
-  --diamond-color-rose: #e06666;
-  --diamond-color-rose-pale: #f4cccc;
-  --diamond-color-rose-fonce: #cc0000;
-  --diamond-color-rose-etrusque: #e6b8af;
-  --diamond-color-vieux-rose: #c27ba0;
-  --diamond-color-rose-pale-brun-terre: #e6b8af;
-  --diamond-color-rose-terre: #d5a6bd;
-  --diamond-color-rose-brun-terre: #c27ba0;
-
   --diamond-color-rouge: #cc0000;
+  --diamond-color-rose: #e06666;
+  --diamond-color-rose-fonce: var(--diamond-color-rouge);
+  --diamond-color-rose-pale: #f4cccc;
+  --diamond-color-rose-etrusque: #e6b8af;
+  --diamond-color-rose-pale-brun-terre: var(--diamond-color-rose-etrusque);
+  --diamond-color-rose-terre: #d5a6bd;
+  --diamond-color-vieux-rose: #c27ba0;
+  --diamond-color-rose-brun-terre: var(--diamond-color-vieux-rose);
+
   --diamond-color-bordeaux: #800020;
   --diamond-color-bordeaux-fonce: #5a0f2e;
   --diamond-color-vigne: #722f37;
@@ -79,7 +78,7 @@
 
   --diamond-color-blanc: #ffffff;
   --diamond-color-noir: #000000;
-  --diamond-color-transparent: #ffffff;
+  --diamond-color-transparent: var(--diamond-color-blanc);
 
   --diamond-color-or: #ffd700;
   --diamond-color-argent: #c0c0c0;
@@ -89,7 +88,7 @@
   --diamond-color-ble: #a4c2f4;
 
   --diamond-color-olive: #808000;
-  --diamond-color-sapin: #556b2f;
+  --diamond-color-sapin: var(--diamond-color-vert-kaki);
   --diamond-color-avocat: #568203;
 
   --diamond-color-violet: #ee82ee;

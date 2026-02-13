@@ -81,7 +81,7 @@ body.oasis-footer-force-dark footer .news-success {
 body.oasis-footer-force-dark section[data-section-id="6943f46e084deb646d9f0a51"],
 body.oasis-footer-force-dark .oasis-footer,
 body.oasis-footer-force-dark .oasis-footer-frame {
-  background: var(--oasis-sombre-2);
+  background: var(--oasis-brown);
   color: var(--oasis-beige);
 }
 
@@ -364,7 +364,7 @@ section[data-section-id="6943f46e084deb646d9f0a51"] {
 /* Galerie Oasis / dark : forcer fond sombre (override transparent ci-dessus) */
 body.dark-mode section[data-section-id="6943f46e084deb646d9f0a51"],
 body.oasis-footer-force-dark section[data-section-id="6943f46e084deb646d9f0a51"] {
-  background-color: var(--oasis-sombre-2) !important;
+  background-color: var(--oasis-brown) !important;
 }
 
 /* Élément au-dessus (section-border, section-background, content-wrapper) : fond sombre (override inline style) */
@@ -374,14 +374,14 @@ body.dark-mode section[data-section-id="6943f46e084deb646d9f0a51"] .content-wrap
 body.oasis-footer-force-dark section[data-section-id="6943f46e084deb646d9f0a51"] .section-border,
 body.oasis-footer-force-dark section[data-section-id="6943f46e084deb646d9f0a51"] .section-background,
 body.oasis-footer-force-dark section[data-section-id="6943f46e084deb646d9f0a51"] .content-wrapper {
-  background: var(--oasis-sombre-2) !important;
-  background-color: var(--oasis-sombre-2) !important;
+  background: var(--oasis-brown) !important;
+  background-color: var(--oasis-brown) !important;
 }
 
 /* Conteneur footer (au-dessus de la section) */
 body.dark-mode footer#footer-sections,
 body.oasis-footer-force-dark footer#footer-sections {
-  background-color: var(--oasis-sombre-2) !important;
+  background-color: var(--oasis-brown) !important;
 }
 
 section[data-section-id="6943f46e084deb646d9f0a51"] .book {

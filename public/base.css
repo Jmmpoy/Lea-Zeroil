@@ -445,7 +445,7 @@ body.dark-mode #theme-toggle button.is-active .theme-icon path {
 }
 
 body.dark-mode {
-  --bg-color: var(--oasis-sombre-2);
+  --bg-color: var(--oasis-brown);
   --text-color: var(--oasis-beige);
   --accent-color: var(--oasis-cream);
   --border-color: var(--oasis-beige-55);

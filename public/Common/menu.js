@@ -86,6 +86,7 @@
           <div class="oasis-submenu__col">
             <h3 class="oasis-submenu__title">Galerie Oasis</h3>
             <ul class="oasis-submenu__list">
+            <li><a href="/galerie-oasis">La Galerie Oasis</a></li>
               <li><a href="/galerie-oasis-collections/tapistelar">Tapistelar</a></li>
               <li><a href="/galerie-oasis-collections/siroco">Siroco</a></li>
               <li><a href="/galerie-oasis-collections/mirages">Mirages</a></li>

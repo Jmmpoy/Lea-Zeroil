@@ -143,6 +143,10 @@ section[data-section-id="696abd01e1d862206d905143"] .summary-thumbnail-outer-con
     grid-row: auto !important;
   }
 
+  section[data-section-id="696abd01e1d862206d905143"] .summary-item-list.gm-filter-active {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
   /* Padding horizontal + hauteur min titre : harmonise les cartes en 2 colonnes */
   section[data-section-id="696abd01e1d862206d905143"] .summary-title {
     min-height: 2.8em;
@@ -412,7 +416,7 @@ section[data-section-id="697e19388832206a924322ee"] .gm-filterbar__label {
   flex: 0 0 auto;
   color: var(--oasis-bordeaux);
   font-family: "Presicav", serif !important;
-  font-size: 8px !important;
+  font-size: 10px !important;
   line-height: 1 !important;
   letter-spacing: 0.20em !important;
   text-transform: uppercase !important;
