@@ -35,6 +35,8 @@
 
 .product-variants {
   width: 100%;
+  max-width: 500px !important;
+  margin: auto !important;
 }
 
 .product-extra-actions {
@@ -359,8 +361,7 @@
 
 [data-product-detail-layout="simple"] .product-variants.sqs-site-style-form .field-list {
   display: grid !important;
-  grid-template-columns: 160px 1fr;
-  column-gap: 18px !important;
+  grid-template-columns: 90px 1fr;
   align-items: start;
 }
 
