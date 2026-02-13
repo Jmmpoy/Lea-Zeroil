@@ -12,6 +12,7 @@
  * - Mise à jour des sections avec attribut [data-section-theme]
  * - Marquage automatique de l'élément de navigation de la page courante
  * - Compatible avec la navigation AJAX de Squarespace
+ * - Swap du logo header (bordeaux / crème) selon le thème
  * 
  * Classes CSS gérées :
  * - white, white-bold, light, light-bold
@@ -30,6 +31,11 @@
   const lightTheme = "bright";
   const darkTheme = "dark";
 
+  const headerLogoUrls = {
+    bordeaux: "https://static1.squarespace.com/static/6939b3b7d90b6131b1aeebba/t/698f7663c75fac7748a47014/1771009635162/LOGOTYPE_LEA_ZEROIL_VFINAL_BORDEAUX.png",
+    cream: "https://static1.squarespace.com/static/6939b3b7d90b6131b1aeebba/t/698f76631382647efdf0d612/1771009635156/LOGOTYPE_LEA_ZEROIL_VFINAL_CREAM.png"
+  };
+
   const themeClasses = [
     "white", "white-bold", "light", "light-bold",
     "bright-inverse", "bright",
@@ -43,6 +49,15 @@
       section.classList.add(theme);
       section.setAttribute("data-section-theme", theme);
     });
+  }
+
+  function updateHeaderLogo() {
+    const img = document.querySelector(".header-announcement-bar-wrapper .header-title img") ||
+      document.querySelector(".header-announcement-bar-wrapper .header-title-logo img");
+    if (!img) return;
+    img.src = document.body.classList.contains("dark-mode")
+      ? headerLogoUrls.cream
+      : headerLogoUrls.bordeaux;
   }
 
   function markCurrentNavItem() {
@@ -78,6 +93,7 @@
       }
       setActive(true);
       applySectionTheme(darkTheme);
+      updateHeaderLogo();
     }
 
     function disableDark(persist) {
@@ -87,6 +103,7 @@
       }
       setActive(false);
       applySectionTheme(lightTheme);
+      updateHeaderLogo();
     }
 
     darkBtn.addEventListener("click", function () { enableDark(true); });
@@ -105,6 +122,7 @@
 
   function run() {
     initThemeToggle();
+    updateHeaderLogo();
     markCurrentNavItem();
   }
 

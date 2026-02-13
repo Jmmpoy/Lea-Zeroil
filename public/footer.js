@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="https://lea-zeroil.vercel.app/footer.css">
 <link rel="stylesheet" href="https://lea-zeroil.vercel.app/Collection/collection.css">
 <link rel="stylesheet" href="https://lea-zeroil.vercel.app/Product/product.css">
+<link rel="stylesheet" href="https://lea-zeroil.vercel.app/Product/productItem.css"></link>
 <link rel="stylesheet" href="https://lea-zeroil.vercel.app/Homepage/homepage.css">
 <link rel="stylesheet" href="https://lea-zeroil.vercel.app/Contact/contact.css">
 <link rel="stylesheet" href="https://lea-zeroil.vercel.app/About/about.css">
