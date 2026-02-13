@@ -177,9 +177,9 @@
 /* --------------------------------------------------------------------------
    Responsive : colonnes empilées sur mobile
    -------------------------------------------------------------------------- */
-@media (max-width: 1300px) {
+@media (max-width: 900px) {
   .product-content-wrapper {
-    flex-direction: column;
+    flex-direction: column !important;
     height: auto;
     min-height: 90vh;
   }
@@ -190,8 +190,9 @@
   }
 
   .product-content-wrapper .product-gallery[data-product-gallery="container"] {
-    min-height: 50vh;
-    max-height: 60vh;
+    height: auto;
+    min-height: 0;
+    max-height: none;
   }
 
   .product-gallery[data-product-gallery="container"] {
@@ -203,6 +204,7 @@
   .product-gallery .product-gallery-slides {
     width: 100% !important;
     max-width: 100%;
+    height: auto;
   }
 
   .product-gallery .product-gallery-slides-item {
@@ -210,6 +212,14 @@
     min-width: 100% !important;
     flex: 0 0 100% !important;
     box-sizing: border-box;
+    height: auto !important;
+  }
+
+  .product-gallery .product-gallery-slides-item-image {
+    height: auto !important;
+    max-height: 75vh;
+    object-fit: contain;
+    object-position: center;
   }
 
   [data-product-detail-layout="simple"] .product-meta {
@@ -365,7 +375,7 @@
   align-items: start;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 900px) {
   [data-product-detail-layout="simple"] .product-variants.sqs-site-style-form .field-list {
     align-items: unset;
     column-gap: unset;
@@ -845,6 +855,13 @@ fieldset.variant-option.form-item.select .variant-select-wrapper,
   text-align: left;
   font-family: "Presicav", serif;
   font-size: 15px;
+}
+
+@media (max-width: 900px) {
+  .ProductItem-additional .sqs-layout .sqs-row .sqs-col-12 > *:nth-child(2) .sqs-block-content .sqs-html-content p,
+  .ProductItem-additional .sqs-layout .sqs-row .sqs-col-12 > *:nth-child(3) .sqs-block-content .sqs-gallery-container .sqs-gallery .slide .margin-wrapper .image-slide-title {
+    font-size: 12px;
+  }
 }
 
 /* Section bright : texte bordeaux */

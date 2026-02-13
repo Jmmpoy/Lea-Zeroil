@@ -74,23 +74,14 @@
         wrapperClass: WRAPPER_CLASS,
         slidesPerView: 1,
         spaceBetween: 0,
+        autoHeight: _mobile,
         speed: 400,
         loop: false,
         grabCursor: true,
         observer: true,
         observeSlideChildren: true,
         // Comme Goodmoods : breakpoints pour recalc responsive + base sur le conteneur (mobile)
-        breakpointsBase: 'container',
-        breakpoints: {
-          0: {
-            slidesPerView: 1,
-            spaceBetween: 0
-          },
-          768: {
-            slidesPerView: 1,
-            spaceBetween: 0
-          }
-        },
+        
         navigation: prevEl && nextEl ? {
           prevEl: prevEl,
           nextEl: nextEl
@@ -107,6 +98,7 @@
             // Recalcul après chargement layout/images (fix mobile : grilles vides à l'init, seulement 3 slides)
             function doUpdate() {
               if (s && s.update) s.update();
+              if (s && s.updateAutoHeight) s.updateAutoHeight(0);
               updateIndicator(s);
               updateThumbnails(s);
             }
@@ -121,6 +113,7 @@
             }
           },
           slideChange: function (s) {
+            if (s && s.updateAutoHeight) s.updateAutoHeight(250);
             updateIndicator(s);
             updateThumbnails(s);
           }
