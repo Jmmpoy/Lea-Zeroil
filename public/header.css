@@ -11,6 +11,10 @@
   border:0 !important;
 }
 
+.header-display-mobile {
+  margin-top: 20px !important;
+}
+
 .header-nav-item a {
   position: relative;
   display: inline-block;

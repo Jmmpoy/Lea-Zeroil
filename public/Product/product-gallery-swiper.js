@@ -1,152 +1,89 @@
 /**
- * Page produit : initialisation du carousel Swiper de la galerie.
+ * Product gallery native autoplay helper.
+ * Works with Squarespace native product gallery controls.
  */
-  /* Galerie produit : Swiper pour le carousel d’images */
-  (function initProductGallerySwiper() {
-    var WRAPPER_CLASS = 'swiper-wrapper';
-    var INIT_FLAG = 'data-product-gallery-swiper-init';
-    var isMobile = function () {
-      return window.matchMedia('(max-width: 900px)').matches;
-    };
+(function initNativeProductGalleryAutoplay() {
+  var INTERVAL_MS = 4500;
+  var INIT_FLAG = "data-product-gallery-autoplay-init";
 
-    function run() {
-      var container = document.querySelector('.product-gallery[data-product-gallery="container"]');
-      var slidesEl = container && container.querySelector('.product-gallery-slides');
+  function setup(container) {
+    if (!container || container.getAttribute(INIT_FLAG) === "1") return;
 
-      if (!slidesEl || slidesEl.getAttribute(INIT_FLAG)) return;
+    var nextBtn = container.querySelector('[data-product-gallery="next"]');
+    var thumbnailButtons = Array.from(
+      container.querySelectorAll(".product-gallery-thumbnails-item")
+    );
+    if (!nextBtn || !thumbnailButtons.length) return;
 
-      var items = Array.from(slidesEl.querySelectorAll('.product-gallery-slides-item'));
+    var timer = null;
+    var isPaused = false;
 
-      // Au moins 3 slides requis (sinon retry via setTimeout)
-      if (items.length < 3) return;
-
-      var _mobile = isMobile();
-      // Mobile : n'init qu'après chargement complet (images, layout) pour éviter grille à 3 slides
-      if (_mobile && document.readyState !== 'complete') {
-        return; // run() sera rappelé au window.load
-      }
-      var _rect = container ? container.getBoundingClientRect() : null;
-      var _containerWidth = _rect ? _rect.width : 0;
-      // Mobile : ne pas init si le conteneur est trop étroit (grilles vides, seulement 3 slides calculées)
-      var MIN_WIDTH_MOBILE = 250;
-      if (_mobile && _containerWidth > 0 && _containerWidth < MIN_WIDTH_MOBILE) return;
-
-      // Créer wrapper
-      var wrapper = document.createElement('div');
-      wrapper.className = WRAPPER_CLASS;
-      items.forEach(function (item) {
-        wrapper.appendChild(item);
-      });
-      slidesEl.insertBefore(wrapper, slidesEl.firstChild);
-
-      // 🔥 Ne définir le flag d'init qu'après avoir VRAIMENT tout initialisé
-      slidesEl.setAttribute(INIT_FLAG, '1');
-
-      var prevEl = container.querySelector('[data-product-gallery="prev"]');
-      var nextEl = container.querySelector('[data-product-gallery="next"]');
-      var indicatorEl = container.querySelector('[data-product-gallery="indicator"]');
-      var thumbItems = Array.from(container.querySelectorAll('.product-gallery-thumbnails-item'));
-
-      function updateIndicator(swiper) {
-        if (!indicatorEl) return;
-        indicatorEl.textContent = (swiper.realIndex + 1) + ' / ' + swiper.slides.length;
-      }
-
-      function updateThumbnails(swiper) {
-        thumbItems.forEach(function (btn, i) {
-          btn.setAttribute('aria-current', i === swiper.realIndex ? 'true' : 'false');
-        });
-      }
-
-      // ⚠️ Forcer le layout complet AVANT Swiper
-      if (_mobile) {
-        var slideWidthPx = container.offsetWidth || 360; // fallback raisonnable
-        wrapper.style.display = 'flex';
-        wrapper.style.width = (slideWidthPx * items.length) + 'px';
-        items.forEach(function (slide) {
-          slide.style.minWidth = slideWidthPx + 'px';
-          slide.style.width = slideWidthPx + 'px';
-          slide.style.flexShrink = '0';
-        });
-      }
-      var swiper = new Swiper(slidesEl, {
-        slideClass: 'product-gallery-slides-item',
-        wrapperClass: WRAPPER_CLASS,
-        slidesPerView: 1,
-        spaceBetween: 0,
-        autoHeight: _mobile,
-        speed: 400,
-        loop: false,
-        grabCursor: true,
-        observer: true,
-        observeSlideChildren: true,
-        // Comme Goodmoods : breakpoints pour recalc responsive + base sur le conteneur (mobile)
-        
-        navigation: prevEl && nextEl ? {
-          prevEl: prevEl,
-          nextEl: nextEl
-        } : {},
-        autoplay: {
-          delay: 5000,
-          disableOnInteraction: false,
-          pauseOnMouseEnter: true
-        },
-        on: {
-          init: function (s) {
-            updateIndicator(s);
-            updateThumbnails(s);
-            // Recalcul après chargement layout/images (fix mobile : grilles vides à l'init, seulement 3 slides)
-            function doUpdate() {
-              if (s && s.update) s.update();
-              if (s && s.updateAutoHeight) s.updateAutoHeight(0);
-              updateIndicator(s);
-              updateThumbnails(s);
-            }
-            var delayFirst = isMobile() ? 500 : 300;
-            setTimeout(doUpdate, delayFirst);
-            if (isMobile()) {
-              if (document.readyState !== 'complete') {
-                window.addEventListener('load', doUpdate);
-              }
-              setTimeout(doUpdate, 1000);
-              setTimeout(doUpdate, 2000);
-            }
-          },
-          slideChange: function (s) {
-            if (s && s.updateAutoHeight) s.updateAutoHeight(250);
-            updateIndicator(s);
-            updateThumbnails(s);
-          }
-        }
-      });
-
-      thumbItems.forEach(function (btn, index) {
-        btn.addEventListener('click', function () {
-          swiper.slideTo(index);
-        });
-      });
-
-      var slideArea = slidesEl.querySelector('.swiper-wrapper');
-      if (slideArea) {
-        slideArea.addEventListener('click', function () {
-          swiper.slideNext();
-        });
-      }
+    function goToFirst() {
+      if (!thumbnailButtons.length) return;
+      thumbnailButtons[0].click();
     }
 
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', run);
-    } else {
-      run();
+    function goNext() {
+      var isDisabled =
+        nextBtn.disabled ||
+        nextBtn.getAttribute("aria-disabled") === "true" ||
+        nextBtn.classList.contains("disabled") ||
+        nextBtn.classList.contains("swiper-button-disabled");
+
+      if (isDisabled) {
+        goToFirst();
+        return;
+      }
+      nextBtn.click();
     }
 
-    // ⏱ Tentatives retardées
-    setTimeout(run, 600);
-    setTimeout(run, 1500);
-    setTimeout(run, 3000);
+    function tick() {
+      if (isPaused) return;
+      goNext();
+    }
 
-    // Mobile : init galerie après chargement complet (évite grille partielle à 3 slides)
-    window.addEventListener('load', run);
+    function start() {
+      if (timer) return;
+      timer = window.setInterval(tick, INTERVAL_MS);
+    }
 
-    document.addEventListener('sqs-route-did-change', run);
-  })();
+    function stop() {
+      if (!timer) return;
+      window.clearInterval(timer);
+      timer = null;
+    }
+
+    container.addEventListener("mouseenter", function () {
+      isPaused = true;
+    });
+    container.addEventListener("mouseleave", function () {
+      isPaused = false;
+    });
+
+    document.addEventListener("visibilitychange", function () {
+      if (document.hidden) stop();
+      else start();
+    });
+
+    container.setAttribute(INIT_FLAG, "1");
+    start();
+  }
+
+  function run() {
+    var galleries = document.querySelectorAll(
+      '.product-gallery[data-product-gallery="container"]'
+    );
+    galleries.forEach(setup);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", run);
+  } else {
+    run();
+  }
+
+  window.addEventListener("load", run);
+  document.addEventListener("sqs-route-did-change", function () {
+    setTimeout(run, 80);
+  });
+})();
