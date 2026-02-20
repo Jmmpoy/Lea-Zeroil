@@ -9,7 +9,7 @@
       wrap.className = "product-extra-actions";
       wrap.innerHTML = `
       <a class="product-extra-btn product-extra-btn--download"
-   download>
+   >
   Fiche technique
 </a>
       <button class="product-extra-btn" href="/lien-guide-entretien" type="button" data-action="open-guide">Voir le guide d’entretien</button>

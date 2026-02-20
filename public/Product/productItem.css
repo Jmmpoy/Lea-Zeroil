@@ -510,6 +510,7 @@ body.dark-mode [data-product-detail-layout="simple"] .product-variants.sqs-site-
   font-size: 12px !important;
   text-transform: uppercase;
   color: var(--text-color);
+  white-space: normal !important;
 }
 
 [data-product-detail-layout="simple"] .product-variants.sqs-site-style-form .field-list .variant-option.gm-single-option select,
