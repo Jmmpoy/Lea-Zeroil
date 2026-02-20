@@ -15,7 +15,7 @@
  * Structure du menu :
  * - Collections (Luminaires, Tables, Assises, etc.)
  * - Collaborations (Silva Paris, La faïencerie de Gien, etc.)
- * - Galerie Oasis (Tapistelar, Siroco, Mirages)
+ * - Galerie Oasis (Siroco, Mirages)
  * - Évènements (Salon des ensembliers, Pad Paris 2024, etc.)
  * - Catalogue (Français, Anglais)
  * 
@@ -74,6 +74,7 @@
             <h3 class="oasis-submenu__title">Collaborations</h3>
             <ul class="oasis-submenu__list">
               <li><a href="/collaborations#all">All</a></li>
+              <li><a href="/collaborations-post/silva">Silva</a></li>
               <li><a href="/collaborations-post/silvaparis">Silva Paris</a></li>
               <li><a href="/collaborations-post/la-faiencerie-de-gien-x-la-zeroil">La faïencerie de Gien</a></li>
               <li><a href="/collaborations-post/modernmetierxleazeroil">Modern Metier</a></li>
@@ -87,8 +88,7 @@
             <h3 class="oasis-submenu__title">Galerie Oasis</h3>
             <ul class="oasis-submenu__list">
             <li><a href="/galerie-oasis">La Galerie Oasis</a></li>
-              <li><a href="/galerie-oasis-collections/tapistelar">Tapistelar</a></li>
-              <li><a href="/galerie-oasis-collections/siroco">Siroco</a></li>
+              <li><a href="/galerie-oasis-collections/sirocco">Sirocco</a></li>
               <li><a href="/galerie-oasis-collections/mirages">Mirages</a></li>
             </ul>
           </div>
@@ -98,10 +98,7 @@
             <h3 class="oasis-submenu__title">Évènements</h3>
             <ul class="oasis-submenu__list">
               <li><a href="/evenements-post/salon-des-ensembliers">Salon des ensembliers</a></li>
-              <li><a href="/evenements-post/pad-paris-2024">Pad Paris 2024</a></li>
               <li><a href="/evenements-post/lune-rousse">Lune Rousse</a></li>
-              <li><a href="/evenements-post/arjumand">Arjumand's world</a></li>
-              <li><a href="/evenements-post/modern-metier">Modern Metier</a></li>
             </ul>
           </div>
 

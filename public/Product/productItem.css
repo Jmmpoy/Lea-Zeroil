@@ -351,9 +351,10 @@
     letter-spacing: 1px !important;
    }
 
+   /* SUR LA PGE EVENEMENT c'est le bloc image   */
   /* cacher modules matériaux en attendant d'avoir les infos */
-   .sqs-col-12 > div:nth-child(1){
-    display:none !important;
+   .sqs-col-12 > .gallery-block:first-child {
+    display: none !important;
    }
 
    /* cacher l'icône du panier */
