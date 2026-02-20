@@ -361,6 +361,7 @@
    .sqs-custom-cart header-icon{
     display:none !important;
    }
+
 [data-product-detail-layout="simple"] .product-details {
   color: #f5f0e8;
 }
@@ -846,6 +847,8 @@ body.dark-mode [data-product-detail-layout="simple"] .product-variants.sqs-site-
 
 .variant-option-title {
   text-align: left;
+  white-space: normal !important;
+  width:fit-content !important;
 }
 
 .variant-option,
