@@ -55,6 +55,7 @@
 <script src="https://lea-zeroil.vercel.app/Product/product-data-render-b.js"></script>
 <script src="https://lea-zeroil.vercel.app/Product/product-image-title-swatches.js"></script>
 <script src="https://lea-zeroil.vercel.app/Product/product-gallery-all-slide.js"></script>
+<script src="https://lea-zeroil.vercel.app/Product/product-gallery-random.js"></script>
 <script src="https://lea-zeroil.vercel.app/Product/product-variant-defaults.js"></script>
 <script src="https://lea-zeroil.vercel.app/Product/product-variant-icon.js"></script>
 <script src="https://lea-zeroil.vercel.app/Product/product-variant-dropdown.js"></script>

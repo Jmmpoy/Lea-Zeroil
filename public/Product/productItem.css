@@ -970,6 +970,29 @@ section[data-section-theme="bright"] .ProductItem-additional .sqs-layout .sqs-ro
   background: var(--diamond-color-olive);
 }
 
+/* 2e galerie : même format pour les 3 slides images que le slide « All » (3:4) */
+.ProductItem-additional .sqs-layout .sqs-row .sqs-col-12 > *:nth-child(3) .sqs-gallery .slide:not(.collab-gallery-all-slide) .margin-wrapper {
+  aspect-ratio: 3 / 4;
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+
+.ProductItem-additional .sqs-layout .sqs-row .sqs-col-12 > *:nth-child(3) .sqs-gallery .slide:not(.collab-gallery-all-slide) .margin-wrapper .sqs-image-shape-container-element,
+.ProductItem-additional .sqs-layout .sqs-row .sqs-col-12 > *:nth-child(3) .sqs-gallery .slide:not(.collab-gallery-all-slide) .margin-wrapper .image-slide-anchor {
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+}
+
+.ProductItem-additional .sqs-layout .sqs-row .sqs-col-12 > *:nth-child(3) .sqs-gallery .slide:not(.collab-gallery-all-slide) .margin-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 /* 4e slide « All » – 2e galerie (style collaboration) */
 .ProductItem-additional .sqs-layout .sqs-row .sqs-col-12 > *:nth-child(3) .collab-gallery-all-slide .margin-wrapper {
   aspect-ratio: 3 / 4;
