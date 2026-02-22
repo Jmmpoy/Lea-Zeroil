@@ -317,8 +317,6 @@
   display: none !important;
 }
 
-
-
 .squarify-slideout-cart__footer{
   position: unset !important; 
 }
@@ -591,3 +589,15 @@
     max-width: 80vw !important;
   }
 }
+
+ .squarify-slideout-cart:not(.squarify-slideout-cart--open) {
+    right: -80vw !important;
+  }
+
+[data-product-detail-layout="simple"] .product-variants.sqs-site-style-form .field-list select {
+  white-space: normal;
+}
+
+ .sqs-col-12 > .gallery-block:first-child {
+    display: none !important;
+   }
