@@ -1,8 +1,10 @@
 /**
- * Produit : randomisation des 3 premières images de la 2e galerie (ProductItem-additional).
- * Affiche 3 images différentes parmi 9 à chaque rechargement ; le slide « All » reste inchangé.
+ * Produit : section « Vous pourriez également aimer » (suggestionsGallery).
+ * Créée de A à Z en JS : titre + 3 images aléatoires + bloc « All ».
+ * Injectée comme enfant de .product-detail, après ProductItem-additional.
  */
 (function () {
+  var SECTION_TITLE = "Vous pourriez également aimer";
   var RANDOM_GALLERY = [
     { title: "Bougeoir mural", imageUrl: "https://images.squarespace-cdn.com/content/v1/6939b3b7d90b6131b1aeebba/25059981-7a6e-4196-aaa6-5b92b40cd63b/MIRAGES-56.jpg?format=1500w", redirectUrl: "/boutique/p/bougeoir-mural-grand" },
     { title: "APPLIQUE ORSAY", imageUrl: "https://images.squarespace-cdn.com/content/v1/6939b3b7d90b6131b1aeebba/077f395b-ce8c-4576-9ddc-be79050da851/MIRAGES-45.jpg?format=1500w", redirectUrl: "/boutique/p/applique-orsay" },
@@ -28,40 +30,62 @@
   }
 
   function run() {
-    var container = document.querySelector(".ProductItem-additional");
-    if (!container) return;
-    var block3 = container.querySelector(".sqs-layout .sqs-row .sqs-col-12 > *:nth-child(3)");
-    if (!block3) return;
-    var gallery = block3.querySelector(".sqs-block-content .sqs-gallery-container .sqs-gallery");
-    if (!gallery) return;
+    var productDetail = document.querySelector(".product-detail");
+    if (!productDetail) return;
+    if (document.getElementById("suggestionsGallery")) return;
 
-    var allSlides = gallery.querySelectorAll(".slide");
-    var contentSlides = [];
-    for (var s = 0; s < allSlides.length; s++) {
-      if (allSlides[s].classList.contains("collab-gallery-all-slide")) break;
-      contentSlides.push(allSlides[s]);
-    }
-    if (contentSlides.length < 3) return;
+    var productItemAdditional = productDetail.querySelector(".ProductItem-additional");
+    var section = document.createElement("section");
+    section.id = "suggestionsGallery";
+    section.className = "suggestionsGallery";
+
+    var titleEl = document.createElement("h2");
+    titleEl.className = "suggestionsGallery__title";
+    titleEl.textContent = SECTION_TITLE;
+
+    var grid = document.createElement("div");
+    grid.className = "suggestionsGallery__grid";
 
     var indices = pickRandomIndices(3, RANDOM_GALLERY.length);
     for (var i = 0; i < 3; i++) {
       var item = RANDOM_GALLERY[indices[i]];
-      var slide = contentSlides[i];
       var href = item.redirectUrl && !item.redirectUrl.startsWith("/") ? "/" + item.redirectUrl : item.redirectUrl;
 
-      var img = slide.querySelector("img");
-      if (img) img.src = item.imageUrl;
+      var link = document.createElement("a");
+      link.href = href;
+      link.className = "suggestionsGallery__item";
+      link.setAttribute("aria-label", item.title);
 
-      var link = slide.querySelector(".margin-wrapper a[href]") || slide.querySelector("a[href]");
-      if (link) link.href = href;
+      var imgWrap = document.createElement("div");
+      imgWrap.className = "suggestionsGallery__item-image-wrap";
+      var img = document.createElement("img");
+      img.src = item.imageUrl;
+      img.alt = item.title;
+      imgWrap.appendChild(img);
 
-      var titleText = slide.querySelector(".image-slide-title__text");
-      var titleBlock = slide.querySelector(".image-slide-title");
-      if (titleText) {
-        titleText.textContent = item.title;
-      } else if (titleBlock) {
-        titleBlock.textContent = item.title;
-      }
+      var titleSpan = document.createElement("span");
+      titleSpan.className = "suggestionsGallery__item-title";
+      titleSpan.textContent = item.title;
+
+      link.appendChild(imgWrap);
+      link.appendChild(titleSpan);
+      grid.appendChild(link);
+    }
+
+    var allLink = document.createElement("a");
+    allLink.href = "/collections";
+    allLink.className = "suggestionsGallery__all";
+    allLink.setAttribute("aria-label", "Voir tout");
+    allLink.textContent = "All";
+    grid.appendChild(allLink);
+
+    section.appendChild(titleEl);
+    section.appendChild(grid);
+
+    if (productItemAdditional && productItemAdditional.nextSibling) {
+      productDetail.insertBefore(section, productItemAdditional.nextSibling);
+    } else {
+      productDetail.appendChild(section);
     }
   }
 
@@ -70,7 +94,7 @@
   } else {
     run();
   }
-  setTimeout(run, 600);
-  setTimeout(run, 1200);
+  setTimeout(run, 400);
+  setTimeout(run, 1000);
   document.addEventListener("sqs-route-did-change", run);
 })();

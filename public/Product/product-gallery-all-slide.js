@@ -4,6 +4,8 @@
   /* Page produit – 4e slide « All » bordeaux sur la 2e galerie (même logique que page collaboration) */
   (function injectProductPageGalleryAllSlide() {
     function run() {
+      /* Page produit : la section suggestionsGallery gère désormais le bloc « All » */
+      if (document.querySelector(".product-detail")) return;
       var container = document.querySelector(".ProductItem-additional");
       if (!container) return;
       var block3 = container.querySelector(".sqs-layout .sqs-row .sqs-col-12 > *:nth-child(3)");

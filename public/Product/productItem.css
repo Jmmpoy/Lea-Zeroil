@@ -889,6 +889,10 @@ fieldset.variant-option.form-item.select .variant-select-wrapper,
    ProductItem-additional : galeries et titres sous la fiche produit
    ========================================================================== */
 
+   .product-detail .ProductItem-additional {
+  height: 1px !important;
+}
+
 /* Première galerie : fond bordeaux → texte clair */
 .ProductItem-additional .sqs-layout .sqs-row .sqs-col-12 > *:nth-child(1) .sqs-block-content .sqs-gallery-container .sqs-gallery .slide .margin-wrapper .image-slide-title {
   color: var(--oasis-cream, #f5f0e8);
@@ -987,10 +991,10 @@ section[data-section-theme="bright"] .ProductItem-additional .sqs-layout .sqs-ro
 }
 
 .ProductItem-additional .sqs-layout .sqs-row .sqs-col-12 > *:nth-child(3) .sqs-gallery .slide:not(.collab-gallery-all-slide) .margin-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
 }
 
 /* 4e slide « All » – 2e galerie (style collaboration) */
@@ -1021,6 +1025,99 @@ section[data-section-theme="bright"] .ProductItem-additional .sqs-layout .sqs-ro
 
 .gallery-all-slide__link .content-fill{
   font-size: 14px;
+}
+
+/* ==========================================================================
+   suggestionsGallery : section « Vous pourriez également aimer » (enfant de .product-detail)
+   ========================================================================== */
+.suggestionsGallery {
+  padding: 60px 12px 0;
+  max-width: 100%;
+}
+
+.suggestionsGallery__title {
+  margin: 0 0 24px;
+  color: var(--oasis-bordeaux, #5c3d2e);
+  font-family: "Presicav", serif;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: underline !important;
+}
+
+.suggestionsGallery__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+
+.suggestionsGallery__item {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.suggestionsGallery__item-image-wrap {
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.suggestionsGallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.suggestionsGallery__item-title {
+  display: block;
+  color: var(--oasis-cream, #f5f0e8);
+  font-family: "Presicav", serif;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0 12px;
+  box-sizing: border-box;
+}
+
+section[data-section-theme="bright"] .suggestionsGallery__item-title {
+  color: var(--oasis-bordeaux, #5c3d2e);
+}
+
+.suggestionsGallery__all {
+  aspect-ratio: 3 / 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+  background-color: var(--oasis-bordeaux, #5c3d2e);
+  color: var(--oasis-cream, #f5f0e8) !important;
+  font-family: "Henry", serif;
+  font-size: 12px;
+  font-style: italic;
+  text-decoration: underline;
+  text-decoration-color: var(--oasis-cream, #f5f0e8);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+@media (max-width: 900px) {
+  .suggestionsGallery__title {
+    font-size: 12px;
+  }
+
+  .suggestionsGallery__item-title {
+    font-size: 12px;
+  }
+
+  .suggestionsGallery__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
 }
 
 .product-detail-section{
