@@ -149,7 +149,7 @@ section[data-section-id="696abd01e1d862206d905143"] .summary-thumbnail-outer-con
 
   /* Padding horizontal + hauteur min titre : harmonise les cartes en 2 colonnes */
   section[data-section-id="696abd01e1d862206d905143"] .summary-title {
-    min-height: 2.8em;
+    min-height: 5.8em !important;
     padding-left: 10px;
     padding-right: 10px;
     box-sizing: border-box;
