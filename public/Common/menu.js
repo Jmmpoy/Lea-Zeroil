@@ -74,7 +74,6 @@
             <h3 class="oasis-submenu__title">Collaborations</h3>
             <ul class="oasis-submenu__list">
               <li><a href="/collaborations#all">All</a></li>
-              <li><a href="/collaborations-post/silva">Silva</a></li>
               <li><a href="/collaborations-post/silvaparis">Silva Paris</a></li>
               <li><a href="/collaborations-post/la-faiencerie-de-gien-x-la-zeroil">La faïencerie de Gien</a></li>
               <li><a href="/collaborations-post/modernmetierxleazeroil">Modern Metier</a></li>
