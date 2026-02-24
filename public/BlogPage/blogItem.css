@@ -22,8 +22,6 @@
 body.oasis-blog-theme-lune,
 body.oasis-blog-theme-lune section[data-test="page-section"],
 body.oasis-blog-theme-lune .page-section,
-body.oasis-blog-theme-lune .header,
-body.oasis-blog-theme-lune #header,
 body.oasis-blog-theme-lune footer,
 body.oasis-blog-theme-lune .oasis-footer-frame,
 body.oasis-blog-theme-lune .content-wrapper,
@@ -33,6 +31,12 @@ body.oasis-blog-theme-lune .section-border,
 body.oasis-blog-theme-lune .section-background,
 body.oasis-blog-theme-lune .section-background:not(.has-background) {
   background-color: var(--bg-color) !important;
+}
+
+/* Header Galerie & Événements : fond transparent */
+body.oasis-blog-theme-lune .header,
+body.oasis-blog-theme-lune #header {
+  background-color: transparent !important;
 }
 
 /* --------------------------------------------------------------------------
