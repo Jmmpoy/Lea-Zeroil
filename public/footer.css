@@ -1,3 +1,98 @@
+/**FIX ESPACE FOOTER**/
+
+body footer#footer-sections
+    section[data-section-id="6943f46e084deb646d9f0a51"]
+    .content-wrapper .content > div > .fe-6943f46e084deb646d9f0a50
+     {
+--row-height-scaling-factor: unset;
+grid-template-rows: repeat(7, minmax(24px, auto));
+  }
+
+
+
+body footer#footer-sections
+    section[data-section-id="6943f46e084deb646d9f0a51"]
+    .content-wrapper .content > div > .fe-6943f46e084deb646d9f0a50 .fe-block-yui_3_17_2_1_1769794676008_202096 .newsletter-block
+     {
+       height:unset !important;
+  }
+
+
+
+
+body footer#footer-sections
+    section[data-section-id="6943f46e084deb646d9f0a51"]
+    .content-wrapper .content > div > .fe-6943f46e084deb646d9f0a50 .fe-block-yui_3_17_2_1_1769794676008_202096
+     {
+       top:0 !important;
+  }
+
+
+@media (min-width: 768px) {
+  body footer#footer-sections
+  section[data-section-id="6943f46e084deb646d9f0a51"]
+  .content-wrapper .content > div > .fe-6943f46e084deb646d9f0a50
+  .fe-block-yui_3_17_2_1_1770425770951_7007 {
+    /* Option simple : toutes les colonnes de la grille, gutters compris */
+    grid-column: span 12;
+  }
+}
+
+body footer#footer-sections
+    section[data-section-id="6943f46e084deb646d9f0a51"]
+    .content-wrapper .content > div > .fe-6943f46e084deb646d9f0a50 .fe-block-yui_3_17_2_1_1770425770951_7007
+     {
+       grid-column: span 26;
+  }
+
+
+@media (min-width: 768px) {
+  footer .oasis-footer-frame .footer__inner .footer__grid .footer__block--galerie  {
+	margin-top:0;
+  }
+}
+
+@media (max-width: 768px) {
+  footer .oasis-footer-frame .footer__inner .footer__grid .footer__block--galerie .footer__block-title  {
+	margin-bottom:24px;
+  }
+}
+
+
+
+@media (max-width: 600px) {
+  .grid-footer{
+    gap: 60px !important;
+  }
+}
+
+.footer__block--newsletter form {
+  width:205px;
+}
+
+.footer__block-title{
+  margin-bottom:10px;
+}
+
+
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .header,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) #header,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .header,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) #header {
+  background-color: transparent !important;
+}
+
+.burger{
+  display: block !important;
+}
+
+ .oasis-submenu__list a {
+    font-size: 16px;
+    line-height: 1.3;
+    min-height: 10px !important;
+    align-items: center;
+  }
+
 /* Footer grid :
    la 3e colonne (logo) est volontairement plus large */
 .grid-footer {
@@ -856,4 +951,8 @@ body.oasis-footer-force-dark .oasis-footer-frame {
   display: block;
   width: 100%;
   height: 100%;
+}
+
+.oasis-footer-frame {
+  border: unset !important;
 }
