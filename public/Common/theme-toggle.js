@@ -55,9 +55,11 @@
     const img = document.querySelector(".header-announcement-bar-wrapper .header-title img") ||
       document.querySelector(".header-announcement-bar-wrapper .header-title-logo img");
     if (!img) return;
-    img.src = document.body.classList.contains("dark-mode")
-      ? headerLogoUrls.cream
-      : headerLogoUrls.bordeaux;
+    const isCollaborationPage =
+      document.body.classList.contains("collection-type-blog-basic-grid") &&
+      !document.body.classList.contains("oasis-blog-theme-lune");
+    const useCreamLogo = document.body.classList.contains("dark-mode") || isCollaborationPage;
+    img.src = useCreamLogo ? headerLogoUrls.cream : headerLogoUrls.bordeaux;
   }
 
   function markCurrentNavItem() {

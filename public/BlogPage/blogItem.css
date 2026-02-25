@@ -86,6 +86,20 @@ body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .header-announc
   background-color: var(--oasis-cream, #f5f0e8) !important;
 }
 
+/* Pages collaborations : overlay menu fond bordeaux, texte blanc */
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .oasis-submenu,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .oasis-submenu {
+  background: #712317 !important;
+  color: #fff !important;
+}
+
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .oasis-submenu .oasis-submenu__title,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .oasis-submenu .oasis-submenu__list a,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .oasis-submenu .oasis-submenu__title,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .oasis-submenu .oasis-submenu__list a {
+  color: #fff !important;
+}
+
 body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) footer,
 body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .oasis-footer-frame,
 body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) footer,
