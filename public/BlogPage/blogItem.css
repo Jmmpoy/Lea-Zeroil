@@ -61,6 +61,31 @@ body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) #header {
   background-color: transparent !important;
 }
 
+/* Header collaborations : texte et burger en crème sur fond bordeaux */
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .header-announcement-bar-wrapper .header-nav-item a,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .header-announcement-bar-wrapper .header-nav-folder-title,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .header-announcement-bar-wrapper .header-actions a,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .header-announcement-bar-wrapper .header-actions .cart-text-link,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .header-announcement-bar-wrapper .header-actions .cart-quantity-container,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .header-announcement-bar-wrapper .header-title a,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .header-announcement-bar-wrapper .header-nav-item a,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .header-announcement-bar-wrapper .header-nav-folder-title,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .header-announcement-bar-wrapper .header-actions a,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .header-announcement-bar-wrapper .header-actions .cart-text-link,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .header-announcement-bar-wrapper .header-actions .cart-quantity-container,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .header-announcement-bar-wrapper .header-title a {
+  color: var(--oasis-cream, #f5f0e8) !important;
+}
+
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .header-announcement-bar-wrapper .burger-inner .top-bun,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .header-announcement-bar-wrapper .burger-inner .patty,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .header-announcement-bar-wrapper .burger-inner .bottom-bun,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .header-announcement-bar-wrapper .burger-inner .top-bun,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .header-announcement-bar-wrapper .burger-inner .patty,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .header-announcement-bar-wrapper .burger-inner .bottom-bun {
+  background-color: var(--oasis-cream, #f5f0e8) !important;
+}
+
 body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) footer,
 body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .oasis-footer-frame,
 body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) footer,
@@ -130,11 +155,29 @@ body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .oasis-footer-f
   border-bottom-color: rgba(245, 240, 232, 0.55);
 }
 
-/* Logo footer : crème sur fond #712317 (collaborations uniquement) */
+/* Logo footer : crème sur fond #712317 (collaborations uniquement) – light/dark et variante .footer__logo */
 body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .oasis-footer-frame .footer-logo--light path,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .oasis-footer-frame .footer-logo--light path:nth-child(n+2),
 body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .oasis-footer-frame .footer-logo--dark path,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .oasis-footer-frame .footer-logo--dark path:nth-child(n+2),
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .oasis-footer-frame .footer__logo svg path,
 body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .oasis-footer-frame .footer-logo--light path,
-body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .oasis-footer-frame .footer-logo--dark path {
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .oasis-footer-frame .footer-logo--light path:nth-child(n+2),
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .oasis-footer-frame .footer-logo--dark path,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .oasis-footer-frame .footer-logo--dark path:nth-child(n+2),
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .oasis-footer-frame .footer__logo svg path {
+  fill: var(--oasis-cream, #f5f0e8) !important;
+  stroke: var(--oasis-cream, #f5f0e8) !important;
+}
+
+/* Au cas où le logo est dans la section footer sans .oasis-footer-frame */
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) section[data-section-id="6943f46e084deb646d9f0a51"] .footer-logo--light path,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) section[data-section-id="6943f46e084deb646d9f0a51"] .footer-logo--light path:nth-child(n+2),
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) section[data-section-id="6943f46e084deb646d9f0a51"] .footer-logo--dark path,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) section[data-section-id="6943f46e084deb646d9f0a51"] .footer__logo svg path,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) section[data-section-id="6943f46e084deb646d9f0a51"] .footer-logo--light path,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) section[data-section-id="6943f46e084deb646d9f0a51"] .footer-logo--dark path,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) section[data-section-id="6943f46e084deb646d9f0a51"] .footer__logo svg path {
   fill: var(--oasis-cream, #f5f0e8) !important;
   stroke: var(--oasis-cream, #f5f0e8) !important;
 }
