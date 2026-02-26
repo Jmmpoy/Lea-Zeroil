@@ -1031,7 +1031,7 @@ section[data-section-theme="bright"] .ProductItem-additional .sqs-layout .sqs-ro
    suggestionsGallery : section « Vous pourriez également aimer » (enfant de .product-detail)
    ========================================================================== */
 .suggestionsGallery {
-  padding: 60px 12px 0;
+  padding: 60px 12px;
   max-width: 100%;
 }
 
@@ -1039,16 +1039,15 @@ section[data-section-theme="bright"] .ProductItem-additional .sqs-layout .sqs-ro
   margin: 0 0 24px;
   color: var(--oasis-bordeaux, #5c3d2e);
   font-family: "Presicav", serif;
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  text-decoration: underline !important;
 }
 
 .suggestionsGallery__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
+  gap: 10px;
   align-items: start;
 }
 
@@ -1077,7 +1076,7 @@ section[data-section-theme="bright"] .ProductItem-additional .sqs-layout .sqs-ro
   display: block;
   color: var(--oasis-cream, #f5f0e8);
   font-family: "Presicav", serif;
-  font-size: 14px;
+  font-size: 10px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   padding: 0 12px;
@@ -1097,12 +1096,13 @@ section[data-section-theme="bright"] .suggestionsGallery__item-title {
   background-color: var(--oasis-bordeaux, #5c3d2e);
   color: var(--oasis-cream, #f5f0e8) !important;
   font-family: "Henry", serif;
-  font-size: 12px;
+  font-size: 14px;
   font-style: italic;
   text-decoration: underline;
   text-decoration-color: var(--oasis-cream, #f5f0e8);
   text-underline-offset: 3px;
   text-decoration-thickness: 1px;
+  text-decoration: underline !important;
 }
 
 @media (max-width: 900px) {
