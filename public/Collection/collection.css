@@ -77,26 +77,63 @@ section[data-section-id="696abd01e1d862206d905143"] .summary-item-list>.summary-
    ====================== */
 
 /* Gauche – ligne 1 */
-section[data-section-id="696abd01e1d862206d905143"] .summary-item-list>.summary-item:nth-child(7) {
+section[data-section-id="696abd01e1d862206d905143"] .summary-item-list>.summary-item:nth-child(7),
+section[data-section-id="696abd01e1d862206d905143"] .summary-item-list>.summary-item:nth-child(18),
+section[data-section-id="696abd01e1d862206d905143"] .summary-item-list>.summary-item:nth-child(29),
+section[data-section-id="696abd01e1d862206d905143"] .summary-item-list>.summary-item:nth-child(40),
+section[data-section-id="696abd01e1d862206d905143"] .summary-item-list>.summary-item:nth-child(51),
+section[data-section-id="696abd01e1d862206d905143"] .summary-item-list>.summary-item:nth-child(62),
+section[data-section-id="696abd01e1d862206d905143"] .summary-item-list>.summary-item:nth-child(73),
+section[data-section-id="696abd01e1d862206d905143"] .summary-item-list>.summary-item:nth-child(84)
+{
   grid-column: 1 / span 3;
 }
 
-section[data-section-id="696abd01e1d862206d905143"] .summary-item-list>.summary-item:nth-child(8) {
+section[data-section-id="696abd01e1d862206d905143"] .summary-item-list>.summary-item:nth-child(8),
+section[data-section-id="696abd01e1d862206d905143"] .summary-item-list>.summary-item:nth-child(19),
+section[data-section-id="696abd01e1d862206d905143"] .summary-item-list>.summary-item:nth-child(30),
+section[data-section-id="696abd01e1d862206d905143"] .summary-item-list>.summary-item:nth-child(41),
+section[data-section-id="696abd01e1d862206d905143"] .summary-item-list>.summary-item:nth-child(52),
+section[data-section-id="696abd01e1d862206d905143"] .summary-item-list>.summary-item:nth-child(63),
+section[data-section-id="696abd01e1d862206d905143"] .summary-item-list>.summary-item:nth-child(74),
+section[data-section-id="696abd01e1d862206d905143"] .summary-item-list>.summary-item:nth-child(85) {
   grid-column: 4 / span 3;
 }
 
 /* HERO – droite (2 colonnes × 2 lignes) */
-section[data-section-id="696abd01e1d862206d905143"] .summary-item-list>.summary-item:nth-child(9) {
+section[data-section-id="696abd01e1d862206d905143"] .summary-item-list>.summary-item:nth-child(9),
+section[data-section-id="696abd01e1d862206d905143"] .summary-item-list>.summary-item:nth-child(20),
+section[data-section-id="696abd01e1d862206d905143"] .summary-item-list>.summary-item:nth-child(31),
+section[data-section-id="696abd01e1d862206d905143"] .summary-item-list>.summary-item:nth-child(42),
+section[data-section-id="696abd01e1d862206d905143"] .summary-item-list>.summary-item:nth-child(53),
+section[data-section-id="696abd01e1d862206d905143"] .summary-item-list>.summary-item:nth-child(64),
+section[data-section-id="696abd01e1d862206d905143"] .summary-item-list>.summary-item:nth-child(75),
+section[data-section-id="696abd01e1d862206d905143"] .summary-item-list>.summary-item:nth-child(86) {
   grid-column: 7 / span 6;
   grid-row: span 2;
 }
 
 /* Gauche – ligne 2 */
-section[data-section-id="696abd01e1d862206d905143"] .summary-item-list>.summary-item:nth-child(10) {
+section[data-section-id="696abd01e1d862206d905143"] .summary-item-list>.summary-item:nth-child(10), 
+section[data-section-id="696abd01e1d862206d905143"] .summary-item-list>.summary-item:nth-child(21),
+section[data-section-id="696abd01e1d862206d905143"] .summary-item-list>.summary-item:nth-child(32),
+section[data-section-id="696abd01e1d862206d905143"] .summary-item-list>.summary-item:nth-child(43),
+section[data-section-id="696abd01e1d862206d905143"] .summary-item-list>.summary-item:nth-child(54),
+section[data-section-id="696abd01e1d862206d905143"] .summary-item-list>.summary-item:nth-child(65),
+section[data-section-id="696abd01e1d862206d905143"] .summary-item-list>.summary-item:nth-child(76),
+section[data-section-id="696abd01e1d862206d905143"] .summary-item-list>.summary-item:nth-child(87) 
+{
   grid-column: 1 / span 3;
 }
 
-section[data-section-id="696abd01e1d862206d905143"] .summary-item-list>.summary-item:nth-child(11) {
+section[data-section-id="696abd01e1d862206d905143"] .summary-item-list>.summary-item:nth-child(11),
+section[data-section-id="696abd01e1d862206d905143"] .summary-item-list>.summary-item:nth-child(22),
+section[data-section-id="696abd01e1d862206d905143"] .summary-item-list>.summary-item:nth-child(33),
+section[data-section-id="696abd01e1d862206d905143"] .summary-item-list>.summary-item:nth-child(44),
+section[data-section-id="696abd01e1d862206d905143"] .summary-item-list>.summary-item:nth-child(55),
+section[data-section-id="696abd01e1d862206d905143"] .summary-item-list>.summary-item:nth-child(66),
+section[data-section-id="696abd01e1d862206d905143"] .summary-item-list>.summary-item:nth-child(77),
+section[data-section-id="696abd01e1d862206d905143"] .summary-item-list>.summary-item:nth-child(88) {
   grid-column: 4 / span 3;
 }
 
@@ -388,11 +425,10 @@ section[data-section-id="696abd01e1d862206d905143"] .summary-item.gm-filter-hidd
   display: none !important;
 }
 
-/* Grille dynamique quand un filtre est actif : 3 colonnes desktop uniquement (mobile = 2 colonnes dans le bloc @media max-width 767px) */
-@media (min-width: 768px) {
-  section[data-section-id="696abd01e1d862206d905143"] .summary-item-list.gm-filter-active {
-    grid-template-columns: repeat(3, 1fr) !important;
-  }
+/* Grille dynamique quand un filtre est actif : 3 colonnes, réorganisation des items visibles */
+section[data-section-id="696abd01e1d862206d905143"] .summary-item-list.gm-filter-active {
+  grid-template-columns: repeat(3, 1fr) !important;
+}
 
   section[data-section-id="696abd01e1d862206d905143"] .summary-item-list.gm-filter-active>.summary-item {
     grid-column: auto !important;
