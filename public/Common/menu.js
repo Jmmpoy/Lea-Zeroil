@@ -98,6 +98,8 @@
             <ul class="oasis-submenu__list">
               <li><a href="/evenements-post/salon-des-ensembliers">Salon des ensembliers</a></li>
               <li><a href="/evenements-post/lune-rousse">Lune Rousse</a></li>
+              <li><a href="/evenements-post/pad-paris-2024">Pad Paris</a></li>
+              <li><a href="/evenements-post/arjumand">Arjumand's World</a></li>
             </ul>
           </div>
 
