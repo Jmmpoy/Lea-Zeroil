@@ -336,7 +336,7 @@
    .product-price{
     font-family: "Henry", serif !important;
     font-style: italic !important;
-    font-size: 14px !important;
+    font-size: 16px !important;
    }
 
    .product-meta{
@@ -509,10 +509,11 @@ body.dark-mode [data-product-detail-layout="simple"] .product-variants.sqs-site-
 .product-variants .product-variant-option.form-item.select select,
 .product-variants .product-variant-option .form-item.select select {
   font-family: "Presicav", sans-serif !important;
-  font-size: 12px !important;
+  font-size: 10px !important;
   text-transform: uppercase;
   color: var(--text-color);
   white-space: normal !important;
+  letter-spacing: 0.15em;
 }
 
 [data-product-detail-layout="simple"] .product-variants.sqs-site-style-form .field-list .variant-option.gm-single-option select,
