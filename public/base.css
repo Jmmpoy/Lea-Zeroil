@@ -332,19 +332,19 @@
    ========================= */
 
 .text-cream {
-  color: var(--oasis-cream);
+  color: var(--oasis-cream) !important;
 }
 
 .text-brown {
-  color: var(--brown);
+  color: var(--brown) !important;
 }
 
 .text-dark {
-  color: var(--oasis-brown);
+  color: var(--oasis-brown) !important;
 }
 
 .bg-cream {
-  background: var(--oasis-cream);
+  background: var(--oasis-cream) !important;
 }
 
 .bg-brown {
@@ -352,7 +352,7 @@
 }
 
 .bg-bordeaux {
-  background: var(--oasis-bordeaux-dark);
+  background: var(--oasis-bordeaux-dark) !important;
 }
 
 /*******************************************/
