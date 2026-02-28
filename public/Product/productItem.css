@@ -329,6 +329,17 @@
    Éléments produit : couleurs, titre, description
    -------------------------------------------------------------------------- */
 
+/* Couleur texte forcée selon thème : tout le contenu de .product-meta */
+[data-product-detail-layout="simple"] .product-meta,
+[data-product-detail-layout="simple"] .product-meta * {
+  color: #461010 !important;
+}
+
+body.dark-mode [data-product-detail-layout="simple"] .product-meta,
+body.dark-mode [data-product-detail-layout="simple"] .product-meta * {
+  color: #f5f0e8 !important;
+}
+
    .product-title{
     font-size: 12px !important;
    }
@@ -361,15 +372,6 @@
    .sqs-custom-cart header-icon{
     display:none !important;
    }
-
-[data-product-detail-layout="simple"] .product-details {
-  color: #f5f0e8;
-}
-
-[data-product-detail-layout="simple"] .product-title,
-[data-product-detail-layout="simple"] .product-price {
-  color: #f5f0e8;
-}
 
 [data-product-detail-layout="simple"] .product-title.preFade.fadeIn {
   font-size: 12px !important;
