@@ -459,6 +459,23 @@ footer a {
   color: var(--oasis-brown) !important;
 }
 
+/* Contact : Mail & Instagram en bordeaux sur thème light (override Squarespace) */
+footer .footer__block--contact .footer__links,
+footer .footer__block--contact .footer__links a,
+footer .footer__block--contact .footer__links .link {
+  color: var(--oasis-bordeaux) !important;
+}
+
+/* Dark mode : garder la crème pour le même bloc */
+body.dark-mode footer .footer__block--contact .footer__links,
+body.dark-mode footer .footer__block--contact .footer__links a,
+body.dark-mode footer .footer__block--contact .footer__links .link,
+body.oasis-footer-force-dark footer .footer__block--contact .footer__links,
+body.oasis-footer-force-dark footer .footer__block--contact .footer__links a,
+body.oasis-footer-force-dark footer .footer__block--contact .footer__links .link {
+  color: var(--oasis-cream) !important;
+}
+
 section[data-section-id="6943f46e084deb646d9f0a51"] {
   background-color: transparent !important;
 }
