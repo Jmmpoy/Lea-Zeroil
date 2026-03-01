@@ -374,7 +374,7 @@ body.dark-mode [data-product-detail-layout="simple"] .product-meta * {
    }
 
 [data-product-detail-layout="simple"] .product-title.preFade.fadeIn {
-  font-size: 12px !important;
+  font-size: 14px !important;
   text-transform: uppercase;
 }
 
