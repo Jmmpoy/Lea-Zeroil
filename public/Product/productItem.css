@@ -347,7 +347,7 @@ body.dark-mode [data-product-detail-layout="simple"] .product-meta * {
    .product-price{
     font-family: "Henry", serif !important;
     font-style: italic !important;
-    font-size: 16px !important;
+    font-size: 18px !important;
    }
 
    .product-meta{
@@ -491,6 +491,7 @@ body.dark-mode [data-product-detail-layout="simple"] .product-meta * {
   font-family: "Henry", serif !important;
   font-size: 17px !important;
   font-style: italic;
+  letter-spacing: 0.05em;
   color: var(--oasis-bordeaux, #5c3d2e) !important;
   margin: 0;
   padding: 0;
@@ -1034,7 +1035,7 @@ section[data-section-theme="bright"] .ProductItem-additional .sqs-layout .sqs-ro
    suggestionsGallery : section « Vous pourriez également aimer » (enfant de .product-detail)
    ========================================================================== */
 .suggestionsGallery {
-  padding: 60px 12px;
+  padding: 60px 12px 120px;
   max-width: 100%;
 }
 
@@ -1157,4 +1158,11 @@ section[data-section-theme="bright"] .suggestionsGallery__item-title {
 .sqs-layout > .sqs-row {
     margin-left: 0px !important;
   margin-right: 0px !important;
+}
+
+
+ /* hide space under price */
+
+div[data-uiextensions-selector="sqs-uiextensions-product-badge"] {
+  display: none !important;
 }
