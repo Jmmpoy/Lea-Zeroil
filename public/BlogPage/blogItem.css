@@ -434,13 +434,13 @@ body.galerie-oasis-page .collection-type-blog-basic-grid .blog-item-content #blo
 }
 
 body.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content .gallery-all-slide__link.content-fill {
-  background-color: var(--oasis-bordeaux, #5c3d2e) !important;
+  background-color: var(--oasis-bordeaux, #461010) !important;
   color: var(--oasis-cream, #f5f0e8) !important;
   text-decoration-color: var(--oasis-cream, #f5f0e8) !important;
 }
 
 body.dark-mode.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content .gallery-all-slide__link.content-fill {
-  background-color: var(--oasis-bordeaux-dark, #4b0706) !important;
+  background-color: var(--oasis-bordeaux-dark, #461010) !important;
   color: var(--oasis-cream, #f5f0e8) !important;
   text-decoration-color: var(--oasis-cream, #f5f0e8) !important;
 }
