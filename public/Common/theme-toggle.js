@@ -137,9 +137,9 @@
     var path = (window.location.pathname || "").replace(/^\/|\/$/g, "");
     var forcedTheme = getForcedTheme(path);
     if (forcedTheme === "dark") {
-      enableDark(false);
+      enableDark(true);
     } else if (forcedTheme === "light") {
-      disableDark(false);
+      disableDark(true);
     } else {
       var savedTheme = localStorage.getItem("theme");
       savedTheme === "dark" ? enableDark() : disableDark();
