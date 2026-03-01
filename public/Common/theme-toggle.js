@@ -58,7 +58,8 @@
     const isCollaborationPage =
       document.body.classList.contains("collection-type-blog-basic-grid") &&
       !document.body.classList.contains("oasis-blog-theme-lune");
-    const useCreamLogo = document.body.classList.contains("dark-mode") || isCollaborationPage;
+    const isGalerieOasisPage = document.body.classList.contains("galerie-oasis-page");
+    const useCreamLogo = document.body.classList.contains("dark-mode") || isCollaborationPage || isGalerieOasisPage;
     img.src = useCreamLogo ? headerLogoUrls.cream : headerLogoUrls.bordeaux;
   }
 
@@ -126,6 +127,8 @@
     initThemeToggle();
     updateHeaderLogo();
     markCurrentNavItem();
+    /* Second passage après injection des classes (ex. galerie-oasis-page par common.js) */
+    setTimeout(updateHeaderLogo, 0);
   }
 
   if (document.readyState === "loading") {
