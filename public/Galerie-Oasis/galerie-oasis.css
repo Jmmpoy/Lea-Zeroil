@@ -42,6 +42,46 @@ body.galerie-oasis-page .header-announcement-bar-wrapper .burger-inner .bottom-b
   background-color: var(--oasis-cream) !important;
 }
 
+/* Page Galerie Oasis : sélecteur de langue en crème (même couleur que le header) */
+body.galerie-oasis-page .header-announcement-bar-wrapper .language-picker,
+body.galerie-oasis-page .header-announcement-bar-wrapper .language-picker .current-language,
+body.galerie-oasis-page .header-announcement-bar-wrapper .language-picker .current-language-name,
+body.galerie-oasis-page .header-announcement-bar-wrapper .language-picker .header-dropdown-icon,
+body.galerie-oasis-page .header-announcement-bar-wrapper .language-picker .header-dropdown-icon svg {
+  color: var(--oasis-cream) !important;
+  stroke: var(--oasis-cream) !important;
+}
+
+body.galerie-oasis-page .header-announcement-bar-wrapper .language-picker .language-picker-content {
+  background: var(--oasis-cream) !important;
+}
+
+body.galerie-oasis-page .header-announcement-bar-wrapper .language-picker .language-picker-content a,
+body.galerie-oasis-page .header-announcement-bar-wrapper .language-picker .language-picker-content .language-item,
+body.galerie-oasis-page .header-announcement-bar-wrapper .language-picker .language-picker-content .language-item a,
+body.galerie-oasis-page .header-announcement-bar-wrapper .language-picker .language-picker-content .language-item span {
+  color: var(--oasis-bordeaux) !important;
+}
+
+body.galerie-oasis-page .header-menu .header-menu-actions.language-picker .current-language-name,
+body.galerie-oasis-page .header-menu .header-menu-actions.language-picker a,
+body.galerie-oasis-page .header-menu .header-menu-actions.language-picker .header-dropdown-icon,
+body.galerie-oasis-page .header-menu .header-menu-actions.language-picker .header-dropdown-icon svg {
+  color: var(--oasis-cream) !important;
+  stroke: var(--oasis-cream) !important;
+}
+
+body.galerie-oasis-page #multilingual-language-picker-mobile .language-picker-content {
+  background: var(--oasis-cream) !important;
+}
+
+body.galerie-oasis-page #multilingual-language-picker-mobile .language-picker-content a,
+body.galerie-oasis-page #multilingual-language-picker-mobile .language-picker-content .language-item,
+body.galerie-oasis-page #multilingual-language-picker-mobile .language-picker-content .language-item a,
+body.galerie-oasis-page #multilingual-language-picker-mobile .language-picker-content .language-item span {
+  color: var(--oasis-bordeaux) !important;
+}
+
 /* GALERIE OASIS - ZOOM LÉGER AU HOVER SUR L'IMAGE */
 section[data-section-id="695501167c658f284aecb9b9"] img {
   transition: transform 0.4s ease;
