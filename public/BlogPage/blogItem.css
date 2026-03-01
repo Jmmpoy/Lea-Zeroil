@@ -273,7 +273,7 @@ body:has(.collection-type-blog-basic-grid) .item-pagination.item-pagination--pre
   letter-spacing: 0.2em;
   text-transform: uppercase;
   background: transparent;
-  border: 0.5px solid var(--oasis-cream, #f5f0e8);
+  border: 0.5px solid var(--oasis-cream, #f5f0e8) !important;
   padding: 15px;
   color: var(--oasis-cream, #f5f0e8) !important;
   text-decoration: none;
