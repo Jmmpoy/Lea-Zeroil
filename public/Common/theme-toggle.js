@@ -73,6 +73,20 @@
     });
   }
 
+  /** Applique le thème (body, localStorage, sections, logo) sans dépendre des boutons. */
+  function applyTheme(isDark, persist) {
+    if (isDark) {
+      document.body.classList.add("dark-mode");
+      if (persist !== false) localStorage.setItem("theme", "dark");
+      applySectionTheme(darkTheme);
+    } else {
+      document.body.classList.remove("dark-mode");
+      if (persist !== false) localStorage.setItem("theme", "light");
+      applySectionTheme(lightTheme);
+    }
+    updateHeaderLogo();
+  }
+
   function updateHeaderLogo() {
     const img = document.querySelector(".header-announcement-bar-wrapper .header-title img") ||
       document.querySelector(".header-announcement-bar-wrapper .header-title-logo img");
@@ -102,6 +116,17 @@
   }
 
   function initThemeToggle() {
+    var path = (window.location.pathname || "").replace(/^\/|\/$/g, "");
+    var forcedTheme = getForcedTheme(path);
+    if (forcedTheme === "dark") {
+      applyTheme(true, true);
+    } else if (forcedTheme === "light") {
+      applyTheme(false, true);
+    } else {
+      var savedTheme = localStorage.getItem("theme");
+      applyTheme(savedTheme === "dark", true);
+    }
+
     const darkBtn = document.getElementById("dark-mode-toggle");
     const lightBtn = document.getElementById("light-mode-toggle");
     if (!darkBtn || !lightBtn) return;
@@ -112,38 +137,19 @@
     }
 
     function enableDark(persist) {
-      document.body.classList.add("dark-mode");
-      if (persist !== false) {
-        localStorage.setItem("theme", "dark");
-      }
+      applyTheme(true, persist);
       setActive(true);
-      applySectionTheme(darkTheme);
-      updateHeaderLogo();
     }
 
     function disableDark(persist) {
-      document.body.classList.remove("dark-mode");
-      if (persist !== false) {
-        localStorage.setItem("theme", "light");
-      }
+      applyTheme(false, persist);
       setActive(false);
-      applySectionTheme(lightTheme);
-      updateHeaderLogo();
     }
+
+    setActive(document.body.classList.contains("dark-mode"));
 
     darkBtn.addEventListener("click", function () { enableDark(true); });
     lightBtn.addEventListener("click", function () { disableDark(true); });
-
-    var path = (window.location.pathname || "").replace(/^\/|\/$/g, "");
-    var forcedTheme = getForcedTheme(path);
-    if (forcedTheme === "dark") {
-      enableDark(true);
-    } else if (forcedTheme === "light") {
-      disableDark(true);
-    } else {
-      var savedTheme = localStorage.getItem("theme");
-      savedTheme === "dark" ? enableDark() : disableDark();
-    }
   }
 
   function run() {
