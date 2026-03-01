@@ -13,6 +13,7 @@
  * - Marquage automatique de l'élément de navigation de la page courante
  * - Compatible avec la navigation AJAX de Squarespace
  * - Swap du logo header (bordeaux / crème) selon le thème
+ * - Thème forcé par URL : certaines pages appliquent un thème par défaut sans écraser le localStorage
  * 
  * Classes CSS gérées :
  * - white, white-bold, light, light-bold
@@ -41,6 +42,27 @@
     "bright-inverse", "bright",
     "dark", "dark-bold", "black", "black-bold"
   ];
+
+  /**
+   * Thème forcé par URL (pattern = préfixe ou égalité du path).
+   * Si une entrée matche, ce thème est appliqué sans persister dans localStorage.
+   */
+  const forceThemeByPath = [
+    { pattern: "galerie-oasis-collections", theme: "dark" },
+    { pattern: "galerie-oasis", theme: "dark" },
+    { pattern: "collaborations", theme: "dark" }
+  ];
+
+  function getForcedTheme(path) {
+    if (!path) return null;
+    for (var i = 0; i < forceThemeByPath.length; i++) {
+      var entry = forceThemeByPath[i];
+      if (path === entry.pattern || path.indexOf(entry.pattern) === 0) {
+        return entry.theme;
+      }
+    }
+    return null;
+  }
 
   function applySectionTheme(theme) {
     const sections = document.querySelectorAll("section[data-section-theme]");
@@ -113,9 +135,10 @@
     lightBtn.addEventListener("click", function () { disableDark(true); });
 
     var path = (window.location.pathname || "").replace(/^\/|\/$/g, "");
-    var isGalerieOasisPage = path === "galerie-oasis" || path.indexOf("galerie-oasis") === 0;
-    if (isGalerieOasisPage) {
-      /* Page Galerie Oasis : fond jaune, pas de thème dark */
+    var forcedTheme = getForcedTheme(path);
+    if (forcedTheme === "dark") {
+      enableDark(false);
+    } else if (forcedTheme === "light") {
       disableDark(false);
     } else {
       var savedTheme = localStorage.getItem("theme");

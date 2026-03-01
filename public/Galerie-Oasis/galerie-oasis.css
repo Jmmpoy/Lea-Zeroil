@@ -10,9 +10,6 @@ body.galerie-oasis-page section {
   background-color: var(--galerie-oasis-dark-red) !important;
 }
 
-body.galerie-oasis-page .content-wrapper {
-  background-color: var(--galerie-oasis-dark-red) !important;
-}
 
 body.galerie-oasis-page footer,
 body.galerie-oasis-page footer#footer-sections {
