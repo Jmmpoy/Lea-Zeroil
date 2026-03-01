@@ -216,6 +216,12 @@ body.dark-mode .header-announcement-bar-wrapper .burger-inner .bottom-bun {
   background-color: var(--oasis-beige) !important;
 }
 
+/* Mode sombre : losange (◆) sous Menu / À propos / Contact en blanc */
+body.dark-mode .header-announcement-bar-wrapper .header-nav-item a::after,
+body.dark-mode .header-announcement-bar-wrapper .header-nav-item button::after {
+  color: var(--oasis-beige) !important;
+}
+
 /* Sélecteur de langue – adaptation au thème (bordeaux / beige) */
 
 /* Desktop : thème clair */
