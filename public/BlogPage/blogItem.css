@@ -350,6 +350,13 @@ body.oasis-blog-theme-lune:not(.dark-mode) .item-pagination.item-pagination--pre
   color: var(--oasis-bordeaux, #5c3d2e);
 }
 
+/* Pages collaborations : pagination bordure et texte en crème */
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .item-pagination.item-pagination--prev-next .item-pagination-link,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .item-pagination.item-pagination--prev-next .item-pagination-link:hover {
+  border-color: var(--oasis-cream);
+  color: var(--oasis-cream);
+}
+
 body.oasis-blog-theme-lune:not(.dark-mode) .item-pagination-label-custom,
 body.oasis-blog-theme-lune:not(.dark-mode) .item-pagination.item-pagination--prev-next .item-pagination-prev-next {
   color: var(--oasis-bordeaux, #5c3d2e);
