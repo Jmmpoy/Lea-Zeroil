@@ -25,6 +25,22 @@ body.galerie-oasis-page .oasis-footer-frame {
   background-color: var(--galerie-oasis-dark-red) !important;
 }
 
+/* Page Galerie Oasis : header en crème sur fond sombre */
+body.galerie-oasis-page .header-announcement-bar-wrapper .header-nav-item a,
+body.galerie-oasis-page .header-announcement-bar-wrapper .header-nav-folder-title,
+body.galerie-oasis-page .header-announcement-bar-wrapper .header-actions a,
+body.galerie-oasis-page .header-announcement-bar-wrapper .header-actions .cart-text-link,
+body.galerie-oasis-page .header-announcement-bar-wrapper .header-actions .cart-quantity-container,
+body.galerie-oasis-page .header-announcement-bar-wrapper .header-title a {
+  color: var(--oasis-cream) !important;
+}
+
+body.galerie-oasis-page .header-announcement-bar-wrapper .burger-inner .top-bun,
+body.galerie-oasis-page .header-announcement-bar-wrapper .burger-inner .patty,
+body.galerie-oasis-page .header-announcement-bar-wrapper .burger-inner .bottom-bun {
+  background-color: var(--oasis-cream) !important;
+}
+
 /* GALERIE OASIS - ZOOM LÉGER AU HOVER SUR L'IMAGE */
 section[data-section-id="695501167c658f284aecb9b9"] img {
   transition: transform 0.4s ease;
