@@ -5,20 +5,21 @@
 
 /* --------------------------------------------------------------------------
    Galerie & Événements : forcer thème lune/soleil (priorité sur tout autre CSS)
+   Exclure .galerie-oasis-page pour laisser le fond rouge (#461010) s'appliquer
    -------------------------------------------------------------------------- */
-body.oasis-blog-theme-lune,
-body.oasis-blog-theme-lune section[data-test="page-section"],
-body.oasis-blog-theme-lune .page-section,
-body.oasis-blog-theme-lune .header,
-body.oasis-blog-theme-lune #header,
-body.oasis-blog-theme-lune footer,
-body.oasis-blog-theme-lune .oasis-footer-frame,
-body.oasis-blog-theme-lune .content-wrapper,
-body.oasis-blog-theme-lune .item-pagination,
-body.oasis-blog-theme-lune .item-pagination--prev-next,
-body.oasis-blog-theme-lune .section-border,
-body.oasis-blog-theme-lune .section-background,
-body.oasis-blog-theme-lune .section-background:not(.has-background) {
+body.oasis-blog-theme-lune:not(.galerie-oasis-page),
+body.oasis-blog-theme-lune:not(.galerie-oasis-page) section[data-test="page-section"],
+body.oasis-blog-theme-lune:not(.galerie-oasis-page) .page-section,
+body.oasis-blog-theme-lune:not(.galerie-oasis-page) .header,
+body.oasis-blog-theme-lune:not(.galerie-oasis-page) #header,
+body.oasis-blog-theme-lune:not(.galerie-oasis-page) footer,
+body.oasis-blog-theme-lune:not(.galerie-oasis-page) .oasis-footer-frame,
+body.oasis-blog-theme-lune:not(.galerie-oasis-page) .content-wrapper,
+body.oasis-blog-theme-lune:not(.galerie-oasis-page) .item-pagination,
+body.oasis-blog-theme-lune:not(.galerie-oasis-page) .item-pagination--prev-next,
+body.oasis-blog-theme-lune:not(.galerie-oasis-page) .section-border,
+body.oasis-blog-theme-lune:not(.galerie-oasis-page) .section-background,
+body.oasis-blog-theme-lune:not(.galerie-oasis-page) .section-background:not(.has-background) {
   background-color: var(--bg-color) !important;
 }
 
