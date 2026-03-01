@@ -216,6 +216,87 @@ body.dark-mode .header-announcement-bar-wrapper .burger-inner .bottom-bun {
   background-color: var(--oasis-beige) !important;
 }
 
+/* Sélecteur de langue – adaptation au thème (bordeaux / beige) */
+
+/* Desktop : thème clair */
+.header-announcement-bar-wrapper .language-picker,
+.header-announcement-bar-wrapper .language-picker .current-language,
+.header-announcement-bar-wrapper .language-picker .current-language-name,
+.header-announcement-bar-wrapper .language-picker .language-picker-content a,
+.header-announcement-bar-wrapper .language-picker .language-picker-content .language-item,
+.header-announcement-bar-wrapper .language-picker .language-picker-content .language-item a,
+.header-announcement-bar-wrapper .language-picker .language-picker-content .language-item span {
+  color: var(--oasis-bordeaux) !important;
+}
+
+.header-announcement-bar-wrapper .language-picker .header-dropdown-icon,
+.header-announcement-bar-wrapper .language-picker .header-dropdown-icon svg {
+  color: var(--oasis-bordeaux) !important;
+  stroke: var(--oasis-bordeaux) !important;
+}
+
+/* Desktop : thème sombre */
+body.dark-mode .header-announcement-bar-wrapper .language-picker,
+body.dark-mode .header-announcement-bar-wrapper .language-picker .current-language,
+body.dark-mode .header-announcement-bar-wrapper .language-picker .current-language-name {
+  color: var(--oasis-beige) !important;
+}
+
+body.dark-mode .header-announcement-bar-wrapper .language-picker .language-picker-content {
+  background: var(--oasis-cream) !important;
+}
+
+body.dark-mode .header-announcement-bar-wrapper .language-picker .language-picker-content a,
+body.dark-mode .header-announcement-bar-wrapper .language-picker .language-picker-content .language-item,
+body.dark-mode .header-announcement-bar-wrapper .language-picker .language-picker-content .language-item a,
+body.dark-mode .header-announcement-bar-wrapper .language-picker .language-picker-content .language-item span {
+  color: var(--oasis-bordeaux) !important;
+}
+
+body.dark-mode .header-announcement-bar-wrapper .language-picker .header-dropdown-icon,
+body.dark-mode .header-announcement-bar-wrapper .language-picker .header-dropdown-icon svg {
+  color: var(--oasis-beige) !important;
+  stroke: var(--oasis-beige) !important;
+}
+
+/* Mobile (menu overlay) : thème clair */
+.header-menu .header-menu-actions.language-picker .current-language-name,
+.header-menu .header-menu-actions.language-picker a,
+#multilingual-language-picker-mobile .language-picker-content a,
+#multilingual-language-picker-mobile .language-picker-content .language-item,
+#multilingual-language-picker-mobile .language-picker-content .language-item a,
+#multilingual-language-picker-mobile .language-picker-content .language-item span {
+  color: var(--oasis-bordeaux) !important;
+}
+
+.header-menu .header-menu-actions.language-picker .header-dropdown-icon,
+.header-menu .header-menu-actions.language-picker .header-dropdown-icon svg {
+  color: var(--oasis-bordeaux) !important;
+  stroke: var(--oasis-bordeaux) !important;
+}
+
+/* Mobile : thème sombre */
+body.dark-mode .header-menu .header-menu-actions.language-picker .current-language-name,
+body.dark-mode .header-menu .header-menu-actions.language-picker a {
+  color: var(--oasis-beige) !important;
+}
+
+body.dark-mode #multilingual-language-picker-mobile .language-picker-content {
+  background: var(--oasis-cream) !important;
+}
+
+body.dark-mode #multilingual-language-picker-mobile .language-picker-content a,
+body.dark-mode #multilingual-language-picker-mobile .language-picker-content .language-item,
+body.dark-mode #multilingual-language-picker-mobile .language-picker-content .language-item a,
+body.dark-mode #multilingual-language-picker-mobile .language-picker-content .language-item span {
+  color: var(--oasis-bordeaux) !important;
+}
+
+body.dark-mode .header-menu .header-menu-actions.language-picker .header-dropdown-icon,
+body.dark-mode .header-menu .header-menu-actions.language-picker .header-dropdown-icon svg {
+  color: var(--oasis-beige) !important;
+  stroke: var(--oasis-beige) !important;
+}
 
 /* Importé depuis style.css — Oasis submenu */
 /*******************************************/
