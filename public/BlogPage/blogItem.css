@@ -379,27 +379,51 @@ body.oasis-blog-theme-lune:not(.dark-mode) .item-pagination.item-pagination--pre
 
 /* ==========================================================================
    Pages Galerie Oasis & Événements : thème lune/soleil (couleurs site)
+   Événements : texte var(--text-color) | Galerie Oasis : texte crème (bloc suivant)
    ========================================================================== */
-body.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content,
-body.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content .sqs-block-html .sqs-html-content,
-body.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content .sqs-block-html .sqs-block-content,
-body.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content .sqs-block-code .italic.text-cream,
-body.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content .sqs-block-code .italic.text-md,
-body.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content .image-slide-title,
-body.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content .image-slide-title__row,
-body.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content .image-slide-title__text,
-body.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content #blog-gallery-photos .image-slide-title,
-body.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content #blog-gallery-photos .image-slide-title__row,
-body.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content #blog-gallery-photos .image-slide-title__text,
-body.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content #blog-title-collection,
-body.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content #blog-title-collection .sqs-block-content,
-body.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content #blog-title-collection .sqs-code-container,
-body.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content #blog-title-collection .sqs-html-content,
-body.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content #blog-gallery-collection,
-body.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content #blog-gallery-collection .image-slide-title,
-body.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content #blog-gallery-collection .image-slide-title__row,
-body.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content #blog-gallery-collection .image-slide-title__text {
+body.oasis-blog-theme-lune:not(.galerie-oasis-page) .collection-type-blog-basic-grid .blog-item-content,
+body.oasis-blog-theme-lune:not(.galerie-oasis-page) .collection-type-blog-basic-grid .blog-item-content .sqs-block-html .sqs-html-content,
+body.oasis-blog-theme-lune:not(.galerie-oasis-page) .collection-type-blog-basic-grid .blog-item-content .sqs-block-html .sqs-block-content,
+body.oasis-blog-theme-lune:not(.galerie-oasis-page) .collection-type-blog-basic-grid .blog-item-content .sqs-block-code .italic.text-cream,
+body.oasis-blog-theme-lune:not(.galerie-oasis-page) .collection-type-blog-basic-grid .blog-item-content .sqs-block-code .italic.text-md,
+body.oasis-blog-theme-lune:not(.galerie-oasis-page) .collection-type-blog-basic-grid .blog-item-content .image-slide-title,
+body.oasis-blog-theme-lune:not(.galerie-oasis-page) .collection-type-blog-basic-grid .blog-item-content .image-slide-title__row,
+body.oasis-blog-theme-lune:not(.galerie-oasis-page) .collection-type-blog-basic-grid .blog-item-content .image-slide-title__text,
+body.oasis-blog-theme-lune:not(.galerie-oasis-page) .collection-type-blog-basic-grid .blog-item-content #blog-gallery-photos .image-slide-title,
+body.oasis-blog-theme-lune:not(.galerie-oasis-page) .collection-type-blog-basic-grid .blog-item-content #blog-gallery-photos .image-slide-title__row,
+body.oasis-blog-theme-lune:not(.galerie-oasis-page) .collection-type-blog-basic-grid .blog-item-content #blog-gallery-photos .image-slide-title__text,
+body.oasis-blog-theme-lune:not(.galerie-oasis-page) .collection-type-blog-basic-grid .blog-item-content #blog-title-collection,
+body.oasis-blog-theme-lune:not(.galerie-oasis-page) .collection-type-blog-basic-grid .blog-item-content #blog-title-collection .sqs-block-content,
+body.oasis-blog-theme-lune:not(.galerie-oasis-page) .collection-type-blog-basic-grid .blog-item-content #blog-title-collection .sqs-code-container,
+body.oasis-blog-theme-lune:not(.galerie-oasis-page) .collection-type-blog-basic-grid .blog-item-content #blog-title-collection .sqs-html-content,
+body.oasis-blog-theme-lune:not(.galerie-oasis-page) .collection-type-blog-basic-grid .blog-item-content #blog-gallery-collection,
+body.oasis-blog-theme-lune:not(.galerie-oasis-page) .collection-type-blog-basic-grid .blog-item-content #blog-gallery-collection .image-slide-title,
+body.oasis-blog-theme-lune:not(.galerie-oasis-page) .collection-type-blog-basic-grid .blog-item-content #blog-gallery-collection .image-slide-title__row,
+body.oasis-blog-theme-lune:not(.galerie-oasis-page) .collection-type-blog-basic-grid .blog-item-content #blog-gallery-collection .image-slide-title__text {
   color: var(--text-color) !important;
+}
+
+/* Pages Galerie Oasis (galerie-oasis + galerie-oasis-collections) : texte en crème sur fond rouge */
+body.galerie-oasis-page .collection-type-blog-basic-grid .blog-item-content,
+body.galerie-oasis-page .collection-type-blog-basic-grid .blog-item-content .sqs-block-html .sqs-html-content,
+body.galerie-oasis-page .collection-type-blog-basic-grid .blog-item-content .sqs-block-html .sqs-block-content,
+body.galerie-oasis-page .collection-type-blog-basic-grid .blog-item-content .sqs-block-code .italic.text-cream,
+body.galerie-oasis-page .collection-type-blog-basic-grid .blog-item-content .sqs-block-code .italic.text-md,
+body.galerie-oasis-page .collection-type-blog-basic-grid .blog-item-content .image-slide-title,
+body.galerie-oasis-page .collection-type-blog-basic-grid .blog-item-content .image-slide-title__row,
+body.galerie-oasis-page .collection-type-blog-basic-grid .blog-item-content .image-slide-title__text,
+body.galerie-oasis-page .collection-type-blog-basic-grid .blog-item-content #blog-gallery-photos .image-slide-title,
+body.galerie-oasis-page .collection-type-blog-basic-grid .blog-item-content #blog-gallery-photos .image-slide-title__row,
+body.galerie-oasis-page .collection-type-blog-basic-grid .blog-item-content #blog-gallery-photos .image-slide-title__text,
+body.galerie-oasis-page .collection-type-blog-basic-grid .blog-item-content #blog-title-collection,
+body.galerie-oasis-page .collection-type-blog-basic-grid .blog-item-content #blog-title-collection .sqs-block-content,
+body.galerie-oasis-page .collection-type-blog-basic-grid .blog-item-content #blog-title-collection .sqs-code-container,
+body.galerie-oasis-page .collection-type-blog-basic-grid .blog-item-content #blog-title-collection .sqs-html-content,
+body.galerie-oasis-page .collection-type-blog-basic-grid .blog-item-content #blog-gallery-collection,
+body.galerie-oasis-page .collection-type-blog-basic-grid .blog-item-content #blog-gallery-collection .image-slide-title,
+body.galerie-oasis-page .collection-type-blog-basic-grid .blog-item-content #blog-gallery-collection .image-slide-title__row,
+body.galerie-oasis-page .collection-type-blog-basic-grid .blog-item-content #blog-gallery-collection .image-slide-title__text {
+  color: var(--oasis-cream) !important;
 }
 
 body.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content .gallery-all-slide__link.content-fill {
