@@ -38,7 +38,7 @@
 
     function run() {
       var path = getSitePath();
-      var isGalerieOasisPage = path === "galerie-oasis" || path.indexOf("galerie-oasis") === 0;
+      var isGalerieOasisPage = path === "galerie-oasis-collections" || path.indexOf("galerie-oasis-collections/") === 0;
       var body = getSiteBody();
       if (body) {
         body.classList.toggle("galerie-oasis-page", isGalerieOasisPage);
