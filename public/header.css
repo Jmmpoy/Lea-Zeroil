@@ -447,6 +447,17 @@ body.dark-mode .header-menu .header-menu-actions.language-picker .header-dropdow
   background-color: currentColor;
 }
 
+/* Mode sombre : losange du menu en blanc pour rester visible */
+body.dark-mode .oasis-submenu__diamond {
+  border-color: var(--oasis-beige) !important;
+  color: var(--oasis-beige) !important;
+}
+
+body.dark-mode .oasis-submenu__list a:hover .oasis-submenu__diamond,
+body.dark-mode .oasis-submenu__list a:focus-visible .oasis-submenu__diamond {
+  background-color: var(--oasis-beige) !important;
+}
+
 /* Catalogue de prix : pas d’italique ni de soulignement (y compris au hover) */
 .oasis-submenu__col:last-child .oasis-submenu__list a {
   font-style: normal !important;
