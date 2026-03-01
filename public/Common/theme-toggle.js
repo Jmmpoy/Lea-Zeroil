@@ -50,16 +50,16 @@
   const forceThemeByPath = [
     { pattern: "galerie-oasis-collections", theme: "dark" },
     { pattern: "galerie-oasis", theme: "dark" },
-    { pattern: "collaborations", theme: "dark" }
+    { pattern: "collaborations", theme: "dark" },
+    { pattern: "", theme: "light" } //homepage
   ];
 
   function getForcedTheme(path) {
-    if (!path) return null;
+    if (path === undefined || path === null) return null;
     for (var i = 0; i < forceThemeByPath.length; i++) {
       var entry = forceThemeByPath[i];
-      if (path === entry.pattern || path.indexOf(entry.pattern) === 0) {
-        return entry.theme;
-      }
+      if (path === entry.pattern) return entry.theme;
+      if (entry.pattern.length > 0 && path.indexOf(entry.pattern) === 0) return entry.theme;
     }
     return null;
   }
