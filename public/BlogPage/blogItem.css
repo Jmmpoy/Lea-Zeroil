@@ -377,6 +377,13 @@ body.oasis-blog-theme-lune:not(.dark-mode) .item-pagination.item-pagination--pre
   gap: 15px;
 }
 
+/* Pages collaboration : masquer le lien « précédent » */
+/* Uniquement collaborations (pas événements ni galerie : ils ont .oasis-blog-theme-lune) */
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .item-pagination-link--prev,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .item-pagination-link--prev {
+  display: none !important;
+}
+
 /* Pages unitaires collaboration : pagination sans padding sur mobile */
 @media screen and (max-width: 767px) {
   .item-pagination--prev-next {
