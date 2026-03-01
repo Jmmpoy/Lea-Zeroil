@@ -23,18 +23,18 @@ body.oasis-blog-theme-lune .section-background:not(.has-background) {
 }
 
 /* --------------------------------------------------------------------------
-   Thème global : fond #712317 (collaborations uniquement)
+   Thème global : fond #461010 (collaborations uniquement)
    -------------------------------------------------------------------------- */
 body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune),
 body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) {
-  background-color: #712317 !important;
+  background-color: #461010 !important;
 }
 
 body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) section[data-test="page-section"],
 body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .page-section,
 body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) section[data-test="page-section"],
 body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .page-section {
-  background-color: #712317 !important;
+  background-color: #461010 !important;
 }
 
 body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .header,
@@ -48,23 +48,23 @@ body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) footer,
 body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .oasis-footer-frame,
 body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) footer,
 body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .oasis-footer-frame {
-  background-color: #712317 !important;
+  background-color: #461010 !important;
 }
 
 body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .content-wrapper,
 body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .item-pagination,
 body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .item-pagination--prev-next {
-  background-color: #712317 !important;
+  background-color: #461010 !important;
 }
 
 body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .section-border,
 body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .page-section.background-width--inset .section-border {
-  background-color: #712317 !important;
+  background-color: #461010 !important;
 }
 
 body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .section-background,
 body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .section-background:not(.has-background) {
-  background-color: #712317 !important;
+  background-color: #461010 !important;
 }
 
 /* --------------------------------------------------------------------------
@@ -113,7 +113,7 @@ body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .oasis-footer-f
   border-bottom-color: rgba(245, 240, 232, 0.55);
 }
 
-/* Logo footer : crème sur fond #712317 (collaborations uniquement) */
+/* Logo footer : crème sur fond #461010 (collaborations uniquement) */
 body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .oasis-footer-frame .footer-logo--light path,
 body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .oasis-footer-frame .footer-logo--dark path,
 body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .oasis-footer-frame .footer-logo--light path,
