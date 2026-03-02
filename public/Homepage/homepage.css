@@ -64,6 +64,30 @@ section[data-section-id="69484eaeeea18757b4e08277"] .fe-block-yui_3_17_2_1_17683
 /*        HOME- SECTION PRIMO - ZOOM IMAGE       */
 /*********************************************************************************************************************************/
 
+/* Fond bordeaux permanent — Section PRIMO */
+section[data-section-id="694fe7153e25926a97c74c20"],
+section[data-section-id="694fe7153e25926a97c74c20"] .section-background,
+section[data-section-id="694fe7153e25926a97c74c20"] .content-wrapper,
+section[data-section-id="694fe7153e25926a97c74c20"] .content {
+  background: var(--oasis-bordeaux) !important;
+}
+
+/* Tout le texte en crème — Section PRIMO */
+section[data-section-id="694fe7153e25926a97c74c20"] p,
+section[data-section-id="694fe7153e25926a97c74c20"] span,
+section[data-section-id="694fe7153e25926a97c74c20"] h1,
+section[data-section-id="694fe7153e25926a97c74c20"] h2,
+section[data-section-id="694fe7153e25926a97c74c20"] h3,
+section[data-section-id="694fe7153e25926a97c74c20"] a,
+section[data-section-id="694fe7153e25926a97c74c20"] .sqs-block-html,
+section[data-section-id="694fe7153e25926a97c74c20"] .fe-block {
+  color: var(--oasis-cream) !important;
+}
+
+section[data-section-id="694fe7153e25926a97c74c20"] a:hover {
+  color: var(--oasis-cream) !important;
+}
+
 /* Section PRIMO - Zoom au hover sur l'image */
 section[data-section-id="694fe7153e25926a97c74c20"] img {
   transition: transform 0.4s ease;
