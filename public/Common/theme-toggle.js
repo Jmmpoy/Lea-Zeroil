@@ -51,7 +51,7 @@
     { pattern: "galerie-oasis-collections", theme: "dark" },
     { pattern: "galerie-oasis", theme: "dark" },
     { pattern: "collaborations", theme: "dark" },
-    { pattern: "", theme: "light" } //homepage
+    // { pattern: "", theme: "dark" } //homepage
   ];
 
   function getForcedTheme(path) {
