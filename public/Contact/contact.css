@@ -563,3 +563,101 @@ section[data-section-id="6955321ea3ec302437387bc9"] .gm-select__opt {
   line-height: 1.2 !important;
 }
 
+/* =========================
+   CONTACT — MODE NUIT (texte et bordures en crème)
+   ========================= */
+body.dark-mode section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form input,
+body.dark-mode section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form textarea,
+body.dark-mode section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form select {
+  color: var(--oasis-cream) !important;
+  caret-color: var(--oasis-cream);
+}
+
+body.dark-mode section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form input::placeholder,
+body.dark-mode section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form textarea::placeholder {
+  color: rgba(255, 250, 237, 0.6);
+}
+
+body.dark-mode section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .field.first-name input,
+body.dark-mode section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .field.last-name input {
+  border-bottom-color: var(--oasis-cream) !important;
+  color: var(--oasis-cream);
+}
+
+body.dark-mode section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .field.first-name .form-input-effects-border,
+body.dark-mode section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .field.last-name .form-input-effects-border {
+  background: var(--oasis-cream);
+}
+
+body.dark-mode section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .field.first-name .caption-text,
+body.dark-mode section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .field.last-name .caption-text {
+  color: var(--oasis-cream);
+}
+
+body.dark-mode section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form fieldset.form-item.phone input,
+body.dark-mode section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .form-item.email input {
+  border-bottom-color: var(--oasis-cream) !important;
+}
+
+body.dark-mode section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .form-item.select select {
+  color: var(--oasis-cream) !important;
+}
+
+body.dark-mode section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .form-item.select .QeVRMFrE3dDozGvZ>svg>path {
+  fill: var(--oasis-cream) !important;
+}
+
+body.dark-mode section[data-section-id="6955321ea3ec302437387bc9"] .gm-select {
+  color: var(--oasis-cream);
+}
+
+body.dark-mode section[data-section-id="6955321ea3ec302437387bc9"] .gm-select__btn {
+  border-bottom-color: var(--oasis-cream);
+}
+
+body.dark-mode section[data-section-id="6955321ea3ec302437387bc9"] .gm-select__opt {
+  border-top-color: var(--oasis-cream);
+}
+
+body.dark-mode section[data-section-id="6955321ea3ec302437387bc9"] .form-item.field.text>input,
+body.dark-mode section[data-section-id="6955321ea3ec302437387bc9"] .form-item.field.textarea>textarea {
+  border-color: var(--oasis-cream) !important;
+}
+
+body.dark-mode section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .field-list .form-item.fields.phone label,
+body.dark-mode section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .field-list>.form-item.email label {
+  color: var(--oasis-cream);
+}
+
+body.dark-mode section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .field-list .form-item.fields.phone .caption,
+body.dark-mode section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .field-list>.form-item.email .caption-text {
+  color: var(--oasis-cream);
+}
+
+body.dark-mode section[data-section-id="6955321ea3ec302437387bc9"] .sqs-block-form .form-item.field.select::after {
+  color: var(--oasis-cream);
+}
+
+body.dark-mode section[data-section-id="6955321ea3ec302437387bc9"] .form-item.field.textarea::after {
+  color: var(--oasis-cream);
+}
+
+body.dark-mode section[data-section-id="6955321ea3ec302437387bc9"] .form-button-wrapper .form-submit-button {
+  color: var(--oasis-cream) !important;
+  border-color: var(--oasis-cream) !important;
+}
+
+body.dark-mode section[data-section-id="6955321ea3ec302437387bc9"] .form-button-wrapper .form-submit-button:hover {
+  color: var(--oasis-cream) !important;
+  border-color: var(--oasis-cream) !important;
+}
+
+body.dark-mode section[data-section-id="6955321ea3ec302437387bc9"] .form-submission-text,
+body.dark-mode section[data-section-id="6955321ea3ec302437387bc9"] .form-submission-text--align-center {
+  color: var(--oasis-cream) !important;
+}
+
+body.dark-mode section[data-section-id="6955321ea3ec302437387bc9"] .gm-select__list {
+  background-color: var(--oasis-brown);
+}
+
