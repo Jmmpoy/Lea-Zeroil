@@ -44,7 +44,8 @@
 
       if (noPrice) {
         priceBlock.style.setProperty("display", "none", "important");
-        document.querySelector(".product-meta")?.classList.add("product-no-price");
+        var meta = priceBlock.closest(".product-meta") || document.querySelector("[data-product-detail-layout='simple']");
+        if (meta) meta.classList.add("product-no-price");
 
         var btn = document.querySelector(".product-detail .sqs-add-to-cart-button");
         if (btn && !btn.hasAttribute("data-gm-contact-redirect")) {
@@ -57,7 +58,8 @@
         }
       } else {
         priceBlock.style.removeProperty("display");
-        document.querySelector(".product-meta")?.classList.remove("product-no-price");
+        var meta = priceBlock.closest(".product-meta") || document.querySelector("[data-product-detail-layout='simple']");
+        if (meta) meta.classList.remove("product-no-price");
       }
     }
 
@@ -67,5 +69,6 @@
       run();
     }
     setTimeout(run, 600);
+    setTimeout(run, 1800);
     document.addEventListener("sqs-route-did-change", run);
   })();
