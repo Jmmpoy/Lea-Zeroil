@@ -601,3 +601,16 @@
  .sqs-col-12 > .gallery-block:first-child {
     display: none !important;
    }
+
+
+   #sqs-cart-container .empty-message {
+    font-size: 17px !important;
+   }
+
+   #sqs-cart-container .cart-continue-button {
+    font-size: 17px !important;
+   }
+
+   #sqs-cart-container .cart-continue-button{
+    display: none !important;
+   }

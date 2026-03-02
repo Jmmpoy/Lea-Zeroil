@@ -88,15 +88,17 @@
   }
 
   function updateHeaderLogo() {
-    const img = document.querySelector(".header-announcement-bar-wrapper .header-title img") ||
-      document.querySelector(".header-announcement-bar-wrapper .header-title-logo img");
-    if (!img) return;
+    const imgs = document.querySelectorAll(".header-announcement-bar-wrapper .header-title img, .header-announcement-bar-wrapper .header-title-logo img");
+    if (!imgs.length) return;
     const isCollaborationPage =
       document.body.classList.contains("collection-type-blog-basic-grid") &&
       !document.body.classList.contains("oasis-blog-theme-lune");
     const isGalerieOasisPage = document.body.classList.contains("galerie-oasis-page");
-    const useCreamLogo = document.body.classList.contains("dark-mode") || isCollaborationPage || isGalerieOasisPage;
-    img.src = useCreamLogo ? headerLogoUrls.cream : headerLogoUrls.bordeaux;
+    const path = (window.location.pathname || "").replace(/^\/|\/$/g, "");
+    const isCollectionsPage = path === "collections";
+    const useCreamLogo = document.body.classList.contains("dark-mode") || isCollaborationPage || isGalerieOasisPage || isCollectionsPage;
+    const src = useCreamLogo ? headerLogoUrls.cream : headerLogoUrls.bordeaux;
+    imgs.forEach(function (img) { img.src = src; });
   }
 
   function markCurrentNavItem() {
