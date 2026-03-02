@@ -1091,6 +1091,19 @@ section[data-section-theme="bright"] .suggestionsGallery__item-title {
   color: var(--oasis-bordeaux, #5c3d2e);
 }
 
+/* Mode nuit : titre « Vous pourriez également aimer » en crème */
+body.dark-mode .suggestionsGallery__title {
+  color: var(--oasis-cream) !important;
+}
+
+/* Mode nuit : bouton « Demande de devis » — bordure crème, fond transparent */
+body.dark-mode .product-detail .product-meta .product-add-to-cart .product-purchase-controls-wrapper .sqs-add-to-cart-button-wrapper .sqs-add-to-cart-button {
+  background: transparent !important;
+  border: 1px solid var(--oasis-cream) !important;
+  color: var(--oasis-cream) !important;
+}
+
+
 .suggestionsGallery__all {
   aspect-ratio: 3 / 4;
   display: flex;
