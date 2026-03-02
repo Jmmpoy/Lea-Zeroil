@@ -407,6 +407,10 @@ body.dark-mode [data-product-detail-layout="simple"] .product-meta * {
   padding: 0px !important;
 }
 
+[data-product-detail-layout="simple"] .product-meta.product-no-price .product-description {
+  margin-top: 15px !important;
+}
+
 [data-product-detail-layout="simple"] .product-variant-option select,
 [data-product-detail-layout="simple"] .sqs-block-button-element {
   background-color: #f5f0e8;

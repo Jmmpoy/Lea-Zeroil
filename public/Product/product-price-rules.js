@@ -44,6 +44,7 @@
 
       if (noPrice) {
         priceBlock.style.setProperty("display", "none", "important");
+        document.querySelector(".product-meta")?.classList.add("product-no-price");
 
         var btn = document.querySelector(".product-detail .sqs-add-to-cart-button");
         if (btn && !btn.hasAttribute("data-gm-contact-redirect")) {
@@ -56,6 +57,7 @@
         }
       } else {
         priceBlock.style.removeProperty("display");
+        document.querySelector(".product-meta")?.classList.remove("product-no-price");
       }
     }
 
