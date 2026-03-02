@@ -409,7 +409,7 @@ body.dark-mode [data-product-detail-layout="simple"] .product-meta * {
 
 [data-product-detail-layout="simple"] .product-meta.product-no-price .product-description,
 [data-product-detail-layout="simple"].product-no-price .product-description {
-  margin-top: 15px !important;
+  margin-top: 25px !important;
 }
 
 [data-product-detail-layout="simple"] .product-variant-option select,
