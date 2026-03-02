@@ -87,7 +87,7 @@
 .product-content-wrapper {
   display: flex;
   flex-direction: row;
-  height: 90vh;
+  height: calc(100vh - 55px) !important;
 }
 
 .product-content-wrapper>* {
@@ -224,8 +224,7 @@
 @media (max-width: 900px) {
   .product-content-wrapper {
     flex-direction: column !important;
-    height: auto;
-    min-height: 90vh;
+    height: calc(100vh - 55px) !important;
   }
 
   .product-content-wrapper>* {
