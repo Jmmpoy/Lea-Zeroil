@@ -574,9 +574,13 @@ section[data-section-id="6982262caeec332d2ad73062"] {
   padding-top: 0 !important;
 }
 
+section[data-section-id="6982262caeec332d2ad73062"] .section-border {
+  display: none;
+}
+
 main .sections:first-child .page-section:first-child {
     padding-top: 0 !important;
-    background-color: var(--oasis-brown) !important;
+    background-color: var(--oasis-bordeaux) !important;
 }
 
 /*******************************************/
