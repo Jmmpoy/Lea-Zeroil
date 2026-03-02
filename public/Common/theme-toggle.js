@@ -120,7 +120,11 @@
   function initThemeToggle() {
     var path = (window.location.pathname || "").replace(/^\/|\/$/g, "");
     var forcedTheme = getForcedTheme(path);
-    if (forcedTheme === "dark") {
+    if (path === "") {
+      var savedTheme = localStorage.getItem("theme");
+      applyTheme(savedTheme === "dark", false);
+      localStorage.removeItem("theme");
+    } else if (forcedTheme === "dark") {
       applyTheme(true, true);
     } else if (forcedTheme === "light") {
       applyTheme(false, false);
