@@ -123,7 +123,8 @@
     if (forcedTheme === "dark") {
       applyTheme(true, true);
     } else if (forcedTheme === "light") {
-      applyTheme(false, true);
+      applyTheme(false, false);
+      localStorage.removeItem("theme");
     } else {
       var savedTheme = localStorage.getItem("theme");
       applyTheme(savedTheme === "dark", true);
