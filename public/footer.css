@@ -783,6 +783,21 @@ body.oasis-footer-force-dark .oasis-footer-frame {
   z-index: 0;
 }
 
+/* Desktop : afficher footer-frame-desktop, masquer footer-frame-mobile */
+.oasis-footer-frame .footer-frame-mobile {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .oasis-footer-frame .footer-frame-desktop {
+    display: none;
+  }
+
+  .oasis-footer-frame .footer-frame-mobile {
+    display: block;
+  }
+}
+
 /* Blocs footer : hauteur 100 % de la cellule grille (pour logo SVG 100 % hauteur) */
 .oasis-footer-frame .footer__block--newsletter,
 .oasis-footer-frame .footer__block--logo,
