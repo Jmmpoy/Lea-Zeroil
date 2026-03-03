@@ -617,3 +617,17 @@
   .squarify-slideout-cart {
     z-index: 999980 !important;
   }
+
+
+  #sqs-cart-container .cart-row-variant-label, 
+#sqs-cart-container .cart-row-variants .cart-row-qty .cart-row-qty-label {
+  text-transform: capitalize !important;
+}
+
+#sqs-cart-container .cart-row-variants .cart-row-variant .cart-row-variant-value{
+  white-space: normal !important;
+}
+
+.squarify-slideout-cart__body .cart-row-img-wrapper {
+  width: 100px !important;
+}
