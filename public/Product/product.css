@@ -307,6 +307,17 @@ body.gm-lock {
   padding: 24px 0;
 }
 
+/* Mobile */
+@media (max-width: 640px) {
+    .gm-guide__row {
+    display: grid;
+    grid-template-columns: 60px 1fr !important;
+    gap: 24px;
+    padding: 24px 0;
+  }
+}
+
+
 .gm-guide__colTitle,
 .gm-guide__colText,
 .gm-guide__title {
