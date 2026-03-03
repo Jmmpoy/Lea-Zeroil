@@ -351,6 +351,14 @@
       return;
     }
 
+    // Masquer le footer quand le panier est vide
+    const isEmpty = cartContainer.querySelector(".empty-message") !== null;
+    if (isEmpty) {
+      footer.style.setProperty("display", "none", "important");
+    } else {
+      footer.style.setProperty("display", "flex", "important");
+    }
+
     const checkoutHref =
       cartContainer
         .querySelector(".cart-checkout-button")
