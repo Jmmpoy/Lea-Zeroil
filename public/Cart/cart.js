@@ -441,8 +441,35 @@
     });
   };
 
+  const SLIDEOUT_OPEN_CLASS = "squarify-slideout-cart--open";
+
+  const attachSlideoutOpenObserver = (slideout) => {
+    let scheduled = false;
+
+    const observer = new MutationObserver(() => {
+      if (!slideout.classList.contains(SLIDEOUT_OPEN_CLASS)) return;
+      if (scheduled) return;
+      scheduled = true;
+
+      requestAnimationFrame(() => {
+        runCartDecorations();
+        scheduled = false;
+      });
+    });
+
+    observer.observe(slideout, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+  };
+
   const attachCartObserver = (cartRoot) => {
     logDebug("Observer attaché sur root panier", cartRoot);
+
+    const slideout = cartRoot.closest(".squarify-slideout-cart");
+    if (slideout) {
+      attachSlideoutOpenObserver(slideout);
+    }
 
     let scheduled = false;
 
