@@ -408,9 +408,9 @@
     if (isEmpty) {
       const closeSlideout = (e) => {
         e.preventDefault();
-        const slideout = footer.closest(".squarify-slideout-cart");
-        if (slideout) {
-          slideout.classList.remove("squarify-slideout-cart--open");
+        const wrapper = footer.closest(".squarify-slideout-cart-wrapper");
+        if (wrapper) {
+          wrapper.classList.remove("squarify-slideout-cart-wrapper--open");
         }
       };
       footerCta.onclick = closeSlideout;
