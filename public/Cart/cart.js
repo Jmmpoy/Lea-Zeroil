@@ -413,9 +413,9 @@
           wrapper.classList.remove("squarify-slideout-cart-wrapper--open");
         }
       };
-      footerCta.onclick = closeSlideout;
+      footer.onclick = closeSlideout;
     } else {
-      footerCta.onclick = null;
+      footer.onclick = null;
     }
   };
 
