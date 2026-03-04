@@ -20,6 +20,7 @@
 
   const UI_TRANSLATIONS = {
     en: {
+      back_to_site: "Back to site",
       checkout_cta: "PROCEED TO CHECKOUT",
       color: "Color",
       gift_note: "This order is a gift",
@@ -28,6 +29,7 @@
       size: "Size",
     },
     fr: {
+      back_to_site: "Retourner sur le site",
       checkout_cta: "PROCÉDER AU PAIEMENT",
       color: "Coloris",
       gift_note: "Cette commande est un cadeau",
@@ -351,39 +353,34 @@
       return;
     }
 
-    // Masquer le footer quand le panier est vide
     const isEmpty = cartContainer.querySelector(".empty-message") !== null;
-    if (isEmpty) {
-      footer.style.setProperty("display", "none", "important");
-    } else {
-      footer.style.setProperty("display", "flex", "important");
-    }
 
-    const checkoutHref =
-      cartContainer
-        .querySelector(".cart-checkout-button")
-        ?.getAttribute("href")
-        ?.trim() || "/commerce/goto-checkout";
-    const nativeCheckoutLabel =
-      cartContainer.querySelector(".cart-checkout-button")?.textContent?.trim() ||
-      getTranslation("checkout_cta");
-    const checkoutLabel = nativeCheckoutLabel.toLocaleUpperCase(
-      getCurrentLocale(),
-    );
-    const totalText =
-      getCartTotalText() ||
-      cartContainer.querySelector(".cart-subtotal-price")?.textContent?.trim() ||
-      "";
+    const checkoutHref = isEmpty
+      ? "#"
+      : (cartContainer
+          .querySelector(".cart-checkout-button")
+          ?.getAttribute("href")
+          ?.trim() || "/commerce/goto-checkout");
+    const nativeCheckoutLabel = isEmpty
+      ? getTranslation("back_to_site")
+      : (cartContainer.querySelector(".cart-checkout-button")?.textContent?.trim() ||
+        getTranslation("checkout_cta"));
+    const checkoutLabel = isEmpty
+      ? nativeCheckoutLabel.toUpperCase()
+      : nativeCheckoutLabel.toLocaleUpperCase(getCurrentLocale());
+    const totalText = isEmpty
+      ? ""
+      : (getCartTotalText() ||
+        cartContainer.querySelector(".cart-subtotal-price")?.textContent?.trim() ||
+        "");
 
     let footerCta = footer.querySelector(".cart-footer-cta");
     if (!footerCta) {
       footerCta = document.createElement("a");
       footerCta.className = "cart-footer-cta";
-      footerCta.setAttribute("aria-label", nativeCheckoutLabel);
 
       const labelElement = document.createElement("span");
       labelElement.className = "cart-footer-cta-label";
-      labelElement.textContent = checkoutLabel;
 
       const amountElement = document.createElement("span");
       amountElement.className = "cart-footer-cta-amount";
@@ -393,12 +390,9 @@
       footer.replaceChildren(footerCta);
     }
 
+    footerCta.setAttribute("aria-label", nativeCheckoutLabel);
     if (footerCta.getAttribute("href") !== checkoutHref) {
       footerCta.setAttribute("href", checkoutHref);
-    }
-
-    if (footerCta.getAttribute("aria-label") !== nativeCheckoutLabel) {
-      footerCta.setAttribute("aria-label", nativeCheckoutLabel);
     }
 
     const footerLabel = footerCta.querySelector(".cart-footer-cta-label");
@@ -409,6 +403,19 @@
     const footerAmount = footerCta.querySelector(".cart-footer-cta-amount");
     if (footerAmount && footerAmount.textContent !== totalText) {
       footerAmount.textContent = totalText;
+    }
+
+    if (isEmpty) {
+      const closeSlideout = (e) => {
+        e.preventDefault();
+        const slideout = footer.closest(".squarify-slideout-cart");
+        if (slideout) {
+          slideout.classList.remove("squarify-slideout-cart--open");
+        }
+      };
+      footerCta.onclick = closeSlideout;
+    } else {
+      footerCta.onclick = null;
     }
   };
 
