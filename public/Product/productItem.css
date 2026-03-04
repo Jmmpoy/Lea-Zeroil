@@ -729,6 +729,17 @@ body.dark-mode [data-product-detail-layout="simple"] .product-variants.sqs-site-
   display: none !important;
 }
 
+/* Wrapper single-option : enfants non cliquables, lecture seule */
+.variant-select-wrapper.variant-dropdown.gm-single-option {
+  pointer-events: none !important;
+  cursor: default !important;
+}
+
+.variant-select-wrapper.variant-dropdown.gm-single-option * {
+  pointer-events: none !important;
+  cursor: default !important;
+}
+
 /* --------------------------------------------------------------------------
    Dropdown custom (gm-variant-dropdown-enhanced) : liste, swatch, trigger
    -------------------------------------------------------------------------- */
