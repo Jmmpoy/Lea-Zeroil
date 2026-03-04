@@ -408,9 +408,13 @@
     if (isEmpty) {
       const closeSlideout = (e) => {
         e.preventDefault();
-        const wrapper = footer.closest(".squarify-slideout-cart-wrapper");
+        const wrapper = document.querySelector(".squarify-slideout-cart-wrapper");
         if (wrapper) {
           wrapper.classList.remove("squarify-slideout-cart-wrapper--open");
+        }
+        const cart = footer.closest(".squarify-slideout-cart");
+        if (cart) {
+          cart.classList.remove("squarify-slideout-cart--open");
         }
       };
       footer.onclick = closeSlideout;
