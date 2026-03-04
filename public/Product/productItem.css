@@ -1183,3 +1183,8 @@ body.dark-mode .product-detail .product-meta .product-add-to-cart .product-purch
 div[data-uiextensions-selector="sqs-uiextensions-product-badge"] {
   display: none !important;
 }
+
+
+.product-detail .product-meta .product-description-spacing-mobile{
+  display: none !important;
+}
