@@ -591,10 +591,21 @@ body.oasis-submenu-lock {
 
   .oasis-submenu__mobile-links {
     display: block;
+    position: relative;
     margin-top: 28px;
     padding-top: 20px;
-    border-top: 1px solid currentColor;
     width: 100%;
+  }
+
+  .oasis-submenu__mobile-links::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: .5px;
+    background: currentColor;
+    opacity: 0.5;
   }
 
   .oasis-submenu__mobile-links .oasis-submenu__list {
