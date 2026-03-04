@@ -214,6 +214,13 @@ section[data-section-id="696abd01e1d862206d905143"] .gm-swatches {
   margin-top: 8px;
 }
 
+@media (max-width: 767px) {
+  section[data-section-id="696abd01e1d862206d905143"] .summary-title .gm-swatches,
+  section[data-section-id="696abd01e1d862206d905143"] .gm-swatches {
+    flex-wrap: wrap;
+  }
+}
+
 section[data-section-id="696abd01e1d862206d905143"] .gm-swatch {
   width: 7px;
   height: 7px;
