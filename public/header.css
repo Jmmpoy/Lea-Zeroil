@@ -608,3 +608,32 @@ body.oasis-submenu-lock {
 .oasis-menu-folder .header-nav-folder-content {
   display: none !important;
 }
+
+
+/**LANGUAGE SELECTOR OVERFLOW**/
+
+.header{
+  overflow:visible ! important;
+}
+.header .header-announcement-bar-wrapper {
+  overflow:visible ! important;
+}
+
+header,
+.header-inner,
+.header-display-desktop,
+.header-actions {
+  overflow: visible !important;
+}
+
+.language-picker-content {
+  z-index: 999999 !important;
+}
+
+.header-inner {
+  overflow: visible !important;
+}
+
+.header-display-desktop {
+  overflow: visible !important;
+}
