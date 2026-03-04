@@ -159,8 +159,8 @@ section[data-section-id="696abd01e1d862206d905143"] .summary-thumbnail-outer-con
 section[data-section-id="696abd01e1d862206d905143"] .summary-thumbnail,
 section[data-section-id="696abd01e1d862206d905143"] .summary-thumbnail-container img,
 section[data-section-id="696abd01e1d862206d905143"] .summary-thumbnail-outer-container img {
-  width: 100%;
-  height: 100%;
+  width: 100% !important;
+  height: 100% !important;
   object-fit: cover;
   display: block;
 }
