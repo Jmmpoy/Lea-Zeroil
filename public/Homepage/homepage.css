@@ -407,6 +407,31 @@ section[data-section-id="6987c22136d357787cec839b"] .summary-title::first-letter
   }
 }
 
+/* Mode nuit : témoignages (Goodmoods) visibles sur fond sombre */
+body.dark-mode .gm-meta__brand,
+body.dark-mode .gm-quote {
+  color: var(--oasis-cream) !important;
+}
+
+body.dark-mode .gm-meta__date {
+  color: var(--oasis-cream-80) !important;
+}
+
+body.dark-mode .gm-topline {
+  background: var(--oasis-beige-55) !important;
+}
+
+body.dark-mode .gm-card {
+  border-top-color: var(--oasis-beige-55) !important;
+}
+
+body.dark-mode .gm-dots .swiper-pagination-bullet {
+  background: var(--oasis-beige-55) !important;
+}
+
+body.dark-mode .gm-dots .swiper-pagination-bullet-active {
+  background: var(--oasis-cream) !important;
+}
 
 
 /* HOME - CTA BAR – Galerie Oasis */
