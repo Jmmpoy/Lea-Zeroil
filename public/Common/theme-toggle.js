@@ -97,15 +97,12 @@
   }
 
   function updateCollaborationImages(isDark) {
-    var sectionIds = [
-      "697e0cc6d8d22f1b5689a5ee", "69579673adbf2074438de459",
-      "695798500307240bbe40986e", "69579a35a0a49914a074cb20",
-      "69579b1b3fa9bc11325e312d", "69579c80a244612ab35f9160"
-    ];
-    var selector = sectionIds.map(function (id) {
-      return "section[data-section-id=\"" + id + "\"] .fluid-image-container img";
-    }).join(", ");
-    var imgs = document.querySelectorAll(selector);
+    var isCollaborationPage =
+      document.body.classList.contains("collection-type-blog-basic-grid") &&
+      !document.body.classList.contains("oasis-blog-theme-lune");
+    if (!isCollaborationPage) return;
+
+    var imgs = document.querySelectorAll(".sqs-block-image .fluid-image-container img");
     imgs.forEach(function (img) {
       var src = img.src || img.getAttribute("src") || "";
       collaborationImageSwaps.forEach(function (swap) {

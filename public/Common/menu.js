@@ -121,6 +121,14 @@
           </div>
 
         </div>
+
+        <!-- Mobile uniquement : À propos + Contact -->
+        <div class="oasis-submenu__mobile-links">
+          <ul class="oasis-submenu__list">
+            <li><a href="/a-propos">À propos</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
       </div>
     `;
 
