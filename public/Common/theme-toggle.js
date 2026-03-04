@@ -37,6 +37,14 @@
     cream: "https://static1.squarespace.com/static/6939b3b7d90b6131b1aeebba/t/698f76631382647efdf0d612/1771009635156/LOGOTYPE_LEA_ZEROIL_VFINAL_CREAM.png"
   };
 
+  /** Page collaboration : swap d’images (light ↔ dark) selon le thème */
+  const collaborationImageSwaps = [
+    {
+      lightSrc: "https://images.squarespace-cdn.com/content/v1/6939b3b7d90b6131b1aeebba/95ab0526-5e6e-426b-b068-808ee20f072c/Line.png",
+      darkSrc: "https://static1.squarespace.com/static/6939b3b7d90b6131b1aeebba/t/69a82090f7aa1c60ba6e923c/1772626064470/frise-blanche.png"
+    }
+  ];
+
   const themeClasses = [
     "white", "white-bold", "light", "light-bold",
     "bright-inverse", "bright",
@@ -85,6 +93,39 @@
       applySectionTheme(lightTheme);
     }
     updateHeaderLogo();
+    updateCollaborationImages(isDark);
+  }
+
+  function updateCollaborationImages(isDark) {
+    var sectionIds = [
+      "697e0cc6d8d22f1b5689a5ee", "69579673adbf2074438de459",
+      "695798500307240bbe40986e", "69579a35a0a49914a074cb20",
+      "69579b1b3fa9bc11325e312d", "69579c80a244612ab35f9160"
+    ];
+    var selector = sectionIds.map(function (id) {
+      return "section[data-section-id=\"" + id + "\"] .fluid-image-container img";
+    }).join(", ");
+    var imgs = document.querySelectorAll(selector);
+    imgs.forEach(function (img) {
+      var src = img.src || img.getAttribute("src") || "";
+      collaborationImageSwaps.forEach(function (swap) {
+        var matchLight = src.indexOf(swap.lightSrc) !== -1;
+        var matchDark = src.indexOf(swap.darkSrc) !== -1;
+        if (matchLight && isDark) {
+          img.dataset.lightSrc = img.dataset.lightSrc || src;
+          img.src = swap.darkSrc;
+          img.setAttribute("data-image", swap.darkSrc);
+          if (img.hasAttribute("data-src")) img.setAttribute("data-src", swap.darkSrc);
+          return;
+        }
+        if (matchDark && !isDark) {
+          var light = img.dataset.lightSrc || swap.lightSrc;
+          img.src = light;
+          img.setAttribute("data-image", light);
+          if (img.hasAttribute("data-src")) img.setAttribute("data-src", light);
+        }
+      });
+    });
   }
 
   function updateHeaderLogo() {
@@ -160,6 +201,7 @@
   function run() {
     initThemeToggle();
     updateHeaderLogo();
+    updateCollaborationImages(document.body.classList.contains("dark-mode"));
     markCurrentNavItem();
     /* Second passage après injection des classes (ex. galerie-oasis-page par common.js) */
     setTimeout(updateHeaderLogo, 0);
