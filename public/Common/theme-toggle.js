@@ -94,9 +94,7 @@
       document.body.classList.contains("collection-type-blog-basic-grid") &&
       !document.body.classList.contains("oasis-blog-theme-lune");
     const isGalerieOasisPage = document.body.classList.contains("galerie-oasis-page");
-    const path = (window.location.pathname || "").replace(/^\/|\/$/g, "");
-    const isCollectionsPage = path === "collections";
-    const useCreamLogo = document.body.classList.contains("dark-mode") || isCollaborationPage || isGalerieOasisPage || isCollectionsPage;
+    const useCreamLogo = document.body.classList.contains("dark-mode") || isCollaborationPage || isGalerieOasisPage;
     const src = useCreamLogo ? headerLogoUrls.cream : headerLogoUrls.bordeaux;
     imgs.forEach(function (img) { img.src = src; });
   }
