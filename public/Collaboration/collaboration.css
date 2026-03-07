@@ -7,12 +7,25 @@
   display: none !important;
 }
 
-/* Frise injectée sous le bouton "VOIR TOUTE LA COLLABORATION" */
+/* Frise injectée sous le bouton "VOIR TOUTE LA COLLABORATION" — positionnée dans la grid Fluid Engine */
 .collab-frise-wrapper {
+  z-index: 8;
+  grid-column-start: 2;
+  grid-column-end: 26;
+  grid-row-start: 18;
+   margin-top: 70px !important;
   width: 100%;
-  margin-top: 1em;
   margin-bottom: 0;
   text-align: center;
+}
+
+@media (max-width: 767px) {
+  .collab-frise-wrapper {
+    grid-column-start: 2;
+    grid-column-end: 10;
+    grid-row-start: 24;
+    margin-top: 70px !important;
+  }
 }
 
 .collab-frise-img {
