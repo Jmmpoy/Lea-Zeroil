@@ -101,26 +101,29 @@
    * "VOIR TOUTE LA COLLABORATION" et met à jour son image selon le thème (light/dark).
    */
   function injectCollaborationFrises(isDark) {
-    var isCollaborationPage =
-      document.body.classList.contains("collection-type-blog-basic-grid") &&
-      !document.body.classList.contains("oasis-blog-theme-lune");
+    var path = (window.location.pathname || "").replace(/\/$/, "");
+    var isCollaborationPage = path === "/collaborations";
+    console.log("isCollaborationPage", isCollaborationPage);
+    console.log("path", path);
     if (!isCollaborationPage) return;
 
     var swap = collaborationImageSwaps[0];
     var friseSrc = isDark ? swap.darkSrc : swap.lightSrc;
 
     var existing = document.querySelectorAll(".collab-frise-img");
+    console.log("existing", existing);
     if (existing.length > 0) {
       existing.forEach(function (img) { img.src = friseSrc; });
       return;
     }
 
     var buttons = document.querySelectorAll("a.sqs-block-button-element");
+    console.log("buttons", buttons);
     buttons.forEach(function (btn) {
       if (btn.textContent.trim() !== "VOIR TOUTE LA COLLABORATION") return;
       var feBlock = btn.closest(".fe-block");
+      console.log("feBlock", feBlock);
       if (!feBlock) return;
-
       var wrapper = document.createElement("div");
       wrapper.className = "collab-frise-wrapper";
       var img = document.createElement("img");
@@ -130,8 +133,10 @@
       wrapper.appendChild(img);
 
       if (feBlock.nextElementSibling) {
+        console.log("feBlock.nextElementSibling", feBlock.nextElementSibling);
         feBlock.parentNode.insertBefore(wrapper, feBlock.nextElementSibling);
       } else {
+        console.log("feBlock.parentNode.appendChild(wrapper)");
         feBlock.parentNode.appendChild(wrapper);
       }
     });
