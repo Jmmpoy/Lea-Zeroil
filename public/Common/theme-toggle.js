@@ -93,50 +93,47 @@
       applySectionTheme(lightTheme);
     }
     updateHeaderLogo();
-    updateCollaborationImages(isDark);
+    injectCollaborationFrises(isDark);
   }
 
-  /** Génère un srcset au format Squarespace (?format=Nw Nw) */
-  function buildSrcset(baseUrl) {
-    var widths = [100, 300, 500, 750, 1000, 1500, 2500];
-    return widths.map(function (w) { return baseUrl + "?format=" + w + "w " + w + "w"; }).join(", ");
-  }
-
-  function updateCollaborationImages(isDark) {
+  /**
+   * Page collaboration : injecte la frise (ligne décorative) juste sous chaque bouton
+   * "VOIR TOUTE LA COLLABORATION" et met à jour son image selon le thème (light/dark).
+   */
+  function injectCollaborationFrises(isDark) {
     var isCollaborationPage =
       document.body.classList.contains("collection-type-blog-basic-grid") &&
       !document.body.classList.contains("oasis-blog-theme-lune");
     if (!isCollaborationPage) return;
 
-    var lineBlockSelector = [
-      ".fe-block-24fd8965aefa836b01c5",
-      ".fe-block-68fd3b5d4242179c0097",
-      ".fe-block-e7feb16e039e5862ebea",
-      ".fe-block-275aada142cb0fa91333",
-      ".fe-block-b5a2b7071c2909022ee7"
-    ].map(function (c) { return c + " .fluid-image-container img"; }).join(", ");
-    var imgs = document.querySelectorAll(lineBlockSelector);
-    imgs.forEach(function (img) {
-      var src = img.src || img.getAttribute("src") || img.getAttribute("data-src") || "";
-      collaborationImageSwaps.forEach(function (swap) {
-        var matchLight = src.indexOf(swap.lightSrc) !== -1;
-        var matchDark = src.indexOf(swap.darkSrc) !== -1;
-        if (matchLight && isDark) {
-          img.dataset.lightSrc = img.dataset.lightSrc || src;
-          img.src = swap.darkSrc;
-          img.setAttribute("data-image", swap.darkSrc);
-          if (img.hasAttribute("data-src")) img.setAttribute("data-src", swap.darkSrc);
-          img.setAttribute("srcset", buildSrcset(swap.darkSrc));
-          return;
-        }
-        if (matchDark && !isDark) {
-          var light = img.dataset.lightSrc || swap.lightSrc;
-          img.src = light;
-          img.setAttribute("data-image", light);
-          if (img.hasAttribute("data-src")) img.setAttribute("data-src", light);
-          img.setAttribute("srcset", buildSrcset(light));
-        }
-      });
+    var swap = collaborationImageSwaps[0];
+    var friseSrc = isDark ? swap.darkSrc : swap.lightSrc;
+
+    var existing = document.querySelectorAll(".collab-frise-img");
+    if (existing.length > 0) {
+      existing.forEach(function (img) { img.src = friseSrc; });
+      return;
+    }
+
+    var buttons = document.querySelectorAll("a.sqs-block-button-element");
+    buttons.forEach(function (btn) {
+      if (btn.textContent.trim() !== "VOIR TOUTE LA COLLABORATION") return;
+      var feBlock = btn.closest(".fe-block");
+      if (!feBlock) return;
+
+      var wrapper = document.createElement("div");
+      wrapper.className = "collab-frise-wrapper";
+      var img = document.createElement("img");
+      img.className = "collab-frise-img";
+      img.alt = "";
+      img.src = friseSrc;
+      wrapper.appendChild(img);
+
+      if (feBlock.nextElementSibling) {
+        feBlock.parentNode.insertBefore(wrapper, feBlock.nextElementSibling);
+      } else {
+        feBlock.parentNode.appendChild(wrapper);
+      }
     });
   }
 
@@ -213,7 +210,7 @@
   function run() {
     initThemeToggle();
     updateHeaderLogo();
-    updateCollaborationImages(document.body.classList.contains("dark-mode"));
+    injectCollaborationFrises(document.body.classList.contains("dark-mode"));
     markCurrentNavItem();
     /* Second passage après injection des classes (ex. galerie-oasis-page par common.js) */
     setTimeout(updateHeaderLogo, 0);

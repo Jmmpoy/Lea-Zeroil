@@ -1,4 +1,27 @@
+/* Blocs ligne Squarespace remplacés par la frise injectée en JS (theme-toggle.js) */
+.fe-block-24fd8965aefa836b01c5,
+.fe-block-68fd3b5d4242179c0097,
+.fe-block-e7feb16e039e5862ebea,
+.fe-block-275aada142cb0fa91333,
+.fe-block-b5a2b7071c2909022ee7 {
+  display: none !important;
+}
 
+/* Frise injectée sous le bouton "VOIR TOUTE LA COLLABORATION" */
+.collab-frise-wrapper {
+  width: 100%;
+  margin-top: 1em;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.collab-frise-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
 
 /* COLLABORATION - FILTRES */
 .gm-filterbar {
