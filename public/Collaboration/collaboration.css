@@ -112,7 +112,8 @@
   }
 
   article#sections.header-improvement section a {
-    font-size: 14px !important;
+    font-size: 12px !important;
+    line-height: 1;
   }
 }
 
