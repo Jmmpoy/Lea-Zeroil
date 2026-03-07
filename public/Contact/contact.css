@@ -560,6 +560,18 @@ section[data-section-id="6955321ea3ec302437387bc9"] .field-list>.title>p.hawrxS_
   display: none !important;
 }
 
+/* Après soumission (light + dark) : masquer champs et bouton, ne garder que « Merci ! » */
+section[data-section-id="6955321ea3ec302437387bc9"] form.react-form-contents--submitted .field-list,
+section[data-section-id="6955321ea3ec302437387bc9"] form.react-form-contents--submitted .form-button-wrapper {
+  display: none !important;
+}
+
+/* Après soumission : masquer les blocs « Champs obligatoires* » et « Mail. contact@leazeroil.com » */
+section[data-section-id="6955321ea3ec302437387bc9"]:has(form.react-form-contents--submitted) .fe-block-yui_3_17_2_1_1769716972185_8836,
+section[data-section-id="6955321ea3ec302437387bc9"]:has(form.react-form-contents--submitted) .fe-block-yui_3_17_2_1_1769716972185_9360 {
+  display: none !important;
+}
+
 section[data-section-id="6955321ea3ec302437387bc9"] .gm-select__btn,
 section[data-section-id="6955321ea3ec302437387bc9"] .gm-select__opt {
   font-size: 12px !important;
