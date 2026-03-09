@@ -695,3 +695,12 @@ section[data-section-id="693ad8fc71bac65c231449a1"] .sqs-block-html .sqs-block-a
   }
 
 }
+
+
+/* Section GALERIE OASIS — texte en crème en mode nuit */
+body.dark-mode section[data-section-id="6984069a844f9874fb6dfdc5"] h4,
+body.dark-mode section[data-section-id="6984069a844f9874fb6dfdc5"] a,
+body.dark-mode section[data-section-id="6984069a844f9874fb6dfdc5"] span,
+body.dark-mode section[data-section-id="6984069a844f9874fb6dfdc5"] p {
+  color: var(--oasis-cream) !important;
+}
