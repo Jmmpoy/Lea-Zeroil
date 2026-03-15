@@ -139,9 +139,30 @@
     return items[0] || null;
   }
 
+  function findProductNameInput() {
+    var items = root.querySelectorAll(".field-list .form-item.field.text");
+    for (var i = 0; i < items.length; i++) {
+      var label = items[i].querySelector("label .SP08ZLkhAnk2Rqaf span, label span, .title span");
+      var text = label ? (label.textContent || "").trim() : "";
+      if (/nom du produit/i.test(text)) return items[i].querySelector("input[type='text']");
+    }
+    return items[0] ? items[0].querySelector("input[type='text']") : null;
+  }
+
+  function prefillProductNameFromUrl() {
+    var productParam = getProductFromUrl();
+    if (!productParam) return;
+    var input = findProductNameInput();
+    if (input) {
+      input.value = productParam;
+      input.dispatchEvent(new Event("input", { bubbles: true }));
+    }
+  }
+
   function prefillProductFromUrl() {
     var productParam = getProductFromUrl();
     if (!productParam) return;
+    prefillProductNameFromUrl();
     var wrapper = findProductSelectWrapper();
     if (!wrapper) return;
     var nativeSelect = wrapper.querySelector("select");
