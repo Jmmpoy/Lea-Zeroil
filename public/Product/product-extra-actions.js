@@ -8,7 +8,7 @@
       const wrap = document.createElement("div");
       wrap.className = "product-extra-actions";
       wrap.innerHTML = `
-      <a class="product-extra-btn product-extra-btn--download"
+      <a class="product-extra-btn product-extra-btn--download" target="_blank" rel="noopener"
    >
   Fiche technique
 </a>
