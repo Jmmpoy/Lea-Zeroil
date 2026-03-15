@@ -24,7 +24,7 @@
 
   /* Page produit : masquer le prix si 0 ou absent, bouton panier → contact */
   (function productPriceZeroNoPrice() {
-    var CONTACT_PATH = "/contact";
+    var CONTACT_PATH = "/demande-de-devis";
 
     function parsePrice(text) {
       if (!text || typeof text !== "string") return NaN;
