@@ -265,6 +265,24 @@
     document.addEventListener("sqs-route-did-change", run);
   })();
 
+  (function initFooterLogoScrollTop() {
+    function run() {
+      var logo = document.querySelector(".footer__logo");
+      if (!logo || logo.hasAttribute("data-scroll-top-init")) return;
+      logo.setAttribute("data-scroll-top-init", "1");
+      logo.style.cursor = "pointer";
+      logo.addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    }
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", run);
+    } else {
+      run();
+    }
+    document.addEventListener("sqs-route-did-change", run);
+  })();
+
   document.addEventListener("DOMContentLoaded", function () {
 
     var NEWSLETTER_FORM_HTML = "<input class=\"news-input\" placeholder=\"Adresse mail\" /><button class=\"news-btn\">OK →</button>";
