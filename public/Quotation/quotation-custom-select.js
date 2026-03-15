@@ -4,10 +4,18 @@
  */
 (function initQuotationCustomSelect(retry) {
   if (retry === undefined) retry = 30;
+
   var SECTION_ID = "6939b405d90b6131b1aefbbd";
   var root = document.querySelector('section[data-section-id="' + SECTION_ID + '"]');
+  var PREFILL_DONE = false;
+  var runTimer = null;
+
   if (!root) {
-    if (retry > 0) return setTimeout(function () { initQuotationCustomSelect(retry - 1); }, 250);
+    if (retry > 0) {
+      return setTimeout(function () {
+        initQuotationCustomSelect(retry - 1);
+      }, 250);
+    }
     return;
   }
 
@@ -60,15 +68,22 @@
     listEl.className = "gm-select__list";
     listEl.setAttribute("role", "listbox");
 
-    options.forEach(function (opt, idx) {
+    options.forEach(function (opt) {
       var li = document.createElement("li");
       var optBtn = document.createElement("button");
       optBtn.type = "button";
       optBtn.className = "gm-select__opt";
       optBtn.textContent = opt.textContent.trim();
-      optBtn.setAttribute("data-index", idx);
       li.appendChild(optBtn);
       listEl.appendChild(li);
+
+      optBtn.addEventListener("click", function () {
+        var text = opt.textContent.trim();
+        nativeSelect.value = opt.value;
+        nativeSelect.dispatchEvent(new Event("change", { bubbles: true }));
+        valueSpan.textContent = text;
+        close();
+      });
     });
 
     custom.appendChild(btnEl);
@@ -87,25 +102,6 @@
 
     btnEl.addEventListener("click", function () {
       custom.classList.contains("is-open") ? close() : open();
-    });
-
-    listEl.querySelectorAll(".gm-select__opt").forEach(function (ob) {
-      ob.addEventListener("click", function () {
-        var realIdx = -1;
-        var text = ob.textContent.trim();
-        for (var j = 0; j < nativeSelect.options.length; j++) {
-          if (nativeSelect.options[j].textContent.trim() === text) {
-            realIdx = j;
-            break;
-          }
-        }
-        if (realIdx !== -1) {
-          nativeSelect.selectedIndex = realIdx;
-          nativeSelect.dispatchEvent(new Event("change", { bubbles: true }));
-        }
-        valueSpan.textContent = text;
-        close();
-      });
     });
 
     document.addEventListener("click", function (e) {
@@ -132,8 +128,10 @@
     for (var i = 0; i < items.length; i++) {
       var item = items[i];
       if (item.classList.contains("country-select")) continue;
-      var label = item.querySelector("label .caption-text, .caption-text, label");
+
+      var label = item.querySelector("label");
       var text = label ? (label.textContent || "").trim() : "";
+
       if (/produit/i.test(text)) return item;
     }
     return items[0] || null;
@@ -141,40 +139,60 @@
 
   function findProductNameInput() {
     var items = root.querySelectorAll(".field-list .form-item.field.text");
+
     for (var i = 0; i < items.length; i++) {
-      var label = items[i].querySelector("label .SP08ZLkhAnk2Rqaf span, label span, .title span");
+      var label = items[i].querySelector("label");
       var text = label ? (label.textContent || "").trim() : "";
-      if (/nom du produit/i.test(text)) return items[i].querySelector("input[type='text']");
+
+      if (/nom du produit/i.test(text)) {
+        return items[i].querySelector("input[type='text']");
+      }
     }
-    return items[0] ? items[0].querySelector("input[type='text']") : null;
+
+    return null;
   }
 
   function prefillProductNameFromUrl() {
     var productParam = getProductFromUrl();
     if (!productParam) return;
+
     var input = findProductNameInput();
-    if (input) {
+    if (!input) return;
+
+    if (input.value !== productParam) {
       input.value = productParam;
       input.dispatchEvent(new Event("input", { bubbles: true }));
+      input.dispatchEvent(new Event("change", { bubbles: true }));
     }
   }
 
   function prefillProductFromUrl() {
     var productParam = getProductFromUrl();
     if (!productParam) return;
-    prefillProductNameFromUrl();
+
     var wrapper = findProductSelectWrapper();
     if (!wrapper) return;
+
     var nativeSelect = wrapper.querySelector("select");
     if (!nativeSelect || !nativeSelect.options.length) return;
+
     var paramUpper = productParam.toUpperCase();
     var options = nativeSelect.options;
+
     for (var i = 0; i < options.length; i++) {
       var optText = (options[i].textContent || "").trim();
       if (!optText) continue;
-      if (optText.toUpperCase() === paramUpper || optText.toUpperCase().indexOf(paramUpper) !== -1 || paramUpper.indexOf(optText.toUpperCase()) !== -1) {
-        nativeSelect.selectedIndex = i;
-        nativeSelect.dispatchEvent(new Event("change", { bubbles: true }));
+
+      if (
+        optText.toUpperCase() === paramUpper ||
+        optText.toUpperCase().indexOf(paramUpper) !== -1 ||
+        paramUpper.indexOf(optText.toUpperCase()) !== -1
+      ) {
+        if (nativeSelect.selectedIndex !== i) {
+          nativeSelect.selectedIndex = i;
+          nativeSelect.dispatchEvent(new Event("change", { bubbles: true }));
+        }
+
         var valueSpan = wrapper.querySelector(".gm-select__value");
         if (valueSpan) valueSpan.textContent = optText;
         break;
@@ -183,13 +201,19 @@
   }
 
   function run() {
-    prefillProductFromUrl();
     root.querySelectorAll(".form-item.field.select").forEach(enhanceSelect);
     root.querySelectorAll(".country-select").forEach(enhanceSelect);
+
+    prefillProductFromUrl();
+    prefillProductNameFromUrl();
   }
 
   run();
 
-  var mo = new MutationObserver(run);
+  var mo = new MutationObserver(function () {
+    clearTimeout(runTimer);
+    runTimer = setTimeout(run, 120);
+  });
+
   mo.observe(root, { childList: true, subtree: true });
 })();
