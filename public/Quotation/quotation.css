@@ -1,0 +1,340 @@
+/* =========================
+   DEVIS — PAGE /demande-de-devis
+   Section : 6939b405d90b6131b1aefbbd
+   ========================= */
+
+/* --- Titre de page --- */
+section[data-section-id="6939b405d90b6131b1aefbbd"] h2 {
+  font-family: "Presicav", serif !important;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--oasis-bordeaux);
+}
+
+/* --- Base inputs / textarea / select --- */
+section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form input,
+section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form textarea,
+section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form select {
+  font-family: "Presicav", serif;
+  color: var(--oasis-bordeaux) !important;
+  caret-color: var(--oasis-bordeaux);
+}
+
+section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form input {
+  font-family: "Presicav", serif;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 12px !important;
+  line-height: 1.2 !important;
+}
+
+section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form input::placeholder,
+section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form textarea::placeholder {
+  color: var(--oasis-brown-70);
+}
+
+/* --- Nom (Prénom + Nom de famille) --- */
+section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form .field.first-name,
+section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form .field.last-name {
+  display: flex;
+  flex-direction: column;
+}
+
+section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form .field.first-name input,
+section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form .field.last-name input {
+  order: 1;
+  border: 0 !important;
+  border-bottom: 1px solid var(--oasis-bordeaux) !important;
+  background: transparent;
+  padding: 0;
+  margin: 0 0 10px 0;
+  outline: none;
+}
+
+section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form .field.first-name label,
+section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form .field.last-name label {
+  order: 3;
+  margin: 0;
+}
+
+section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form .field.first-name .caption-text,
+section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form .field.last-name .caption-text {
+  font-style: italic;
+  font-family: "Henry", serif !important;
+  font-size: 18px !important;
+  color: var(--oasis-bordeaux);
+}
+
+section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form .field.first-name .description.required,
+section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form .field.last-name .description.required {
+  display: none;
+}
+
+section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form .field.first-name .caption-text::after,
+section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form .field.last-name .caption-text::after {
+  content: " *";
+}
+
+/* --- Labels (titre des champs) --- */
+section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form .form-item > label.title,
+section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form fieldset > legend .title {
+  font-family: "Henry", serif !important;
+  font-style: italic;
+  font-size: 18px !important;
+  color: var(--oasis-bordeaux);
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+}
+
+section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form .description.required {
+  font-size: 12px;
+  color: var(--oasis-bordeaux);
+  opacity: 0.6;
+}
+
+section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form .description:not(.required) {
+  font-family: "Henry", serif !important;
+  font-style: italic;
+  font-size: 14px !important;
+  color: var(--oasis-bordeaux);
+  opacity: 0.7;
+}
+
+/* Sous-labels (caption) des sous-champs (adresse, phone) */
+section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form .caption-text {
+  font-family: "Henry", serif !important;
+  font-style: italic;
+  font-size: 14px !important;
+  color: var(--oasis-bordeaux);
+}
+
+/* --- Select --- */
+section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form .form-item.select select {
+  font-family: "Presicav" !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em;
+  color: var(--oasis-bordeaux) !important;
+  background: transparent !important;
+  font-size: 12px !important;
+}
+
+section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form .form-item.select .QeVRMFrE3dDozGvZ > svg > path {
+  fill: var(--oasis-brown) !important;
+}
+
+/* --- Inputs bordure bas --- */
+section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form fieldset.form-item.phone input,
+section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form .form-item.email input,
+section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form .form-item.number input {
+  border: 0 !important;
+  border-bottom: 1px solid var(--oasis-bordeaux) !important;
+}
+
+/* Pas de letter-spacing pour le téléphone */
+section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form fieldset.form-item.phone input {
+  letter-spacing: 0;
+}
+
+
+/* --- Textarea --- */
+section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form textarea,
+section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form .qj2U4ppWTRohr5rP {
+  background-color: transparent !important;
+  background: transparent !important;
+  border: 1px solid var(--oasis-brown) !important;
+  box-shadow: none !important;
+  outline: none !important;
+  padding: 12px 14px !important;
+  height: 130px !important;
+  font-family: "Henry", serif !important;
+}
+
+/* --- Address : inputs --- */
+section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form fieldset.form-item.address input {
+  border: 0 !important;
+  border-bottom: 1px solid var(--oasis-bordeaux) !important;
+  background: transparent;
+}
+
+section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form fieldset.form-item.address select {
+  font-size: 12px !important;
+}
+
+/* --- Checkbox --- */
+section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form .form-item.checkbox label {
+  font-family: "Presicav", serif !important;
+  font-size: 12px !important;
+  letter-spacing: 0.1em;
+  color: var(--oasis-bordeaux);
+  text-transform: uppercase;
+}
+
+/* --- Supprimer effets Squarespace --- */
+section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form .form-input-effects {
+  display: none !important;
+}
+
+section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form input:focus,
+section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form input:focus-visible,
+section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form input:active,
+section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form textarea:focus,
+section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form textarea:focus-visible,
+section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form textarea:active {
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form input[aria-invalid="true"],
+section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form input[aria-invalid="false"] {
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+/* --- Bouton Envoyer --- */
+section[data-section-id="6939b405d90b6131b1aefbbd"] .form-button-wrapper {
+  position: relative;
+  z-index: 60;
+  text-align: center !important;
+}
+
+section[data-section-id="6939b405d90b6131b1aefbbd"] .form-button-wrapper .form-submit-button {
+  background-color: transparent !important;
+  color: var(--oasis-bordeaux) !important;
+  border: 1px solid var(--oasis-bordeaux) !important;
+  padding: 10px 16px;
+  font-size: 15px;
+  font-family: "Presicav" !important;
+  line-height: 1.2;
+  transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+section[data-section-id="6939b405d90b6131b1aefbbd"] .form-button-wrapper .form-submit-button > span {
+  font-family: "Presicav" !important;
+}
+
+section[data-section-id="6939b405d90b6131b1aefbbd"] .form-button-wrapper .form-submit-button .form-submit-button-state span {
+  background: transparent !important;
+  border: none !important;
+}
+
+section[data-section-id="6939b405d90b6131b1aefbbd"] .form-button-wrapper .form-submit-button:hover {
+  background-color: transparent !important;
+  color: var(--oasis-bordeaux) !important;
+  border-color: var(--oasis-bordeaux) !important;
+}
+
+section[data-section-id="6939b405d90b6131b1aefbbd"] .form-button-wrapper .form-submit-button:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* --- Message de soumission --- */
+section[data-section-id="6939b405d90b6131b1aefbbd"] .form-submission-text,
+section[data-section-id="6939b405d90b6131b1aefbbd"] .form-submission-text--align-center {
+  color: var(--oasis-bordeaux) !important;
+}
+
+/* --- Erreurs --- */
+section[data-section-id="6939b405d90b6131b1aefbbd"] .form-field-error,
+section[data-section-id="6939b405d90b6131b1aefbbd"] .hawrxS_zLJ4CZHlM {
+  background: var(--oasis-bordeaux) !important;
+  color: var(--oasis-beige) !important;
+  font-size: 11px !important;
+  padding: 6px 10px;
+}
+
+section[data-section-id="6939b405d90b6131b1aefbbd"] .field-list > .title > p.form-field-error,
+section[data-section-id="6939b405d90b6131b1aefbbd"] .field-list > .title > p.hawrxS_zLJ4CZHlM {
+  display: none !important;
+}
+
+/* Après soumission : masquer champs et bouton */
+section[data-section-id="6939b405d90b6131b1aefbbd"] form.react-form-contents--submitted .field-list,
+section[data-section-id="6939b405d90b6131b1aefbbd"] form.react-form-contents--submitted .form-button-wrapper {
+  display: none !important;
+}
+
+/* =========================
+   DEVIS — MODE NUIT
+   ========================= */
+
+body.dark-mode section[data-section-id="6939b405d90b6131b1aefbbd"] h2 {
+  color: var(--oasis-cream) !important;
+}
+
+body.dark-mode section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form input,
+body.dark-mode section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form textarea,
+body.dark-mode section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form select {
+  color: var(--oasis-cream) !important;
+  caret-color: var(--oasis-cream);
+}
+
+body.dark-mode section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form input::placeholder,
+body.dark-mode section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form textarea::placeholder {
+  color: rgba(255, 250, 237, 0.6);
+}
+
+body.dark-mode section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form .field.first-name input,
+body.dark-mode section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form .field.last-name input {
+  border-bottom-color: var(--oasis-cream) !important;
+  color: var(--oasis-cream);
+}
+
+body.dark-mode section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form .field.first-name .caption-text,
+body.dark-mode section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form .field.last-name .caption-text {
+  color: var(--oasis-cream);
+}
+
+body.dark-mode section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form fieldset.form-item.phone input,
+body.dark-mode section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form .form-item.email input,
+body.dark-mode section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form .form-item.number input {
+  border-bottom-color: var(--oasis-cream) !important;
+}
+
+body.dark-mode section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form fieldset.form-item.address input {
+  border-bottom-color: var(--oasis-cream) !important;
+}
+
+body.dark-mode section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form .form-item.select select {
+  color: var(--oasis-cream) !important;
+}
+
+body.dark-mode section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form .form-item.select .QeVRMFrE3dDozGvZ > svg > path {
+  fill: var(--oasis-cream) !important;
+}
+
+body.dark-mode section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form .form-item > label.title,
+body.dark-mode section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form fieldset > legend .title,
+body.dark-mode section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form .caption-text,
+body.dark-mode section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form .description {
+  color: var(--oasis-cream) !important;
+}
+
+body.dark-mode section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form .form-item.checkbox label {
+  color: var(--oasis-cream) !important;
+}
+
+body.dark-mode section[data-section-id="6939b405d90b6131b1aefbbd"] .sqs-block-form .form-item.field.textarea > textarea {
+  border-color: var(--oasis-cream) !important;
+}
+
+body.dark-mode section[data-section-id="6939b405d90b6131b1aefbbd"] .form-button-wrapper .form-submit-button {
+  color: var(--oasis-cream) !important;
+  border-color: var(--oasis-cream) !important;
+}
+
+body.dark-mode section[data-section-id="6939b405d90b6131b1aefbbd"] .form-button-wrapper .form-submit-button:hover {
+  color: var(--oasis-cream) !important;
+  border-color: var(--oasis-cream) !important;
+}
+
+body.dark-mode section[data-section-id="6939b405d90b6131b1aefbbd"] .form-submission-text,
+body.dark-mode section[data-section-id="6939b405d90b6131b1aefbbd"] .form-submission-text--align-center {
+  color: var(--oasis-cream) !important;
+}
+
+/* Phone prefix en crème */
+body.dark-mode section[data-section-id="6939b405d90b6131b1aefbbd"] .form-input-prefix {
+  color: var(--oasis-cream) !important;
+}
