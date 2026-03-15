@@ -117,7 +117,52 @@
     });
   }
 
+  function getProductFromUrl() {
+    try {
+      var params = new URLSearchParams(window.location.search);
+      var product = params.get("product");
+      return product ? product.trim() : "";
+    } catch (e) {
+      return "";
+    }
+  }
+
+  function findProductSelectWrapper() {
+    var items = root.querySelectorAll(".form-item.field.select");
+    for (var i = 0; i < items.length; i++) {
+      var item = items[i];
+      if (item.classList.contains("country-select")) continue;
+      var label = item.querySelector("label .caption-text, .caption-text, label");
+      var text = label ? (label.textContent || "").trim() : "";
+      if (/produit/i.test(text)) return item;
+    }
+    return items[0] || null;
+  }
+
+  function prefillProductFromUrl() {
+    var productParam = getProductFromUrl();
+    if (!productParam) return;
+    var wrapper = findProductSelectWrapper();
+    if (!wrapper) return;
+    var nativeSelect = wrapper.querySelector("select");
+    if (!nativeSelect || !nativeSelect.options.length) return;
+    var paramUpper = productParam.toUpperCase();
+    var options = nativeSelect.options;
+    for (var i = 0; i < options.length; i++) {
+      var optText = (options[i].textContent || "").trim();
+      if (!optText) continue;
+      if (optText.toUpperCase() === paramUpper || optText.toUpperCase().indexOf(paramUpper) !== -1 || paramUpper.indexOf(optText.toUpperCase()) !== -1) {
+        nativeSelect.selectedIndex = i;
+        nativeSelect.dispatchEvent(new Event("change", { bubbles: true }));
+        var valueSpan = wrapper.querySelector(".gm-select__value");
+        if (valueSpan) valueSpan.textContent = optText;
+        break;
+      }
+    }
+  }
+
   function run() {
+    prefillProductFromUrl();
     root.querySelectorAll(".form-item.field.select").forEach(enhanceSelect);
     root.querySelectorAll(".country-select").forEach(enhanceSelect);
   }

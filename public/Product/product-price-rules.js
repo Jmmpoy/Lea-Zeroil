@@ -47,13 +47,32 @@
         var meta = priceBlock.closest(".product-meta") || document.querySelector("[data-product-detail-layout='simple']");
         if (meta) meta.classList.add("product-no-price");
 
-        var btn = document.querySelector(".product-detail .sqs-add-to-cart-button");
-        if (btn && !btn.hasAttribute("data-gm-contact-redirect")) {
-          btn.setAttribute("data-gm-contact-redirect", "1");
+        function getProductTitle() {
+          var el = document.querySelector(".product-detail .product-title") || document.querySelector(".product-detail h1");
+          return el ? (el.textContent || "").trim() : "";
+        }
+
+        function getDevisUrl() {
+          var title = getProductTitle();
+          if (!title) return CONTACT_PATH;
+          var sep = CONTACT_PATH.indexOf("?") !== -1 ? "&" : "?";
+          return CONTACT_PATH + sep + "product=" + encodeURIComponent(title);
+        }
+
+        var wrapper = document.querySelector(".product-detail .sqs-add-to-cart-button-wrapper");
+        if (!wrapper || wrapper.hasAttribute("data-gm-devis-redirect")) return;
+        wrapper.setAttribute("data-gm-devis-redirect", "1");
+
+        var btn = wrapper.querySelector(".sqs-add-to-cart-button");
+        var link = wrapper.querySelector("a[href]");
+        var url = getDevisUrl();
+        if (link) link.setAttribute("href", url);
+        if (btn && !btn.hasAttribute("data-gm-devis-click")) {
+          btn.setAttribute("data-gm-devis-click", "1");
           btn.addEventListener("click", function (e) {
             e.preventDefault();
             e.stopPropagation();
-            window.location.href = CONTACT_PATH;
+            window.location.href = getDevisUrl();
           }, true);
         }
       } else {
