@@ -1050,7 +1050,7 @@ section[data-section-theme="bright"] .ProductItem-additional .sqs-layout .sqs-ro
    suggestionsGallery : section « Vous pourriez également aimer » (enfant de .product-detail)
    ========================================================================== */
 .suggestionsGallery {
-  padding: 60px 12px 120px;
+  padding: 60px 12px 0px;
   max-width: 100%;
 }
 
