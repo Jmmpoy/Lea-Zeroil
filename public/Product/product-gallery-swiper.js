@@ -6,8 +6,16 @@
   var INTERVAL_MS = 4500;
   var INIT_FLAG = "data-product-gallery-autoplay-init";
 
+  function isEditMode() {
+    return document.body && (
+      document.body.classList.contains("sqs-edit-mode-active") ||
+      document.body.classList.contains("sqs-is-page-editing")
+    );
+  }
+
   function setup(container) {
     if (!container || container.getAttribute(INIT_FLAG) === "1") return;
+    if (isEditMode()) return;
 
     var nextBtn = container.querySelector('[data-product-gallery="next"]');
     var thumbnailButtons = Array.from(

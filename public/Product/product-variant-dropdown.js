@@ -139,6 +139,7 @@
         });
 
         document.addEventListener('click', function (e) {
+          if (!e.isTrusted) return;
           if (!wrapper.contains(e.target)) close();
         });
         document.addEventListener('keydown', function (e) {
