@@ -266,13 +266,13 @@
       valueSpan.className = "cart-row-variant-value";
       const trimmedValue = rawValue.trim();
 
-      if (normalizedKey === "color" && trimmedValue) {
-        const colorDot = document.createElement("span");
-        colorDot.className = "cart-row-color-dot";
-        colorDot.style.backgroundColor = resolveColorValue(trimmedValue);
-        colorDot.setAttribute("aria-hidden", "true");
-        valueSpan.appendChild(colorDot);
-      }
+      // if (normalizedKey === "color" && trimmedValue) {
+      //   const colorDot = document.createElement("span");
+      //   colorDot.className = "cart-row-color-dot";
+      //   colorDot.style.backgroundColor = resolveColorValue(trimmedValue);
+      //   colorDot.setAttribute("aria-hidden", "true");
+      //   valueSpan.appendChild(colorDot);
+      // }
 
       valueSpan.appendChild(document.createTextNode(trimmedValue));
 
