@@ -21,7 +21,8 @@
    Exclure .galerie-oasis-page pour laisser le fond rouge (#461010) s'appliquer
    -------------------------------------------------------------------------- */
 body.oasis-blog-theme-lune:not(.galerie-oasis-page),
-body.oasis-blog-theme-lune:not(.galerie-oasis-page) section[data-test="page-section"],
+body.oasis-blog-theme-lune:not(.galerie-oasis-page)
+  section[data-test='page-section'],
 body.oasis-blog-theme-lune:not(.galerie-oasis-page) .page-section,
 body.oasis-blog-theme-lune:not(.galerie-oasis-page) footer,
 body.oasis-blog-theme-lune:not(.galerie-oasis-page) .oasis-footer-frame,
@@ -30,7 +31,8 @@ body.oasis-blog-theme-lune:not(.galerie-oasis-page) .item-pagination,
 body.oasis-blog-theme-lune:not(.galerie-oasis-page) .item-pagination--prev-next,
 body.oasis-blog-theme-lune:not(.galerie-oasis-page) .section-border,
 body.oasis-blog-theme-lune:not(.galerie-oasis-page) .section-background,
-body.oasis-blog-theme-lune:not(.galerie-oasis-page) .section-background:not(.has-background) {
+body.oasis-blog-theme-lune:not(.galerie-oasis-page)
+  .section-background:not(.has-background) {
   background-color: var(--bg-color) !important;
 }
 
@@ -48,9 +50,12 @@ body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) {
   background-color: #461010 !important;
 }
 
-body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) section[data-test="page-section"],
-body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .page-section,
-body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) section[data-test="page-section"],
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune)
+  section[data-test='page-section'],
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune)
+  .page-section,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune)
+  section[data-test='page-section'],
 body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .page-section {
   background-color: #461010 !important;
 }
@@ -63,136 +68,317 @@ body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) #header {
 }
 
 /* Header collaborations : texte et burger en crème sur fond bordeaux */
-body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .header-announcement-bar-wrapper .header-nav-item a,
-body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .header-announcement-bar-wrapper .header-nav-folder-title,
-body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .header-announcement-bar-wrapper .header-actions a,
-body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .header-announcement-bar-wrapper .header-actions .cart-text-link,
-body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .header-announcement-bar-wrapper .header-actions .cart-quantity-container,
-body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .header-announcement-bar-wrapper .header-title a,
-body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .header-announcement-bar-wrapper .header-nav-item a,
-body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .header-announcement-bar-wrapper .header-nav-folder-title,
-body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .header-announcement-bar-wrapper .header-actions a,
-body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .header-announcement-bar-wrapper .header-actions .cart-text-link,
-body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .header-announcement-bar-wrapper .header-actions .cart-quantity-container,
-body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .header-announcement-bar-wrapper .header-title a {
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune)
+  .header-announcement-bar-wrapper
+  .header-nav-item
+  a,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune)
+  .header-announcement-bar-wrapper
+  .header-nav-folder-title,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune)
+  .header-announcement-bar-wrapper
+  .header-actions
+  a,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune)
+  .header-announcement-bar-wrapper
+  .header-actions
+  .cart-text-link,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune)
+  .header-announcement-bar-wrapper
+  .header-actions
+  .cart-quantity-container,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune)
+  .header-announcement-bar-wrapper
+  .header-title
+  a,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune)
+  .header-announcement-bar-wrapper
+  .header-nav-item
+  a,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune)
+  .header-announcement-bar-wrapper
+  .header-nav-folder-title,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune)
+  .header-announcement-bar-wrapper
+  .header-actions
+  a,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune)
+  .header-announcement-bar-wrapper
+  .header-actions
+  .cart-text-link,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune)
+  .header-announcement-bar-wrapper
+  .header-actions
+  .cart-quantity-container,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune)
+  .header-announcement-bar-wrapper
+  .header-title
+  a {
   color: var(--oasis-cream, #f5f0e8) !important;
 }
 
-body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .header-announcement-bar-wrapper .burger-inner .top-bun,
-body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .header-announcement-bar-wrapper .burger-inner .patty,
-body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .header-announcement-bar-wrapper .burger-inner .bottom-bun,
-body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .header-announcement-bar-wrapper .burger-inner .top-bun,
-body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .header-announcement-bar-wrapper .burger-inner .patty,
-body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .header-announcement-bar-wrapper .burger-inner .bottom-bun {
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune)
+  .header-announcement-bar-wrapper
+  .burger-inner
+  .top-bun,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune)
+  .header-announcement-bar-wrapper
+  .burger-inner
+  .patty,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune)
+  .header-announcement-bar-wrapper
+  .burger-inner
+  .bottom-bun,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune)
+  .header-announcement-bar-wrapper
+  .burger-inner
+  .top-bun,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune)
+  .header-announcement-bar-wrapper
+  .burger-inner
+  .patty,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune)
+  .header-announcement-bar-wrapper
+  .burger-inner
+  .bottom-bun {
   background-color: var(--oasis-cream, #f5f0e8) !important;
 }
 
 /* Pages collaborations : overlay menu fond bordeaux, texte blanc */
-body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .oasis-submenu,
-body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .oasis-submenu {
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune)
+  .oasis-submenu,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune)
+  .oasis-submenu {
   background: #461010 !important;
   color: var(--oasis-cream, #f5f0e8) !important;
 }
 
-body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .oasis-submenu .oasis-submenu__title,
-body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .oasis-submenu .oasis-submenu__list a,
-body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .oasis-submenu .oasis-submenu__title,
-body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .oasis-submenu .oasis-submenu__list a {
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune)
+  .oasis-submenu
+  .oasis-submenu__title,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune)
+  .oasis-submenu
+  .oasis-submenu__list
+  a,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune)
+  .oasis-submenu
+  .oasis-submenu__title,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune)
+  .oasis-submenu
+  .oasis-submenu__list
+  a {
   color: var(--oasis-cream, #f5f0e8) !important;
 }
 
 body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) footer,
-body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .oasis-footer-frame,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune)
+  .oasis-footer-frame,
 body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) footer,
-body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .oasis-footer-frame {
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune)
+  .oasis-footer-frame {
   background-color: #461010 !important;
 }
 
-body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .content-wrapper,
-body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .item-pagination,
-body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .item-pagination--prev-next {
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune)
+  .content-wrapper,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune)
+  .item-pagination,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune)
+  .item-pagination--prev-next {
   background-color: #461010 !important;
 }
 
-body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .section-border,
-body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .page-section.background-width--inset .section-border {
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune)
+  .section-border,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune)
+  .page-section.background-width--inset
+  .section-border {
   background-color: #461010 !important;
 }
 
-body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .section-background,
-body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .section-background:not(.has-background) {
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune)
+  .section-background,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune)
+  .section-background:not(.has-background) {
   background-color: #461010 !important;
 }
 
 /* --------------------------------------------------------------------------
    Footer page collaboration : texte et logo en crème (sauf galerie/événements)
    -------------------------------------------------------------------------- */
-body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .oasis-footer-frame,
-body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .oasis-footer-frame .text-brown,
-body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .oasis-footer-frame .link,
-body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .oasis-footer-frame .book,
-body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .oasis-footer-frame a,
-body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .oasis-footer-frame,
-body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .oasis-footer-frame .text-brown,
-body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .oasis-footer-frame .link,
-body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .oasis-footer-frame .book,
-body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .oasis-footer-frame a {
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune)
+  .oasis-footer-frame,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune)
+  .oasis-footer-frame
+  .text-brown,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune)
+  .oasis-footer-frame
+  .link,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune)
+  .oasis-footer-frame
+  .book,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune)
+  .oasis-footer-frame
+  a,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune)
+  .oasis-footer-frame,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune)
+  .oasis-footer-frame
+  .text-brown,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune)
+  .oasis-footer-frame
+  .link,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune)
+  .oasis-footer-frame
+  .book,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune)
+  .oasis-footer-frame
+  a {
   color: var(--oasis-cream, #f5f0e8) !important;
 }
 
-body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .oasis-footer-frame .footer-frame,
-body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .oasis-footer-frame .footer-frame {
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune)
+  .oasis-footer-frame
+  .footer-frame,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune)
+  .oasis-footer-frame
+  .footer-frame {
   color: var(--oasis-cream, #f5f0e8) !important;
 }
 
-body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .oasis-footer-frame .footer-frame svg,
-body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .oasis-footer-frame .footer-frame svg path,
-body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .oasis-footer-frame .footer-frame svg,
-body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .oasis-footer-frame .footer-frame svg path {
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune)
+  .oasis-footer-frame
+  .footer-frame
+  svg,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune)
+  .oasis-footer-frame
+  .footer-frame
+  svg
+  path,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune)
+  .oasis-footer-frame
+  .footer-frame
+  svg,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune)
+  .oasis-footer-frame
+  .footer-frame
+  svg
+  path {
   fill: var(--oasis-cream, #f5f0e8) !important;
   stroke: var(--oasis-cream, #f5f0e8) !important;
 }
 
-body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .oasis-footer-frame .news-input,
-body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .oasis-footer-frame .news-btn,
-body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .oasis-footer-frame .news-input,
-body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .oasis-footer-frame .news-btn {
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune)
+  .oasis-footer-frame
+  .news-input,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune)
+  .oasis-footer-frame
+  .news-btn,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune)
+  .oasis-footer-frame
+  .news-input,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune)
+  .oasis-footer-frame
+  .news-btn {
   color: var(--oasis-cream, #f5f0e8) !important;
 }
 
-body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .oasis-footer-frame .news-input::placeholder,
-body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .oasis-footer-frame .news-input::placeholder {
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune)
+  .oasis-footer-frame
+  .news-input::placeholder,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune)
+  .oasis-footer-frame
+  .news-input::placeholder {
   color: rgba(245, 240, 232, 0.8) !important;
 }
 
-body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .oasis-footer-frame .newsline,
-body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .oasis-footer-frame .newsline {
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune)
+  .oasis-footer-frame
+  .newsline,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune)
+  .oasis-footer-frame
+  .newsline {
   border-bottom-color: rgba(245, 240, 232, 0.55);
 }
 
 /* Logo footer : crème sur fond #461010 (collaborations uniquement) – light/dark et variante .footer__logo */
-body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .oasis-footer-frame .footer-logo--light path,
-body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .oasis-footer-frame .footer-logo--light path:nth-child(n+2),
-body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .oasis-footer-frame .footer-logo--dark path,
-body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .oasis-footer-frame .footer-logo--dark path:nth-child(n+2),
-body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .oasis-footer-frame .footer__logo svg path,
-body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .oasis-footer-frame .footer-logo--light path,
-body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .oasis-footer-frame .footer-logo--light path:nth-child(n+2),
-body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .oasis-footer-frame .footer-logo--dark path,
-body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .oasis-footer-frame .footer-logo--dark path:nth-child(n+2),
-body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .oasis-footer-frame .footer__logo svg path {
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune)
+  .oasis-footer-frame
+  .footer-logo--light
+  path,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune)
+  .oasis-footer-frame
+  .footer-logo--light
+  path:nth-child(n + 2),
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune)
+  .oasis-footer-frame
+  .footer-logo--dark
+  path,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune)
+  .oasis-footer-frame
+  .footer-logo--dark
+  path:nth-child(n + 2),
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune)
+  .oasis-footer-frame
+  .footer__logo
+  svg
+  path,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune)
+  .oasis-footer-frame
+  .footer-logo--light
+  path,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune)
+  .oasis-footer-frame
+  .footer-logo--light
+  path:nth-child(n + 2),
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune)
+  .oasis-footer-frame
+  .footer-logo--dark
+  path,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune)
+  .oasis-footer-frame
+  .footer-logo--dark
+  path:nth-child(n + 2),
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune)
+  .oasis-footer-frame
+  .footer__logo
+  svg
+  path {
   fill: var(--oasis-cream, #f5f0e8) !important;
   stroke: var(--oasis-cream, #f5f0e8) !important;
 }
 
 /* Au cas où le logo est dans la section footer sans .oasis-footer-frame */
-body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) section[data-section-id="6943f46e084deb646d9f0a51"] .footer-logo--light path,
-body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) section[data-section-id="6943f46e084deb646d9f0a51"] .footer-logo--light path:nth-child(n+2),
-body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) section[data-section-id="6943f46e084deb646d9f0a51"] .footer-logo--dark path,
-body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) section[data-section-id="6943f46e084deb646d9f0a51"] .footer__logo svg path,
-body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) section[data-section-id="6943f46e084deb646d9f0a51"] .footer-logo--light path,
-body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) section[data-section-id="6943f46e084deb646d9f0a51"] .footer-logo--dark path,
-body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) section[data-section-id="6943f46e084deb646d9f0a51"] .footer__logo svg path {
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune)
+  section[data-section-id='6943f46e084deb646d9f0a51']
+  .footer-logo--light
+  path,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune)
+  section[data-section-id='6943f46e084deb646d9f0a51']
+  .footer-logo--light
+  path:nth-child(n + 2),
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune)
+  section[data-section-id='6943f46e084deb646d9f0a51']
+  .footer-logo--dark
+  path,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune)
+  section[data-section-id='6943f46e084deb646d9f0a51']
+  .footer__logo
+  svg
+  path,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune)
+  section[data-section-id='6943f46e084deb646d9f0a51']
+  .footer-logo--light
+  path,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune)
+  section[data-section-id='6943f46e084deb646d9f0a51']
+  .footer-logo--dark
+  path,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune)
+  section[data-section-id='6943f46e084deb646d9f0a51']
+  .footer__logo
+  svg
+  path {
   fill: var(--oasis-cream, #f5f0e8) !important;
   stroke: var(--oasis-cream, #f5f0e8) !important;
 }
@@ -207,7 +393,8 @@ body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) section[data-se
 /* Mobile : footer visible (fallback si :has() non supporté) – collaborations uniquement */
 @media (max-width: 900px) {
   body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) footer,
-  body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .oasis-footer-frame {
+  body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune)
+    .oasis-footer-frame {
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
@@ -255,20 +442,28 @@ body.sqs-edit-mode .blog-item-top-wrapper {
    Taille texte, bordure blanche, font Presicav identiques ; fond selon thème (Lune vs #461010)
    -------------------------------------------------------------------------- */
 body.oasis-blog-theme-lune .item-pagination.item-pagination--prev-next,
-body.collection-type-blog-basic-grid .item-pagination.item-pagination--prev-next,
-body:has(.collection-type-blog-basic-grid) .item-pagination.item-pagination--prev-next {
+body.collection-type-blog-basic-grid
+  .item-pagination.item-pagination--prev-next,
+body:has(.collection-type-blog-basic-grid)
+  .item-pagination.item-pagination--prev-next {
   display: flex;
   flex-direction: column;
 }
 
-body.oasis-blog-theme-lune .item-pagination.item-pagination--prev-next .item-pagination-link,
-body.collection-type-blog-basic-grid .item-pagination.item-pagination--prev-next .item-pagination-link,
-body:has(.collection-type-blog-basic-grid) .item-pagination.item-pagination--prev-next .item-pagination-link {
+body.oasis-blog-theme-lune
+  .item-pagination.item-pagination--prev-next
+  .item-pagination-link,
+body.collection-type-blog-basic-grid
+  .item-pagination.item-pagination--prev-next
+  .item-pagination-link,
+body:has(.collection-type-blog-basic-grid)
+  .item-pagination.item-pagination--prev-next
+  .item-pagination-link {
   margin: auto;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  font-family: "Presicav", serif;
+  font-family: 'Presicav', serif;
   font-size: 17px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -292,18 +487,33 @@ body:has(.collection-type-blog-basic-grid) .item-pagination-label-custom {
   clip: auto !important;
   clip-path: none !important;
   text-indent: 0 !important;
-  font-family: "Presicav", serif;
+  font-family: 'Presicav', serif;
   font-size: 17px;
   text-transform: uppercase;
   color: var(--oasis-cream, #f5f0e8) !important;
 }
 
-body.oasis-blog-theme-lune .item-pagination.item-pagination--prev-next .pagination-title-wrapper,
-body.oasis-blog-theme-lune .item-pagination.item-pagination--prev-next .item-pagination-link .pagination-title-wrapper,
-body.collection-type-blog-basic-grid .item-pagination.item-pagination--prev-next .pagination-title-wrapper,
-body.collection-type-blog-basic-grid .item-pagination.item-pagination--prev-next .item-pagination-link .pagination-title-wrapper,
-body:has(.collection-type-blog-basic-grid) .item-pagination.item-pagination--prev-next .pagination-title-wrapper,
-body:has(.collection-type-blog-basic-grid) .item-pagination.item-pagination--prev-next .item-pagination-link .pagination-title-wrapper {
+body.oasis-blog-theme-lune
+  .item-pagination.item-pagination--prev-next
+  .pagination-title-wrapper,
+body.oasis-blog-theme-lune
+  .item-pagination.item-pagination--prev-next
+  .item-pagination-link
+  .pagination-title-wrapper,
+body.collection-type-blog-basic-grid
+  .item-pagination.item-pagination--prev-next
+  .pagination-title-wrapper,
+body.collection-type-blog-basic-grid
+  .item-pagination.item-pagination--prev-next
+  .item-pagination-link
+  .pagination-title-wrapper,
+body:has(.collection-type-blog-basic-grid)
+  .item-pagination.item-pagination--prev-next
+  .pagination-title-wrapper,
+body:has(.collection-type-blog-basic-grid)
+  .item-pagination.item-pagination--prev-next
+  .item-pagination-link
+  .pagination-title-wrapper {
   display: block !important;
   visibility: visible !important;
   position: static !important;
@@ -314,9 +524,15 @@ body:has(.collection-type-blog-basic-grid) .item-pagination.item-pagination--pre
   text-indent: 0 !important;
 }
 
-body.oasis-blog-theme-lune .item-pagination.item-pagination--prev-next .item-pagination-prev-next,
-body.collection-type-blog-basic-grid .item-pagination.item-pagination--prev-next .item-pagination-prev-next,
-body:has(.collection-type-blog-basic-grid) .item-pagination.item-pagination--prev-next .item-pagination-prev-next {
+body.oasis-blog-theme-lune
+  .item-pagination.item-pagination--prev-next
+  .item-pagination-prev-next,
+body.collection-type-blog-basic-grid
+  .item-pagination.item-pagination--prev-next
+  .item-pagination-prev-next,
+body:has(.collection-type-blog-basic-grid)
+  .item-pagination.item-pagination--prev-next
+  .item-pagination-prev-next {
   display: block !important;
   visibility: visible !important;
   position: static !important;
@@ -325,51 +541,73 @@ body:has(.collection-type-blog-basic-grid) .item-pagination.item-pagination--pre
   clip: auto !important;
   clip-path: none !important;
   text-indent: 0 !important;
-  font-family: "Presicav", serif;
+  font-family: 'Presicav', serif;
   font-size: 17px;
   text-transform: uppercase;
   color: var(--oasis-cream, #f5f0e8) !important;
 }
 
-body.oasis-blog-theme-lune .item-pagination.item-pagination--prev-next .item-pagination-title,
-body.collection-type-blog-basic-grid .item-pagination.item-pagination--prev-next .item-pagination-title,
-body:has(.collection-type-blog-basic-grid) .item-pagination.item-pagination--prev-next .item-pagination-title {
+body.oasis-blog-theme-lune
+  .item-pagination.item-pagination--prev-next
+  .item-pagination-title,
+body.collection-type-blog-basic-grid
+  .item-pagination.item-pagination--prev-next
+  .item-pagination-title,
+body:has(.collection-type-blog-basic-grid)
+  .item-pagination.item-pagination--prev-next
+  .item-pagination-title {
   display: none;
 }
 
-body.oasis-blog-theme-lune .item-pagination-link:has(.item-pagination-label-custom) .pagination-title-wrapper,
-body.collection-type-blog-basic-grid .item-pagination-link:has(.item-pagination-label-custom) .pagination-title-wrapper,
-body:has(.collection-type-blog-basic-grid) .item-pagination-link:has(.item-pagination-label-custom) .pagination-title-wrapper {
+body.oasis-blog-theme-lune
+  .item-pagination-link:has(.item-pagination-label-custom)
+  .pagination-title-wrapper,
+body.collection-type-blog-basic-grid
+  .item-pagination-link:has(.item-pagination-label-custom)
+  .pagination-title-wrapper,
+body:has(.collection-type-blog-basic-grid)
+  .item-pagination-link:has(.item-pagination-label-custom)
+  .pagination-title-wrapper {
   display: none !important;
 }
 
 /* Thème Lune light : pagination en bordeaux (texte + bordure) */
-body.oasis-blog-theme-lune:not(.dark-mode) .item-pagination.item-pagination--prev-next .item-pagination-link,
-body.oasis-blog-theme-lune:not(.dark-mode) .item-pagination.item-pagination--prev-next .item-pagination-link:hover {
-  border-color: var(--oasis-bordeaux, #5c3d2e);
-  color: var(--oasis-bordeaux, #5c3d2e);
+body.oasis-blog-theme-lune:not(.dark-mode)
+  .item-pagination.item-pagination--prev-next
+  .item-pagination-link,
+body.oasis-blog-theme-lune:not(.dark-mode)
+  .item-pagination.item-pagination--prev-next
+  .item-pagination-link:hover {
+  border-color: var(--oasis-bordeaux, #5c3d2e) !important;
+  color: var(--oasis-bordeaux, #5c3d2e) !important;
 }
 
 /* Pages collaborations : pagination bordure et texte en crème */
-body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .item-pagination.item-pagination--prev-next .item-pagination-link,
-body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .item-pagination.item-pagination--prev-next .item-pagination-link:hover {
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune)
+  .item-pagination.item-pagination--prev-next
+  .item-pagination-link,
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune)
+  .item-pagination.item-pagination--prev-next
+  .item-pagination-link:hover {
   border-color: var(--oasis-cream);
   color: var(--oasis-cream);
 }
 
 body.oasis-blog-theme-lune:not(.dark-mode) .item-pagination-label-custom,
-body.oasis-blog-theme-lune:not(.dark-mode) .item-pagination.item-pagination--prev-next .item-pagination-prev-next {
+body.oasis-blog-theme-lune:not(.dark-mode)
+  .item-pagination.item-pagination--prev-next
+  .item-pagination-prev-next {
   color: var(--oasis-bordeaux, #5c3d2e);
 }
 
 .item-pagination-icon {
   display: none;
 }
-.item-pagination-link{
+.item-pagination-link {
   max-width: unset !important;
 }
 
-.item-pagination-link>span {
+.item-pagination-link > span {
   font-size: 8px !important;
 }
 
@@ -379,8 +617,10 @@ body.oasis-blog-theme-lune:not(.dark-mode) .item-pagination.item-pagination--pre
 
 /* Pages collaboration : masquer le lien « précédent » */
 /* Uniquement collaborations (pas événements ni galerie : ils ont .oasis-blog-theme-lune) */
-body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune) .item-pagination-link--prev,
-body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .item-pagination-link--prev {
+body.collection-type-blog-basic-grid:not(.oasis-blog-theme-lune)
+  .item-pagination-link--prev,
+body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune)
+  .item-pagination-link--prev {
   display: none !important;
 }
 
@@ -395,58 +635,200 @@ body:has(.collection-type-blog-basic-grid):not(.oasis-blog-theme-lune) .item-pag
    Pages Galerie Oasis & Événements : thème lune/soleil (couleurs site)
    Événements : texte var(--text-color) | Galerie Oasis : texte crème (bloc suivant)
    ========================================================================== */
-body.oasis-blog-theme-lune:not(.galerie-oasis-page) .collection-type-blog-basic-grid .blog-item-content,
-body.oasis-blog-theme-lune:not(.galerie-oasis-page) .collection-type-blog-basic-grid .blog-item-content .sqs-block-html .sqs-html-content,
-body.oasis-blog-theme-lune:not(.galerie-oasis-page) .collection-type-blog-basic-grid .blog-item-content .sqs-block-html .sqs-block-content,
-body.oasis-blog-theme-lune:not(.galerie-oasis-page) .collection-type-blog-basic-grid .blog-item-content .sqs-block-code .italic.text-cream,
-body.oasis-blog-theme-lune:not(.galerie-oasis-page) .collection-type-blog-basic-grid .blog-item-content .sqs-block-code .italic.text-md,
-body.oasis-blog-theme-lune:not(.galerie-oasis-page) .collection-type-blog-basic-grid .blog-item-content .image-slide-title,
-body.oasis-blog-theme-lune:not(.galerie-oasis-page) .collection-type-blog-basic-grid .blog-item-content .image-slide-title__row,
-body.oasis-blog-theme-lune:not(.galerie-oasis-page) .collection-type-blog-basic-grid .blog-item-content .image-slide-title__text,
-body.oasis-blog-theme-lune:not(.galerie-oasis-page) .collection-type-blog-basic-grid .blog-item-content #blog-gallery-photos .image-slide-title,
-body.oasis-blog-theme-lune:not(.galerie-oasis-page) .collection-type-blog-basic-grid .blog-item-content #blog-gallery-photos .image-slide-title__row,
-body.oasis-blog-theme-lune:not(.galerie-oasis-page) .collection-type-blog-basic-grid .blog-item-content #blog-gallery-photos .image-slide-title__text,
-body.oasis-blog-theme-lune:not(.galerie-oasis-page) .collection-type-blog-basic-grid .blog-item-content #blog-title-collection,
-body.oasis-blog-theme-lune:not(.galerie-oasis-page) .collection-type-blog-basic-grid .blog-item-content #blog-title-collection .sqs-block-content,
-body.oasis-blog-theme-lune:not(.galerie-oasis-page) .collection-type-blog-basic-grid .blog-item-content #blog-title-collection .sqs-code-container,
-body.oasis-blog-theme-lune:not(.galerie-oasis-page) .collection-type-blog-basic-grid .blog-item-content #blog-title-collection .sqs-html-content,
-body.oasis-blog-theme-lune:not(.galerie-oasis-page) .collection-type-blog-basic-grid .blog-item-content #blog-gallery-collection,
-body.oasis-blog-theme-lune:not(.galerie-oasis-page) .collection-type-blog-basic-grid .blog-item-content #blog-gallery-collection .image-slide-title,
-body.oasis-blog-theme-lune:not(.galerie-oasis-page) .collection-type-blog-basic-grid .blog-item-content #blog-gallery-collection .image-slide-title__row,
-body.oasis-blog-theme-lune:not(.galerie-oasis-page) .collection-type-blog-basic-grid .blog-item-content #blog-gallery-collection .image-slide-title__text {
+body.oasis-blog-theme-lune:not(.galerie-oasis-page)
+  .collection-type-blog-basic-grid
+  .blog-item-content,
+body.oasis-blog-theme-lune:not(.galerie-oasis-page)
+  .collection-type-blog-basic-grid
+  .blog-item-content
+  .sqs-block-html
+  .sqs-html-content,
+body.oasis-blog-theme-lune:not(.galerie-oasis-page)
+  .collection-type-blog-basic-grid
+  .blog-item-content
+  .sqs-block-html
+  .sqs-block-content,
+body.oasis-blog-theme-lune:not(.galerie-oasis-page)
+  .collection-type-blog-basic-grid
+  .blog-item-content
+  .sqs-block-code
+  .italic.text-cream,
+body.oasis-blog-theme-lune:not(.galerie-oasis-page)
+  .collection-type-blog-basic-grid
+  .blog-item-content
+  .sqs-block-code
+  .italic.text-md,
+body.oasis-blog-theme-lune:not(.galerie-oasis-page)
+  .collection-type-blog-basic-grid
+  .blog-item-content
+  .image-slide-title,
+body.oasis-blog-theme-lune:not(.galerie-oasis-page)
+  .collection-type-blog-basic-grid
+  .blog-item-content
+  .image-slide-title__row,
+body.oasis-blog-theme-lune:not(.galerie-oasis-page)
+  .collection-type-blog-basic-grid
+  .blog-item-content
+  .image-slide-title__text,
+body.oasis-blog-theme-lune:not(.galerie-oasis-page)
+  .collection-type-blog-basic-grid
+  .blog-item-content
+  #blog-gallery-photos
+  .image-slide-title,
+body.oasis-blog-theme-lune:not(.galerie-oasis-page)
+  .collection-type-blog-basic-grid
+  .blog-item-content
+  #blog-gallery-photos
+  .image-slide-title__row,
+body.oasis-blog-theme-lune:not(.galerie-oasis-page)
+  .collection-type-blog-basic-grid
+  .blog-item-content
+  #blog-gallery-photos
+  .image-slide-title__text,
+body.oasis-blog-theme-lune:not(.galerie-oasis-page)
+  .collection-type-blog-basic-grid
+  .blog-item-content
+  #blog-title-collection,
+body.oasis-blog-theme-lune:not(.galerie-oasis-page)
+  .collection-type-blog-basic-grid
+  .blog-item-content
+  #blog-title-collection
+  .sqs-block-content,
+body.oasis-blog-theme-lune:not(.galerie-oasis-page)
+  .collection-type-blog-basic-grid
+  .blog-item-content
+  #blog-title-collection
+  .sqs-code-container,
+body.oasis-blog-theme-lune:not(.galerie-oasis-page)
+  .collection-type-blog-basic-grid
+  .blog-item-content
+  #blog-title-collection
+  .sqs-html-content,
+body.oasis-blog-theme-lune:not(.galerie-oasis-page)
+  .collection-type-blog-basic-grid
+  .blog-item-content
+  #blog-gallery-collection,
+body.oasis-blog-theme-lune:not(.galerie-oasis-page)
+  .collection-type-blog-basic-grid
+  .blog-item-content
+  #blog-gallery-collection
+  .image-slide-title,
+body.oasis-blog-theme-lune:not(.galerie-oasis-page)
+  .collection-type-blog-basic-grid
+  .blog-item-content
+  #blog-gallery-collection
+  .image-slide-title__row,
+body.oasis-blog-theme-lune:not(.galerie-oasis-page)
+  .collection-type-blog-basic-grid
+  .blog-item-content
+  #blog-gallery-collection
+  .image-slide-title__text {
   color: var(--text-color) !important;
 }
 
 /* Pages Galerie Oasis (galerie-oasis + galerie-oasis-collections) : texte en crème sur fond rouge */
 body.galerie-oasis-page .collection-type-blog-basic-grid .blog-item-content,
-body.galerie-oasis-page .collection-type-blog-basic-grid .blog-item-content .sqs-block-html .sqs-html-content,
-body.galerie-oasis-page .collection-type-blog-basic-grid .blog-item-content .sqs-block-html .sqs-block-content,
-body.galerie-oasis-page .collection-type-blog-basic-grid .blog-item-content .sqs-block-code .italic.text-cream,
-body.galerie-oasis-page .collection-type-blog-basic-grid .blog-item-content .sqs-block-code .italic.text-md,
-body.galerie-oasis-page .collection-type-blog-basic-grid .blog-item-content .image-slide-title,
-body.galerie-oasis-page .collection-type-blog-basic-grid .blog-item-content .image-slide-title__row,
-body.galerie-oasis-page .collection-type-blog-basic-grid .blog-item-content .image-slide-title__text,
-body.galerie-oasis-page .collection-type-blog-basic-grid .blog-item-content #blog-gallery-photos .image-slide-title,
-body.galerie-oasis-page .collection-type-blog-basic-grid .blog-item-content #blog-gallery-photos .image-slide-title__row,
-body.galerie-oasis-page .collection-type-blog-basic-grid .blog-item-content #blog-gallery-photos .image-slide-title__text,
-body.galerie-oasis-page .collection-type-blog-basic-grid .blog-item-content #blog-title-collection,
-body.galerie-oasis-page .collection-type-blog-basic-grid .blog-item-content #blog-title-collection .sqs-block-content,
-body.galerie-oasis-page .collection-type-blog-basic-grid .blog-item-content #blog-title-collection .sqs-code-container,
-body.galerie-oasis-page .collection-type-blog-basic-grid .blog-item-content #blog-title-collection .sqs-html-content,
-body.galerie-oasis-page .collection-type-blog-basic-grid .blog-item-content #blog-gallery-collection,
-body.galerie-oasis-page .collection-type-blog-basic-grid .blog-item-content #blog-gallery-collection .image-slide-title,
-body.galerie-oasis-page .collection-type-blog-basic-grid .blog-item-content #blog-gallery-collection .image-slide-title__row,
-body.galerie-oasis-page .collection-type-blog-basic-grid .blog-item-content #blog-gallery-collection .image-slide-title__text {
+body.galerie-oasis-page
+  .collection-type-blog-basic-grid
+  .blog-item-content
+  .sqs-block-html
+  .sqs-html-content,
+body.galerie-oasis-page
+  .collection-type-blog-basic-grid
+  .blog-item-content
+  .sqs-block-html
+  .sqs-block-content,
+body.galerie-oasis-page
+  .collection-type-blog-basic-grid
+  .blog-item-content
+  .sqs-block-code
+  .italic.text-cream,
+body.galerie-oasis-page
+  .collection-type-blog-basic-grid
+  .blog-item-content
+  .sqs-block-code
+  .italic.text-md,
+body.galerie-oasis-page
+  .collection-type-blog-basic-grid
+  .blog-item-content
+  .image-slide-title,
+body.galerie-oasis-page
+  .collection-type-blog-basic-grid
+  .blog-item-content
+  .image-slide-title__row,
+body.galerie-oasis-page
+  .collection-type-blog-basic-grid
+  .blog-item-content
+  .image-slide-title__text,
+body.galerie-oasis-page
+  .collection-type-blog-basic-grid
+  .blog-item-content
+  #blog-gallery-photos
+  .image-slide-title,
+body.galerie-oasis-page
+  .collection-type-blog-basic-grid
+  .blog-item-content
+  #blog-gallery-photos
+  .image-slide-title__row,
+body.galerie-oasis-page
+  .collection-type-blog-basic-grid
+  .blog-item-content
+  #blog-gallery-photos
+  .image-slide-title__text,
+body.galerie-oasis-page
+  .collection-type-blog-basic-grid
+  .blog-item-content
+  #blog-title-collection,
+body.galerie-oasis-page
+  .collection-type-blog-basic-grid
+  .blog-item-content
+  #blog-title-collection
+  .sqs-block-content,
+body.galerie-oasis-page
+  .collection-type-blog-basic-grid
+  .blog-item-content
+  #blog-title-collection
+  .sqs-code-container,
+body.galerie-oasis-page
+  .collection-type-blog-basic-grid
+  .blog-item-content
+  #blog-title-collection
+  .sqs-html-content,
+body.galerie-oasis-page
+  .collection-type-blog-basic-grid
+  .blog-item-content
+  #blog-gallery-collection,
+body.galerie-oasis-page
+  .collection-type-blog-basic-grid
+  .blog-item-content
+  #blog-gallery-collection
+  .image-slide-title,
+body.galerie-oasis-page
+  .collection-type-blog-basic-grid
+  .blog-item-content
+  #blog-gallery-collection
+  .image-slide-title__row,
+body.galerie-oasis-page
+  .collection-type-blog-basic-grid
+  .blog-item-content
+  #blog-gallery-collection
+  .image-slide-title__text {
   color: var(--oasis-cream) !important;
 }
 
-body.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content .gallery-all-slide__link.content-fill {
+body.oasis-blog-theme-lune
+  .collection-type-blog-basic-grid
+  .blog-item-content
+  .gallery-all-slide__link.content-fill {
   background-color: var(--oasis-bordeaux, #461010) !important;
   color: var(--oasis-cream, #f5f0e8) !important;
   text-decoration-color: var(--oasis-cream, #f5f0e8) !important;
 }
 
-body.dark-mode.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content .gallery-all-slide__link.content-fill {
+body.dark-mode.oasis-blog-theme-lune
+  .collection-type-blog-basic-grid
+  .blog-item-content
+  .gallery-all-slide__link.content-fill {
   background-color: var(--oasis-bordeaux-dark, #461010) !important;
   color: var(--oasis-cream, #f5f0e8) !important;
   text-decoration-color: var(--oasis-cream, #f5f0e8) !important;
@@ -474,12 +856,20 @@ body.dark-mode.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item
    Image à gauche en 2 colonnes (desktop), pleine largeur (mobile)
    ========================================================================== */
 
-.collection-type-blog-basic-grid .blog-item-content .sqs-layout .row .col.sqs-col-12 {
+.collection-type-blog-basic-grid
+  .blog-item-content
+  .sqs-layout
+  .row
+  .col.sqs-col-12 {
   display: block;
 }
 
 @media (min-width: 768px) {
-  .collection-type-blog-basic-grid .blog-item-content .sqs-layout .row .col.sqs-col-12 {
+  .collection-type-blog-basic-grid
+    .blog-item-content
+    .sqs-layout
+    .row
+    .col.sqs-col-12 {
     display: grid;
     grid-auto-columns: 1fr 1fr;
     gap: 0;
@@ -487,7 +877,12 @@ body.dark-mode.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item
   }
 
   /* Image hero à gauche – 100vh */
-  .collection-type-blog-basic-grid .blog-item-content .sqs-layout .row .col.sqs-col-12 > .sqs-block-image {
+  .collection-type-blog-basic-grid
+    .blog-item-content
+    .sqs-layout
+    .row
+    .col.sqs-col-12
+    > .sqs-block-image {
     grid-column: 1;
     grid-row: 1;
     display: block !important;
@@ -498,26 +893,62 @@ body.dark-mode.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item
     position: relative;
   }
 
-  .collection-type-blog-basic-grid .blog-item-content .sqs-layout .row .col.sqs-col-12 > .sqs-block-image .sqs-block-content,
-  .collection-type-blog-basic-grid .blog-item-content .sqs-layout .row .col.sqs-col-12 > .sqs-block-image .image-block-outer-wrapper {
+  .collection-type-blog-basic-grid
+    .blog-item-content
+    .sqs-layout
+    .row
+    .col.sqs-col-12
+    > .sqs-block-image
+    .sqs-block-content,
+  .collection-type-blog-basic-grid
+    .blog-item-content
+    .sqs-layout
+    .row
+    .col.sqs-col-12
+    > .sqs-block-image
+    .image-block-outer-wrapper {
     height: 100%;
   }
 
-  .collection-type-blog-basic-grid .blog-item-content .sqs-layout .row .col.sqs-col-12 > .sqs-block-image .image-block-wrapper,
-  .collection-type-blog-basic-grid .blog-item-content .sqs-layout .row .col.sqs-col-12 > .sqs-block-image figure {
+  .collection-type-blog-basic-grid
+    .blog-item-content
+    .sqs-layout
+    .row
+    .col.sqs-col-12
+    > .sqs-block-image
+    .image-block-wrapper,
+  .collection-type-blog-basic-grid
+    .blog-item-content
+    .sqs-layout
+    .row
+    .col.sqs-col-12
+    > .sqs-block-image
+    figure {
     width: 100%;
     height: 100%;
     display: block;
   }
 
-  .collection-type-blog-basic-grid .blog-item-content .sqs-layout .row .col.sqs-col-12 > .sqs-block-image .sqs-image-shape-container-element {
+  .collection-type-blog-basic-grid
+    .blog-item-content
+    .sqs-layout
+    .row
+    .col.sqs-col-12
+    > .sqs-block-image
+    .sqs-image-shape-container-element {
     padding-bottom: 0 !important;
     height: 100%;
     position: absolute;
     inset: 0;
   }
 
-  .collection-type-blog-basic-grid .blog-item-content .sqs-layout .row .col.sqs-col-12 > .sqs-block-image img {
+  .collection-type-blog-basic-grid
+    .blog-item-content
+    .sqs-layout
+    .row
+    .col.sqs-col-12
+    > .sqs-block-image
+    img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -532,31 +963,49 @@ body.dark-mode.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item
    ========================================================================== */
 
 @media (min-width: 768px) {
-  .collection-type-blog-basic-grid .blog-item-content .sqs-layout .row .col.sqs-col-12 > .sqs-block-html {
+  .collection-type-blog-basic-grid
+    .blog-item-content
+    .sqs-layout
+    .row
+    .col.sqs-col-12
+    > .sqs-block-html {
     grid-column: 2;
     grid-row: 1;
     margin-top: 150px;
   }
 }
 
-
-
 /* Panneau texte : couleurs, padding */
-.collection-type-blog-basic-grid .blog-item-content .sqs-block-html .sqs-html-content,
-.collection-type-blog-basic-grid .blog-item-content .sqs-block-html .sqs-block-content {
+.collection-type-blog-basic-grid
+  .blog-item-content
+  .sqs-block-html
+  .sqs-html-content,
+.collection-type-blog-basic-grid
+  .blog-item-content
+  .sqs-block-html
+  .sqs-block-content {
   color: var(--oasis-cream, #f5f0e8) !important;
   padding: clamp(1.5rem, 4vw, 2.5rem);
 }
 
 @media (max-width: 768px) {
-  .collection-type-blog-basic-grid .blog-item-content .sqs-block-html .sqs-html-content,
-.collection-type-blog-basic-grid .blog-item-content .sqs-block-html .sqs-block-content {
-  padding: clamp(1rem, 4vw, 2.5rem) !important;
-}
+  .collection-type-blog-basic-grid
+    .blog-item-content
+    .sqs-block-html
+    .sqs-html-content,
+  .collection-type-blog-basic-grid
+    .blog-item-content
+    .sqs-block-html
+    .sqs-block-content {
+    padding: clamp(1rem, 4vw, 2.5rem) !important;
+  }
 }
 
 /* Grille 2 colonnes : labels à gauche, contenus à droite */
-.collection-type-blog-basic-grid .blog-item-content .sqs-block-html .sqs-html-content {
+.collection-type-blog-basic-grid
+  .blog-item-content
+  .sqs-block-html
+  .sqs-html-content {
   display: grid !important;
   grid-template-columns: auto 1fr !important;
   column-gap: clamp(0.75rem, 2vw, 1.5rem) !important;
@@ -564,10 +1013,12 @@ body.dark-mode.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item
   align-items: start !important;
 }
 
-
-
 /* En mode édition (ancêtre .sqs-editing) : annuler la grille pour l’éditeur */
-.collection-type-blog-basic-grid .blog-item-content .sqs-block-html .sqs-editing .sqs-html-content {
+.collection-type-blog-basic-grid
+  .blog-item-content
+  .sqs-block-html
+  .sqs-editing
+  .sqs-html-content {
   display: block !important;
   grid-template-columns: unset !important;
   column-gap: unset !important;
@@ -575,20 +1026,32 @@ body.dark-mode.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item
 }
 
 /* Titre : centré sur toute la largeur (classe .collab-header ou premier paragraphe en fallback) */
-.collection-type-blog-basic-grid .blog-item-content .sqs-block-html .sqs-html-content .collab-header,
-.collection-type-blog-basic-grid .blog-item-content .sqs-block-html .sqs-html-content p:first-of-type {
+.collection-type-blog-basic-grid
+  .blog-item-content
+  .sqs-block-html
+  .sqs-html-content
+  .collab-header,
+.collection-type-blog-basic-grid
+  .blog-item-content
+  .sqs-block-html
+  .sqs-html-content
+  p:first-of-type {
   grid-column: span 3 !important;
   text-align: center !important;
   margin: 0;
   padding: 0;
-  font-family: "Presicav", serif !important;
+  font-family: 'Presicav', serif !important;
   text-transform: uppercase !important;
   font-size: 12px !important;
   letter-spacing: 0.2em !important;
 }
 
 /* Légende (année ou courte phrase) : centré, pleine largeur */
-.collection-type-blog-basic-grid .blog-item-content .sqs-block-html .sqs-html-content .collab-legend {
+.collection-type-blog-basic-grid
+  .blog-item-content
+  .sqs-block-html
+  .sqs-html-content
+  .collab-legend {
   grid-column: span 3 !important;
   text-align: center !important;
   margin: 0;
@@ -597,17 +1060,24 @@ body.dark-mode.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item
 }
 
 @media (max-width: 768px) {
- .collection-type-blog-basic-grid .blog-item-content .sqs-block-html .sqs-html-content .collab-legend br {
-  display:none !important;
+  .collection-type-blog-basic-grid
+    .blog-item-content
+    .sqs-block-html
+    .sqs-html-content
+    .collab-legend
+    br {
+    display: none !important;
+  }
 }
-}
-
-
 
 /* Label "Description" → colonne 1, Henry italic */
-.collection-type-blog-basic-grid .blog-item-content .sqs-block-html .sqs-html-content .collab-label-desc {
+.collection-type-blog-basic-grid
+  .blog-item-content
+  .sqs-block-html
+  .sqs-html-content
+  .collab-label-desc {
   grid-column: 1;
-  font-family: "Henry", serif;
+  font-family: 'Henry', serif;
   font-style: italic;
   white-space: normal;
   margin: 0;
@@ -615,7 +1085,11 @@ body.dark-mode.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item
 }
 
 /* Paragraphe description → colonne 2 */
-.collection-type-blog-basic-grid .blog-item-content .sqs-block-html .sqs-html-content .collab-content-desc {
+.collection-type-blog-basic-grid
+  .blog-item-content
+  .sqs-block-html
+  .sqs-html-content
+  .collab-content-desc {
   grid-column: 2;
   white-space: normal;
   margin: 0;
@@ -623,9 +1097,13 @@ body.dark-mode.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item
 }
 
 /* Label "Les artisans" / "Crédits" → colonne 1, Henry italic */
-.collection-type-blog-basic-grid .blog-item-content .sqs-block-html .sqs-html-content .collab-label-artisans {
+.collection-type-blog-basic-grid
+  .blog-item-content
+  .sqs-block-html
+  .sqs-html-content
+  .collab-label-artisans {
   grid-column: 1;
-  font-family: "Henry", serif;
+  font-family: 'Henry', serif;
   font-style: italic;
   white-space: normal;
   margin: 0;
@@ -633,7 +1111,11 @@ body.dark-mode.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item
 }
 
 /* Liste des artisans / crédits → colonne 2 */
-.collection-type-blog-basic-grid .blog-item-content .sqs-block-html .sqs-html-content .collab-content-artisans {
+.collection-type-blog-basic-grid
+  .blog-item-content
+  .sqs-block-html
+  .sqs-html-content
+  .collab-content-artisans {
   grid-column: 2;
   white-space: pre-wrap;
   margin: 0;
@@ -641,15 +1123,23 @@ body.dark-mode.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item
 }
 
 /* Bouton « Voir la collection » (pages galerie) : pleine largeur */
-.collection-type-blog-basic-grid .blog-item-content .sqs-block-html .sqs-html-content .collab-button {
+.collection-type-blog-basic-grid
+  .blog-item-content
+  .sqs-block-html
+  .sqs-html-content
+  .collab-button {
   grid-column: 1 / -1;
   margin-top: 1rem;
   margin-bottom: 0;
 }
 
 /* Classes optionnelles si ajoutées par JS (titres centrés) */
-.collection-type-blog-basic-grid .blog-item-content .sqs-block-html .sqs-html-content .collab-title {
-  font-family: "Presicav", serif;
+.collection-type-blog-basic-grid
+  .blog-item-content
+  .sqs-block-html
+  .sqs-html-content
+  .collab-title {
+  font-family: 'Presicav', serif;
   font-style: normal;
   display: block;
   font-size: 12px;
@@ -657,14 +1147,23 @@ body.dark-mode.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item
   text-transform: uppercase;
 }
 
-.collection-type-blog-basic-grid .blog-item-content .sqs-block-html .sqs-html-content .collab-year {
-  font-family: "Henry", serif;
+.collection-type-blog-basic-grid
+  .blog-item-content
+  .sqs-block-html
+  .sqs-html-content
+  .collab-year {
+  font-family: 'Henry', serif;
   font-style: italic;
   display: block;
 }
 
 /* Fallback si wrapper .collab-label-content-grid présent */
-body:not(.sqs-edit-mode) .collection-type-blog-basic-grid .blog-item-content .sqs-block-html .sqs-html-content .collab-label-content-grid {
+body:not(.sqs-edit-mode)
+  .collection-type-blog-basic-grid
+  .blog-item-content
+  .sqs-block-html
+  .sqs-html-content
+  .collab-label-content-grid {
   display: grid;
   grid-template-columns: auto 1fr;
   column-gap: clamp(0.75rem, 2vw, 1.5rem);
@@ -674,17 +1173,37 @@ body:not(.sqs-edit-mode) .collection-type-blog-basic-grid .blog-item-content .sq
   grid-column: 1 / -1;
 }
 
-.collection-type-blog-basic-grid .blog-item-content .sqs-block-html .sqs-html-content .collab-label-content-grid .collab-label-desc,
-.collection-type-blog-basic-grid .blog-item-content .sqs-block-html .sqs-html-content .collab-label-content-grid .collab-label-artisans {
+.collection-type-blog-basic-grid
+  .blog-item-content
+  .sqs-block-html
+  .sqs-html-content
+  .collab-label-content-grid
+  .collab-label-desc,
+.collection-type-blog-basic-grid
+  .blog-item-content
+  .sqs-block-html
+  .sqs-html-content
+  .collab-label-content-grid
+  .collab-label-artisans {
   font-style: italic;
-  font-family: "Henry", serif;
+  font-family: 'Henry', serif;
   white-space: normal;
   margin: 0;
   padding: 0;
 }
 
-.collection-type-blog-basic-grid .blog-item-content .sqs-block-html .sqs-html-content .collab-label-content-grid .collab-content-desc,
-.collection-type-blog-basic-grid .blog-item-content .sqs-block-html .sqs-html-content .collab-label-content-grid .collab-content-artisans {
+.collection-type-blog-basic-grid
+  .blog-item-content
+  .sqs-block-html
+  .sqs-html-content
+  .collab-label-content-grid
+  .collab-content-desc,
+.collection-type-blog-basic-grid
+  .blog-item-content
+  .sqs-block-html
+  .sqs-html-content
+  .collab-label-content-grid
+  .collab-content-artisans {
   white-space: normal;
   margin: 0;
   padding: 0;
@@ -696,15 +1215,21 @@ body:not(.sqs-edit-mode) .collection-type-blog-basic-grid .blog-item-content .sq
    Uniquement pour les pages Galerie (à afficher/masquer via classe body ou contenu)
    ========================================================================== */
 
-.collection-type-blog-basic-grid .blog-item-content [data-item="cta-collection"],
+.collection-type-blog-basic-grid
+  .blog-item-content
+  [data-item='cta-collection'],
 .collection-type-blog-basic-grid .blog-item-content .blog-item-cta-collection,
-.collection-type-blog-basic-grid .blog-item-content .sqs-block-html .sqs-html-content a.collab-button {
+.collection-type-blog-basic-grid
+  .blog-item-content
+  .sqs-block-html
+  .sqs-html-content
+  a.collab-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   margin-top: 1rem;
   padding: 15px 1.5rem;
-  font-family: "Presicav", serif;
+  font-family: 'Presicav', serif;
   font-size: 14px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -714,9 +1239,20 @@ body:not(.sqs-edit-mode) .collection-type-blog-basic-grid .blog-item-content .sq
   text-decoration: none;
 }
 
-body.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content [data-item="cta-collection"],
-body.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content .blog-item-cta-collection,
-body.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content .sqs-block-html .sqs-html-content a.collab-button {
+body.oasis-blog-theme-lune
+  .collection-type-blog-basic-grid
+  .blog-item-content
+  [data-item='cta-collection'],
+body.oasis-blog-theme-lune
+  .collection-type-blog-basic-grid
+  .blog-item-content
+  .blog-item-cta-collection,
+body.oasis-blog-theme-lune
+  .collection-type-blog-basic-grid
+  .blog-item-content
+  .sqs-block-html
+  .sqs-html-content
+  a.collab-button {
   border-color: var(--text-color);
   color: var(--text-color);
 }
@@ -727,8 +1263,14 @@ body.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content .
    #blog-gallery-photos : titre au-dessus de la galerie photos – Henry italic 12px
    ========================================================================== */
 
-.collection-type-blog-basic-grid .blog-item-content .sqs-block-code .italic.text-cream,
-.collection-type-blog-basic-grid .blog-item-content .sqs-block-code .italic.text-md {
+.collection-type-blog-basic-grid
+  .blog-item-content
+  .sqs-block-code
+  .italic.text-cream,
+.collection-type-blog-basic-grid
+  .blog-item-content
+  .sqs-block-code
+  .italic.text-md {
   color: var(--oasis-cream, #f5f0e8) !important;
 }
 
@@ -740,10 +1282,19 @@ body.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content .
 }
 
 /* Galerie Photos : titre des slides – Henry, italic, 12px */
-.collection-type-blog-basic-grid .blog-item-content #blog-gallery-photos .image-slide-title,
-.collection-type-blog-basic-grid .blog-item-content #blog-gallery-photos .image-slide-title__row,
-.collection-type-blog-basic-grid .blog-item-content #blog-gallery-photos .image-slide-title__text {
-  font-family: "Presicav", serif !important;
+.collection-type-blog-basic-grid
+  .blog-item-content
+  #blog-gallery-photos
+  .image-slide-title,
+.collection-type-blog-basic-grid
+  .blog-item-content
+  #blog-gallery-photos
+  .image-slide-title__row,
+.collection-type-blog-basic-grid
+  .blog-item-content
+  #blog-gallery-photos
+  .image-slide-title__text {
+  font-family: 'Presicav', serif !important;
   font-size: 12px !important;
   font-style: italic !important;
   text-transform: none !important;
@@ -764,27 +1315,38 @@ body.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content .
   flex-shrink: 0;
 }
 
-.collection-type-blog-basic-grid .blog-item-content .image-slide-title__swatches {
+.collection-type-blog-basic-grid
+  .blog-item-content
+  .image-slide-title__swatches {
   display: flex;
   flex-shrink: 0;
   gap: 6px;
 }
 
-.collection-type-blog-basic-grid .blog-item-content .image-slide-title__swatches .oasis-color__swatch {
+.collection-type-blog-basic-grid
+  .blog-item-content
+  .image-slide-title__swatches
+  .oasis-color__swatch {
   border: 0 !important;
   height: 7px;
   width: 7px;
 }
 
-.collection-type-blog-basic-grid .blog-item-content .oasis-color__swatch[data-color="red"] {
+.collection-type-blog-basic-grid
+  .blog-item-content
+  .oasis-color__swatch[data-color='red'] {
   background: var(--diamond-color-rouge);
 }
 
-.collection-type-blog-basic-grid .blog-item-content .oasis-color__swatch[data-color="yellow"] {
+.collection-type-blog-basic-grid
+  .blog-item-content
+  .oasis-color__swatch[data-color='yellow'] {
   background: var(--diamond-color-jaune);
 }
 
-.collection-type-blog-basic-grid .blog-item-content .oasis-color__swatch[data-color="blue"] {
+.collection-type-blog-basic-grid
+  .blog-item-content
+  .oasis-color__swatch[data-color='blue'] {
   background: var(--diamond-color-bleu);
 }
 
@@ -795,9 +1357,26 @@ body.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content .
    ========================================================================== */
 
 /* Blocs code (titres + contenu) : ne pas déborder */
-.collection-type-blog-basic-grid .blog-item-content .sqs-layout .row .col.sqs-col-12 .sqs-block-code.sqs-block,
-.collection-type-blog-basic-grid .blog-item-content .sqs-layout .row .col.sqs-col-12 .sqs-block-code .sqs-block-content,
-.collection-type-blog-basic-grid .blog-item-content .sqs-layout .row .col.sqs-col-12 .sqs-block-code .sqs-code-container {
+.collection-type-blog-basic-grid
+  .blog-item-content
+  .sqs-layout
+  .row
+  .col.sqs-col-12
+  .sqs-block-code.sqs-block,
+.collection-type-blog-basic-grid
+  .blog-item-content
+  .sqs-layout
+  .row
+  .col.sqs-col-12
+  .sqs-block-code
+  .sqs-block-content,
+.collection-type-blog-basic-grid
+  .blog-item-content
+  .sqs-layout
+  .row
+  .col.sqs-col-12
+  .sqs-block-code
+  .sqs-code-container {
   box-sizing: border-box;
   max-width: 100%;
   min-width: 0;
@@ -805,7 +1384,12 @@ body.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content .
 
 @media (min-width: 768px) {
   /* À partir du 3e enfant (après hero + texte) : tous span 2 colonnes */
-  .collection-type-blog-basic-grid .blog-item-content .sqs-layout .row .col.sqs-col-12 > *:nth-child(n+3) {
+  .collection-type-blog-basic-grid
+    .blog-item-content
+    .sqs-layout
+    .row
+    .col.sqs-col-12
+    > *:nth-child(n + 3) {
     grid-column: span 2 !important;
     max-width: 100%;
     min-width: 0;
@@ -835,8 +1419,14 @@ body.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content .
 
 /* Zoom hover sur toutes les images des galeries du blog */
 .collection-type-blog-basic-grid .blog-item-content .sqs-block-gallery figure,
-.collection-type-blog-basic-grid .blog-item-content .sqs-block-gallery .sqs-image-shape-container-element,
-.collection-type-blog-basic-grid .blog-item-content .sqs-block-gallery .image-slide-anchor {
+.collection-type-blog-basic-grid
+  .blog-item-content
+  .sqs-block-gallery
+  .sqs-image-shape-container-element,
+.collection-type-blog-basic-grid
+  .blog-item-content
+  .sqs-block-gallery
+  .image-slide-anchor {
   overflow: hidden;
 }
 
@@ -844,25 +1434,42 @@ body.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content .
   transition: transform 0.35s ease;
 }
 
-.collection-type-blog-basic-grid .blog-item-content .sqs-block-gallery figure:hover img,
-.collection-type-blog-basic-grid .blog-item-content .sqs-block-gallery .sqs-image-shape-container-element:hover img,
-.collection-type-blog-basic-grid .blog-item-content .sqs-block-gallery .image-slide-anchor:hover img {
+.collection-type-blog-basic-grid
+  .blog-item-content
+  .sqs-block-gallery
+  figure:hover
+  img,
+.collection-type-blog-basic-grid
+  .blog-item-content
+  .sqs-block-gallery
+  .sqs-image-shape-container-element:hover
+  img,
+.collection-type-blog-basic-grid
+  .blog-item-content
+  .sqs-block-gallery
+  .image-slide-anchor:hover
+  img {
   transform: scale(1.05);
 }
 
 /* Slide « All » – galerie : fond bordeaux, Henry 14px, souligné */
-.collection-type-blog-basic-grid .blog-item-content .collab-gallery-all-slide .margin-wrapper {
+.collection-type-blog-basic-grid
+  .blog-item-content
+  .collab-gallery-all-slide
+  .margin-wrapper {
   aspect-ratio: 3 / 4;
   display: flex;
 }
 
-.collection-type-blog-basic-grid .blog-item-content .gallery-all-slide__link.content-fill {
+.collection-type-blog-basic-grid
+  .blog-item-content
+  .gallery-all-slide__link.content-fill {
   align-items: center;
   background-color: var(--oasis-bordeaux, #5c3d2e);
   color: var(--oasis-cream, #f5f0e8) !important;
   display: flex;
   flex: 1;
-  font-family: "Henry", serif;
+  font-family: 'Henry', serif;
   font-size: 14px !important;
   font-style: italic !important;
   justify-content: center;
@@ -882,10 +1489,19 @@ body.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content .
    ========================================================================== */
 
 .collection-type-blog-basic-grid .blog-item-content #blog-title-collection,
-.collection-type-blog-basic-grid .blog-item-content #blog-title-collection .sqs-block-content,
-.collection-type-blog-basic-grid .blog-item-content #blog-title-collection .sqs-code-container,
-.collection-type-blog-basic-grid .blog-item-content #blog-title-collection .sqs-html-content {
-  font-family: "Presicav", serif !important;
+.collection-type-blog-basic-grid
+  .blog-item-content
+  #blog-title-collection
+  .sqs-block-content,
+.collection-type-blog-basic-grid
+  .blog-item-content
+  #blog-title-collection
+  .sqs-code-container,
+.collection-type-blog-basic-grid
+  .blog-item-content
+  #blog-title-collection
+  .sqs-html-content {
+  font-family: 'Presicav', serif !important;
   font-size: 14px !important;
   letter-spacing: 0.2em !important;
   text-transform: uppercase !important;
@@ -899,16 +1515,34 @@ body.oasis-blog-theme-lune .collection-type-blog-basic-grid .blog-item-content .
 
 /* Titres des slides dans la galerie La collection */
 /* Titres des slides : toutes les galeries blog item – Presicav 12px uppercase */
-.collection-type-blog-basic-grid .blog-item-content .sqs-block-gallery .sqs-block-content .sqs-gallery-container .sqs-gallery .slide .margin-wrapper .image-slide-title .image-slide-title__row .image-slide-title__text,
-.collection-type-blog-basic-grid .blog-item-content .sqs-block-gallery .image-slide-title__row,
-.collection-type-blog-basic-grid .blog-item-content .sqs-block-gallery .image-slide-title__text {
-  font-family: "Presicav", serif !important;
+.collection-type-blog-basic-grid
+  .blog-item-content
+  .sqs-block-gallery
+  .sqs-block-content
+  .sqs-gallery-container
+  .sqs-gallery
+  .slide
+  .margin-wrapper
+  .image-slide-title
+  .image-slide-title__row
+  .image-slide-title__text,
+.collection-type-blog-basic-grid
+  .blog-item-content
+  .sqs-block-gallery
+  .image-slide-title__row,
+.collection-type-blog-basic-grid
+  .blog-item-content
+  .sqs-block-gallery
+  .image-slide-title__text {
+  font-family: 'Presicav', serif !important;
   font-size: 9px !important;
   text-transform: uppercase !important;
 }
 
-.col.sqs-col-12 .website-component-block { margin-top: 50px; margin-bottom: 15px; }
-
+.col.sqs-col-12 .website-component-block {
+  margin-top: 50px;
+  margin-bottom: 15px;
+}
 
 .blog-item-inner-wrapper {
   width: 100% !important;
