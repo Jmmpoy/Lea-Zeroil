@@ -100,6 +100,7 @@
               <li><a href="/evenements-post/lune-rousse">Lune Rousse</a></li>
               <li><a href="/evenements-post/pad-paris-2024">Pad Paris</a></li>
               <li><a href="/evenements-post/arjumand">Arjumand's World</a></li>
+              <li><a href="/evenements-post/jewellerybox-x-modern-metier">the jewellery box x modern metier</a></li>
             </ul>
           </div>
 
