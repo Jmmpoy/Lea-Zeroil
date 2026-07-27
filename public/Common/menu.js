@@ -1,54 +1,60 @@
 /**
  * Menu Overlay
- * 
+ *
  * Gère l'affichage et l'interaction du menu de navigation principal avec sous-menu.
  * Remplace le comportement par défaut de Squarespace pour offrir une expérience
  * personnalisée sur desktop (hover) et mobile (fullscreen avec bouton de fermeture).
- * 
+ *
  * Fonctionnalités :
  * - Desktop : Affichage au survol (hover) avec fermeture automatique après 120ms
  * - Mobile : Affichage en plein écran avec bouton de fermeture (×)
  * - Gestion des interactions : clic, clavier (Escape), clic extérieur
  * - Synchronisation avec le menu burger Squarespace sur mobile
  * - Retry automatique si le header n'est pas encore chargé (Squarespace AJAX)
- * 
+ *
  * Structure du menu :
  * - Collections (Luminaires, Tables, Assises, etc.)
  * - Collaborations (Silva Paris, La faïencerie de Gien, etc.)
  * - Galerie Oasis (Siroco, Mirages)
  * - Évènements (Salon des ensembliers, Pad Paris 2024, etc.)
  * - Catalogue (Français, Anglais)
- * 
+ *
  * Usage : Charger ce script sur toutes les pages nécessitant la navigation
  */
 (function bootOasisSubmenu(retries = 30) {
-  const mqMobile = window.matchMedia("(max-width: 767px)");
+  const mqMobile = window.matchMedia('(max-width: 767px)');
 
   function findMenuTrigger() {
     // 1) Header nav (desktop)
-    const candidates = Array.from(document.querySelectorAll(
-      '.header-nav-item a, .header-nav-item button, .header-menu-nav-item a, .header-menu-nav-item button'
-    ));
+    const candidates = Array.from(
+      document.querySelectorAll(
+        '.header-nav-item a, .header-nav-item button, .header-menu-nav-item a, .header-menu-nav-item button',
+      ),
+    );
 
     // cherche un item dont le texte est "Menu"
-    const el = candidates.find(x => (x.textContent || "").trim().toLowerCase() === "menu");
+    const el = candidates.find(
+      (x) => (x.textContent || '').trim().toLowerCase() === 'menu',
+    );
     return el || null;
   }
 
   function findBurgerTrigger() {
-    const candidates = Array.from(document.querySelectorAll(
-      ".header-burger-btn, [class*=\"header-burger\"], [class*=\"burger\"]"
-    ));
+    const candidates = Array.from(
+      document.querySelectorAll(
+        '.header-burger-btn, [class*="header-burger"], [class*="burger"]',
+      ),
+    );
 
     return candidates[0] || null;
   }
 
   function buildOverlay() {
-    const overlay = document.createElement("div");
-    overlay.className = "oasis-submenu";
-    overlay.setAttribute("role", "dialog");
-    overlay.setAttribute("aria-modal", "false");
-    overlay.setAttribute("aria-label", "Sous-menu");
+    const overlay = document.createElement('div');
+    overlay.className = 'oasis-submenu';
+    overlay.setAttribute('role', 'dialog');
+    overlay.setAttribute('aria-modal', 'false');
+    overlay.setAttribute('aria-label', 'Sous-menu');
 
     overlay.innerHTML = `
       <button class="oasis-submenu__close" type="button" aria-label="Fermer">×</button>
@@ -100,7 +106,7 @@
               <li><a href="/evenements-post/lune-rousse">Lune Rousse</a></li>
               <li><a href="/evenements-post/pad-paris-2024">Pad Paris</a></li>
               <li><a href="/evenements-post/arjumand">Arjumand's World</a></li>
-              <li><a href="/evenements-post/jewellerybox-x-modern-metier">the jewellery box x modern metier</a></li>
+              <li><a href="/evenements-post/jewellerybox-x-modern-metier">The Jewellery Box x Modern Metier</a></li>
             </ul>
           </div>
 
@@ -138,7 +144,6 @@
   }
 
   function init() {
-
     const menuTrigger = findMenuTrigger();
     const burgerTrigger = findBurgerTrigger();
     const trigger = menuTrigger || burgerTrigger;
@@ -146,46 +151,48 @@
 
     if (!trigger) return false;
 
-    const folderItem = menuTrigger?.closest('.header-nav-item, .header-menu-nav-item');
+    const folderItem = menuTrigger?.closest(
+      '.header-nav-item, .header-menu-nav-item',
+    );
     folderItem?.classList.add('oasis-menu-folder');
 
     // évite double init (nav ajax) + ferme si déjà ouvert
-    const existing = document.querySelector(".oasis-submenu");
+    const existing = document.querySelector('.oasis-submenu');
     if (existing) {
-      existing.classList.remove("is-open");
-      existing.setAttribute("aria-modal", "false");
-      document.body.classList.remove("oasis-submenu-lock");
+      existing.classList.remove('is-open');
+      existing.setAttribute('aria-modal', 'false');
+      document.body.classList.remove('oasis-submenu-lock');
       return true;
     }
 
     const overlay = buildOverlay();
-    const closeBtn = overlay.querySelector(".oasis-submenu__close");
+    const closeBtn = overlay.querySelector('.oasis-submenu__close');
 
     let open = false;
     let closeTimer = null;
     let headerMenuObserver = null;
 
     function hideHeaderMenu() {
-      const headerMenu = document.querySelector(".header-menu");
+      const headerMenu = document.querySelector('.header-menu');
       if (!headerMenu) return;
-      headerMenu.classList.add("oasis-header-menu-hidden");
-      headerMenu.style.display = "none";
-      headerMenu.style.visibility = "hidden";
+      headerMenu.classList.add('oasis-header-menu-hidden');
+      headerMenu.style.display = 'none';
+      headerMenu.style.visibility = 'hidden';
     }
 
     function showHeaderMenu() {
-      const headerMenu = document.querySelector(".header-menu");
+      const headerMenu = document.querySelector('.header-menu');
       if (!headerMenu) return;
-      headerMenu.classList.remove("oasis-header-menu-hidden");
-      headerMenu.style.removeProperty("display");
-      headerMenu.style.removeProperty("visibility");
+      headerMenu.classList.remove('oasis-header-menu-hidden');
+      headerMenu.style.removeProperty('display');
+      headerMenu.style.removeProperty('visibility');
     }
 
     function openMenu() {
       if (open) return;
       open = true;
-      overlay.classList.add("is-open");
-      document.body.classList.add("oasis-submenu-open");
+      overlay.classList.add('is-open');
+      document.body.classList.add('oasis-submenu-open');
       hideHeaderMenu();
 
       if (!headerMenuObserver) {
@@ -193,25 +200,28 @@
           if (!open) return;
           hideHeaderMenu();
         });
-        headerMenuObserver.observe(document.body, { childList: true, subtree: true });
+        headerMenuObserver.observe(document.body, {
+          childList: true,
+          subtree: true,
+        });
       }
 
       if (mqMobile.matches) {
-        document.body.classList.add("oasis-submenu-lock");
-        overlay.setAttribute("aria-modal", "true");
+        document.body.classList.add('oasis-submenu-lock');
+        overlay.setAttribute('aria-modal', 'true');
       } else {
-        document.body.classList.remove("oasis-submenu-lock");
-        overlay.setAttribute("aria-modal", "false");
+        document.body.classList.remove('oasis-submenu-lock');
+        overlay.setAttribute('aria-modal', 'false');
       }
     }
 
     function closeMenu() {
       if (!open) return;
       open = false;
-      overlay.classList.remove("is-open");
-      document.body.classList.remove("oasis-submenu-open");
-      document.body.classList.remove("oasis-submenu-lock");
-      overlay.setAttribute("aria-modal", "false");
+      overlay.classList.remove('is-open');
+      document.body.classList.remove('oasis-submenu-open');
+      document.body.classList.remove('oasis-submenu-lock');
+      overlay.setAttribute('aria-modal', 'false');
       showHeaderMenu();
       headerMenuObserver?.disconnect();
       headerMenuObserver = null;
@@ -226,35 +236,39 @@
     function bindDesktopHover() {
       if (!isMenuTrigger) return;
       // trigger hover
-      trigger.addEventListener("mouseenter", () => { clearTimeout(closeTimer); openMenu(); });
-      trigger.addEventListener("mouseleave", () => scheduleClose(120));
+      trigger.addEventListener('mouseenter', () => {
+        clearTimeout(closeTimer);
+        openMenu();
+      });
+      trigger.addEventListener('mouseleave', () => scheduleClose(120));
 
       // overlay hover
-      overlay.addEventListener("mouseenter", () => clearTimeout(closeTimer));
-      overlay.addEventListener("mouseleave", () => scheduleClose(120));
+      overlay.addEventListener('mouseenter', () => clearTimeout(closeTimer));
+      overlay.addEventListener('mouseleave', () => scheduleClose(120));
     }
 
     // --- Mobile: click fullscreen
     function bindMobileClick() {
       if (!isMenuTrigger) return;
-      trigger.addEventListener("click", (e) => {
+      trigger.addEventListener('click', (e) => {
         if (!mqMobile.matches) return; // desktop ignore click (hover gère)
         e.preventDefault();
         open ? closeMenu() : openMenu();
       });
 
-      closeBtn.addEventListener("click", closeMenu);
+      closeBtn.addEventListener('click', closeMenu);
 
       // close on link click (mobile)
-      overlay.addEventListener("click", (e) => {
-        const a = e.target.closest("a");
+      overlay.addEventListener('click', (e) => {
+        const a = e.target.closest('a');
         if (a && mqMobile.matches) closeMenu();
       });
     }
 
     // --- Mobile: clic burger (capture pour bloquer le natif)
     function bindBurgerClick() {
-      const burgerSelector = ".header-burger-btn, .header-burger, [class*=\"header-burger\"], [class*=\"burger\"]";
+      const burgerSelector =
+        '.header-burger-btn, .header-burger, [class*="header-burger"], [class*="burger"]';
 
       const isBurgerTarget = (target) => {
         return !!target.closest(burgerSelector);
@@ -275,13 +289,13 @@
         open ? closeMenu() : openMenu();
       };
 
-      document.addEventListener("click", handleBurgerClick, true);
-      document.addEventListener("pointerdown", blockNative, true);
-      document.addEventListener("touchstart", blockNative, true);
+      document.addEventListener('click', handleBurgerClick, true);
+      document.addEventListener('pointerdown', blockNative, true);
+      document.addEventListener('touchstart', blockNative, true);
     }
 
     // Close on click outside (desktop)
-    document.addEventListener("click", (e) => {
+    document.addEventListener('click', (e) => {
       if (mqMobile.matches) return;
       if (!open) return;
       const inside = overlay.contains(e.target) || trigger.contains(e.target);
@@ -289,12 +303,12 @@
     });
 
     // Escape to close
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") closeMenu();
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeMenu();
     });
 
     // Re-sync on breakpoint change
-    mqMobile.addEventListener?.("change", () => {
+    mqMobile.addEventListener?.('change', () => {
       // si on passe desktop<->mobile, on ferme pour éviter états bizarres
       closeMenu();
     });
@@ -304,21 +318,20 @@
     bindBurgerClick();
 
     // Empêche le "Menu" de naviguer si c'est un lien vers une page (desktop hover)
-    if (isMenuTrigger) trigger.addEventListener("click", (e) => {
-      if (!mqMobile.matches) {
-        // sur desktop, click ne doit pas naviguer (sinon hover inutile)
-        e.preventDefault();
-        open ? closeMenu() : openMenu();
-      }
-    });
+    if (isMenuTrigger)
+      trigger.addEventListener('click', (e) => {
+        if (!mqMobile.matches) {
+          // sur desktop, click ne doit pas naviguer (sinon hover inutile)
+          e.preventDefault();
+          open ? closeMenu() : openMenu();
+        }
+      });
 
     return true;
   }
 
   // init now
   if (init()) return;
-
-  
 
   // retry (Squarespace injecte parfois le header après)
   if (retries > 0) return setTimeout(() => bootOasisSubmenu(retries - 1), 250);
