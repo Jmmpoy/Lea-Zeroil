@@ -59,45 +59,7 @@
     }
   })();
 
-  (function initExpoSwap() {
-    const root = document.querySelector('[data-expo-swap]');
-    if (!root) return;
-
-    const img = root.querySelector('[data-expo-img]');
-    const links = Array.from(root.querySelectorAll('[data-expo-list] a[data-img]'));
-    if (!img || !links.length) return;
-
-    // Préload
-    links.forEach(a => { const i = new Image(); i.src = a.dataset.img; });
-
-    // Transition simple (fade)
-    let raf = null;
-    function swap(src) {
-      if (!src || img.src === src) return;
-      cancelAnimationFrame(raf);
-
-      img.style.transition = 'opacity .18s ease';
-      img.style.opacity = '0';
-
-      raf = requestAnimationFrame(() => {
-        setTimeout(() => {
-          img.src = src;
-          img.onload = () => { img.style.opacity = '1'; };
-        }, 140);
-      });
-    }
-
-    // Hover desktop
-    links.forEach(a => {
-      a.addEventListener('mouseenter', () => swap(a.dataset.img));
-      a.addEventListener('focus', () => swap(a.dataset.img)); // accessibilité clavier
-    });
-
-    // Mobile: swap au touch (sans empêcher le click)
-    links.forEach(a => {
-      a.addEventListener('touchstart', () => swap(a.dataset.img), { passive: true });
-    });
-  })();
+  /* initExpoSwap : logique déplacée dans Galerie-Oasis/expo-swap.js (doublon supprimé, ce script est chargé sur toutes les pages) */
 
   (function () {
     const root = document.querySelector('[data-expo-gallery]');
@@ -122,8 +84,21 @@
       caption: t.getAttribute('data-caption') || ''
     }));
 
-    // preload hi-res
-    items.forEach(it => { const i = new Image(); i.src = it.src; });
+    // Préload hi-res dès que la galerie approche du viewport (pas au chargement de la page)
+    function preloadAll() {
+      items.forEach(it => { const i = new Image(); i.src = it.src; });
+    }
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        if (entries.some(e => e.isIntersecting)) {
+          preloadAll();
+          io.disconnect();
+        }
+      }, { rootMargin: '400px' });
+      io.observe(root);
+    } else {
+      preloadAll();
+    }
 
     let idx = 0;
 

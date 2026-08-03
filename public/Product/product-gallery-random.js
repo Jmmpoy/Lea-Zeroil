@@ -6,15 +6,15 @@
 (function () {
   var SECTION_TITLE = "Vous pourriez également aimer";
   var RANDOM_GALLERY = [
-    { title: "Bougeoir mural", imageUrl: "https://images.squarespace-cdn.com/content/v1/6939b3b7d90b6131b1aeebba/25059981-7a6e-4196-aaa6-5b92b40cd63b/MIRAGES-56.jpg?format=1500w", redirectUrl: "/boutique/p/bougeoir-mural-grand" },
-    { title: "APPLIQUE ORSAY", imageUrl: "https://images.squarespace-cdn.com/content/v1/6939b3b7d90b6131b1aeebba/077f395b-ce8c-4576-9ddc-be79050da851/MIRAGES-45.jpg?format=1500w", redirectUrl: "/boutique/p/applique-orsay" },
-    { title: "Stool Primo", imageUrl: "https://images.squarespace-cdn.com/content/v1/6939b3b7d90b6131b1aeebba/1769021598576-A7VRGFB93WGRAV8BVCR1/LZ_primo_paille_tournesol_10.jpg?format=1500w", redirectUrl: "/boutique/p/primopailletournesol" },
-    { title: "Applique Saba", imageUrl: "https://images.squarespace-cdn.com/content/v1/6939b3b7d90b6131b1aeebba/7db411c8-ae2f-477c-bbb7-50630ffd69ef/LeaZeroilxGien_%C2%A9AdelSlimaneFecih24.jpg?format=2500w", redirectUrl: "/boutique/p/appliquesaba" },
-    { title: "Table Erba", imageUrl: "https://images.squarespace-cdn.com/content/v1/6939b3b7d90b6131b1aeebba/84ba56f5-449d-4143-83f3-85a631074783/LUNEROUSSE-21.JPG?format=2500w", redirectUrl: "/boutique/p/tablebasseerba" },
-    { title: "Guéridon Supernova", imageUrl: "https://images.squarespace-cdn.com/content/v1/6939b3b7d90b6131b1aeebba/d935fa7e-9a9b-434f-8602-f7bd080a6e66/LUNEROUSSE-13.JPG?format=2500w", redirectUrl: "/boutique/p/gueridonsupernovarose" },
-    { title: "Nauzami Chair", imageUrl: "https://images.squarespace-cdn.com/content/v1/6939b3b7d90b6131b1aeebba/33061c62-67b4-437e-9bcc-7f16a4685fd2/Capture+d%E2%80%99e%CC%81cran+2026-02-20+a%CC%80+11.14.34.png?format=2500w", redirectUrl: "/boutique/p/rfnrea4f4tcupaj04urq4yzf91zbnn" },
-    { title: "Guéridon Serpent", imageUrl: "https://images.squarespace-cdn.com/content/v1/6939b3b7d90b6131b1aeebba/d7423815-3aba-4f7c-8314-3a05ddc5f65e/MIRAGES-100.jpg?format=2500w", redirectUrl: "/boutique/p/gueridonserpent" },
-    { title: "Stool Primo Paille Vigne", imageUrl: "https://images.squarespace-cdn.com/content/v1/6939b3b7d90b6131b1aeebba/0ddf4978-3093-4298-a4b6-4e9e7b7159f1/LUNEROUSSE-1.JPG?format=1500w", redirectUrl: "/boutique/p/stoolprimopaillevigne" },
+    { title: "Bougeoir mural", imageUrl: "https://images.squarespace-cdn.com/content/v1/6939b3b7d90b6131b1aeebba/25059981-7a6e-4196-aaa6-5b92b40cd63b/MIRAGES-56.jpg?format=750w", redirectUrl: "/boutique/p/bougeoir-mural-grand" },
+    { title: "APPLIQUE ORSAY", imageUrl: "https://images.squarespace-cdn.com/content/v1/6939b3b7d90b6131b1aeebba/077f395b-ce8c-4576-9ddc-be79050da851/MIRAGES-45.jpg?format=750w", redirectUrl: "/boutique/p/applique-orsay" },
+    { title: "Stool Primo", imageUrl: "https://images.squarespace-cdn.com/content/v1/6939b3b7d90b6131b1aeebba/1769021598576-A7VRGFB93WGRAV8BVCR1/LZ_primo_paille_tournesol_10.jpg?format=750w", redirectUrl: "/boutique/p/primopailletournesol" },
+    { title: "Applique Saba", imageUrl: "https://images.squarespace-cdn.com/content/v1/6939b3b7d90b6131b1aeebba/7db411c8-ae2f-477c-bbb7-50630ffd69ef/LeaZeroilxGien_%C2%A9AdelSlimaneFecih24.jpg?format=750w", redirectUrl: "/boutique/p/appliquesaba" },
+    { title: "Table Erba", imageUrl: "https://images.squarespace-cdn.com/content/v1/6939b3b7d90b6131b1aeebba/84ba56f5-449d-4143-83f3-85a631074783/LUNEROUSSE-21.JPG?format=750w", redirectUrl: "/boutique/p/tablebasseerba" },
+    { title: "Guéridon Supernova", imageUrl: "https://images.squarespace-cdn.com/content/v1/6939b3b7d90b6131b1aeebba/d935fa7e-9a9b-434f-8602-f7bd080a6e66/LUNEROUSSE-13.JPG?format=750w", redirectUrl: "/boutique/p/gueridonsupernovarose" },
+    { title: "Nauzami Chair", imageUrl: "https://images.squarespace-cdn.com/content/v1/6939b3b7d90b6131b1aeebba/33061c62-67b4-437e-9bcc-7f16a4685fd2/Capture+d%E2%80%99e%CC%81cran+2026-02-20+a%CC%80+11.14.34.png?format=750w", redirectUrl: "/boutique/p/rfnrea4f4tcupaj04urq4yzf91zbnn" },
+    { title: "Guéridon Serpent", imageUrl: "https://images.squarespace-cdn.com/content/v1/6939b3b7d90b6131b1aeebba/d7423815-3aba-4f7c-8314-3a05ddc5f65e/MIRAGES-100.jpg?format=750w", redirectUrl: "/boutique/p/gueridonserpent" },
+    { title: "Stool Primo Paille Vigne", imageUrl: "https://images.squarespace-cdn.com/content/v1/6939b3b7d90b6131b1aeebba/0ddf4978-3093-4298-a4b6-4e9e7b7159f1/LUNEROUSSE-1.JPG?format=750w", redirectUrl: "/boutique/p/stoolprimopaillevigne" },
   ];
 
   function pickRandomIndices(count, max) {
@@ -61,6 +61,7 @@
       var img = document.createElement("img");
       img.src = item.imageUrl;
       img.alt = item.title;
+      img.loading = "lazy";
       imgWrap.appendChild(img);
 
       var titleSpan = document.createElement("span");

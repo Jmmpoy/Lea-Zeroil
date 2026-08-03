@@ -36,8 +36,21 @@
   const links = Array.from(root.querySelectorAll('[data-expo-list] a[data-img]'));
   if (!img || !links.length) return;
 
-  // Préload
-  links.forEach(a => { const i = new Image(); i.src = a.dataset.img; });
+  // Préload dès que la galerie approche du viewport (pas au chargement de la page)
+  function preloadAll() {
+    links.forEach(a => { const i = new Image(); i.src = a.dataset.img; });
+  }
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      if (entries.some(e => e.isIntersecting)) {
+        preloadAll();
+        io.disconnect();
+      }
+    }, { rootMargin: '400px' });
+    io.observe(root);
+  } else {
+    preloadAll();
+  }
 
   // Transition simple (fade)
   let raf = null;
