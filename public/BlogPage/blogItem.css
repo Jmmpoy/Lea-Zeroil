@@ -597,7 +597,7 @@ body.oasis-blog-theme-lune:not(.dark-mode) .item-pagination-label-custom,
 body.oasis-blog-theme-lune:not(.dark-mode)
   .item-pagination.item-pagination--prev-next
   .item-pagination-prev-next {
-  color: var(--oasis-bordeaux, #5c3d2e);
+  color: var(--oasis-bordeaux, #5c3d2e) !important;
 }
 
 .item-pagination-icon {
