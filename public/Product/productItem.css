@@ -115,6 +115,8 @@
   width: 100%;
   overflow: hidden;
   height: 100%;
+  /* Laisse le scroll vertical natif tranquille, swipe horizontal géré en JS (product-gallery-swiper.js) */
+  touch-action: pan-y;
 }
 
 .product-gallery .product-gallery-slides-item {

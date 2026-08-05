@@ -25,6 +25,8 @@
 
     var timer = null;
     var isPaused = false;
+    var resumeTimeoutId = null;
+    var RESUME_DELAY_MS = 2000;
 
     function goToFirst() {
       if (!thumbnailButtons.length) return;
@@ -73,6 +75,27 @@
       else start();
     });
 
+    // API pour le swipe tactile (product-gallery-swipe) : pause immédiate au toucher,
+    // reprise avec minuteur remis à zéro après un délai (évite un saut auto juste après un swipe manuel).
+    container.__galleryAutoplay = {
+      pause: function () {
+        isPaused = true;
+        if (resumeTimeoutId) {
+          window.clearTimeout(resumeTimeoutId);
+          resumeTimeoutId = null;
+        }
+      },
+      resumeAfterDelay: function () {
+        if (resumeTimeoutId) window.clearTimeout(resumeTimeoutId);
+        resumeTimeoutId = window.setTimeout(function () {
+          resumeTimeoutId = null;
+          stop();
+          isPaused = false;
+          start();
+        }, RESUME_DELAY_MS);
+      }
+    };
+
     container.setAttribute(INIT_FLAG, "1");
     start();
   }
@@ -103,6 +126,7 @@
  */
 (function initProductGallerySwipe() {
   var SWIPE_THRESHOLD_PX = 40;
+  var TRANSITION_LOCK_MS = 350; // couvre le fondu mobile (0.28s) + marge
   var INIT_FLAG = "data-product-gallery-swipe-init";
 
   function setup(container) {
@@ -116,15 +140,18 @@
     var startX = 0;
     var startY = 0;
     var tracking = false;
+    var lastNavAt = 0;
 
     track.addEventListener("touchstart", function (e) {
       if (e.touches.length !== 1) return;
       startX = e.touches[0].clientX;
       startY = e.touches[0].clientY;
       tracking = true;
+      if (container.__galleryAutoplay) container.__galleryAutoplay.pause();
     }, { passive: true });
 
     track.addEventListener("touchend", function (e) {
+      if (container.__galleryAutoplay) container.__galleryAutoplay.resumeAfterDelay();
       if (!tracking) return;
       tracking = false;
       var touch = e.changedTouches && e.changedTouches[0];
@@ -132,6 +159,12 @@
       var dx = touch.clientX - startX;
       var dy = touch.clientY - startY;
       if (Math.abs(dx) < SWIPE_THRESHOLD_PX || Math.abs(dx) < Math.abs(dy)) return;
+
+      // Anti-spam : ignore un nouveau swipe tant que la transition précédente n'est pas finie
+      var now = Date.now();
+      if (now - lastNavAt < TRANSITION_LOCK_MS) return;
+      lastNavAt = now;
+
       if (dx < 0) {
         nextBtn.click();
       } else {
