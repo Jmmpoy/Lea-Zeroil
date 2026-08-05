@@ -143,7 +143,6 @@ body.dark-mode .footer-logo--dark path:nth-child(n + 2),
 body.oasis-footer-force-dark .footer-logo--dark path,
 body.oasis-footer-force-dark .footer-logo--dark path:nth-child(n + 2) {
   fill: var(--oasis-cream) !important;
-  stroke: var(--oasis-cream) !important;
 }
 
 body.dark-mode .footer-logo--dark,
@@ -151,11 +150,10 @@ body.oasis-footer-force-dark .footer-logo--dark {
   color: var(--oasis-cream);
 }
 
-/* Logo unique (un seul SVG) : en dark mode, fill/stroke en crème */
+/* Logo unique (un seul SVG) : en dark mode, fill crème, pas de stroke (doublure épaissit le tracé) */
 body.dark-mode .footer__logo svg path,
 body.oasis-footer-force-dark .footer__logo svg path {
   fill: var(--oasis-cream) !important;
-  stroke: var(--oasis-cream) !important;
 }
 
 /* Taches visibles dans le logo sur fond clair (thème light) */
