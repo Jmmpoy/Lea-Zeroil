@@ -190,9 +190,18 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   gap: 8px;
-  padding: 10px 0;
+  padding: 6px 10px;
   min-height: 0;
+  /* Pastille translucide derrière toute la rangée : contraste garanti sur n'importe quelle photo
+     sans changer le dessin des losanges eux-mêmes (contrainte design). */
+  background: rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 999px;
+  width: fit-content;
+  margin: 0 auto;
 }
 
 .product-gallery .product-gallery-thumbnails-item {
@@ -207,17 +216,12 @@
   border-radius: 0;
   opacity: 1;
   transform: rotate(45deg);
-  /* Double anneau (crème + sombre) via box-shadow : reste lisible que la photo derrière soit claire ou sombre.
-     Le style natif Squarespace du composant regagne parfois la main sur border-color/background-color ;
-     box-shadow n'est pas concerné et garantit le contraste. */
-  box-shadow: 0 0 0 1px var(--oasis-cream), 0 0 0 2px rgba(0, 0, 0, 0.55);
-  transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
 }
 
 .product-gallery .product-gallery-thumbnails-item[aria-current="true"] {
   border-color: var(--oasis-bordeaux);
   background: var(--oasis-bordeaux);
-  box-shadow: 0 0 0 1px var(--oasis-cream), 0 0 0 2.5px var(--oasis-bordeaux);
   transform: rotate(45deg) scale(1.1);
 }
 
