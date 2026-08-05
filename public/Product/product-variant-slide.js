@@ -1,8 +1,11 @@
 /**
  * Navigue automatiquement vers la slide de la galerie produit
  * correspondant à la couleur sélectionnée.
- * Repose sur l'attribut alt des images (ex. alt="thèbes-blanc").
- * Compare par segment exact : "blanc" match "thèbes-blanc" mais pas "thèbes-sable".
+ * Repose sur l'attribut alt des images ET, en repli, sur le nom de fichier
+ * (ex. data-image=".../PRIMO-PACK-MONTAGE-LUNE.png") : en pratique l'alt est
+ * souvent vide côté Squarespace alors que le nom de fichier contient la couleur.
+ * Compare par segment exact ; pour une couleur à plusieurs mots ("Terre brulée"),
+ * un seul mot qui matche un segment suffit (le nom de fichier abrège parfois).
  */
 (function initVariantSlideSync() {
   var INIT_FLAG = "data-variant-slide-sync-init";
@@ -15,11 +18,18 @@
       .replace(/[\u0300-\u036f]/g, "");
   }
 
-  function altMatchesColor(alt, color) {
-    var segments = normalize(alt).split(/[\s\-_]+/);
-    var target = normalize(color);
-    for (var i = 0; i < segments.length; i++) {
-      if (segments[i] === target) return true;
+  function getImageSegments(img) {
+    var alt = img.alt || "";
+    var src = img.getAttribute("data-image") || img.getAttribute("data-src") || "";
+    var filename = src.split("/").pop().split("?")[0].replace(/\.[a-z0-9]+$/i, "");
+    return normalize(alt + " " + filename).split(/[\s\-_+.]+/).filter(Boolean);
+  }
+
+  function altMatchesColor(img, color) {
+    var segments = getImageSegments(img);
+    var words = normalize(color).split(/\s+/).filter(Boolean);
+    for (var w = 0; w < words.length; w++) {
+      if (segments.indexOf(words[w]) !== -1) return true;
     }
     return false;
   }
@@ -33,8 +43,8 @@
 
     for (var i = 0; i < slides.length; i++) {
       var img = slides[i].querySelector(".product-gallery-slides-item-image");
-      if (!img || !img.alt) continue;
-      if (altMatchesColor(img.alt, colorName)) {
+      if (!img) continue;
+      if (altMatchesColor(img, colorName)) {
         if (thumbnails[i]) thumbnails[i].click();
         return;
       }
