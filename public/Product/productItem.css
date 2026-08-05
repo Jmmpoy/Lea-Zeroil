@@ -201,23 +201,22 @@
   min-width: 7px;
   height: 7px;
   padding: 0;
-  border: 1px solid var(--oasis-bordeaux-55);
+  border: none;
   background: transparent;
   cursor: pointer;
   border-radius: 0;
   opacity: 1;
   transform: rotate(45deg);
-  /* Double anneau (crème + sombre) via box-shadow : reste lisible que la photo derrière soit claire ou sombre.
-     Le style natif Squarespace du composant regagne parfois la main sur border-color/background-color ;
-     box-shadow n'est pas concerné et garantit le contraste. */
-  box-shadow: 0 0 0 1px var(--oasis-cream), 0 0 0 2px rgba(0, 0, 0, 0.55);
-  transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+  /* Couleur pilotée par JS (product-gallery-swiper.js) selon la luminance de l'image affichée
+     (crème sur photo sombre, bordeaux sur photo claire — comportement par défaut inchangé).
+     box-shadow inset = même poids visuel qu'un border 1px, mais fiable à modifier dynamiquement :
+     border-color/background-color sont repris par une règle Squarespace native sur ce composant. */
+  box-shadow: inset 0 0 0 1px var(--thumb-color, var(--oasis-bordeaux-55));
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .product-gallery .product-gallery-thumbnails-item[aria-current="true"] {
-  border-color: var(--oasis-bordeaux);
-  background: var(--oasis-bordeaux);
-  box-shadow: 0 0 0 1px var(--oasis-cream), 0 0 0 2.5px var(--oasis-bordeaux);
+  box-shadow: inset 0 0 0 4px var(--thumb-color-active, var(--oasis-bordeaux));
   transform: rotate(45deg) scale(1.1);
 }
 
